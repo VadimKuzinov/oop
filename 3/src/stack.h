@@ -59,7 +59,6 @@ public:
     }
 
     explicit constexpr Stack(const std::vector<T>& arr) : arr_(arr.size() > SIZE ? std::vector<T>(0) : arr) {
-        std::cout << "LVALUE Copy Vector" << std::endl;
         if (arr.size() > SIZE) {
             throw std::runtime_error(
                 "Size of init vector is bigger than max size"
@@ -73,7 +72,6 @@ public:
 
     template <std::size_t SIZE_OTHER>
     constexpr Stack(const Stack<T, SIZE_OTHER>& other) : Stack(other.arr_) {
-        std::cout << "LVALUE Copy Stack" << std::endl;
     }
     
     template <std::size_t SIZE_OTHER>
@@ -84,7 +82,6 @@ public:
     }
 
     explicit constexpr Stack(std::vector<T>&& arr) : arr_(arr.size() > SIZE ? std::vector<T>(0) : std::move(arr)) {
-        std::cout << "RVALUE Move Vector" << std::endl;
         if (arr.size() > SIZE) {
             throw std::runtime_error(
                 "Size of init vector is bigger than max size"
@@ -98,7 +95,6 @@ public:
 
     template <std::size_t SIZE_OTHER>
     constexpr Stack(Stack<T, SIZE_OTHER>&& other) : arr_(std::move(other.arr_)) {
-        std::cout << "RVALUE Move Stack" << std::endl;
     }
 
     template <std::size_t SIZE_OTHER>
