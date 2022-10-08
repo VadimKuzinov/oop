@@ -1,112 +1,181 @@
-template <typename T, std::size_t SIZE>
-class Stack; 
+#include <iostream>
+#include <vector>
+
 
 template <typename T, std::size_t SIZE>
+class Stack;
+ 
+template <typename T, std::size_t SIZE>
+constexpr std::ostream& operator<<(std::ostream& os, const Stack<T, SIZE>& st) {
+    std::cout << '[';
+    for (auto&& el : st.arr_) {
+        std::cout << el << ", ";
+    }
+    std::cout << ']';
+    std::cout << std::endl;
+    return os;
+}
+
+template <typename T, std::size_t SIZE>
+std::istream& operator>>(std::istream& is, Stack<T, SIZE>& st) {
+    T val;
+    while (true) {
+        is >> val;
+        if (is.eof()) {
+            is.clear();
+            break;
+        }
+        st.Push(std::move(val));
+    }
+    return is;
+}
+
+template <typename T, std::size_t SIZE>
+void swap(Stack<T, SIZE>& first, Stack<T, SIZE>& second) {
+    auto t = std::move(first);
+    first = std::move(second);
+    second = std::move(t);
+}
+
+template <typename T, std::size_t SIZE = -1>
 class Stack {
-    std::size_t size_ = 0;
-    T arr_[SIZE];
+    std::vector<T> arr_;
 
-    template <typename U, std::size_t SIZE_OTHER>
+    friend constexpr std::ostream& operator<< <> (std::ostream&, const Stack&);
+    friend std::istream& operator>> <> (std::istream&, Stack&);
+    
+    template <typename T_OTHER, std::size_t SIZE_OTHER>
     friend class Stack;
 
-    std::size_t max(std::size_t first, std::size_t second) const noexcept {
-        return first < second ? second : first;
-    }
-
-    template <class U>
-    void swap(U& first, U& second) const {
-        U t(std::move(first));
-        first = std::move(second);
-        second = std::move(t);
-    }
-
 public:
+    constexpr bool Static() const noexcept {
+        return SIZE != std::size_t(-1);
+    }
+
     constexpr Stack() {
+        if (Static()) {
+            arr_.reserve(SIZE);
+        }
     }
 
-    Stack(std::size_t count, T* arr) : size_(max(count, SIZE)) {
-        for (std::size_t it = 0; it < size_; ++it) {
-            arr_[it] = arr[it];
+    explicit constexpr Stack(const std::vector<T>& arr) : arr_(arr.size() > SIZE ? std::vector<T>(0) : arr) {
+        std::cout << "LVALUE Copy Vector" << std::endl;
+        if (arr.size() > SIZE) {
+            throw std::runtime_error(
+                "Size of init vector is bigger than max size"
+            );                
+        }
+
+        if (Static()) {
+            arr_.reserve(SIZE);
         }
     }
 
     template <std::size_t SIZE_OTHER>
-    Stack(const Stack<T, SIZE_OTHER>& other) : size_(max(other.size_, SIZE)) {
-        for (std::size_t it = 0; it < size_; ++it) {
-            arr_[it] = other.arr_[it];
+    constexpr Stack(const Stack<T, SIZE_OTHER>& other) : Stack(other.arr_) {
+        std::cout << "LVALUE Copy Stack" << std::endl;
+    }
+    
+    template <std::size_t SIZE_OTHER>
+    constexpr Stack<T, SIZE>& operator=(const Stack<T, SIZE_OTHER>& other) {
+        Stack<T, SIZE> t(std::move(other));
+        swap(*this, t);
+        return *this;        
+    }
+
+    explicit constexpr Stack(std::vector<T>&& arr) : arr_(arr.size() > SIZE ? std::vector<T>(0) : std::move(arr)) {
+        std::cout << "RVALUE Move Vector" << std::endl;
+        if (arr.size() > SIZE) {
+            throw std::runtime_error(
+                "Size of init vector is bigger than max size"
+            );                
+        }
+
+        if (Static()) {
+            arr_.reserve(SIZE);
         }
     }
 
     template <std::size_t SIZE_OTHER>
-    Stack(Stack<T, SIZE_OTHER>&& other) : size_(max(other.size_, SIZE)), arr_(other.arr_) {
-        other.size_ = 0;
+    constexpr Stack(Stack<T, SIZE_OTHER>&& other) : arr_(std::move(other.arr_)) {
+        std::cout << "RVALUE Move Stack" << std::endl;
     }
 
     template <std::size_t SIZE_OTHER>
-    Stack<T, SIZE>& operator=(const Stack<T, SIZE_OTHER>& other) {
-        Stack<T, SIZE> temporary(other);
-        swap(*this, temporary);
+    constexpr Stack<T, SIZE>& operator=(Stack<T, SIZE_OTHER>&& other) {
+        if (other.arr_ > SIZE) {
+            throw std::runtime_error(
+                "Cannot assign: size of given vector is bigger than max size"
+            );
+        }
+        arr_ = std::move(other.arr_);
+
+        if (Static()) {
+            arr_.reserve(SIZE);
+        }
+ 
         return *this;
-    }
+    }        
 
-    template <std::size_t SIZE_OTHER>
-    Stack<T, SIZE>& operator=(Stack<T, SIZE_OTHER>&& other) {
-        Stack<T, SIZE> temporary(other);
-        swap(*this, temporary);
-        return *this;
-    }
-
-    bool Full() const noexcept {
-        return size_ == SIZE;
-    }
-
-    bool Empty() const noexcept {
-        return size_ == 0;
-    }
-
-    std::size_t Size() const noexcept {
-        return size_;
-    }
-
-    void Push(const T& value) {
+    constexpr void Push(const T& value) {
         if (Full()) {
-            throw std::runtime_error("No place to push into the stack");
+            throw std::runtime_error(
+                "Stack overflow"
+            );                
         }
-
-        arr_[size_++] = value;
+        arr_.push_back(value);
     }
 
-    void Push(T&& value) {
-        if (Full()) {
-            throw std::runtime_error("No place to push into the stack");
+    constexpr void Push(T&& value) {
+         if (Full()) {
+            throw std::runtime_error(
+                "Stack overflow"
+            );                
         }
-
-        arr_[size_++] = std::move(value);
+        arr_.push_back(std::move(value));
     }
 
-
-    T& Pop() {
+    constexpr T Pop() {
         if (Empty()) {
-            throw std::runtime_error("No elements to pop from the stack");
+            throw std::runtime_error(
+                "Trying to pop from empty stack"
+            );                
+        }
+        auto result = arr_.back();
+        arr_.pop_back();
+        return result;
+    }
+   
+    constexpr T& Top() {
+        if (Empty()) {
+            throw std::runtime_error(
+                "Trying to get the top element from empty stack"
+            );                
         }
 
-        return arr_[--size_];
+        return arr_.back();
     }
 
-    T& Top() {
+    constexpr T Top() const {
         if (Empty()) {
-            throw std::runtime_error("No top element in the empty stack");
+            throw std::runtime_error(
+                "Trying to get the top element from empty stack"
+            );                
         }
 
-        return arr_[size_ - 1];
+        return arr_.back();
     }
 
-    T Top() const {
-        if (Empty()) {
-            throw std::runtime_error("No top element in the empty stack");
-        }
+    constexpr std::size_t Size() const noexcept {
+        return arr_.size();
+    }
 
-        return arr_[size_ - 1];      
+    constexpr bool Full() const noexcept {
+        return Size() == SIZE;
+    }
+
+    constexpr bool Empty() const noexcept {
+        return Size() == 0;
     }
 };
 
