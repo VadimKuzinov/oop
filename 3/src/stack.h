@@ -37,7 +37,7 @@ void swap(Stack<T, SIZE>& first, Stack<T, SIZE>& second) {
     second = std::move(t);
 }
 
-template <typename T, std::size_t SIZE = -1>
+template <typename T, std::size_t SIZE = std::size_t(-1)>
 class Stack {
     std::vector<T> arr_;
 
@@ -99,7 +99,7 @@ public:
 
     template <std::size_t SIZE_OTHER>
     constexpr Stack<T, SIZE>& operator=(Stack<T, SIZE_OTHER>&& other) {
-        if (other.arr_ > SIZE) {
+        if (other.arr_.size() > SIZE) {
             throw std::runtime_error(
                 "Cannot assign: size of given vector is bigger than max size"
             );

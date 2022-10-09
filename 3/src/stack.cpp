@@ -21,8 +21,12 @@ int main() {
     }
 
 
-//    std::cin >> st;
-//    std::cout << st;
+    std::cin >> st;
+    std::cout << st;
+
+    Stack<int, 100> st10;
+    std::cin >> st10;
+    std::cout << st10;
 
     Stack<int, 100> st2(std::vector<int>(15, 1337));
     std::cout << st2;
