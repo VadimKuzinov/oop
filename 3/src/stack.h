@@ -11,7 +11,7 @@ constexpr std::ostream& operator<<(std::ostream& os, const Stack<T, SIZE>& st) {
     for (auto&& el : st.arr_) {
         std::cout << el << ", ";
     }
-    std::cout << ']' << "<----- TOP";
+    std::cout << ']' << " <----- TOP";
     std::cout << std::endl;
     return os;
 }
