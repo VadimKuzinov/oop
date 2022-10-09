@@ -2,7 +2,7 @@
 
 
 int main() {
-    Menu<int>();
+    Menu<int, 110>();
     return 0;
 }
 

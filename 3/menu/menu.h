@@ -84,7 +84,8 @@ class Menu {
 
     void D_Top() {
         try {
-           T& top = st.Top();
+            T& top = st.Top();
+            std::cout << "TOP: " << top << std::endl;          
         }
         catch (std::runtime_error& e) {
             std::cout << e.what() << std::endl;
@@ -92,18 +93,22 @@ class Menu {
     }
 
     void D_Size() {
-        std::cout << st.Size() << std::endl;
+        std::cout << "Current size: " << st.Size() << std::endl;
     }
 
     void D_Full() {
-        std::cout << st.Full() << std::endl;
+        std::cout << "Stack is full: " << (st.Full() ? "true" : "false") << std::endl;
     }
 
     void D_Empty() {
-        std::cout << st.Empty() << std::endl;
+        std::cout << "Stack is empty: " << (st.Empty() ? "true" : "false") << std::endl;
     }
 
-    void Start() {
+    void D_WorkLoad() {
+        std::cout << "Stack's workload is: " << st.WorkLoad() * 100 << '%' << std::endl;
+    }
+
+    void Start() {        
         const std::vector<std::pair<void (*)(Menu*), const char*>> func_info = {
             {[](Menu* ptr) {ptr->D_DoNothing(); }, "EXIT"},
             {[](Menu* ptr) {ptr->D_Init(); }, "Initialize stack from stdin"},
@@ -114,6 +119,7 @@ class Menu {
             {[](Menu* ptr) {ptr->D_Size(); }, "Size"},
             {[](Menu* ptr) {ptr->D_Full(); }, "Full"},
             {[](Menu* ptr) {ptr->D_Empty(); }, "Empty"},
+            {[](Menu* ptr) {ptr->D_WorkLoad(); }, "Workload"},
         };
 
         auto Options = [&func_info]() {

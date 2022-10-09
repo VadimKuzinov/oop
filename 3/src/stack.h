@@ -11,7 +11,7 @@ constexpr std::ostream& operator<<(std::ostream& os, const Stack<T, SIZE>& st) {
     for (auto&& el : st.arr_) {
         std::cout << el << ", ";
     }
-    std::cout << ']';
+    std::cout << ']' << "<----- TOP";
     std::cout << std::endl;
     return os;
 }
@@ -19,12 +19,10 @@ constexpr std::ostream& operator<<(std::ostream& os, const Stack<T, SIZE>& st) {
 template <typename T, std::size_t SIZE>
 std::istream& operator>>(std::istream& is, Stack<T, SIZE>& st) {
     T val;
-    while (true) {
+    std::size_t count;
+    std::cin >> count;
+    while (count--) {
         is >> val;
-        if (is.eof()) {
-            is.clear();
-            break;
-        }
         st.Push(std::move(val));
     }
     return is;
@@ -172,6 +170,10 @@ public:
 
     constexpr bool Empty() const noexcept {
         return Size() == 0;
+    }
+
+    constexpr double WorkLoad() const noexcept {
+        return Static() ? (double) Size() / SIZE : 0;
     }
 };
 
