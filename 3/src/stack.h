@@ -160,6 +160,14 @@ public:
         return arr_.back();
     }
 
+    constexpr T& operator()() {
+        return Top();
+    }
+
+    constexpr T operator()() const {
+        return Top();
+    }
+
     constexpr std::size_t Size() const noexcept {
         return arr_.size();
     }
@@ -170,6 +178,10 @@ public:
 
     constexpr bool Empty() const noexcept {
         return Size() == 0;
+    }
+
+    constexpr operator bool() const noexcept {
+        return !Empty();
     }
 
     constexpr double WorkLoad() const noexcept {
