@@ -1,21 +1,15 @@
-class Entity {
-};
+#include <vector>
+#include <list>
+
+#include "BasicSquad.h"
 
 
-class BasicSquad : public Entity {
-protected:
-    const char* name;
-    std::size_t priority_;
-    std::size_t population_;
-    double speed_;
-    double max_hp_;
-    double current_overall_hp_;
-
-public:
-    BasicSquad() const noexcept = default;
-    virtual ~BasicSquad() const noexcept = default;
-    virtual BasicSquad(const BasicSquad&) = default;
-    virtual BasicSquad(BasicSquad&&) = default;
+enum Types {
+    ImmoralSquad,
+    GeneralSquad,
+    ImmoralHealingSquad,
+    GeneralHealingSquad,
+    Summoner,
 };
 
 
@@ -24,14 +18,6 @@ protected:
     double damage_;
     double defense_;
     double loot_after_destr_;
-};
-
-
-class GeneralSquad: public: ImmoralSquad {
-public:
-    const static double morality_dif_ = 1e-3;
-protected:
-    double morality_;
 };
 
 
@@ -55,10 +41,6 @@ class Summoner: public BasicSquad {
 };
 
 
-class Wall : public Entity {
-};
-
-
 class Terrain {
     std::vector<std::vector<BasicSquad>> terrain_;
 
@@ -66,4 +48,13 @@ public:
     constexpr Terrain(std::size_t i_size_, std::size_t j_size_);
     constexpr std::vector<BasicSquad>& operator[](std::size_t it_);
 };
+
+
+class State {
+    std::list<BasicSquad> srt_by_prior_;
+   
+};
+
+
+
 
