@@ -1,8 +1,7 @@
 #pragma once
 
-#include "BasicSquad.h"
-#include "Summoner.h"
-#include "Enums.h"
+#include "Point.h"
+
 #include <unordered_set>
 #include <iostream>
 #include <fstream>
@@ -10,7 +9,11 @@
 #include <list>
 
 
+class Summoner;
+class BasicSquad;
+
 class Terrain {
+public:
     std::unordered_set<Point> obstacles_;
    
     std::pair<Summoner*, Summoner*> summoners_;

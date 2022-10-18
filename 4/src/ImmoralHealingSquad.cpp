@@ -1,6 +1,5 @@
-#include "All.h"
+#include "ImmoralHealingSquad.h"
 
-
-ImmoralHealingSquad::ImmoralHealingSquad(enum Types type) : ImmoralSquad(type) {
+ImmoralHealingSquad::ImmoralHealingSquad(Terrain* terrain, enum Types type) : ImmoralSquad(terrain, type) {
 }
 

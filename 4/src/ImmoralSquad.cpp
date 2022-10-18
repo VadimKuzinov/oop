@@ -1,6 +1,6 @@
 #include "ImmoralSquad.h"
 
 
-ImmoralSquad::ImmoralSquad(enum Types type) : BasicSquad(type) {
+ImmoralSquad::ImmoralSquad(Terrain* terrain, enum Types type) : BasicSquad(terrain, type) {
 }
 

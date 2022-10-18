@@ -3,6 +3,7 @@
 #include <cstddef>
 #include "Enums.h"
 #include "Point.h"
+#include "Terrain.h"
 
 
 class BasicSquad {
@@ -10,6 +11,9 @@ public:
     enum Types id;
     
     Point coords;
+    Terrain* terrain_;
+    Summoner* summoner_ = nullptr;
+
     BasicSquad* captured_ = nullptr;
     std::size_t priority_;
     std::size_t population_;
@@ -22,7 +26,7 @@ public:
     bool moving_ = false;
 
 public:
-    BasicSquad(enum Types = _BasicSquad);
+    BasicSquad(Terrain* terrain, enum Types = _BasicSquad);
     virtual ~BasicSquad() = default;
 
     void SetCoords(const Point& p);

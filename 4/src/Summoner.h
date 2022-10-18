@@ -8,7 +8,7 @@ protected:
     double xp_;
 
 public:
-    Summoner(enum Types type = Types::_Summoner); 
+    Summoner(Terrain* terrain, enum Types = Types::_Summoner); 
     virtual ~Summoner() = default;
 };
 

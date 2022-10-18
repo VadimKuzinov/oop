@@ -6,6 +6,6 @@ protected:
     double morality;
 
 public:
-    GeneralSquad(enum Types type = Types::_GeneralSquad);
+    GeneralSquad(Terrain*, enum Types = Types::_GeneralSquad);
     virtual ~GeneralSquad() = default;
 };

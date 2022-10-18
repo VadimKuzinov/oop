@@ -2,7 +2,7 @@
 #include <cmath>
 
 
-BasicSquad::BasicSquad(enum Types type): id(type) {
+BasicSquad::BasicSquad(Terrain* terrain, enum Types type): terrain_(terrain), id(type) {
 }
 
 void BasicSquad::SetCoords(const Point& p) {
@@ -61,8 +61,25 @@ void BasicSquad::MoveTowards(const Point& other_coords) {
     double sine = (other_coords.y - coords.y) / distance;
     double cosine = (other_coords.x - coords.x) / distance;
 
-    coords.x += speed_ * cosine;
-    coords.y += speed_ * sine;
+    double new_x = coords.x + speed_ * cosine;
+    double new_y = coords.y + speed_ * sine;
+
+    int new_x_int = static_cast<int>(new_x);
+    int new_y_int = static_cast<int>(new_y);
+
+    int old_x_int = static_cast<int>(coords.x);
+    int old_y_int = static_cast<int>(coords.y);
+
+    if (new_x_int == old_x_int && new_y_int == old_y_int) {
+        return;
+    }
+
+    if (terrain_->map_[new_y][new_x] != nullptr) {
+        return;
+    }
+
+    terrain_->map_[new_y][new_x] = this;
+    terrain_->map_[new_y][new_x] = nullptr;
 }
 
 void BasicSquad::Interact(enum Actions action) {

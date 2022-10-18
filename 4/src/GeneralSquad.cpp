@@ -1,5 +1,5 @@
 #include "GeneralSquad.h"
 
-GeneralSquad::GeneralSquad(enum Types type): ImmoralSquad(type) {
+GeneralSquad::GeneralSquad(Terrain* terrain, enum Types type): ImmoralSquad(terrain, type) {
 }
 

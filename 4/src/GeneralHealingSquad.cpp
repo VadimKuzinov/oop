@@ -1,5 +1,5 @@
 #include "GeneralHealingSquad.h"
 
-GeneralHealingSquad::GeneralHealingSquad(enum Types type) : GeneralSquad(type) {
+GeneralHealingSquad::GeneralHealingSquad(Terrain* terrain, enum Types type) : GeneralSquad(terrain, type) {
 }
 

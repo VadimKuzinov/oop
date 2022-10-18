@@ -9,7 +9,7 @@ protected:
     double loot_after_destr_;
 
 public:    
-    ImmoralSquad(enum Types type = Types::_ImmoralSquad);
+    ImmoralSquad(Terrain*, enum Types = Types::_ImmoralSquad);
     virtual ~ImmoralSquad() = default;
 };
 

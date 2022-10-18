@@ -13,10 +13,10 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     Point p2;
     is >> p1 >> p2;
     
-    auto summoner1 = new Summoner;
+    auto summoner1 = new Summoner(&terrain);
     summoner1->coords = p1;
 
-    auto summoner2 = new Summoner;
+    auto summoner2 = new Summoner(&terrain);
     summoner2->coords = p2;
     
     terrain.summoners_ = std::make_pair<Summoner*, Summoner*>(std::move(summoner1), std::move(summoner2));
@@ -65,5 +65,5 @@ Terrain::~Terrain() {
     delete obstacle_;
 }
 
-BasicSquad* Terrain::obstacle_ = new BasicSquad;
+BasicSquad* Terrain::obstacle_ = new BasicSquad(nullptr);
 

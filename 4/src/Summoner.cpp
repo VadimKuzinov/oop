@@ -1,5 +1,5 @@
 #include "Summoner.h"
 
-Summoner::Summoner(enum Types type) : BasicSquad(type) {
+Summoner::Summoner(Terrain* terrain, enum Types type) : BasicSquad(terrain, type) {
 }
 

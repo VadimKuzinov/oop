@@ -4,6 +4,6 @@
 
 class ImmoralHealingSquad : public ImmoralSquad, public HealingProperty {
 public:
-    ImmoralHealingSquad(enum Types type = Types::_ImmoralHealingSquad);
+    ImmoralHealingSquad(Terrain*, enum Types = Types::_ImmoralHealingSquad);
     virtual ~ImmoralHealingSquad() = default;
 };

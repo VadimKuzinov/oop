@@ -4,6 +4,6 @@
 
 class GeneralHealingSquad : public GeneralSquad, public HealingProperty {
 public:
-    GeneralHealingSquad(enum Types type = Types::_GeneralHealingSquad);
+    GeneralHealingSquad(Terrain*, enum Types = Types::_GeneralHealingSquad);
     virtual ~GeneralHealingSquad() = default;
 };
