@@ -7,6 +7,7 @@ BasicSquad::BasicSquad(Terrain* terrain, enum Types type): terrain_(terrain), id
 
 void BasicSquad::SetCoords(const Point& p) {
     coords = p;
+    goal_coords = coords;
 }
 
 void BasicSquad::SetPriority(std::size_t priority) {
@@ -29,17 +30,34 @@ void BasicSquad::SetAttackRange(double attack_range) {
     attack_range_ = attack_range;
 }
 
+void BasicSquad::Capture(BasicSquad* other) {
+    captured_ = other;
+}
+
+void BasicSquad::SetGoalPoint(const Point& other) {
+    goal_coords = other;
+}
+
 void BasicSquad::TryToAttack() {
     attacking_ = true;
-    moving_ = false;
 }
 
 void BasicSquad::TryToMove() {
     moving_ = true;
-    attacking_ = false;
+}
+
+void BasicSquad::TryToMove(const Point& p) {
+    moving_ = true;
+    goal_coords = p;    
 }
 
 void BasicSquad::Act() {
+    if (captured_ && captured_->current_hp_ <= 0) { //CHANGE to bool FUNCTION
+        captured_ = nullptr;
+    }
+
+    goal_coords = captured_ ? captured_->coords : goal_coords;
+
     if (attacking_) {
         Interact(_Attack);
         return;
@@ -78,8 +96,22 @@ void BasicSquad::MoveTowards(const Point& other_coords) {
         return;
     }
 
-    terrain_->map_[new_y][new_x] = this;
-    terrain_->map_[new_y][new_x] = nullptr;
+    terrain_->map_[new_y_int][new_x_int] = this;
+    terrain_->map_[new_y_int][new_x_int] = nullptr;
+}
+
+void BasicSquad::AttackCaptured() {
+    if (captured_ == nullptr) {
+        return;
+    }
+
+    double distance = captured_->coords - coords;
+    if (distance > attack_range_) {
+        return;
+    }
+
+    
+    //TO DO
 }
 
 void BasicSquad::Interact(enum Actions action) {
@@ -87,11 +119,7 @@ void BasicSquad::Interact(enum Actions action) {
         MoveTowards(captured_->coords);
     }
     else if (action == _Attack) {
-        if (captured_ == nullptr) {
-            return;
-        }
-
-        
+        AttackCaptured();
         //TO DO
     }
 }

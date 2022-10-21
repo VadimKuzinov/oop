@@ -1,41 +1,34 @@
 #pragma once
-
 #include "Point.h"
-
-#include <unordered_set>
+#include "Type.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <list>
+#include <memory>
 
 
 class Summoner;
-class BasicSquad;
+class Base;
+
 
 class Terrain {
 public:
-    std::unordered_set<Point> obstacles_;
-   
-    std::pair<Summoner*, Summoner*> summoners_;
-    std::vector<std::vector<BasicSquad*>> map_;
-    std::list<BasicSquad*> squads_;
-
-    static BasicSquad* obstacle_; 
+    std::vector<std::vector<std::shared_ptr<Base>>> map_;
+    std::list<std::shared_ptr<Base>> squads_; //sorted by priority
 
     friend std::istream& operator>>(std::istream& is, Terrain& terrain);
     friend std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
     friend class Summoner;
-
-public:
+   
     int MAX_X;
     int MAX_Y;
 
 public:
     Terrain(const std::string& cfg_filename); //add
-    ~Terrain();
 
-    void AddSquad(BasicSquad*, const Point&); //called from summoner may be
-    void Live();
+    void addSquad(Type id, Point); //called from summoner may be
+    void live();
 };
 
 

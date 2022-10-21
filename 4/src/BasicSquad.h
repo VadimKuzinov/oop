@@ -9,17 +9,19 @@
 class BasicSquad {
 public:
     enum Types id;
-    
+
     Point coords;
     Terrain* terrain_;
     Summoner* summoner_ = nullptr;
+    Point goal_coords;
 
     BasicSquad* captured_ = nullptr;
-    std::size_t priority_;
+
+    std::size_t priority_; 
     std::size_t population_;
     double speed_;
     double max_hp_;
-    double current_overall_hp_;
+    double current_hp_;
     double attack_range_;
 
     bool attacking_ = false;
@@ -36,11 +38,15 @@ public:
     void SetMaxHp(double max_hp);
     void SetAttackRange(double attack_range);
 
+    void SetGoalPoint(const Point&);
+    void Capture(BasicSquad*);
     void TryToAttack();
     void TryToMove();
+    void TryToMove(const Point&);
 
     void Act(); //virtual
     void Interact(enum Actions); //with captured    
-    void MoveTowards(const Point& p); //move by command from outside                                
+    void MoveTowards(const Point&); //move by command from outside
+    void AttackCaptured();
 };
 
