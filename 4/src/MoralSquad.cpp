@@ -4,7 +4,7 @@
 MoralSquad::MoralSquad(Terrain* terrain, Point coords, Type id) : GeneralSquad(terrain, coords, id) {
 }
 
-void MoralSquad::stablizeMorality() {
+void MoralSquad::stabilizeMorality() {
     if (morality_ < 0) {
         morality_ += stabilization_speed_;
     }
@@ -29,7 +29,7 @@ void MoralSquad::giveDamage() {
 }
 
 void MoralSquad::attack() {
-    auto distance = Point::distance(coords_, captured_->coords_);
+    auto distance = Point::distance(coords_, captured_->getCoords());
     if (distance > attack_range_) {
         return;
     }

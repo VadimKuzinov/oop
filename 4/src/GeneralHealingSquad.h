@@ -1,9 +1,15 @@
 #pragma once
-#include "HealingProperty.h"
 #include "GeneralSquad.h"
+#include "IHealingSquad.h"
+#include "Type.h"
 
-class GeneralHealingSquad : public GeneralSquad, public HealingProperty {
+
+class GeneralHealingSquad : public GeneralSquad, public IHealingSquad {
 public:
-    GeneralHealingSquad(Terrain*, enum Types = Types::_GeneralHealingSquad);
-    virtual ~GeneralHealingSquad() = default;
+    GeneralHealingSquad(Terrain*, Point coords, Type = GeneralHealing_);
+
+    void heal() override;
+    void act() override;
+    void update() override;
 };
+

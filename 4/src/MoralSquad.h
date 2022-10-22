@@ -5,7 +5,7 @@
 
 class MoralSquad : public GeneralSquad {
 protected:
-    double morality = 0;
+    double morality_ = 0;
     double stabilization_speed_ = Moral_Stab_;
 
 public:

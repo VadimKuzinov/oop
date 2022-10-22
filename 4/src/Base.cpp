@@ -1,12 +1,11 @@
 #include "Base.h"
-#include "Utils.h"
 
 
-Base::Base(const Terrain* terrain, const Point& coords, Type id) : id_(id), terrain_(terrain), coords_(coords) {
+Base::Base(Terrain* terrain, Point coords, Type id) : id_(id), terrain_(terrain), coords_(coords) {
     setDefaults();
 }
 
-void Base::getDamage(double value) {
+void Base::receiveDamage(double value) {
     cur_hp_ -= value;
 }
 
@@ -32,7 +31,7 @@ void Base::setDefaults() {
             max_hp_ = GeneralHealing_Mhp_;
             cur_hp_ = max_hp_;
            break;
-        case ImmoralHealing_:
+        case MoralHealing_:
             priority_ = ImmoralHealing_Pr_;
             max_hp_ = ImmoralHealing_Mhp_;
             cur_hp_ = max_hp_;

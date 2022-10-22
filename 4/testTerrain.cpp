@@ -13,8 +13,8 @@ int main() {
     Summoner* s2 = terrain.summoners_.second;
     s2->SetRadius(10);
 
-    s1->Summon(_GeneralSquad, Point(2, 5));
-    s2->Summon(_ImmoralHealingSquad, Point(97, 98));
+    s1->summon(_GeneralSquad, Point(2, 5));
+    s2->summon(_ImmoralHealingSquad, Point(97, 98));
 
     std::cout << terrain;
     return 0;

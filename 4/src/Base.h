@@ -15,7 +15,7 @@ protected:
     int priority_ = Obstacle_Pr_;
 
 public:
-    Base(const Terrain*, Point coords, Type = Obstacle_);
+    Base(Terrain*, Point coords, Type = Obstacle_);
     void setDefaults();
 
     virtual void act() {
@@ -23,4 +23,16 @@ public:
 
     virtual void receiveDamage(double);
     bool isAlive() const;
+
+    int getPriority() const {
+        return priority_;
+    }
+
+    Type getId() const {
+        return id_;
+    }
+
+    Point getCoords() const {
+        return coords_;
+    }
 };

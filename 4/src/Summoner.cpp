@@ -1,33 +1,44 @@
-#include "All.h"
+#include "Summoner.h"
 
-Summoner::Summoner(Terrain* terrain, enum Types type) : BasicSquad(terrain, type) {
+
+Summoner::Summoner(Terrain* terrain, Point coords, Type id) : Base(terrain, coords, id) {
 }
 
-void Summoner::SetRadius(double r) {
-    radius_ = r;
+void Summoner::accumulateEnergy() {
+    cur_energy_ = std::max(max_energy_, cur_energy_ + energy_regen_speed_);
 }
 
-void Summoner::Summon(enum Types type, const Point& where) {
-    if (where - coords >= radius_) {
+void Summoner::summon() {
+    if (summoned_id_ == Obstacle_) {
         return;
     }
 
-    BasicSquad* new_sq;
-    switch (type) {
-        case _ImmoralSquad:
-            new_sq = new ImmoralSquad(terrain_);
-            break;
-        case _GeneralSquad:
-            new_sq = new GeneralSquad(terrain_);
-            break;
-        case _ImmoralHealingSquad:
-            new_sq = new ImmoralHealingSquad(terrain_);
-            break;
-        case _GeneralHealingSquad:
-            new_sq = new GeneralHealingSquad(terrain_);
-            break;    
+    auto distance = Point::distance(coords_, target_coords_);
+    if (distance > summon_range_) {
+        return;
     }
-    new_sq->summoner_ = this;
-    terrain_->AddSquad(new_sq, where);
+
+    if (terrain_->map_[target_coords_.y][target_coords_.x] != nullptr) {
+        return;
+    }
+
+    terrain_->addSquad(summoned_id_, target_coords_);
+}
+
+void Summoner::act() {
+    if (accumulating_) {
+        accumulateEnergy();
+        return;
+    }
+
+    if (summoning_) {
+        summon();
+        return;
+    }
+
+    if (upgrading_) {
+        upgradeSchool();
+        return;
+    }
 }
 
