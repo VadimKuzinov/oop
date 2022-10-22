@@ -22,8 +22,8 @@ struct Point {
 };
 
 
-std::istream& operator>>(std::istream& is, Point& p);
-std::ostream& operator<<(std::ostream& os, const Point& p);
+std::istream& operator>>(std::istream&, Point&);
+std::ostream& operator<<(std::ostream&, const Point&);
 
 inline bool operator==(const Point& p1, const Point& p2) {
     return p1.x == p2.x && p1.y == p2.y;
@@ -49,3 +49,4 @@ namespace std {
         }
     };
 }
+

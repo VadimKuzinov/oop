@@ -1,4 +1,5 @@
 #pragma once
+#include "Terrain.h"
 #include "Type.h"
 #include "Base.h"
 #include "IActive.h"
@@ -21,9 +22,31 @@ protected:
 public:
     Summoner(Terrain* terrain, Point coords, Type = Summoner_);
 
+    void tryToAccumulate() {
+        accumulating_ = true;
+        summoning_ = false;
+        upgrading_ = false;
+    }
+
+    void tryToSummon() {
+        summoning_ = true;
+        accumulating_ = false;
+        upgrading_ = false;
+    }
+
+    void tryToUpgrade() {
+        summoning_ = false;
+        accumulating_ = false;
+        upgrading_ = true; 
+    }
+
+    void setSummonedId(Type id) {
+        summoned_id_ = id;
+    }
+
     void summon();
     void accumulateEnergy();
     void upgradeSchool();
-    void act() override;     
+    void act() override;
 };
 

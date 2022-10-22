@@ -1,4 +1,5 @@
-#include "src/All.h"
+#include "src/Terrain.h"
+#include "src/Summoner.h"
 
 #include <iostream>
 
@@ -7,16 +8,15 @@ int main() {
     Terrain terrain("cfg/terrain");
     std::cout << terrain;
 
-    Summoner* s1 = terrain.summoners_.first;
-    s1->SetRadius(10);
-
-    Summoner* s2 = terrain.summoners_.second;
-    s2->SetRadius(10);
-
-    s1->summon(_GeneralSquad, Point(2, 5));
-    s2->summon(_ImmoralHealingSquad, Point(97, 98));
+    auto s1 = terrain.getSummonerFirst();
+    auto s2 = terrain.getSummonerSecond();
+    s1->setTargetCoords(Point(2, 5));
+    s1->setSummonedId(General_);
+    s1->tryToSummon();
+    s1->summon();
 
     std::cout << terrain;
+
     return 0;
 }
 

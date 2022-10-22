@@ -3,6 +3,7 @@
 #include "Base.h"
 #include "Point.h"
 #include "IActive.h"
+#include "Summoner.h"
 #include <memory>
 
 
@@ -25,14 +26,6 @@ public:
 
     void setSummoner(std::shared_ptr<Summoner> summoner) {
         summoner_ = summoner;
-    }
-
-    void setCaptured(std::shared_ptr<Base> captured) {
-        captured_ = captured;
-    }
-
-    void setTargetCoords(Point target_coords) {
-        target_coords_ = target_coords;
     }
 
     void tryToMove() {

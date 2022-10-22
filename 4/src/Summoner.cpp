@@ -11,7 +11,7 @@ void Summoner::accumulateEnergy() {
 void Summoner::summon() {
     if (summoned_id_ == Obstacle_) {
         return;
-    }
+   }
 
     auto distance = Point::distance(coords_, target_coords_);
     if (distance > summon_range_) {
@@ -23,6 +23,10 @@ void Summoner::summon() {
     }
 
     terrain_->addSquad(summoned_id_, target_coords_);
+}
+
+void Summoner::upgradeSchool() {
+    return;
 }
 
 void Summoner::act() {

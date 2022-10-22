@@ -12,7 +12,6 @@
 Terrain::Terrain(const std::string& filename) {
     std::ifstream ifs(filename);
     ifs >> *this;
-    map_.assign(MAX_Y, std::vector<std::shared_ptr<Base>>(MAX_X));
 }
 
 void Terrain::live() {
@@ -67,7 +66,9 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     Point p1;
     Point p2;
     is >> p1 >> p2;
-   
+
+    terrain.summoners_coords_ = {p1, p2};
+
     terrain.addSquad(Summoner_, p1);
     terrain.addSquad(Summoner_, p2);
 
@@ -87,8 +88,8 @@ std::ostream& operator<<(std::ostream& os, const Terrain& terrain) {
     os << "MAP_WIDTH: " << terrain.MAX_X << '\n';
     os << "MAP_HEIGHT: " << terrain.MAX_Y << '\n';
 
-    for (std::size_t y = 0; y < terrain.MAX_Y; ++y) {
-        for (std::size_t x = 0; x < terrain.MAX_X; ++x) {
+    for (int y = 0; y < terrain.MAX_Y; ++y) {
+        for (int x = 0; x < terrain.MAX_X; ++x) {
             if (terrain.map_[y][x] == nullptr) {
                 continue;
             }
@@ -121,5 +122,4 @@ std::ostream& operator<<(std::ostream& os, const Terrain& terrain) {
 
     return os;
 }
-
 

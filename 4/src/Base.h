@@ -1,8 +1,8 @@
 #pragma once
 #include "Type.h"
 #include "Point.h"
-#include "Terrain.h"
 
+class Terrain;
 
 class Base {
 protected:
@@ -16,12 +16,13 @@ protected:
 
 public:
     Base(Terrain*, Point coords, Type = Obstacle_);
+    
     void setDefaults();
+    virtual void receiveDamage(double);
 
     virtual void act() {
     }
 
-    virtual void receiveDamage(double);
     bool isAlive() const;
 
     int getPriority() const {

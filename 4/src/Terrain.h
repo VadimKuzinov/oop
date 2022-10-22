@@ -8,12 +8,17 @@
 #include <memory>
 
 
+class Terrain;
 class Summoner;
 class Base;
+
+std::istream& operator>>(std::istream& is, Terrain& terrain);
+std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
 
 
 class Terrain {
 public:
+    std::pair<Point, Point> summoners_coords_;
     std::vector<std::vector<std::shared_ptr<Base>>> map_;
     std::list<std::shared_ptr<Base>> squads_; //sorted by priority
 
@@ -25,12 +30,19 @@ public:
     int MAX_Y;
 
     Terrain(const std::string& cfg_filename); //add
-
     void addSquad(Type id, Point); //called from summoner may be
     void live();
+
+    std::shared_ptr<Summoner> getSummonerFirst() {
+        int x = static_cast<int>(summoners_coords_.first.x);
+        int y = static_cast<int>(summoners_coords_.first.y);
+        return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
+    }
+
+    std::shared_ptr<Summoner> getSummonerSecond() {
+        int x = static_cast<int>(summoners_coords_.second.x);
+        int y = static_cast<int>(summoners_coords_.second.y);
+        return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
+    }
 };
-
-
-std::istream& operator>>(std::istream& is, Terrain& terrain);
-std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
 
