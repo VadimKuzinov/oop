@@ -44,6 +44,10 @@ public:
         summoned_id_ = id;
     }
 
+    Terrain* getTerrain() const {
+        return terrain_;
+    }
+
     void summon();
     void accumulateEnergy();
     void upgradeSchool();
