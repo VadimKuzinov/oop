@@ -2,9 +2,6 @@
 #include "Squads.h"
 
 
-template <Type
-
-
 template <typename T>
 concept Moving = requires(T sq) {
     sq.tryToMove();
