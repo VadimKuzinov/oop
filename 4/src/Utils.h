@@ -32,8 +32,3 @@ concept Healing = requires(T sq) {
     sq.tryToHeal();
 };
 
-template <typename T>
-concept Capturing = requires(T sq, std::shared_ptr<Base> captured) {
-    sq.setCaptured(captured);
-};
-

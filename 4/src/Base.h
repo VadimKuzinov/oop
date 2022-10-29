@@ -2,6 +2,7 @@
 #include "Type.h"
 #include "Point.h"
 
+
 class Terrain;
 
 class Base {
@@ -16,7 +17,8 @@ protected:
 
 public:
     Base(Terrain*, Point coords, Type = Obstacle_);
-    
+    virtual ~Base() = default;
+
     void setDefaults();
     virtual void receiveDamage(double);
 

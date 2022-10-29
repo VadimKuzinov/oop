@@ -21,6 +21,7 @@ protected:
 
 public:
     Summoner(Terrain* terrain, Point coords, Type = Summoner_);
+    ~Summoner() = default;
 
     void tryToAccumulate() {
         accumulating_ = true;

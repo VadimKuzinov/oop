@@ -1,7 +1,7 @@
 #include "MoralHealingSquad.h"
 
 
-MoralHealingSquad::MoralHealingSquad(Terrain* terrain, Point coords, Type id) : MoralSquad(terrain, coords, id) {
+MoralHealingSquad::MoralHealingSquad(Terrain* terrain, Point coords, Type id) : GeneralSquad(terrain, coords, id), MoralSquad(terrain, coords, id), GeneralHealingSquad(terrain, coords, id) {
 }
 
 void MoralHealingSquad::heal() {

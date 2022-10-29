@@ -36,13 +36,13 @@ public:
     std::shared_ptr<Summoner> getSummonerFirst() {
         int x = static_cast<int>(summoners_coords_.first.x);
         int y = static_cast<int>(summoners_coords_.first.y);
-        return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
+        return dynamic_pointer_cast<Summoner>(map_[y][x]);
     }
 
     std::shared_ptr<Summoner> getSummonerSecond() {
         int x = static_cast<int>(summoners_coords_.second.x);
         int y = static_cast<int>(summoners_coords_.second.y);
-        return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
+        return dynamic_pointer_cast<Summoner>(map_[y][x]);
     }
 };
 

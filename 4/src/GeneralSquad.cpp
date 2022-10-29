@@ -7,7 +7,7 @@ GeneralSquad::GeneralSquad(Terrain* terrain, Point coords, Type id) : Base(terra
 }
 
 void GeneralSquad::update() {
-    if (!captured_->isAlive()) {
+    if (captured_ && !captured_->isAlive()) {
         captured_ = nullptr;
     }
 

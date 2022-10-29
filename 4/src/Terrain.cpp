@@ -7,6 +7,8 @@
 #include "MoralHealingSquad.h"
 #include <algorithm>
 #include <memory>
+#include <chrono>
+#include <thread>
 
 
 Terrain::Terrain(const std::string& filename) {
@@ -15,10 +17,18 @@ Terrain::Terrain(const std::string& filename) {
 }
 
 void Terrain::live() {
+    using frames = std::chrono::duration<int64_t, std::ratio<1, 5>>; //5 fps
+    auto nextFrame = std::chrono::system_clock::now();
+    auto lastFrame = nextFrame - frames{1};
     while (true) {
+        std::cout << "frame\n";
         for (auto&& squad : squads_) {
             squad->act(); //squad acting depending on flags (moving_, attacking_ etc.) and using information (goal_point_)                     
         }
+
+        std::this_thread::sleep_until(nextFrame);
+        lastFrame = nextFrame;
+        nextFrame += frames{1};
     }
 }
 

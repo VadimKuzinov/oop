@@ -12,7 +12,7 @@ LIB=-L$(LIB_PATH)/ -l$(LIB_NAME) -Wl,-rpath,$(LIB_PATH)/
 all: run
 
 testTerrain: $(LIB_PATH)/lib$(LIB_NAME).a
-	$(CC) -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(LIB) $(STD)
+	$(CC) -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(LIB) $(STD) $(FLAGS)
 
 $(LIB_NAME):
 	$(CC) -fPIC -c $(SRC) $(STD) $(FLAGS)
