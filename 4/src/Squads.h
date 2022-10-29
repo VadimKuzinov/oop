@@ -1,5 +1,6 @@
 #pragma once
-#include "Base.h"
+#include "Entity.h"
+#include "Obstacle.h"
 #include "GeneralHealingSquad.h"
 #include "GeneralSquad.h"
 #include "MoralHealingSquad.h"

@@ -20,25 +20,25 @@ class Game {
 
 public:
     template <typename T>
-    static auto menu(std::shared_ptr<T> squad) {
-        std::vector<std::pair<void (*)(std::shared_ptr<Base>), const char*>> choices; 
+    static auto menu(T* squad) {
+        std::vector<std::pair<void (*)(Entity*), const char*>> choices; 
         if constexpr (Attacking<T>) {
-            choices.push_back(std::make_pair([](std::shared_ptr<Base> squad){ dynamic_pointer_cast<T>(squad)->tryToAttack(); }, "Attack"));
+            choices.push_back(std::make_pair([](Entity* squad){ dynamic_pointer_cast<T>(squad)->tryToAttack(); }, "Attack"));
         }
 		if constexpr (Moving<T>) {
-			choices.push_back(std::make_pair([](std::shared_ptr<Base> squad){ dynamic_pointer_cast<T>(squad)->tryToMove(); }, "Move"));
+			choices.push_back(std::make_pair([](Entity* squad){ dynamic_pointer_cast<T>(squad)->tryToMove(); }, "Move"));
 		}
 		if constexpr (Summoning<T>) {
-			choices.push_back(std::make_pair([](std::shared_ptr<Base> squad){ dynamic_pointer_cast<T>(squad)->tryToSummon(); }, "Summon"));
+			choices.push_back(std::make_pair([](Entity* squad){ dynamic_pointer_cast<T>(squad)->tryToSummon(); }, "Summon"));
 		}
 		if constexpr (Accumulating<T>) {
-			choices.push_back(std::make_pair([](std::shared_ptr<Base> squad){ dynamic_pointer_cast<T>(squad)->tryToAccumulate(); }, "Accumulate"));
+			choices.push_back(std::make_pair([](Entity* squad){ dynamic_pointer_cast<T>(squad)->tryToAccumulate(); }, "Accumulate"));
 		}
 		if constexpr (Upgrading<T>) {
-			choices.push_back(std::make_pair([](std::shared_ptr<Base> squad){ dynamic_pointer_cast<T>(squad)->tryToUpgrade(); }, "Upgrade"));
+			choices.push_back(std::make_pair([](Entity* squad){ dynamic_pointer_cast<T>(squad)->tryToUpgrade(); }, "Upgrade"));
 		}
 		if constexpr (Healing<T>) {
-			choices.push_back(std::make_pair([](std::shared_ptr<Base> squad){ dynamic_pointer_cast<T>(squad)->tryToHeal(); }, "Heal"));
+			choices.push_back(std::make_pair([](Entity* squad){ dynamic_pointer_cast<T>(squad)->tryToHeal(); }, "Heal"));
         }
 
         return choices;
@@ -47,7 +47,7 @@ public:
     Game(const std::string& filename) : 
                     terrain_(new Terrain(filename)), 
                     players_(std::make_pair<Player*, Player*>(new Player(terrain_->getSummonerFirst()), new Player(terrain_->getSummonerSecond()))) {
-        initializeSocket();                        
+//        initializeSocket();                        
     }
 
     Player* getFirstPlayer() const {

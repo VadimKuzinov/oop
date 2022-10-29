@@ -1,15 +1,17 @@
-#include "Base.h"
+#include "Obstacle.h"
 
 
-Base::Base(Terrain* terrain, Point coords, Type id) : id_(id), terrain_(terrain), coords_(coords) {
+Obstacle::Obstacle(Terrain* terrain, Point coords, Type id) : id_(id), terrain_(terrain), coords_(coords) {
     setDefaults();
 }
 
-void Base::receiveDamage(double value) {
+void Obstacle::receiveDamage(double value) {
+    std::cout << "OLD HP: " << cur_hp_ << '\n';
     cur_hp_ -= value;
+    std::cout << "NEW HP: " << cur_hp_ << '\n';
 }
 
-void Base::setDefaults() {
+void Obstacle::setDefaults() {
     switch (id_) {
         case Obstacle_:
             priority_ = Obstacle_Pr_;
@@ -44,7 +46,7 @@ void Base::setDefaults() {
     }
 }
 
-bool Base::isAlive() const {
+bool Obstacle::isAlive() const {
     return cur_hp_ > 0;
 }
 

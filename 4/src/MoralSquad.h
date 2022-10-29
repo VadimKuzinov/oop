@@ -11,6 +11,10 @@ protected:
 public:
     MoralSquad(Terrain*, Point coords, Type = Moral_);
     virtual ~MoralSquad() = default;
+   
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
+        return Game::menu(this);
+    }
 
     void stabilizeMorality();
 

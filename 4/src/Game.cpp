@@ -54,7 +54,7 @@ void Game::catchClicks() {
             std::cout << "Not nullptr!" << std::endl;
             auto menu_v = menu(active);
             if (active->getId() == Obstacle_)
-                menu_v = menu(std::dynamic_pointer_cast<Base>(active));
+                menu_v = menu(std::dynamic_pointer_cast<Obstacle>(active));
             else if (active->getId() ==  General_)
                 menu_v = menu(std::dynamic_pointer_cast<GeneralSquad>(active));
             else if (active->getId() ==  Moral_)
@@ -75,8 +75,14 @@ void Game::catchClicks() {
 }   
 
 void Game::run() {
-    std::thread thr1(&Game::catchClicks, this);
-    thr1.join();
-    terrain_->live();    
+   // std::thread thr1(&Terrain::live, terrain_);
+//  terrain_->live();    
+//    std::thread thr2(&Game::catchClicks, this);
+
+    //thr1.join();
+  //  thr2.join();
+  //
+    std::cout << "Game is running\n";
+    terrain_->live();
 }   
 

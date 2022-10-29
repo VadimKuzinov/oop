@@ -7,7 +7,7 @@
 class Player {
     std::shared_ptr<Summoner> summoner_;
     Terrain* terrain_;
-    std::shared_ptr<Base> active_ = nullptr;
+    std::shared_ptr<Entity> active_ = nullptr;
 
 public:
     Player(const std::shared_ptr<Summoner>& summoner) : summoner_(summoner), terrain_(summoner->getTerrain()) {
@@ -29,7 +29,7 @@ public:
         }
     }
 
-    std::shared_ptr<Base> getActive() const {
+    std::shared_ptr<Entity> getActive() const {
         return active_;
     }
 
@@ -45,6 +45,10 @@ public:
             }
             casted->setTargetCoords(where);
         }
+    }
+
+    std::shared_ptr<Summoner> getSummoner() const {
+        return summoner_;
     }
     //class Game{ ... some method() {player1->setActive()}....}  
 };

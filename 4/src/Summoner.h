@@ -1,12 +1,12 @@
 #pragma once
 #include "Terrain.h"
 #include "Type.h"
-#include "Base.h"
+#include "Entity.h"
 #include "IActive.h"
 #include <memory>
 
 
-class Summoner: public Base, public IActive {
+class Summoner: public Obstacle, public IActive {
 protected:
     double summon_range_ = Summoner_Summon_Range_;
     double max_energy_ = Summoner_Energy_;
@@ -22,6 +22,11 @@ protected:
 public:
     Summoner(Terrain* terrain, Point coords, Type = Summoner_);
     ~Summoner() = default;
+  
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
+        auto choices = Obstacle::getMenu();
+        choices.push_back([](Entity* squad){ 
+    }
 
     void tryToAccumulate() {
         accumulating_ = true;

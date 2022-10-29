@@ -1,7 +1,7 @@
 #include "Summoner.h"
 
 
-Summoner::Summoner(Terrain* terrain, Point coords, Type id) : Base(terrain, coords, id) {
+Summoner::Summoner(Terrain* terrain, Point coords, Type id) : Obstacle(terrain, coords, id) {
 }
 
 void Summoner::accumulateEnergy() {

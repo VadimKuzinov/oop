@@ -1,13 +1,14 @@
 #pragma once
+#include "Utils.h"
 #include "Type.h"
-#include "Base.h"
+#include "Obstacle.h"
 #include "Point.h"
 #include "IActive.h"
 #include "Summoner.h"
 #include <memory>
 
 
-class GeneralSquad : public Base, public IActive {
+class GeneralSquad : public Obstacle, public IActive {
 protected:
     double damage_;
     double velocity_;
@@ -20,7 +21,7 @@ protected:
 
     std::shared_ptr<Summoner> summoner_ = nullptr;
 
-    std::shared_ptr<Base> captured_ = nullptr;
+    std::shared_ptr<Entity> captured_ = nullptr;
     Point target_coords_;
 
 public:
@@ -39,8 +40,12 @@ public:
         attacking_ = true;
     }
 
-    void setCaptured(std::shared_ptr<Base> captured) {
+    void setCaptured(std::shared_ptr<Obstacle> captured) {
         captured_ = captured;
+    }   
+
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
+        return Game::menu(this);
     }   
 
     void setTargetCoords(Point target_coords) {

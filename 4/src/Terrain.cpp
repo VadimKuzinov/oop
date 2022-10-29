@@ -17,12 +17,17 @@ Terrain::Terrain(const std::string& filename) {
 }
 
 void Terrain::live() {
-    using frames = std::chrono::duration<int64_t, std::ratio<1, 5>>; //5 fps
+    using frames = std::chrono::duration<int64_t, std::ratio<1, 1>>; //1 fps
     auto nextFrame = std::chrono::system_clock::now();
     auto lastFrame = nextFrame - frames{1};
-    while (true) {
+    auto summoner1 = getSummonerFirst();
+    auto summoner2 = getSummonerSecond();
+    while (summoner1->isAlive() && summoner2->isAlive()) {
+        std::cout << "s1 hp: " << summoner1->getCurHp() << '\n';
+        std::cout << "s2 hp: " << summoner2->getCurHp() << '\n';
         std::cout << "frame\n";
         for (auto&& squad : squads_) {
+            std::cout << "Prior: " << squad->getPriority() << '\n';
             squad->act(); //squad acting depending on flags (moving_, attacking_ etc.) and using information (goal_point_)                     
         }
 
@@ -33,10 +38,10 @@ void Terrain::live() {
 }
 
 void Terrain::addSquad(Type id, Point where) {
-    Base* new_squad;
+    Entity* new_squad;
     switch (id) {
         case Obstacle_:
-            new_squad = new Base(this, where);
+            new_squad = new Obstacle(this, where);
             break;
         case General_:
             new_squad = new GeneralSquad(this, where);
@@ -55,10 +60,10 @@ void Terrain::addSquad(Type id, Point where) {
             break;
     }
 
-    map_[where.y][where.x] = std::shared_ptr<Base>(new_squad);
+    map_[where.y][where.x] = std::shared_ptr<Entity>(new_squad);
 
     auto it_low = std::lower_bound(squads_.begin(), squads_.end(), new_squad->getPriority(),
-            [](std::shared_ptr<Base> squad, int priority) { 
+            [](std::shared_ptr<Entity> squad, int priority) { 
                 return squad->getPriority() < priority;
             });
 
@@ -71,7 +76,7 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     terrain.MAX_X = limits.x;
     terrain.MAX_Y = limits.y;
 
-    terrain.map_.assign(terrain.MAX_Y, std::vector<std::shared_ptr<Base>>(terrain.MAX_X));
+    terrain.map_.assign(terrain.MAX_Y, std::vector<std::shared_ptr<Entity>>(terrain.MAX_X));
 
     Point p1;
     Point p2;

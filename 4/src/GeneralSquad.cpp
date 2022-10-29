@@ -3,7 +3,7 @@
 #include "Point.h"
 
 
-GeneralSquad::GeneralSquad(Terrain* terrain, Point coords, Type id) : Base(terrain, coords, id) {
+GeneralSquad::GeneralSquad(Terrain* terrain, Point coords, Type id) : Obstacle(terrain, coords, id) {
 }
 
 void GeneralSquad::update() {

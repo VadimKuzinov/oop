@@ -10,7 +10,7 @@
 
 class Terrain;
 class Summoner;
-class Base;
+class Entity;
 
 std::istream& operator>>(std::istream& is, Terrain& terrain);
 std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
@@ -19,8 +19,8 @@ std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
 class Terrain {
 public:
     std::pair<Point, Point> summoners_coords_;
-    std::vector<std::vector<std::shared_ptr<Base>>> map_;
-    std::list<std::shared_ptr<Base>> squads_; //sorted by priority
+    std::vector<std::vector<std::shared_ptr<Entity>>> map_;
+    std::list<std::shared_ptr<Entity>> squads_; //sorted by priority
 
     friend std::istream& operator>>(std::istream& is, Terrain& terrain);
     friend std::ostream& operator<<(std::ostream& os, const Terrain& terrain);

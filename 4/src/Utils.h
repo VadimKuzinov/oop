@@ -1,5 +1,7 @@
 #pragma once
 #include "Squads.h"
+#include "Entity.h"
+#include <vector>
 
 
 template <typename T>
@@ -31,4 +33,3 @@ template <typename T>
 concept Healing = requires(T sq) {
     sq.tryToHeal();
 };
-
