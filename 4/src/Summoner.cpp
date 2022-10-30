@@ -9,11 +9,15 @@ void Summoner::accumulateEnergy() {
 }
 
 void Summoner::summon() {
+    std::cout << "TRYING TO SUMMON: " << summoned_id_ << '\n';
     if (summoned_id_ == Obstacle_) {
         return;
-   }
+    }
+
+    std::cout << "Target coords: " << target_coords_ << '\n';
 
     auto distance = Point::distance(coords_, target_coords_);
+    std::cout << "Distance : " << distance << '\n';
     if (distance > summon_range_) {
         return;
     }
@@ -37,11 +41,13 @@ void Summoner::act() {
 
     if (summoning_) {
         summon();
+        summoning_ = false;
         return;
     }
 
     if (upgrading_) {
         upgradeSchool();
+        upgrading_ = false;
         return;
     }
 }

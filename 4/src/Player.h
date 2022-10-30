@@ -36,11 +36,11 @@ public:
         if (active_ == nullptr) {
             setActive(where);
         }
-        else if (active_ == terrain_->map[where.y][where.x]) {
+        else if (active_ == terrain_->map_[where.y][where.x]) {
             active_ = nullptr;
         }
         else {
-            auto casted = std::dynamic_pointer_cast<Summoner>(active_);
+            auto casted = std::dynamic_pointer_cast<Obstacle>(active_);
             casted->setTargetCoords(where);
         }
     }

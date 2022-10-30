@@ -3,6 +3,8 @@
 #include <SDL2/SDL_ttf.h>
 #include "../src/Game.h"
 #include "MenuWindow.h"
+#include "SummonerWindow.h"
+#include <memory>
 
 
 class Application {
@@ -12,14 +14,17 @@ private:
     int scale_factor_ = 25;
     int MAX_X_;
     int MAX_Y_;
-    int MENU_W_ = 100;
+    int MENU_W_ = 150;
 
     SDL_Window* window_;
     SDL_Renderer* renderer_;
     SDL_Event event_;
     MenuWindow* menu_window_;
+    SummonerWindow* summoner_window_;
 
     void draw();
+    void drawCircle(int, int, int);
+    void drawSquad(std::shared_ptr<Entity>);
 
 public:
     void renderCoords(int*, int*);

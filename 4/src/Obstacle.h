@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include "Type.h"
 #include "Point.h"
+#include <memory>
 
 
 class Terrain;
@@ -16,10 +17,22 @@ protected:
     double max_hp_ = Obstacle_Mhp_;
     double cur_hp_ = max_hp_;
     int priority_ = Obstacle_Pr_;
+    
+    std::shared_ptr<Entity> captured_ = nullptr;
+    Point target_coords_;
 
 public:
     Obstacle(Terrain*, Point coords, Type = Obstacle_);
     virtual ~Obstacle() = default;
+
+    void setCaptured(std::shared_ptr<Entity> captured) {
+        captured_ = captured;
+    }
+    
+    void setTargetCoords(Point target_coords) {
+        std::cout << "Setting target coords: " << target_coords << '\n';
+        target_coords_ = target_coords;
+    }
 
     void setDefaults();
     void receiveDamage(double) override;

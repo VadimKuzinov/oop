@@ -3,26 +3,25 @@
 #include "Type.h"
 #include "Obstacle.h"
 #include "Point.h"
-#include "IActive.h"
 #include "Summoner.h"
 #include <memory>
 
 
-class GeneralSquad : public Obstacle, public IActive {
+class GeneralSquad : public Obstacle {
 protected:
-    double damage_;
-    double velocity_;
-    int quantity_;
-    double xp_for_destroying_;
-    double attack_range_;
+    double damage_ = 4;
+    double velocity_ = 0.6;
+    int quantity_ = 1;
+    double xp_for_destroying_ = 3;
+    double attack_range_ = 2;
 
     bool moving_ = false;
     bool attacking_ = false;
 
     std::shared_ptr<Summoner> summoner_ = nullptr;
 
-    std::shared_ptr<Entity> captured_ = nullptr;
-    Point target_coords_;
+//    std::shared_ptr<Entity> captured_ = nullptr;
+//    Point target_coords_;
 
 public:
     GeneralSquad(Terrain*, Point coords, Type = General_);
@@ -40,13 +39,13 @@ public:
         attacking_ = true;
     }
 
-    void setCaptured(std::shared_ptr<Obstacle> captured) {
-        captured_ = captured;
-    }   
+  //  void setCaptured(std::shared_ptr<Obstacle> captured) {
+  //      captured_ = captured;
+  // }   
 
     std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
-    void setTargetCoords(Point target_coords) {
+   /* void setTargetCoords(Point target_coords) {
         std::cout << "Trying to set target coords for " << id_ << std::endl;
         std::cout << target_coords << std::endl;
         auto int_p = Point::withIntCfs(target_coords);
@@ -60,7 +59,7 @@ public:
             captured_ = cell;
         }
         std::cout << "captured is set" << std::endl;
-    }   
+    }*/   
 
     void act() override;
     virtual void update();

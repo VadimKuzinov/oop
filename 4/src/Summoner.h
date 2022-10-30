@@ -1,12 +1,11 @@
 #pragma once
 #include "Terrain.h"
 #include "Type.h"
-#include "Entity.h"
-#include "IActive.h"
+#include "Obstacle.h"
 #include <memory>
 
 
-class Summoner: public Obstacle, public IActive {
+class Summoner: public Obstacle {
 protected:
     double summon_range_ = Summoner_Summon_Range_;
     double max_energy_ = Summoner_Energy_;
@@ -42,6 +41,7 @@ public:
     }
 
     void setSummonedId(Type id) {
+        std::cout << "ID that taken: " << id << '\n';
         summoned_id_ = id;
     }
 
@@ -56,4 +56,6 @@ public:
     void upgradeSchool();
     void act() override;
 };
+
+
 

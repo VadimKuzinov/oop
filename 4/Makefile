@@ -16,7 +16,7 @@ testTerrain: $(LIB_PATH)/lib$(LIB_NAME).a
 	$(CC) -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(LIB) $(STD) $(FLAGS)
 
 main: $(LIB_PATH)/lib$(LIB_NAME).a
-	$(CC) -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(CUR_DIR)/game/Application.cpp $(CUR_DIR)/game/MenuWindow.cpp $(LIB) -lSDL2main -lSDL2_ttf -lSDL2 $(STD) $(FLAGS)
+	$(CC) -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(wildcard game/*.cpp) $(LIB) -lSDL2main -lSDL2_ttf -lSDL2 $(STD) $(FLAGS)
 
 lib$(LIB_NAME).a: $(SRC)
 	$(CC) -fPIC -c $(SRC) $(STD) $(FLAGS)
