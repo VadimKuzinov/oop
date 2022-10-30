@@ -46,3 +46,11 @@ void Summoner::act() {
     }
 }
 
+std::vector<std::pair<void (*)(Entity*), const char*>> Summoner::getMenu() const {
+    auto choices = Obstacle::getMenu();
+    choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToAccumulate(); }, "Accumulate"});
+    choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToSummon(); }, "Summon"});
+    choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToUpgrade(); }, "Upgrade"});
+    return choices;
+}
+ 

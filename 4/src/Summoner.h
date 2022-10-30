@@ -23,11 +23,6 @@ public:
     Summoner(Terrain* terrain, Point coords, Type = Summoner_);
     ~Summoner() = default;
   
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
-        auto choices = Obstacle::getMenu();
-        choices.push_back([](Entity* squad){ 
-    }
-
     void tryToAccumulate() {
         accumulating_ = true;
         summoning_ = false;
@@ -54,6 +49,8 @@ public:
         return terrain_;
     }
 
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
+ 
     void summon();
     void accumulateEnergy();
     void upgradeSchool();

@@ -16,9 +16,7 @@ public:
         healing_ = true;
     }
   
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
-        return Game::menu(this);
-    }
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
     virtual void heal();
     void act() override;

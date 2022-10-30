@@ -28,3 +28,8 @@ void MoralHealingSquad::act() {
     }
 }
 
+std::vector<std::pair<void (*)(Entity*), const char*>> MoralHealingSquad::getMenu() const {
+    auto choices = GeneralHealingSquad::getMenu();
+    return choices;
+}
+

@@ -14,12 +14,6 @@ public:
     }
 
     void setActive(Point where) {
-        std::cout << where << std::endl;
-        if (where.y >= terrain_->MAX_Y || where.x >= terrain_->MAX_X) {
-            std::cout << "Out of range of the map" << std::endl;
-            return;
-        }
-
         active_ = terrain_->map_[where.y][where.x];
         if (active_ == nullptr) {
             std::cout << "Set to nullptr" << std::endl;
@@ -34,15 +28,19 @@ public:
     }
 
     void catchClick(Point where) {
-        if (active_ == nullptr || active_->getId() == Obstacle_) {
+        if (where.y >= terrain_->MAX_Y || where.x >= terrain_->MAX_X) {
+            std::cout << "Out of range of the map" << '\n';
+            return;
+        }
+    
+        if (active_ == nullptr) {
             setActive(where);
         }
-        else if (active_->getId() != Obstacle_) {
+        else if (active_ == terrain_->map[where.y][where.x]) {
+            active_ = nullptr;
+        }
+        else {
             auto casted = std::dynamic_pointer_cast<Summoner>(active_);
-            if (casted == nullptr) {
-                std::cout << "dynamic_casted to nullptr???" << std::endl;
-                return;
-            }
             casted->setTargetCoords(where);
         }
     }

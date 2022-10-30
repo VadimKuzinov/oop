@@ -2,7 +2,7 @@
 #include "Type.h"
 #include "Point.h"
 #include <vector>
-#include <memory>
+
 
 class Entity {
 public:
@@ -13,6 +13,7 @@ public:
     virtual void act() = 0;
     virtual void receiveDamage(double) = 0;
     virtual std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const = 0;
+    virtual void killMySelf() = 0;
     virtual ~Entity() = default;
 };
 

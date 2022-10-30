@@ -1,6 +1,4 @@
 #pragma once
-#include "Squads.h"
-#include "Entity.h"
 #include <vector>
 
 

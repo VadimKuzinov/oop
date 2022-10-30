@@ -9,8 +9,12 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
     MAX_X_ = scale_factor_ * terrain->MAX_X;
     MAX_Y_ = scale_factor_ * terrain->MAX_Y;
 
+    //menu in the right side of the map
+
+
+
     SDL_Init(SDL_INIT_EVERYTHING);
-    window_ = SDL_CreateWindow("sss", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, MAX_X_, MAX_Y_, SDL_WINDOW_SHOWN);
+    window_ = SDL_CreateWindow("sss", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, MAX_X_ + MENU_W_, MAX_Y_, SDL_WINDOW_SHOWN);
     renderer_ = SDL_CreateRenderer(window_, -1, 0);
 
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
@@ -18,11 +22,8 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
 }
 
 Application::~Application() {
-    std::cout << "trying to destroy window...\n";
     SDL_DestroyWindow(window_);
-    std::cout << "destroyed!\n";
     SDL_Quit();
-    std::cout << "quitted\n";
 }
 
 void Application::renderCoords(int* x, int* y) {
@@ -37,6 +38,10 @@ void Application::flipYInCoords(int* x, int* y) {
 }
 
 void Application::draw() {
+    MenuWindow menu_window_(MAX_X_, 0, MENU_W_, MAX_Y_, renderer_, player_->getActive());
+    menu_window_.draw();
+
+    //drawing map
     int x, y;
     int r, g, b;
     for (std::size_t y0 = 0; y0 < MAX_Y_ / scale_factor_; ++y0) {
@@ -95,7 +100,8 @@ void Application::draw() {
 
     SDL_RenderPresent(renderer_);
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
-    SDL_RenderClear(renderer_); 
+    SDL_RenderClear(renderer_);
+    TTF_Quit(); 
 }
 
 void Application::loop() {
@@ -103,28 +109,22 @@ void Application::loop() {
     bool running = true;
     std::shared_ptr<Summoner> s = nullptr;
     SDL_Window* popup = nullptr;
-    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> menu;
+    std::vector<std::pair<void (*)(Entity*), const char*>> menu;
     std::shared_ptr<Entity> active;
     while (running) {
         std::cout << "Loop iter\n";
         while (SDL_PollEvent(&event_)) {
             switch (event_.type) {
                 case SDL_QUIT:
-                    std::cout << "SDLQUIT SITUATION\n";
                     running = false;
                     s = player_->getSummoner();
-                    std::cout << "Summoner coords: " << s->getCoords() << '\n';
-                    std::cout << "Summoner hp: " << s->getCurHp() << '\n';
-                    s->receiveDamage(100000);
-                    std::cout << "Summoner hp: " << s->getCurHp() << '\n';
+                    s->killMySelf();
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                     SDL_GetMouseState(&x, &y);
-                    std::cout << "Mouse state: " << x << ' ' << y << '\n';
                     renderCoords(&x, &y);
-                    std::cout << "After rendering: " << x << ' ' << y << '\n';
                     flipYInCoords(&x, &y);
-                    std::cout << "After flipping: " << x << ' ' << y << '\n';
+                    std::cout << "After correcting: " << x << ' ' << y << '\n';
                     player_->catchClick(Point{x, y});
                     break;
                 case SDL_KEYDOWN:
@@ -148,5 +148,4 @@ void Application::loop() {
         SDL_Delay(1000);
     }
 }
-
 

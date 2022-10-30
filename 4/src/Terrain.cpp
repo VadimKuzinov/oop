@@ -27,7 +27,7 @@ void Terrain::live() {
         std::cout << "s2 hp: " << summoner2->getCurHp() << '\n';
         std::cout << "frame\n";
         for (auto&& squad : squads_) {
-            std::cout << "Prior: " << squad->getPriority() << '\n';
+//          std::cout << "Prior: " << squad->getPriority() << '\n';
             squad->act(); //squad acting depending on flags (moving_, attacking_ etc.) and using information (goal_point_)                     
         }
 

@@ -50,3 +50,7 @@ bool Obstacle::isAlive() const {
     return cur_hp_ > 0;
 }
 
+std::vector<std::pair<void (*)(Entity*), const char*>> Obstacle::getMenu() const {
+    return {};
+}
+

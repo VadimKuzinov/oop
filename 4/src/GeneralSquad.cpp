@@ -55,3 +55,11 @@ void GeneralSquad::act() {
     }
 }
 
+std::vector<std::pair<void (*)(Entity*), const char*>> GeneralSquad::getMenu() const {
+    auto choices = Obstacle::getMenu();
+    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToMove(); }, "Move"});
+    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToMove(); }, "Attack"});
+    return choices;
+}   
+
+ 

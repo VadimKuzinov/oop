@@ -24,9 +24,7 @@ public:
     void setDefaults();
     void receiveDamage(double) override;
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
-        return {};
-    }
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
     void act() override {
     }
@@ -47,5 +45,9 @@ public:
 
     double getCurHp() const {
         return cur_hp_;
+    }
+
+    void killMySelf() override {
+        cur_hp_ = 0;
     }
 };

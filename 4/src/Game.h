@@ -19,7 +19,7 @@ class Game {
     void initializeSocket();
 
 public:
-    template <typename T>
+/*    template <typename T>
     static auto menu(T* squad) {
         std::vector<std::pair<void (*)(Entity*), const char*>> choices; 
         if constexpr (Attacking<T>) {
@@ -43,7 +43,7 @@ public:
 
         return choices;
     }
-
+*/
     Game(const std::string& filename) : 
                     terrain_(new Terrain(filename)), 
                     players_(std::make_pair<Player*, Player*>(new Player(terrain_->getSummonerFirst()), new Player(terrain_->getSummonerSecond()))) {

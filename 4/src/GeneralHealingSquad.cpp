@@ -27,4 +27,10 @@ void GeneralHealingSquad::act() {
         heal();
     }
 }
+  
+std::vector<std::pair<void (*)(Entity*), const char*>> GeneralHealingSquad::getMenu() const {
+    auto choices = GeneralSquad::getMenu();
+    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralHealingSquad*>(e)->tryToHeal(); }, "Heal"});
+    return choices;
+}
 

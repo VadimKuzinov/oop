@@ -9,10 +9,7 @@ public:
     MoralHealingSquad(Terrain*, Point coords, Type = MoralHealing_);
     virtual ~MoralHealingSquad() = default;
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
-        return Game::menu(this);
-    }
-
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
     void act() override;
     void heal() override;

@@ -44,9 +44,7 @@ public:
         captured_ = captured;
     }   
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override {
-        return Game::menu(this);
-    }   
+    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
     void setTargetCoords(Point target_coords) {
         std::cout << "Trying to set target coords for " << id_ << std::endl;
