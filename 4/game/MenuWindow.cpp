@@ -7,12 +7,9 @@ MenuWindow::MenuWindow(int x, int y, int w, int h, SDL_Renderer* renderer, std::
                                                                                                         renderer_(renderer),
                                                                                                         summoner_(summoner)
 {
-//    TTF_Init();
-//    const char* font_path = "JustSquash.ttf";
-//    font_ = TTF_OpenFont(font_path, 23);
-//    if (!font_) {
-//        std::cout << "FONT IN CON IS NULL\n";
-//    }    
+    TTF_Init();
+    const char* font_path = "JustSquash.ttf";
+    font_ = TTF_OpenFont(font_path, 23);
 }
 
 MenuWindow::~MenuWindow() {
@@ -65,11 +62,13 @@ void MenuWindow::draw() {
     //arrange font stuff
     
     TTF_Init();
+/*
     const char* font_path = "JustSquash.ttf";//
     SDL_Color textColor = {0, 0, 0, 255};
     TTF_Font* font = TTF_OpenFont(font_path, 23);//
-
+*/
     //qty options
+    SDL_Color textColor = {0, 0, 0, 255};
     SDL_Rect rect;
     rect.w = w_;
     rect.h = ch_h_;
@@ -79,7 +78,7 @@ void MenuWindow::draw() {
      
     for (int it = 0; it < qty; ++it) {
     //    std::cout << "FONT_: " << font_ << '\n';
-        SDL_Surface* surface = TTF_RenderText_Solid(font, std::get<1>(choices_[it]), textColor);
+        SDL_Surface* surface = TTF_RenderText_Solid(font_, std::get<1>(choices_[it]), textColor);
         if (surface == nullptr) {
             std::cout << "SURFACE IS NULLPTR!!!\n";
 //            return;
@@ -94,8 +93,8 @@ void MenuWindow::draw() {
         SDL_RenderCopy(renderer_, texture, NULL, &rect);
         SDL_RenderDrawLine(renderer_, x_, rect.y, x_ + w_, rect.y);
     }
-    TTF_CloseFont(font);
-    TTF_Quit();
+   // TTF_CloseFont(font);
+  //  TTF_Quit();
 }
 
 void MenuWindow::catchClick(int y) { 

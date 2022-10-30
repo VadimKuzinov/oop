@@ -12,6 +12,7 @@ class SummonerWindow {
     int w_;
     int h_;
 
+    TTF_Font* font_;
     SDL_Renderer* renderer_;
     std::shared_ptr<Summoner> summoner_;
     std::vector<SDL_Texture*> textures_;

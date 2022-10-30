@@ -16,7 +16,7 @@ private:
     
     SDL_Renderer* renderer_;
     
-//    TTF_Font* font_;
+    TTF_Font* font_;
 
     std::shared_ptr<Summoner> summoner_;
     std::shared_ptr<Entity> active_;

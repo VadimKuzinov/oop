@@ -123,6 +123,7 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     SDL_RenderFillRect(renderer_, &rect);
 
     if (player_->getActive() == e) {
+        std::cout << "PLAYER: " << player_ << '\n';
         drawCircle(x, y, scale_factor_ * 1.4);
     }
 

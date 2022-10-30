@@ -6,7 +6,10 @@ SummonerWindow::SummonerWindow(int x, int y, int w, int h, SDL_Renderer* rendere
                                                                                                         x_(x), y_(y), w_(w), h_(h), 
                                                                                                         renderer_(renderer),
                                                                                                         summoner_(summoner)
-{
+{    
+    TTF_Init();
+    const char* font_path = "JustSquash.ttf";
+    font_ = TTF_OpenFont(font_path, 23);
 }
 
 SummonerWindow::~SummonerWindow() {
@@ -16,15 +19,12 @@ SummonerWindow::~SummonerWindow() {
 }
 
 void SummonerWindow::draw() {
+    
     SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 255);
     SDL_RenderDrawLine(renderer_, x_, y_, x_ + w_, y_);
     SDL_RenderDrawLine(renderer_, x_, y_, x_, y_ + h_);
     
-    TTF_Init();
-    const char* font_path = "JustSquash.ttf";
     SDL_Color textColor = {0, 0, 0, 255};
-    TTF_Font* font = TTF_OpenFont(font_path, 23);
-
     std::string hp_info; 
 
     SDL_Rect rect;
