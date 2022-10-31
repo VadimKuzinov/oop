@@ -1,0 +1,156 @@
+\hypertarget{classEntity}{}\doxysection{Entity Class Reference}
+\label{classEntity}\index{Entity@{Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+
+
+Inheritance diagram for Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEntity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEntity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{classEntity_a3281c194f0f968741e80b311d57be7b8}{get\+Id}} () const =0
+\item 
+virtual \mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{classEntity_affff2db5822b044edcd36a15aa777b5e}{get\+Coords}} () const =0
+\item 
+virtual int \mbox{\hyperlink{classEntity_a5bcbcdb082bbb1cf2693d1308d0c48c5}{get\+Priority}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classEntity_a56002c792a216fedc78f5aa2bce75161}{is\+Alive}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classEntity_ad69ce9ad1123a7cb30c142c7ec45e387}{act}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classEntity_ab37147920ef7534ea188452a5cf0deec}{receive\+Damage}} (double)=0
+\item 
+virtual std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classEntity_ae710fa33b9de440d8532bc1d0bb2b963}{get\+Menu}} () const =0
+\item 
+virtual void \mbox{\hyperlink{classEntity_abe386549463d98d4225ba02b3c949784}{kill\+My\+Self}} ()=0
+\item 
+virtual std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classEntity_a9eae1970289e40192828e1c64f596fd7}{serialize}} () const =0
+\item 
+virtual \mbox{\hyperlink{classEntity_ac479d009ddde62dfb378ca0a70d81307}{$\sim$\+Entity}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEntity_ac479d009ddde62dfb378ca0a70d81307}\label{classEntity_ac479d009ddde62dfb378ca0a70d81307}} 
+\index{Entity@{Entity}!````~Entity@{$\sim$Entity}}
+\index{````~Entity@{$\sim$Entity}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{$\sim$Entity()}{~Entity()}}
+{\footnotesize\ttfamily virtual Entity\+::$\sim$\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEntity_ad69ce9ad1123a7cb30c142c7ec45e387}\label{classEntity_ad69ce9ad1123a7cb30c142c7ec45e387}} 
+\index{Entity@{Entity}!act@{act}}
+\index{act@{act}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{act()}{act()}}
+{\footnotesize\ttfamily virtual void Entity\+::act (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGeneralHealingSquad_a59ab858c0da159fd0ef9635cb39e9635}{General\+Healing\+Squad}}, \mbox{\hyperlink{classGeneralSquad_a5e826000139cc86181545f0051a2bdf1}{General\+Squad}}, \mbox{\hyperlink{classMoralHealingSquad_a6182aacf94380eab0bc9c11ee9779319}{Moral\+Healing\+Squad}}, \mbox{\hyperlink{classMoralSquad_ae9ff7c99cf940a68fac43a5a9c68f121}{Moral\+Squad}}, \mbox{\hyperlink{classObstacle_a3be68686c3c9d4e82def8dbf38ac1eaf}{Obstacle}}, and \mbox{\hyperlink{classSummoner_a9f230646ba11cb765d014889afed55a4}{Summoner}}.
+
+\mbox{\Hypertarget{classEntity_affff2db5822b044edcd36a15aa777b5e}\label{classEntity_affff2db5822b044edcd36a15aa777b5e}} 
+\index{Entity@{Entity}!getCoords@{getCoords}}
+\index{getCoords@{getCoords}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getCoords()}{getCoords()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structPoint}{Point}} Entity\+::get\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_a488d92d04aa14a36c650ec33531c8ec5}{Obstacle}}.
+
+\mbox{\Hypertarget{classEntity_a3281c194f0f968741e80b311d57be7b8}\label{classEntity_a3281c194f0f968741e80b311d57be7b8}} 
+\index{Entity@{Entity}!getId@{getId}}
+\index{getId@{getId}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} Entity\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_afbc63409fc69821b0bafde6d55f4babb}{Obstacle}}.
+
+\mbox{\Hypertarget{classEntity_ae710fa33b9de440d8532bc1d0bb2b963}\label{classEntity_ae710fa33b9de440d8532bc1d0bb2b963}} 
+\index{Entity@{Entity}!getMenu@{getMenu}}
+\index{getMenu@{getMenu}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Entity\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGeneralHealingSquad_abc7f5856fe749151d0fe4e00823ec785}{General\+Healing\+Squad}}, \mbox{\hyperlink{classGeneralSquad_af342bccc032db47fb00ce76c8649e8ca}{General\+Squad}}, \mbox{\hyperlink{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}{Moral\+Healing\+Squad}}, \mbox{\hyperlink{classMoralSquad_a00bdfdb81a0840b35686168d97c9d53f}{Moral\+Squad}}, \mbox{\hyperlink{classObstacle_aeae0c019baf07c628d32d6b04415f372}{Obstacle}}, and \mbox{\hyperlink{classSummoner_a700a8790f706117719f7fc8f353a7aa5}{Summoner}}.
+
+\mbox{\Hypertarget{classEntity_a5bcbcdb082bbb1cf2693d1308d0c48c5}\label{classEntity_a5bcbcdb082bbb1cf2693d1308d0c48c5}} 
+\index{Entity@{Entity}!getPriority@{getPriority}}
+\index{getPriority@{getPriority}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{getPriority()}{getPriority()}}
+{\footnotesize\ttfamily virtual int Entity\+::get\+Priority (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_ac3a68ebf32fa3c16e319d55a77ceaf4f}{Obstacle}}.
+
+\mbox{\Hypertarget{classEntity_a56002c792a216fedc78f5aa2bce75161}\label{classEntity_a56002c792a216fedc78f5aa2bce75161}} 
+\index{Entity@{Entity}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily virtual bool Entity\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_a2ac21dd14b863e139d33a1a2e0ea7bda}{Obstacle}}.
+
+\mbox{\Hypertarget{classEntity_abe386549463d98d4225ba02b3c949784}\label{classEntity_abe386549463d98d4225ba02b3c949784}} 
+\index{Entity@{Entity}!killMySelf@{killMySelf}}
+\index{killMySelf@{killMySelf}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{killMySelf()}{killMySelf()}}
+{\footnotesize\ttfamily virtual void Entity\+::kill\+My\+Self (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_a7d51afb55f3bb9da87ba374062fd6804}{Obstacle}}.
+
+\mbox{\Hypertarget{classEntity_ab37147920ef7534ea188452a5cf0deec}\label{classEntity_ab37147920ef7534ea188452a5cf0deec}} 
+\index{Entity@{Entity}!receiveDamage@{receiveDamage}}
+\index{receiveDamage@{receiveDamage}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{receiveDamage()}{receiveDamage()}}
+{\footnotesize\ttfamily virtual void Entity\+::receive\+Damage (\begin{DoxyParamCaption}\item[{double}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classObstacle_a2c66e7be50580c57ba95df7c9e68f246}{Obstacle}}.
+
+\mbox{\Hypertarget{classEntity_a9eae1970289e40192828e1c64f596fd7}\label{classEntity_a9eae1970289e40192828e1c64f596fd7}} 
+\index{Entity@{Entity}!serialize@{serialize}}
+\index{serialize@{serialize}!Entity@{Entity}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ Entity\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classGeneralHealingSquad_a413ba1c881b666447d1a1dc1b5f48a0d}{General\+Healing\+Squad}}, \mbox{\hyperlink{classGeneralSquad_a3142e6a4d4baa63384208f03e6c8f06c}{General\+Squad}}, \mbox{\hyperlink{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57}{Moral\+Healing\+Squad}}, \mbox{\hyperlink{classMoralSquad_a43c3aaa0093022aeb0690cbce204aa0c}{Moral\+Squad}}, \mbox{\hyperlink{classObstacle_a30b61324898ee3a68b30fecc9e9401b6}{Obstacle}}, and \mbox{\hyperlink{classSummoner_ad92fd2d728ce30614afa85b3be5de48f}{Summoner}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{Entity_8h}{Entity.\+h}}\end{DoxyCompactItemize}

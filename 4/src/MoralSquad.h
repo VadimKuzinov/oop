@@ -19,6 +19,7 @@ public:
     void act() override;
     void update() override;
     void attack() override;
-    void giveDamage() override;        
+    void giveDamage() override;
+    std::vector<std::pair<std::string, std::string>> serialize() const override;
 };
 

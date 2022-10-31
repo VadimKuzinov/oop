@@ -1,0 +1,39 @@
+\hypertarget{Utils_8h_source}{}\doxysection{Utils.\+h}
+\label{Utils_8h_source}\index{src/Utils.h@{src/Utils.h}}
+\mbox{\hyperlink{Utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{6 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptMoving}{Moving}} = \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{7     sq.tryToMove();}
+\DoxyCodeLine{8 \};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{11 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptAttacking}{Attacking}} = \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{12     sq.tryToAttack();}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{16 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptSummoning}{Summoning}} = \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{17     sq.tryToSummon();}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{21 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptAccumulating}{Accumulating}} = \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{22     sq.tryToAccumulate();}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{26 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptUpgrading}{Upgrading}} = \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{27     sq.tryToUpgrade();}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{31 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptHealing}{Healing}} = \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{32     sq.tryToHeal();}
+\DoxyCodeLine{33 \};}
+
+\end{DoxyCode}

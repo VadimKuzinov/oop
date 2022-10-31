@@ -41,7 +41,7 @@ public:
     }
 
     void setSummonedId(Type id) {
-        std::cout << "ID that taken: " << id << '\n';
+        std::cout << "ID that is taken: " << id << '\n';
         summoned_id_ = id;
     }
 
@@ -50,7 +50,8 @@ public:
     }
 
     std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
- 
+    std::vector<std::pair<std::string, std::string>> serialize() const override;
+
     void summon();
     void accumulateEnergy();
     void upgradeSchool();

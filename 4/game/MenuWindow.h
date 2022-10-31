@@ -27,6 +27,7 @@ public:
     MenuWindow(int x, int y, int w, int h, SDL_Renderer*, std::shared_ptr<Summoner>);
     ~MenuWindow();
 
+    void clearTextures();
     void setActive(std::shared_ptr<Entity> active);
     void addChoice(const std::tuple<void (*)(Entity*), const char*, MenuWindow*>&);
     void draw();

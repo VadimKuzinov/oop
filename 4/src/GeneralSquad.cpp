@@ -18,34 +18,28 @@ void GeneralSquad::update() {
 }
 
 void GeneralSquad::move() {
-    std::cout << "CURRENT COORDS: " << coords_ << '\n';
-    std::cout << "TARGET COORDS: " << target_coords_ << '\n';
     double act_velocity = std::min(Point::distance(coords_, target_coords_), velocity_);
-    std::cout << "Vector dif: " << target_coords_ - coords_ << '\n';
-    std::cout << "Actual velocity: " << act_velocity << '\n';
     auto vector_direction = Point::normalized(target_coords_ - coords_) * act_velocity;
-    std::cout << "VECTOR DIRECTION: " << vector_direction << '\n';
     auto target_point = coords_ + vector_direction;
-    std::cout << "TARGET POINT: " << target_point << '\n';
     auto int_target_point = Point::withIntCfs(target_point);
-    std::cout << "INT TARGET POINT: " << int_target_point << '\n';
     int x = int_target_point.x;
     int y = int_target_point.y;
     if (terrain_->map_[y][x] != nullptr && terrain_->map_[y][x].get() != this) {
-        std::cout << "RETURNED!!!" << '\n';
         moving_ = false;
         return;
     }
 
     Point cur_int_coords_ = Point::withIntCfs(coords_);
     coords_ = target_point;
+
     if (int_target_point == cur_int_coords_) {
+        if (cur_int_coords_ == target_coords_) {
+            moving_ = false;
+        }
         return;
     }
     terrain_->map_[y][x] = terrain_->map_[cur_int_coords_.y][cur_int_coords_.x];
     terrain_->map_[cur_int_coords_.y][cur_int_coords_.x] = nullptr;
-    std::cout << "NOW: " << y << ' ' << x << " is occuppied by us and " << cur_int_coords_.y << ' ' << cur_int_coords_.x << " is nullptr\n";
-    std::cout << "New coords: " << coords_ << '\n';
 }
 
 void GeneralSquad::giveDamage() {
@@ -54,6 +48,10 @@ void GeneralSquad::giveDamage() {
 }
 
 void GeneralSquad::attack() {
+    if (captured_ == nullptr) {
+        return;
+    }
+
     auto distance = Point::distance(coords_, captured_->getCoords());
     if (distance > attack_range_) {
         return;
@@ -64,7 +62,6 @@ void GeneralSquad::attack() {
 
 void GeneralSquad::act() {
     update();
-
     if (moving_) {
         move();
     }
@@ -77,8 +74,17 @@ void GeneralSquad::act() {
 std::vector<std::pair<void (*)(Entity*), const char*>> GeneralSquad::getMenu() const {
     auto choices = Obstacle::getMenu();
     choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToMove(); }, "Move"});
-    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToMove(); }, "Attack"});
+    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToAttack(); }, "Attack"});
     return choices;
 }   
 
- 
+std::vector<std::pair<std::string, std::string>> GeneralSquad::serialize() const {
+    auto res = Obstacle::serialize();
+    res.push_back(std::make_pair("damage", std::to_string(damage_)));
+    res.push_back(std::make_pair("velocity", std::to_string(velocity_)));
+    res.push_back(std::make_pair("qty", std::to_string(quantity_)));
+    res.push_back(std::make_pair("xp_for_dsrt", std::to_string(xp_for_destroying_)));
+    res.push_back(std::make_pair("attack_range", std::to_string(attack_range_)));
+    return res;
+} 
+

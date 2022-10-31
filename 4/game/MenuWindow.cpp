@@ -13,10 +13,14 @@ MenuWindow::MenuWindow(int x, int y, int w, int h, SDL_Renderer* renderer, std::
 }
 
 MenuWindow::~MenuWindow() {
-    for (auto&& texture: textures_) {
+    clearTextures();
+}
+
+void MenuWindow::clearTextures() {
+    for (auto&& texture : textures_) {
         SDL_DestroyTexture(texture);
     }
-//    TTF_Quit();
+    textures_ = {};
 }
 
 void MenuWindow::setActive(std::shared_ptr<Entity> active) {
@@ -55,18 +59,11 @@ void MenuWindow::draw() {
         ch_h_ = std::min(25, h_ / qty);
     }
 
-    //vertical line for dividing game map and menu
     SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 255);
-    SDL_RenderDrawLine(renderer_, x_, y_, x_, y_ + h_);
 
-    //arrange font stuff
     
     TTF_Init();
-/*
-    const char* font_path = "JustSquash.ttf";//
-    SDL_Color textColor = {0, 0, 0, 255};
-    TTF_Font* font = TTF_OpenFont(font_path, 23);//
-*/
+
     //qty options
     SDL_Color textColor = {0, 0, 0, 255};
     SDL_Rect rect;
@@ -84,6 +81,7 @@ void MenuWindow::draw() {
 //            return;
         }
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
+        textures_.push_back(texture);
         text_w = surface->w;
         text_h = surface->h;
         SDL_FreeSurface(surface);
@@ -91,7 +89,7 @@ void MenuWindow::draw() {
         rect.w = text_w;
         rect.h = text_h;
         SDL_RenderCopy(renderer_, texture, NULL, &rect);
-        SDL_RenderDrawLine(renderer_, x_, rect.y, x_ + w_, rect.y);
+        SDL_RenderDrawLine(renderer_, x_, rect.y + ch_h_, x_ + w_, rect.y + ch_h_);
     }
    // TTF_CloseFont(font);
   //  TTF_Quit();

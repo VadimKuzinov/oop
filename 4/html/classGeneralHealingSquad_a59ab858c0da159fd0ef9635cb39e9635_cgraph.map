@@ -1,0 +1,12 @@
+<map id="GeneralHealingSquad::act" name="GeneralHealingSquad::act">
+<area shape="rect" id="node1" title=" " alt="" coords="5,113,196,138"/>
+<area shape="rect" id="node2" href="$classGeneralSquad.html#a5cb0049360741624ebccc107b7b41086" title=" " alt="" coords="271,36,433,61"/>
+<area shape="rect" id="node5" href="$classGeneralHealingSquad.html#a028f01c5bf0fac457926760e1ea6eeaf" title=" " alt="" coords="253,88,451,113"/>
+<area shape="rect" id="node6" href="$classGeneralSquad.html#ace6975bdff5f20efa159155efb31a1d9" title=" " alt="" coords="273,137,431,162"/>
+<area shape="rect" id="node9" href="$classGeneralHealingSquad.html#af9222affae474a0c29a9f8cabeb50539" title=" " alt="" coords="244,210,460,236"/>
+<area shape="rect" id="node3" href="$structPoint.html#ad883843137a07ea2bf51219c7afe5ac3" title=" " alt="" coords="760,86,879,112"/>
+<area shape="rect" id="node4" href="$classGeneralSquad.html#acd1a57e97e3af1fcd9a000dc9fefbfb2" title=" " alt="" coords="508,36,712,61"/>
+<area shape="rect" id="node7" href="$structPoint.html#a37406f22c3b74582eb3a7d9bf1ab3e8f" title=" " alt="" coords="542,137,678,162"/>
+<area shape="rect" id="node8" href="$structPoint.html#a40bfbab108a7d5e754e04e6dc7ac245e" title=" " alt="" coords="545,186,675,212"/>
+<area shape="rect" id="node10" href="$classGeneralSquad.html#af8cf10005c9fac930c58ec4c31f51254" title=" " alt="" coords="527,236,693,261"/>
+</map>

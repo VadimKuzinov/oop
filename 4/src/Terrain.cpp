@@ -17,20 +17,16 @@ Terrain::Terrain(const std::string& filename) {
 }
 
 void Terrain::live() {
-    using frames = std::chrono::duration<int64_t, std::ratio<1, 1>>; //1 fps
+    using frames = std::chrono::duration<int64_t, std::ratio<1, 64>>; //64 fps
+   //std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<int64_t, std::ratio<1, 999999960>>> 
     auto nextFrame = std::chrono::system_clock::now();
     auto lastFrame = nextFrame - frames{1};
     auto summoner1 = getSummonerFirst();
     auto summoner2 = getSummonerSecond();
     while (summoner1->isAlive() && summoner2->isAlive()) {
-        std::cout << "s1 hp: " << summoner1->getCurHp() << '\n';
-        std::cout << "s2 hp: " << summoner2->getCurHp() << '\n';
-        std::cout << "frame\n";
         for (auto&& squad : squads_) {
-//          std::cout << "Prior: " << squad->getPriority() << '\n';
             squad->act(); //squad acting depending on flags (moving_, attacking_ etc.) and using information (goal_point_)                     
         }
-
         std::this_thread::sleep_until(nextFrame);
         lastFrame = nextFrame;
         nextFrame += frames{1};

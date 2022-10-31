@@ -1,0 +1,8 @@
+<map id="MoralSquad" name="MoralSquad">
+<area shape="rect" id="node1" title=" " alt="" coords="549,1073,1127,1283"/>
+<area shape="rect" id="node2" href="$classGeneralSquad.html" title=" " alt="" coords="549,683,1127,1024"/>
+<area shape="rect" id="node3" href="$classObstacle.html" title=" " alt="" coords="549,292,1127,633"/>
+<area shape="rect" id="node4" href="$classEntity.html" title=" " alt="" coords="5,5,593,215"/>
+<area shape="rect" id="node5" href="$classTerrain.html" title=" " alt="" coords="618,13,1058,207"/>
+<area shape="rect" id="node6" href="$structPoint.html" title=" " alt="" coords="1082,42,1485,178"/>
+</map>

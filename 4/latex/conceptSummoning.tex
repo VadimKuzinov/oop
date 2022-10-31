@@ -1,0 +1,15 @@
+\hypertarget{conceptSummoning}{}\doxysection{Summoning Concept Reference}
+\label{conceptSummoning}\index{Summoning@{Summoning}}
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsection{Concept definition}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\textcolor{keyword}{concept }\mbox{\hyperlink{conceptSummoning}{Summoning}} =  \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{    sq.tryToSummon();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

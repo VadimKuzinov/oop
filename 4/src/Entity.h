@@ -14,6 +14,7 @@ public:
     virtual void receiveDamage(double) = 0;
     virtual std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const = 0;
     virtual void killMySelf() = 0;
+    virtual std::vector<std::pair<std::string, std::string>> serialize() const = 0;
     virtual ~Entity() = default;
 };
 

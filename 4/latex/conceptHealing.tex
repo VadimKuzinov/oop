@@ -1,0 +1,15 @@
+\hypertarget{conceptHealing}{}\doxysection{Healing Concept Reference}
+\label{conceptHealing}\index{Healing@{Healing}}
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\doxysubsection{Concept definition}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{\textcolor{keyword}{concept }\mbox{\hyperlink{conceptHealing}{Healing}} =  \textcolor{keyword}{requires}(T sq) \{}
+\DoxyCodeLine{    sq.tryToHeal();}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

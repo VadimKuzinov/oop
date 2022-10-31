@@ -14,5 +14,7 @@ public:
     void act() override;
     void heal() override;
     void update() override;
+
+    std::vector<std::pair<std::string, std::string>> serialize() const override;
 };
 

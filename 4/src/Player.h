@@ -42,6 +42,7 @@ public:
         else {
             auto casted = std::dynamic_pointer_cast<Obstacle>(active_);
             casted->setTargetCoords(where);
+            casted->setCaptured(terrain_->map_[where.y][where.x]);
         }
     }
 

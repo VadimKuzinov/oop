@@ -1,0 +1,26 @@
+\hypertarget{Entity_8h_source}{}\doxysection{Entity.\+h}
+\label{Entity_8h_source}\index{src/Entity.h@{src/Entity.h}}
+\mbox{\hyperlink{Entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Type_8h}{Type.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Point_8h}{Point.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classEntity}{Entity}} \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \textcolor{keyword}{virtual} \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{classEntity_a3281c194f0f968741e80b311d57be7b8}{getId}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{10     \textcolor{keyword}{virtual} \mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{classEntity_affff2db5822b044edcd36a15aa777b5e}{getCoords}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{11     \textcolor{keyword}{virtual} \textcolor{keywordtype}{int} \mbox{\hyperlink{classEntity_a5bcbcdb082bbb1cf2693d1308d0c48c5}{getPriority}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{12     \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classEntity_a56002c792a216fedc78f5aa2bce75161}{isAlive}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{13     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classEntity_ad69ce9ad1123a7cb30c142c7ec45e387}{act}}() = 0;}
+\DoxyCodeLine{14     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classEntity_ab37147920ef7534ea188452a5cf0deec}{receiveDamage}}(\textcolor{keywordtype}{double}) = 0;}
+\DoxyCodeLine{15     \textcolor{keyword}{virtual} std::vector<std::pair<void (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classEntity_ae710fa33b9de440d8532bc1d0bb2b963}{getMenu}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{16     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classEntity_abe386549463d98d4225ba02b3c949784}{killMySelf}}() = 0;}
+\DoxyCodeLine{17     \textcolor{keyword}{virtual} std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classEntity_a9eae1970289e40192828e1c64f596fd7}{serialize}}() \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{18     \textcolor{keyword}{virtual} \mbox{\hyperlink{classEntity_ac479d009ddde62dfb378ca0a70d81307}{\string~Entity}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+
+\end{DoxyCode}

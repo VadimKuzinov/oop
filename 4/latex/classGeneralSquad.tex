@@ -1,0 +1,283 @@
+\hypertarget{classGeneralSquad}{}\doxysection{General\+Squad Class Reference}
+\label{classGeneralSquad}\index{GeneralSquad@{GeneralSquad}}
+
+
+{\ttfamily \#include $<$General\+Squad.\+h$>$}
+
+
+
+Inheritance diagram for General\+Squad\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for General\+Squad\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneralSquad_a6ec285fb62ca0438c656861228ac17b4}{General\+Squad}} (\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}=\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7ac11191abcbc7032995de91ad6a708915}{General\+\_\+}})
+\item 
+virtual \mbox{\hyperlink{classGeneralSquad_a998f8bc14cb39b5914ae6dfe234abe71}{$\sim$\+General\+Squad}} ()=default
+\item 
+void \mbox{\hyperlink{classGeneralSquad_ab51d3aa1532a40d223f83ea7d8cf99be}{set\+Summoner}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSummoner}{Summoner}} $>$ summoner)
+\item 
+void \mbox{\hyperlink{classGeneralSquad_a2ee30574bb9dff8aa98e0d2ee4fd3fd9}{try\+To\+Move}} ()
+\item 
+void \mbox{\hyperlink{classGeneralSquad_a24e4052f87c0e35590caf51dabfd5ff3}{try\+To\+Attack}} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classGeneralSquad_af342bccc032db47fb00ce76c8649e8ca}{get\+Menu}} () const override
+\item 
+void \mbox{\hyperlink{classGeneralSquad_a5e826000139cc86181545f0051a2bdf1}{act}} () override
+\item 
+virtual void \mbox{\hyperlink{classGeneralSquad_af8cf10005c9fac930c58ec4c31f51254}{update}} ()
+\item 
+virtual void \mbox{\hyperlink{classGeneralSquad_ace6975bdff5f20efa159155efb31a1d9}{move}} ()
+\item 
+virtual void \mbox{\hyperlink{classGeneralSquad_a5cb0049360741624ebccc107b7b41086}{attack}} ()
+\item 
+virtual void \mbox{\hyperlink{classGeneralSquad_acd1a57e97e3af1fcd9a000dc9fefbfb2}{give\+Damage}} ()
+\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classGeneralSquad_a3142e6a4d4baa63384208f03e6c8f06c}{serialize}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classGeneralSquad_a8962cdbe992d29124dfb19c0785db77a}{damage\+\_\+}} = 4
+\item 
+double \mbox{\hyperlink{classGeneralSquad_ae3f19943ff4e6857a1573ce01789b1ef}{velocity\+\_\+}} = 0.\+6
+\item 
+int \mbox{\hyperlink{classGeneralSquad_a361a2796538bc22992dbd9d7439153d2}{quantity\+\_\+}} = 1
+\item 
+double \mbox{\hyperlink{classGeneralSquad_ae01ef7e0e951b1ec9a190bf1838c1924}{xp\+\_\+for\+\_\+destroying\+\_\+}} = 3
+\item 
+double \mbox{\hyperlink{classGeneralSquad_ae728c0de21272235c48c0287d9ff892b}{attack\+\_\+range\+\_\+}} = 2
+\item 
+bool \mbox{\hyperlink{classGeneralSquad_a80195c7cc5a0dcc16423f19977b16069}{moving\+\_\+}} = false
+\item 
+bool \mbox{\hyperlink{classGeneralSquad_a91426e4acd7101b7dafa5bba45a2a225}{attacking\+\_\+}} = false
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSummoner}{Summoner}} $>$ \mbox{\hyperlink{classGeneralSquad_ad131c33b5d8a73a6733e11c4a68e407d}{summoner\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGeneralSquad_a6ec285fb62ca0438c656861228ac17b4}\label{classGeneralSquad_a6ec285fb62ca0438c656861228ac17b4}} 
+\index{GeneralSquad@{GeneralSquad}!GeneralSquad@{GeneralSquad}}
+\index{GeneralSquad@{GeneralSquad}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{GeneralSquad()}{GeneralSquad()}}
+{\footnotesize\ttfamily General\+Squad\+::\+General\+Squad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$}]{terrain,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{coords,  }\item[{\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{id = {\ttfamily \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7ac11191abcbc7032995de91ad6a708915}{General\+\_\+}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classGeneralSquad_a998f8bc14cb39b5914ae6dfe234abe71}\label{classGeneralSquad_a998f8bc14cb39b5914ae6dfe234abe71}} 
+\index{GeneralSquad@{GeneralSquad}!````~GeneralSquad@{$\sim$GeneralSquad}}
+\index{````~GeneralSquad@{$\sim$GeneralSquad}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{$\sim$GeneralSquad()}{~GeneralSquad()}}
+{\footnotesize\ttfamily virtual General\+Squad\+::$\sim$\+General\+Squad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeneralSquad_a5e826000139cc86181545f0051a2bdf1}\label{classGeneralSquad_a5e826000139cc86181545f0051a2bdf1}} 
+\index{GeneralSquad@{GeneralSquad}!act@{act}}
+\index{act@{act}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{act()}{act()}}
+{\footnotesize\ttfamily void General\+Squad\+::act (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEntity_ad69ce9ad1123a7cb30c142c7ec45e387}{Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMoralHealingSquad_a6182aacf94380eab0bc9c11ee9779319}{Moral\+Healing\+Squad}}, and \mbox{\hyperlink{classMoralSquad_ae9ff7c99cf940a68fac43a5a9c68f121}{Moral\+Squad}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad_a5e826000139cc86181545f0051a2bdf1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneralSquad_a5cb0049360741624ebccc107b7b41086}\label{classGeneralSquad_a5cb0049360741624ebccc107b7b41086}} 
+\index{GeneralSquad@{GeneralSquad}!attack@{attack}}
+\index{attack@{attack}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily void General\+Squad\+::attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classMoralSquad_af7c525bfbc673ef0a99f5e89420d7a53}{Moral\+Squad}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad_a5cb0049360741624ebccc107b7b41086_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneralSquad_af342bccc032db47fb00ce76c8649e8ca}\label{classGeneralSquad_af342bccc032db47fb00ce76c8649e8ca}} 
+\index{GeneralSquad@{GeneralSquad}!getMenu@{getMenu}}
+\index{getMenu@{getMenu}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ General\+Squad\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEntity_ae710fa33b9de440d8532bc1d0bb2b963}{Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}{Moral\+Healing\+Squad}}, and \mbox{\hyperlink{classMoralSquad_a00bdfdb81a0840b35686168d97c9d53f}{Moral\+Squad}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad_af342bccc032db47fb00ce76c8649e8ca_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneralSquad_acd1a57e97e3af1fcd9a000dc9fefbfb2}\label{classGeneralSquad_acd1a57e97e3af1fcd9a000dc9fefbfb2}} 
+\index{GeneralSquad@{GeneralSquad}!giveDamage@{giveDamage}}
+\index{giveDamage@{giveDamage}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{giveDamage()}{giveDamage()}}
+{\footnotesize\ttfamily void General\+Squad\+::give\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classMoralSquad_ab96f0c0d16531bf913d16e8a7a032301}{Moral\+Squad}}.
+
+\mbox{\Hypertarget{classGeneralSquad_ace6975bdff5f20efa159155efb31a1d9}\label{classGeneralSquad_ace6975bdff5f20efa159155efb31a1d9}} 
+\index{GeneralSquad@{GeneralSquad}!move@{move}}
+\index{move@{move}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void General\+Squad\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad_ace6975bdff5f20efa159155efb31a1d9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneralSquad_a3142e6a4d4baa63384208f03e6c8f06c}\label{classGeneralSquad_a3142e6a4d4baa63384208f03e6c8f06c}} 
+\index{GeneralSquad@{GeneralSquad}!serialize@{serialize}}
+\index{serialize@{serialize}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ General\+Squad\+::serialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEntity_a9eae1970289e40192828e1c64f596fd7}{Entity}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57}{Moral\+Healing\+Squad}}, and \mbox{\hyperlink{classMoralSquad_a43c3aaa0093022aeb0690cbce204aa0c}{Moral\+Squad}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneralSquad_a3142e6a4d4baa63384208f03e6c8f06c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneralSquad_ab51d3aa1532a40d223f83ea7d8cf99be}\label{classGeneralSquad_ab51d3aa1532a40d223f83ea7d8cf99be}} 
+\index{GeneralSquad@{GeneralSquad}!setSummoner@{setSummoner}}
+\index{setSummoner@{setSummoner}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{setSummoner()}{setSummoner()}}
+{\footnotesize\ttfamily void General\+Squad\+::set\+Summoner (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSummoner}{Summoner}} $>$}]{summoner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGeneralSquad_a24e4052f87c0e35590caf51dabfd5ff3}\label{classGeneralSquad_a24e4052f87c0e35590caf51dabfd5ff3}} 
+\index{GeneralSquad@{GeneralSquad}!tryToAttack@{tryToAttack}}
+\index{tryToAttack@{tryToAttack}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{tryToAttack()}{tryToAttack()}}
+{\footnotesize\ttfamily void General\+Squad\+::try\+To\+Attack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGeneralSquad_a2ee30574bb9dff8aa98e0d2ee4fd3fd9}\label{classGeneralSquad_a2ee30574bb9dff8aa98e0d2ee4fd3fd9}} 
+\index{GeneralSquad@{GeneralSquad}!tryToMove@{tryToMove}}
+\index{tryToMove@{tryToMove}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{tryToMove()}{tryToMove()}}
+{\footnotesize\ttfamily void General\+Squad\+::try\+To\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classGeneralSquad_af8cf10005c9fac930c58ec4c31f51254}\label{classGeneralSquad_af8cf10005c9fac930c58ec4c31f51254}} 
+\index{GeneralSquad@{GeneralSquad}!update@{update}}
+\index{update@{update}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void General\+Squad\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classGeneralHealingSquad_af9222affae474a0c29a9f8cabeb50539}{General\+Healing\+Squad}}, \mbox{\hyperlink{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6}{Moral\+Healing\+Squad}}, and \mbox{\hyperlink{classMoralSquad_a4c3df16fe46791827166342cabf468b3}{Moral\+Squad}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGeneralSquad_ae728c0de21272235c48c0287d9ff892b}\label{classGeneralSquad_ae728c0de21272235c48c0287d9ff892b}} 
+\index{GeneralSquad@{GeneralSquad}!attack\_range\_@{attack\_range\_}}
+\index{attack\_range\_@{attack\_range\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{attack\_range\_}{attack\_range\_}}
+{\footnotesize\ttfamily double General\+Squad\+::attack\+\_\+range\+\_\+ = 2\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_a91426e4acd7101b7dafa5bba45a2a225}\label{classGeneralSquad_a91426e4acd7101b7dafa5bba45a2a225}} 
+\index{GeneralSquad@{GeneralSquad}!attacking\_@{attacking\_}}
+\index{attacking\_@{attacking\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{attacking\_}{attacking\_}}
+{\footnotesize\ttfamily bool General\+Squad\+::attacking\+\_\+ = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_a8962cdbe992d29124dfb19c0785db77a}\label{classGeneralSquad_a8962cdbe992d29124dfb19c0785db77a}} 
+\index{GeneralSquad@{GeneralSquad}!damage\_@{damage\_}}
+\index{damage\_@{damage\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{damage\_}{damage\_}}
+{\footnotesize\ttfamily double General\+Squad\+::damage\+\_\+ = 4\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_a80195c7cc5a0dcc16423f19977b16069}\label{classGeneralSquad_a80195c7cc5a0dcc16423f19977b16069}} 
+\index{GeneralSquad@{GeneralSquad}!moving\_@{moving\_}}
+\index{moving\_@{moving\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{moving\_}{moving\_}}
+{\footnotesize\ttfamily bool General\+Squad\+::moving\+\_\+ = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_a361a2796538bc22992dbd9d7439153d2}\label{classGeneralSquad_a361a2796538bc22992dbd9d7439153d2}} 
+\index{GeneralSquad@{GeneralSquad}!quantity\_@{quantity\_}}
+\index{quantity\_@{quantity\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{quantity\_}{quantity\_}}
+{\footnotesize\ttfamily int General\+Squad\+::quantity\+\_\+ = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_ad131c33b5d8a73a6733e11c4a68e407d}\label{classGeneralSquad_ad131c33b5d8a73a6733e11c4a68e407d}} 
+\index{GeneralSquad@{GeneralSquad}!summoner\_@{summoner\_}}
+\index{summoner\_@{summoner\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{summoner\_}{summoner\_}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classSummoner}{Summoner}}$>$ General\+Squad\+::summoner\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_ae3f19943ff4e6857a1573ce01789b1ef}\label{classGeneralSquad_ae3f19943ff4e6857a1573ce01789b1ef}} 
+\index{GeneralSquad@{GeneralSquad}!velocity\_@{velocity\_}}
+\index{velocity\_@{velocity\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{velocity\_}{velocity\_}}
+{\footnotesize\ttfamily double General\+Squad\+::velocity\+\_\+ = 0.\+6\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classGeneralSquad_ae01ef7e0e951b1ec9a190bf1838c1924}\label{classGeneralSquad_ae01ef7e0e951b1ec9a190bf1838c1924}} 
+\index{GeneralSquad@{GeneralSquad}!xp\_for\_destroying\_@{xp\_for\_destroying\_}}
+\index{xp\_for\_destroying\_@{xp\_for\_destroying\_}!GeneralSquad@{GeneralSquad}}
+\doxysubsubsection{\texorpdfstring{xp\_for\_destroying\_}{xp\_for\_destroying\_}}
+{\footnotesize\ttfamily double General\+Squad\+::xp\+\_\+for\+\_\+destroying\+\_\+ = 3\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{GeneralSquad_8h}{General\+Squad.\+h}}\item 
+src/\mbox{\hyperlink{GeneralSquad_8cpp}{General\+Squad.\+cpp}}\end{DoxyCompactItemize}

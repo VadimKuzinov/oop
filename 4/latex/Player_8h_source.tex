@@ -1,0 +1,59 @@
+\hypertarget{Player_8h_source}{}\doxysection{Player.\+h}
+\label{Player_8h_source}\index{src/Player.h@{src/Player.h}}
+\mbox{\hyperlink{Player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Squads_8h}{Squads.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classPlayer}{Player}} \{}
+\DoxyCodeLine{8     std::shared\_ptr<Summoner> summoner\_;}
+\DoxyCodeLine{9     \mbox{\hyperlink{classTerrain}{Terrain}}* terrain\_;}
+\DoxyCodeLine{10     std::shared\_ptr<Entity> active\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{classPlayer_a30441d88419aa6e7a9ddd0918beb1398}{Player}}(\textcolor{keyword}{const} std::shared\_ptr<Summoner>\& summoner) : summoner\_(summoner), terrain\_(summoner-\/>getTerrain()) \{}
+\DoxyCodeLine{14     \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayer_ad9475052d2c532058d9c45250b106650}{setActive}}(\mbox{\hyperlink{structPoint}{Point}} where) \{}
+\DoxyCodeLine{17         active\_ = terrain\_-\/>\mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}}[where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}}][where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}}];}
+\DoxyCodeLine{18         \textcolor{keywordflow}{if} (active\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{19             std::cout << \textcolor{stringliteral}{"{}Set to nullptr"{}} << std::endl;}
+\DoxyCodeLine{20         \}}
+\DoxyCodeLine{21         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{22             std::cout << \textcolor{stringliteral}{"{}Set to: "{}} << active\_-\/>getId() << std::endl;}
+\DoxyCodeLine{23         \}}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     std::shared\_ptr<Entity> \mbox{\hyperlink{classPlayer_a66c6583ac9470e3b684d29b1c0b37527}{getActive}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{27         \textcolor{keywordflow}{return} active\_;}
+\DoxyCodeLine{28     \}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayer_a3c382bbcba079f45c88c65212ed39457}{catchClick}}(\mbox{\hyperlink{structPoint}{Point}} where) \{}
+\DoxyCodeLine{31         \textcolor{keywordflow}{if} (where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}} >= terrain\_-\/>\mbox{\hyperlink{classTerrain_a3441f4ae8b67eb8ee4e9f67fca8d4f9a}{MAX\_Y}} || where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}} >= terrain\_-\/>\mbox{\hyperlink{classTerrain_aa08ef05d4c8b4b66c6e8162dfe19df7b}{MAX\_X}}) \{}
+\DoxyCodeLine{32             std::cout << \textcolor{stringliteral}{"{}Out of range of the map"{}} << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{33             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{34         \}}
+\DoxyCodeLine{35     }
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (active\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{37             \mbox{\hyperlink{classPlayer_ad9475052d2c532058d9c45250b106650}{setActive}}(where);}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (active\_ == terrain\_-\/>\mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}}[where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}}][where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}}]) \{}
+\DoxyCodeLine{40             active\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{41         \}}
+\DoxyCodeLine{42         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{43             \textcolor{keyword}{auto} casted = std::dynamic\_pointer\_cast<Obstacle>(active\_);}
+\DoxyCodeLine{44             casted-\/>setTargetCoords(where);}
+\DoxyCodeLine{45         \}}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     std::shared\_ptr<Summoner> \mbox{\hyperlink{classPlayer_ae440978ce11310398006125c179215f6}{getSummoner}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{49         \textcolor{keywordflow}{return} summoner\_;}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51     \textcolor{comment}{//class Game\{ ... some method() \{player1-\/>setActive()\}....\}  }}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+
+\end{DoxyCode}

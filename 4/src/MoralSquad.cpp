@@ -54,3 +54,10 @@ std::vector<std::pair<void (*)(Entity*), const char*>> MoralSquad::getMenu() con
     return choices;
 }
 
+std::vector<std::pair<std::string, std::string>> MoralSquad::serialize() const {
+    auto res = GeneralSquad::serialize();
+    res.push_back(std::make_pair("morality", std::to_string(morality_)));
+    res.push_back(std::make_pair("stab_speed", std::to_string(stabilization_speed_)));
+    return res;
+}
+

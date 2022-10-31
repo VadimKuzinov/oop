@@ -1,0 +1,46 @@
+\hypertarget{Application_8h_source}{}\doxysection{Application.\+h}
+\label{Application_8h_source}\index{game/Application.h@{game/Application.h}}
+\mbox{\hyperlink{Application_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../src/Game.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MenuWindow_8h}{MenuWindow.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{SummonerWindow_8h}{SummonerWindow.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{classApplication}{Application}} \{}
+\DoxyCodeLine{11 \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{classGame}{Game}}* game\_;}
+\DoxyCodeLine{13     \mbox{\hyperlink{classPlayer}{Player}}* player\_;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} scale\_factor\_ = 25;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} MAX\_X\_;}
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} MAX\_Y\_;}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} MENU\_W\_ = 200;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19     SDL\_Window* window\_;}
+\DoxyCodeLine{20     SDL\_Renderer* renderer\_;}
+\DoxyCodeLine{21     SDL\_Event event\_;}
+\DoxyCodeLine{22     SDL\_Texture* backround\_;}
+\DoxyCodeLine{23     SDL\_Texture* obstacle\_;}
+\DoxyCodeLine{24     \mbox{\hyperlink{classMenuWindow}{MenuWindow}}* menu\_window\_;}
+\DoxyCodeLine{25     \mbox{\hyperlink{classSummonerWindow}{SummonerWindow}}* summoner\_window\_;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} draw();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} drawCircle(\textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} drawSquad(std::shared\_ptr<Entity>);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classApplication_ab4e5734909b06d820a49f51c116af2b8}{renderCoords}}(\textcolor{keywordtype}{int}*, \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classApplication_a31b5523ac5de7185e99b89396e1b3db9}{flipYInCoords}}(\textcolor{keywordtype}{int}*, \textcolor{keywordtype}{int}*);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \mbox{\hyperlink{classApplication}{Application}}(\mbox{\hyperlink{classGame}{Game}}*, \mbox{\hyperlink{classPlayer}{Player}}*);}
+\DoxyCodeLine{36     \mbox{\hyperlink{classApplication_a748bca84fefb9c12661cfaa2f623748d}{\string~Application}}();}
+\DoxyCodeLine{37     }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classApplication_a6d8650e05b79e76e688a38fb9b92bbb9}{loop}}();}
+\DoxyCodeLine{39 \};}
+\DoxyCodeLine{40 }
+
+\end{DoxyCode}

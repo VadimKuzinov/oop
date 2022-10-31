@@ -3,6 +3,7 @@
 #include "Entity.h"
 #include "Type.h"
 #include "Point.h"
+//#include "Terrain.h"
 #include <memory>
 
 
@@ -29,11 +30,7 @@ public:
         captured_ = captured;
     }
     
-    void setTargetCoords(Point target_coords) {
-        std::cout << "Setting target coords: " << target_coords << '\n';
-        target_coords_ = target_coords;
-    }
-
+    void setTargetCoords(Point target_coords);
     void setDefaults();
     void receiveDamage(double) override;
 
@@ -63,4 +60,6 @@ public:
     void killMySelf() override {
         cur_hp_ = 0;
     }
+    
+    std::vector<std::pair<std::string, std::string>> serialize() const override;
 };

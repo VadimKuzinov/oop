@@ -33,3 +33,10 @@ std::vector<std::pair<void (*)(Entity*), const char*>> MoralHealingSquad::getMen
     return choices;
 }
 
+std::vector<std::pair<std::string, std::string>> MoralHealingSquad::serialize() const {
+    auto res = GeneralHealingSquad::serialize();
+    res.push_back(std::make_pair("morality", std::to_string(morality_)));
+    res.push_back(std::make_pair("stab_speed", std::to_string(stabilization_speed_)));
+    return res;
+}
+

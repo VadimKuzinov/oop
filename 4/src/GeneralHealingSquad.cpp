@@ -5,7 +5,7 @@ GeneralHealingSquad::GeneralHealingSquad(Terrain* terrain, Point coords, Type id
 }
 
 void GeneralHealingSquad::heal() {
-    cur_hp_ = std::max(max_hp_, cur_hp_ + healing_speed_);
+    cur_hp_ = std::min(max_hp_, cur_hp_ + healing_speed_);
 }
 
 void GeneralHealingSquad::update() {
@@ -32,5 +32,11 @@ std::vector<std::pair<void (*)(Entity*), const char*>> GeneralHealingSquad::getM
     auto choices = GeneralSquad::getMenu();
     choices.push_back({[](Entity* e){ return dynamic_cast<GeneralHealingSquad*>(e)->tryToHeal(); }, "Heal"});
     return choices;
+}
+
+std::vector<std::pair<std::string, std::string>> GeneralHealingSquad::serialize() const {
+    auto res = GeneralSquad::serialize();
+    res.push_back(std::make_pair("healing_speed", std::to_string(healing_speed_)));
+    return res;
 }
 

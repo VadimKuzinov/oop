@@ -1,0 +1,74 @@
+\hypertarget{Obstacle_8h_source}{}\doxysection{Obstacle.\+h}
+\label{Obstacle_8h_source}\index{src/Obstacle.h@{src/Obstacle.h}}
+\mbox{\hyperlink{Obstacle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Utils_8h}{Utils.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Type_8h}{Type.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Point_8h}{Point.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classTerrain}{Terrain}};}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classObstacle}{Obstacle}} : \textcolor{keyword}{public} \mbox{\hyperlink{classEntity}{Entity}} \{}
+\DoxyCodeLine{12 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{13     \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{classObstacle_a2199fdd3b94723a93f5aade0a29e33bc}{id\_}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15     \mbox{\hyperlink{classTerrain}{Terrain}}* \mbox{\hyperlink{classObstacle_a10c2b9343bea1309d2e833759def4ab6}{terrain\_}};}
+\DoxyCodeLine{16     \mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{classObstacle_af3fa3b29511957cd062e490a861a82c7}{coords\_}};}
+\DoxyCodeLine{17     \textcolor{keywordtype}{double} \mbox{\hyperlink{classObstacle_a14c03bdd994c4f91a8563fe4fe78dae3}{max\_hp\_}} = \mbox{\hyperlink{Type_8cpp_afaa1219305d8d2ce46a4312c2d7581d3}{Obstacle\_Mhp\_}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{double} \mbox{\hyperlink{classObstacle_a2e68188bd4098859096b957c9c548a49}{cur\_hp\_}} = \mbox{\hyperlink{classObstacle_a14c03bdd994c4f91a8563fe4fe78dae3}{max\_hp\_}};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{classObstacle_ace2435d0a30b62d8935a52075cdf249b}{priority\_}} = \mbox{\hyperlink{Type_8cpp_ad6750ff0255cfcaf9a8435bb08690f54}{Obstacle\_Pr\_}};}
+\DoxyCodeLine{20     }
+\DoxyCodeLine{21     std::shared\_ptr<Entity> \mbox{\hyperlink{classObstacle_a2496ff92e67ffa3b0871b4755df32df3}{captured\_}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{22     \mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{classObstacle_ad990cb56f13823ad8cd34fdc8a3404bb}{target\_coords\_}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{classObstacle}{Obstacle}}(\mbox{\hyperlink{classTerrain}{Terrain}}*, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7adbf44951b3f1f3259044f1f764f3f46f}{Obstacle\_}});}
+\DoxyCodeLine{26     \textcolor{keyword}{virtual} \mbox{\hyperlink{classObstacle_aeb0cbf2b7a0f06b6e836b5e5c8d5cfc5}{\string~Obstacle}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObstacle_a31ad8d494434f62ed3b85f7b617b61db}{setCaptured}}(std::shared\_ptr<Entity> captured) \{}
+\DoxyCodeLine{29         \mbox{\hyperlink{classObstacle_a2496ff92e67ffa3b0871b4755df32df3}{captured\_}} = captured;}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObstacle_a68a2716aaa5f0c04b2a320105fb68df5}{setTargetCoords}}(\mbox{\hyperlink{structPoint}{Point}} target\_coords) \{}
+\DoxyCodeLine{33         std::cout << \textcolor{stringliteral}{"{}Setting target coords: "{}} << target\_coords << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{34         \mbox{\hyperlink{classObstacle_ad990cb56f13823ad8cd34fdc8a3404bb}{target\_coords\_}} = target\_coords;}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObstacle_a3fe8af7b32d84527861ce76c0516964f}{setDefaults}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObstacle_a2c66e7be50580c57ba95df7c9e68f246}{receiveDamage}}(\textcolor{keywordtype}{double}) \textcolor{keyword}{override};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     std::vector<std::pair<void (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classObstacle_aeae0c019baf07c628d32d6b04415f372}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObstacle_a3be68686c3c9d4e82def8dbf38ac1eaf}{act}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classObstacle_a2ac21dd14b863e139d33a1a2e0ea7bda}{isAlive}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{classObstacle_ac3a68ebf32fa3c16e319d55a77ceaf4f}{getPriority}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} \mbox{\hyperlink{classObstacle_ace2435d0a30b62d8935a52075cdf249b}{priority\_}};}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{classObstacle_afbc63409fc69821b0bafde6d55f4babb}{getId}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{52         \textcolor{keywordflow}{return} \mbox{\hyperlink{classObstacle_a2199fdd3b94723a93f5aade0a29e33bc}{id\_}};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \mbox{\hyperlink{structPoint}{Point}} \mbox{\hyperlink{classObstacle_a488d92d04aa14a36c650ec33531c8ec5}{getCoords}}()\textcolor{keyword}{ const override }\{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \mbox{\hyperlink{classObstacle_af3fa3b29511957cd062e490a861a82c7}{coords\_}};}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordtype}{double} \mbox{\hyperlink{classObstacle_a962a61ccd7cdbbf0cd33679f75201245}{getCurHp}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} \mbox{\hyperlink{classObstacle_a2e68188bd4098859096b957c9c548a49}{cur\_hp\_}};}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{classObstacle_a7d51afb55f3bb9da87ba374062fd6804}{killMySelf}}()\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{64         \mbox{\hyperlink{classObstacle_a2e68188bd4098859096b957c9c548a49}{cur\_hp\_}} = 0;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{67     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classObstacle_a30b61324898ee3a68b30fecc9e9401b6}{serialize}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{68 \};}
+
+\end{DoxyCode}

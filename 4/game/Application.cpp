@@ -8,7 +8,6 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
     auto terrain = game->getTerrain();
     MAX_X_ = scale_factor_ * terrain->MAX_X;
     MAX_Y_ = scale_factor_ * terrain->MAX_Y;
-
     //menu at the right side of screen
     SDL_Init(SDL_INIT_EVERYTHING);
     window_ = SDL_CreateWindow("sss", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, MAX_X_ + MENU_W_, MAX_Y_, SDL_WINDOW_SHOWN);
@@ -19,6 +18,16 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
 
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
     SDL_RenderClear(renderer_); 
+
+    SDL_Surface* backround = SDL_LoadBMP("grey.bmp");
+    SDL_Surface* obstacle = SDL_LoadBMP("obstacle.bmp");
+    backround_ = SDL_CreateTextureFromSurface(renderer_, backround);
+    obstacle_ = SDL_CreateTextureFromSurface(renderer_, obstacle);
+//    SDL_Rect rect;
+//    rect.x = 0; rect.y = 0; rect.w = MAX_X_; rect.h = MAX_Y_;
+//    SDL_RenderCopy(renderer_, texture, NULL, &rect);
+    SDL_FreeSurface(backround);
+    SDL_FreeSurface(obstacle);
 }
 
 Application::~Application() {
@@ -36,11 +45,20 @@ void Application::flipYInCoords(int* x, int* y) {
 }
 
 void Application::draw() {
+    SDL_Rect rect;
+    rect.x = 0; rect.y = 0; rect.w = MAX_X_; rect.h = MAX_Y_;
+    SDL_RenderCopy(renderer_, backround_, NULL, &rect);
+
+    SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 255);
+    SDL_RenderDrawLine(renderer_, MAX_X_, 0, MAX_X_, MAX_Y_);
+
+    summoner_window_->clearTextures();
+    summoner_window_->setActive(player_->getActive());
     summoner_window_->draw();
+
+    menu_window_->clearTextures();
     menu_window_->setActive(player_->getActive());
     menu_window_->draw();
-
-    //summoner_window_->draw();
 
     for (auto&& squad : game_->getTerrain()->squads_) {
         drawSquad(squad);
@@ -60,7 +78,7 @@ void Application::loop() {
     std::vector<std::pair<void (*)(Entity*), const char*>> menu;
     std::shared_ptr<Entity> active;
     while (running) {
-        std::cout << "Loop iter\n";
+       // std::cout << "Loop iter\n";
         while (SDL_PollEvent(&event_)) {
             switch (event_.type) {
                 case SDL_QUIT:
@@ -76,7 +94,7 @@ void Application::loop() {
                     }
                     renderCoords(&x, &y);
                     flipYInCoords(&x, &y);
-                    std::cout << "After correcting: " << x << ' ' << y << '\n';
+                    //std::cout << "After correcting: " << x << ' ' << y << '\n';
                     player_->catchClick(Point{x, y});
                     break;
             }
@@ -117,13 +135,25 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     int x = scale_factor_ * x0;
     int y = MAX_Y_ - scale_factor_ * (y0 + 1);
 
+
+//    int x = static_cast<int>(coords.x * scale_factor_);
+//    int y = static_cast<int>(MAX_Y_ - scale_factor_ * coords.y);
+    auto point = Point::withIntCfs(e->getCoords() * scale_factor_);
+    x = (int)point.x;
+    y = (int)point.y;
+    y = MAX_Y_ - y - scale_factor_;
+
     SDL_Rect rect;
     rect.x = x; rect.y = y; rect.w = scale_factor_; rect.h = scale_factor_;
     SDL_SetRenderDrawColor(renderer_, r, g, b, 255);
+    if (e->getId() != Obstacle_)
     SDL_RenderFillRect(renderer_, &rect);
+    else
+    SDL_RenderCopy(renderer_, obstacle_, NULL, &rect);
 
     if (player_->getActive() == e) {
-        std::cout << "PLAYER: " << player_ << '\n';
+//        std::cout << "PLAYER: " << player_ << '\n';   
+        SDL_SetRenderDrawColor(renderer_, 255, 0, 0, 255);      
         drawCircle(x, y, scale_factor_ * 1.4);
     }
 

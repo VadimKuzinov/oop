@@ -1,0 +1,54 @@
+\hypertarget{Terrain_8h_source}{}\doxysection{Terrain.\+h}
+\label{Terrain_8h_source}\index{src/Terrain.h@{src/Terrain.h}}
+\mbox{\hyperlink{Terrain_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Point_8h}{Point.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Type_8h}{Type.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classTerrain}{Terrain}};}
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{classSummoner}{Summoner}};}
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classEntity}{Entity}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 std::istream\& \mbox{\hyperlink{Terrain_8h_ab1980fa60b56c6e7e383aa5ea69ce488}{operator>>}}(std::istream\& is, \mbox{\hyperlink{classTerrain}{Terrain}}\& terrain);}
+\DoxyCodeLine{16 std::ostream\& \mbox{\hyperlink{Terrain_8h_a58ce8b1ca8e72bf24f3e8cc414820daf}{operator<<}}(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{classTerrain}{Terrain}}\& terrain);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{classTerrain}{Terrain}} \{}
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     std::pair<Point, Point> \mbox{\hyperlink{classTerrain_ac82d8381d83e3bc472e549ab30118310}{summoners\_coords\_}};}
+\DoxyCodeLine{22     std::vector<std::vector<std::shared\_ptr<Entity>>> \mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}};}
+\DoxyCodeLine{23     std::list<std::shared\_ptr<Entity>> \mbox{\hyperlink{classTerrain_a387ed3c536605a5b97b411c7cc0747f9}{squads\_}}; \textcolor{comment}{//sorted by priority}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{friend} std::istream\& \mbox{\hyperlink{classTerrain_ab1980fa60b56c6e7e383aa5ea69ce488}{operator>>}}(std::istream\& is, \mbox{\hyperlink{classTerrain}{Terrain}}\& terrain);}
+\DoxyCodeLine{26     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classTerrain_a58ce8b1ca8e72bf24f3e8cc414820daf}{operator<<}}(std::ostream\& os, \textcolor{keyword}{const} \mbox{\hyperlink{classTerrain}{Terrain}}\& terrain);}
+\DoxyCodeLine{27     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classSummoner}{Summoner}};}
+\DoxyCodeLine{28    }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTerrain_aa08ef05d4c8b4b66c6e8162dfe19df7b}{MAX\_X}};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{classTerrain_a3441f4ae8b67eb8ee4e9f67fca8d4f9a}{MAX\_Y}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \mbox{\hyperlink{classTerrain}{Terrain}}(\textcolor{keyword}{const} std::string\& cfg\_filename); \textcolor{comment}{//add}}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTerrain_a119ce517f39dd11eafb8fd9c476d216f}{addSquad}}(\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \textcolor{keywordtype}{id}, \mbox{\hyperlink{structPoint}{Point}}); \textcolor{comment}{//called from summoner may be}}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classTerrain_a113b4afe15b29c8407c056d4cafe4c92}{live}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     std::shared\_ptr<Summoner> \mbox{\hyperlink{classTerrain_a2f7dec94c282474f74ef83022a893d2a}{getSummonerFirst}}() \{}
+\DoxyCodeLine{37         \textcolor{keywordtype}{int} x = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{classTerrain_ac82d8381d83e3bc472e549ab30118310}{summoners\_coords\_}}.first.x);}
+\DoxyCodeLine{38         \textcolor{keywordtype}{int} y = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{classTerrain_ac82d8381d83e3bc472e549ab30118310}{summoners\_coords\_}}.first.y);}
+\DoxyCodeLine{39         \textcolor{keywordflow}{return} dynamic\_pointer\_cast<Summoner>(\mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}}[y][x]);}
+\DoxyCodeLine{40     \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     std::shared\_ptr<Summoner> \mbox{\hyperlink{classTerrain_a415fe72fe896627045df35446ad65866}{getSummonerSecond}}() \{}
+\DoxyCodeLine{43         \textcolor{keywordtype}{int} x = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{classTerrain_ac82d8381d83e3bc472e549ab30118310}{summoners\_coords\_}}.second.x);}
+\DoxyCodeLine{44         \textcolor{keywordtype}{int} y = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(\mbox{\hyperlink{classTerrain_ac82d8381d83e3bc472e549ab30118310}{summoners\_coords\_}}.second.y);}
+\DoxyCodeLine{45         \textcolor{keywordflow}{return} dynamic\_pointer\_cast<Summoner>(\mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}}[y][x]);}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+
+\end{DoxyCode}

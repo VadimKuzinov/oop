@@ -5,7 +5,7 @@ Summoner::Summoner(Terrain* terrain, Point coords, Type id) : Obstacle(terrain, 
 }
 
 void Summoner::accumulateEnergy() {
-    cur_energy_ = std::max(max_energy_, cur_energy_ + energy_regen_speed_);
+    cur_energy_ = std::min(max_energy_, cur_energy_ + energy_regen_speed_);
 }
 
 void Summoner::summon() {
@@ -59,4 +59,14 @@ std::vector<std::pair<void (*)(Entity*), const char*>> Summoner::getMenu() const
     choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToUpgrade(); }, "Upgrade"});
     return choices;
 }
- 
+
+std::vector<std::pair<std::string, std::string>> Summoner::serialize() const {
+    auto res = Obstacle::serialize();
+    res.push_back(std::make_pair("summon_range", std::to_string(summon_range_)));
+    res.push_back(std::make_pair("max_energy", std::to_string(max_energy_)));
+    res.push_back(std::make_pair("cur_energy", std::to_string(cur_energy_)));
+    res.push_back(std::make_pair("xp", std::to_string(xp_)));
+    res.push_back(std::make_pair("en_reg_speed", std::to_string(energy_regen_speed_)));
+    return res;
+}
+

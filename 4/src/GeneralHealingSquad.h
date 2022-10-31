@@ -21,5 +21,7 @@ public:
     virtual void heal();
     void act() override;
     void update() override;
+
+    std::vector<std::pair<std::string, std::string>> serialize() const override;
 };
 

@@ -1,0 +1,42 @@
+\hypertarget{MenuWindow_8h_source}{}\doxysection{Menu\+Window.\+h}
+\label{MenuWindow_8h_source}\index{game/MenuWindow.h@{game/MenuWindow.h}}
+\mbox{\hyperlink{MenuWindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}../src/Game.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <tuple>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{classMenuWindow}{MenuWindow}} \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} x\_;}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} y\_;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} w\_;}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} h\_;}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} ch\_h\_;}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{17     SDL\_Renderer* renderer\_;}
+\DoxyCodeLine{18     }
+\DoxyCodeLine{19     TTF\_Font* font\_;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     std::shared\_ptr<Summoner> summoner\_;}
+\DoxyCodeLine{22     std::shared\_ptr<Entity> active\_;}
+\DoxyCodeLine{23     std::vector<std::tuple<void (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*, \mbox{\hyperlink{classMenuWindow}{MenuWindow}}*>> choices\_;}
+\DoxyCodeLine{24     std::vector<SDL\_Texture*> textures\_;}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{classMenuWindow}{MenuWindow}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h, SDL\_Renderer*, std::shared\_ptr<Summoner>);}
+\DoxyCodeLine{28     \mbox{\hyperlink{classMenuWindow_a4d0cdde7f18e38d2ab0c2fab21d37970}{\string~MenuWindow}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMenuWindow_ad43be8e443fab7519fb06c6bca895618}{clearTextures}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMenuWindow_a0304c8ce00cf8bcbbb7aefcfd02fba8b}{setActive}}(std::shared\_ptr<Entity> active);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMenuWindow_a4b79366289784cb3504577195ef5d4ca}{addChoice}}(\textcolor{keyword}{const} std::tuple<\textcolor{keywordtype}{void} (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*, \mbox{\hyperlink{classMenuWindow}{MenuWindow}}*>\&);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMenuWindow_ad57e8229e78a97b405a7b6d03672c430}{draw}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMenuWindow_a6cd9a6375ef1149209b540880ec51ca1}{catchClick}}(\textcolor{keywordtype}{int} y); }
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+
+\end{DoxyCode}

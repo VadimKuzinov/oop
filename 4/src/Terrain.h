@@ -24,7 +24,7 @@ public:
 
     friend std::istream& operator>>(std::istream& is, Terrain& terrain);
     friend std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
-    friend class Summoner;
+//    friend class Summoner;
    
     int MAX_X;
     int MAX_Y;
@@ -36,13 +36,13 @@ public:
     std::shared_ptr<Summoner> getSummonerFirst() {
         int x = static_cast<int>(summoners_coords_.first.x);
         int y = static_cast<int>(summoners_coords_.first.y);
-        return dynamic_pointer_cast<Summoner>(map_[y][x]);
+        return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
     }
 
     std::shared_ptr<Summoner> getSummonerSecond() {
         int x = static_cast<int>(summoners_coords_.second.x);
         int y = static_cast<int>(summoners_coords_.second.y);
-        return dynamic_pointer_cast<Summoner>(map_[y][x]);
+        return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
     }
 };
 

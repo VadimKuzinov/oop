@@ -11,6 +11,13 @@ void Obstacle::receiveDamage(double value) {
     std::cout << "NEW HP: " << cur_hp_ << '\n';
 }
 
+void Obstacle::setTargetCoords(Point target_coords) {
+    target_coords_ = target_coords;
+//    int y = static_cast<int>(target_coords.y);
+//    int x = static_cast<int>(target_coords.x);
+//    setCaptured(terrain_->map_[y][x]);
+}
+
 void Obstacle::setDefaults() {
     switch (id_) {
         case Obstacle_:
@@ -52,5 +59,14 @@ bool Obstacle::isAlive() const {
 
 std::vector<std::pair<void (*)(Entity*), const char*>> Obstacle::getMenu() const {
     return {};
+}
+
+std::vector<std::pair<std::string, std::string>> Obstacle::serialize() const {
+    std::vector<std::pair<std::string, std::string>> res;
+    res.push_back(std::make_pair("coords", std::string(coords_)));
+    res.push_back(std::make_pair("max_hp", std::to_string(max_hp_)));
+    res.push_back(std::make_pair("cur_hp", std::to_string(cur_hp_)));
+    res.push_back(std::make_pair("trg_coords", std::string(target_coords_)));
+    return res;
 }
 
