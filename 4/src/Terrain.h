@@ -44,5 +44,7 @@ public:
         int y = static_cast<int>(summoners_coords_.second.y);
         return std::dynamic_pointer_cast<Summoner>(map_[y][x]);
     }
+
+    void clearCorpses();
 };
 

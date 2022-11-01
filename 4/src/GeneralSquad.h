@@ -10,7 +10,7 @@
 class GeneralSquad : public Obstacle {
 protected:
     double damage_ = 4;
-    double velocity_ = 0.006;
+    double velocity_ = 0.014;
     int quantity_ = 1;
     double xp_for_destroying_ = 3;
     double attack_range_ = 2;

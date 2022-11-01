@@ -2,9 +2,10 @@
 #include "Type.h"
 #include "Point.h"
 #include <vector>
+#include <memory>
 
 
-class Entity {
+class Entity : public std::enable_shared_from_this<Entity> {
 public:
     virtual Type getId() const = 0;
     virtual Point getCoords() const = 0;

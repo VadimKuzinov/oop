@@ -29,6 +29,10 @@ void MoralSquad::giveDamage() {
 }
 
 void MoralSquad::attack() {
+    if (captured_ == nullptr) {
+        return;
+    }
+
     auto distance = Point::distance(coords_, captured_->getCoords());
     if (distance > attack_range_) {
         return;

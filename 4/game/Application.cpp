@@ -97,6 +97,11 @@ void Application::loop() {
                     //std::cout << "After correcting: " << x << ' ' << y << '\n';
                     player_->catchClick(Point{x, y});
                     break;
+               case SDL_KEYDOWN:
+                    if (event_.key.keysym.sym == SDLK_a) {
+                        player_->resetActive();
+                    }
+                    break;
             }
         }
         draw();
@@ -164,7 +169,8 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     SDL_Rect hp_bar;
     hp_bar.x = x;
     hp_bar.y = y - scale_factor_ / 4;
-    hp_bar.w = scale_factor_;
+    auto casted_to_obstacle = std::dynamic_pointer_cast<Obstacle>(e);
+    hp_bar.w = scale_factor_ * (casted_to_obstacle->getCurHp() / casted_to_obstacle->getMaxHp());
     hp_bar.h = scale_factor_ / 4;
     SDL_SetRenderDrawColor(renderer_, 11, 102, 35, 111);
     SDL_RenderFillRect(renderer_, &hp_bar);
@@ -176,8 +182,7 @@ void Application::drawCircle(int x0, int y0, int radius) {
     int dx = 1;
     int dy = 1;
     int err = dx - (radius << 1);
-    while (x >= y)
-    {
+    while (x >= y) {
         SDL_RenderDrawPoint(renderer_, x0 + x, y0 + y);
         SDL_RenderDrawPoint(renderer_, x0 + y, y0 + x);
         SDL_RenderDrawPoint(renderer_, x0 - y, y0 + x);
@@ -187,15 +192,13 @@ void Application::drawCircle(int x0, int y0, int radius) {
         SDL_RenderDrawPoint(renderer_, x0 + y, y0 - x);
         SDL_RenderDrawPoint(renderer_, x0 + x, y0 - y);
 
-        if (err <= 0)
-        {
+        if (err <= 0) {
             y++;
             err += dy;
             dy += 2;
         }
         
-        if (err > 0)
-        {
+        if (err > 0) {
             x--;
             dx += 2;
             err += dx - (radius << 1);

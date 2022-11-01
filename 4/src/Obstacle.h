@@ -34,6 +34,10 @@ public:
     void setDefaults();
     void receiveDamage(double) override;
 
+    double getMaxHp() const {
+        return max_hp_;
+    }
+
     std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
     void act() override {

@@ -16,6 +16,21 @@ Terrain::Terrain(const std::string& filename) {
     ifs >> *this;
 }
 
+void Terrain::clearCorpses() {
+    auto it = squads_.begin();
+    Point coords;
+    while (it != squads_.end()) {
+        if (!(*it)->isAlive()) {
+            coords = Point::withIntCfs((*it)->getCoords());
+            map_[coords.y][coords.x] = nullptr;
+            squads_.erase(it++);
+        }
+        else {
+            ++it;
+        }
+    }
+}
+
 void Terrain::live() {
     using frames = std::chrono::duration<int64_t, std::ratio<1, 64>>; //64 fps
    //std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<int64_t, std::ratio<1, 999999960>>> 
@@ -24,6 +39,7 @@ void Terrain::live() {
     auto summoner1 = getSummonerFirst();
     auto summoner2 = getSummonerSecond();
     while (summoner1->isAlive() && summoner2->isAlive()) {
+        clearCorpses();
         for (auto&& squad : squads_) {
             squad->act(); //squad acting depending on flags (moving_, attacking_ etc.) and using information (goal_point_)                     
         }
