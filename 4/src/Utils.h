@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-
-
+#include <typeinfo>
+/*
 template <typename T>
 concept Moving = requires(T sq) {
     sq.tryToMove();
@@ -31,3 +31,9 @@ template <typename T>
 concept Healing = requires(T sq) {
     sq.tryToHeal();
 };
+*/
+template <typename U, typename T>
+constexpr bool isInstanceOf(const T* v) {
+    return typeid(U) == typeid(*v);
+}
+

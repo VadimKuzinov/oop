@@ -50,6 +50,8 @@ void Terrain::live() {
 }
 
 void Terrain::addSquad(Type id, Point where) {
+    //foo<Obstacle, GeneralSquad, MoralSquad, GeneralHealingSquad, MoralHealingSquad>(const std::type_info&);
+
     Entity* new_squad;
     switch (id) {
         case Obstacle_:

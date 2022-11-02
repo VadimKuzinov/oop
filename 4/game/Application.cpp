@@ -17,7 +17,8 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
     summoner_window_ = new SummonerWindow(MAX_X_, 4 * MAX_Y_ / 5, MENU_W_, MAX_Y_ / 5, renderer_, player_->getSummoner());
 
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
-    SDL_RenderClear(renderer_); 
+    SDL_RenderClear(renderer_);
+
 
     SDL_Surface* backround = SDL_LoadBMP("grey.bmp");
     SDL_Surface* obstacle = SDL_LoadBMP("obstacle.bmp");
@@ -165,7 +166,6 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     if (e->getId() == Obstacle_) {
         return;
     }
-
     SDL_Rect hp_bar;
     hp_bar.x = x;
     hp_bar.y = y - scale_factor_ / 4;
