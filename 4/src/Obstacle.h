@@ -53,7 +53,6 @@ public:
     }
     
     void setTargetCoords(Point target_coords);
-    void setDefaults();
     void receiveDamage(double) override;
 
     double getMaxHp() const {

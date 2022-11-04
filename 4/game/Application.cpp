@@ -6,8 +6,8 @@
 
 Application::Application(Game* game, Player* player) : game_(game), player_(player) {
     auto terrain = game->getTerrain();
-    MAX_X_ = scale_factor_ * terrain->MAX_X;
-    MAX_Y_ = scale_factor_ * terrain->MAX_Y;
+    MAX_X_ = scale_factor_ * terrain->getMap().getWidth();
+    MAX_Y_ = scale_factor_ * terrain->getMap().getHeight();
     //menu at the right side of screen
     SDL_Init(SDL_INIT_EVERYTHING);
     window_ = SDL_CreateWindow("sss", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, MAX_X_ + MENU_W_, MAX_Y_, SDL_WINDOW_SHOWN);
@@ -74,7 +74,7 @@ void Application::draw() {
     menu_window_->setActive(player_->getActive());
     menu_window_->draw();
 
-    for (auto&& squad : game_->getTerrain()->squads_) {
+    for (auto&& squad : game_->getTerrain()->getMap()) {
         drawSquad(squad);
     }
 

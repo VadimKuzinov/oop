@@ -14,8 +14,7 @@ public:
     }
 
     void setActive(Point where) {
-        std::cout << "Inside set active" << std::endl;
-        active_ = terrain_->map_[where.y][where.x];
+        active_ = terrain_->getMap()[where];
     }
 
     void resetActive() {
@@ -27,27 +26,20 @@ public:
     }
 
     void catchClick(Point where) {
-        if (terrain_ == nullptr) std::cout << "TERRAIN IS NULLPTR" << std::endl;
-        std::cout << "Catched click: ";
-        std::cout << where << std::endl;
-        if (where.y >= terrain_->MAX_Y || where.x >= terrain_->MAX_X) {
-            std::cout << "INSIDE IF" << std::endl;
+        if (where.y >= terrain_->getMap().getHeight() || where.x >= terrain_->getMap().getWidth()) {
             return;
         }
-        std::cout << "IN RANGE" << std::endl;
 
         if (active_ == nullptr) {
-            std::cout << "before setActive()" << std::endl;
             setActive(where);
-            std::cout << "After" << std::endl;
         }
-        else if (active_ == terrain_->map_[where.y][where.x]) {
+        else if (active_ == terrain_->getMap()[where]) {
             active_ = nullptr;
         }
         else {
             auto casted = std::dynamic_pointer_cast<Obstacle>(active_);
             casted->setTargetCoords(where);
-            casted->setCaptured(terrain_->map_[where.y][where.x]);
+            casted->setCaptured(terrain_->getMap()[where]);
         }
     }
 

@@ -55,6 +55,7 @@ public:
     }
 
     Terrain* getTerrain() const {
+        if (terrain_ == nullptr) std::cout << "TERRAIN IS NULLPTR" << std::endl;
         return terrain_;
     }
 

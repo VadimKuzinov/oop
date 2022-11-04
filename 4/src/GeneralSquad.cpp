@@ -3,10 +3,7 @@
 #include "Point.h"
 #include <iostream>
 
-/*
-GeneralSquad::GeneralSquad(Terrain* terrain, Point coords, Type id) : Obstacle(terrain, coords, id) {
-}
-*/
+
 void GeneralSquad::update() {
     if (captured_ && !captured_->isAlive()) {
         captured_ = nullptr;
@@ -22,9 +19,7 @@ void GeneralSquad::move() {
     auto vector_direction = Point::normalized(target_coords_ - coords_) * act_velocity;
     auto target_point = coords_ + vector_direction;
     auto int_target_point = Point::withIntCfs(target_point);
-    int x = int_target_point.x;
-    int y = int_target_point.y;
-    if (terrain_->map_[y][x] != nullptr && terrain_->map_[y][x].get() != this) {
+    if (terrain_->getMap()[int_target_point] != nullptr && terrain_->getMap()[int_target_point].get() != this) {
         moving_ = false;
         return;
     }
@@ -38,8 +33,8 @@ void GeneralSquad::move() {
         }
         return;
     }
-    terrain_->map_[y][x] = terrain_->map_[cur_int_coords_.y][cur_int_coords_.x];
-    terrain_->map_[cur_int_coords_.y][cur_int_coords_.x] = nullptr;
+    terrain_->getMap()[int_target_point] = terrain_->getMap()[cur_int_coords_];
+    terrain_->getMap()[cur_int_coords_] = nullptr;
 }
 
 void GeneralSquad::giveDamage() {
