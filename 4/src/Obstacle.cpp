@@ -1,10 +1,10 @@
 #include "Obstacle.h"
 
-
+/*
 Obstacle::Obstacle(Terrain* terrain, Point coords, Type id) : id_(id), terrain_(terrain), coords_(coords) {
     setDefaults();
 }
-
+*/
 void Obstacle::receiveDamage(double value) {
     std::cout << "OLD HP: " << cur_hp_ << '\n';
     cur_hp_ -= value;
@@ -19,6 +19,8 @@ void Obstacle::setTargetCoords(Point target_coords) {
 }
 
 void Obstacle::setDefaults() {
+    return;
+    /*
     switch (id_) {
         case Obstacle_:
             priority_ = Obstacle_Pr_;
@@ -49,8 +51,9 @@ void Obstacle::setDefaults() {
             priority_ = Summoner_Pr_;
             max_hp_ = Summoner_Mhp_;
             cur_hp_ = max_hp_;
-         break;        
-    }
+         break;
+         
+    }*/
 }
 
 bool Obstacle::isAlive() const {

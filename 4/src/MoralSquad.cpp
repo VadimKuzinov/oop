@@ -1,9 +1,9 @@
 #include "MoralSquad.h"
 
-
+/*
 MoralSquad::MoralSquad(Terrain* terrain, Point coords, Type id) : GeneralSquad(terrain, coords, id) {
 }
-
+*/
 void MoralSquad::stabilizeMorality() {
     if (morality_ < 0) {
         morality_ += stabilization_speed_;

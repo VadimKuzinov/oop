@@ -9,7 +9,8 @@ protected:
     bool healing_ = false;
 
 public:
-    GeneralHealingSquad(Terrain*, Point coords, Type = GeneralHealing_);
+//    GeneralHealingSquad(Terrain*, Point coords, Type = GeneralHealing_);
+    GeneralHealingSquad() = default;
     virtual ~GeneralHealingSquad() = default;    
 
     void tryToHeal() {

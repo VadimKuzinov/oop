@@ -5,6 +5,8 @@
 #include "MoralSquad.h"
 #include "GeneralHealingSquad.h"
 #include "MoralHealingSquad.h"
+#include "Utils.h"
+#include "School.h"
 #include <algorithm>
 #include <memory>
 #include <chrono>
@@ -49,9 +51,9 @@ void Terrain::live() {
     }
 }
 
-void Terrain::addSquad(Type id, Point where) {
+void Terrain::addSquad(School* school_of_summoned, Point where) {
     //foo<Obstacle, GeneralSquad, MoralSquad, GeneralHealingSquad, MoralHealingSquad>(const std::type_info&);
-
+/*
     Entity* new_squad;
     switch (id) {
         case Obstacle_:
@@ -75,13 +77,15 @@ void Terrain::addSquad(Type id, Point where) {
     }
 
     map_[where.y][where.x] = std::shared_ptr<Entity>(new_squad);
-
+*/
+    auto new_squad = createPtrToInstanceOf(school_of_summoned->getTypeInfo());
+    map_[where.y][where.x] = new_squad;
     auto it_low = std::lower_bound(squads_.begin(), squads_.end(), new_squad->getPriority(),
             [](std::shared_ptr<Entity> squad, int priority) { 
                 return squad->getPriority() < priority;
             });
 
-    squads_.insert(it_low, map_[where.y][where.x]);
+    squads_.insert(it_low, new_squad);
 }
 
 std::istream& operator>>(std::istream& is, Terrain& terrain) {
@@ -97,9 +101,12 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     is >> p1 >> p2;
 
     terrain.summoners_coords_ = {p1, p2};
-
+/*
     terrain.addSquad(Summoner_, p1);
     terrain.addSquad(Summoner_, p2);
+*/
+    terrain.addSquad(new SchoolSummoner, p1);
+    terrain.addSquad(new SchoolSummoner, p2);
 
     std::size_t count_of_obstacles;
     is >> count_of_obstacles;
@@ -107,12 +114,12 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     Point obst_coords;
     while (t--) {
         is >> obst_coords;
-        terrain.addSquad(Obstacle_, obst_coords);
+        terrain.addSquad(new SchoolObstacle, obst_coords);
     }
 
     return is;
 }
-
+/*
 std::ostream& operator<<(std::ostream& os, const Terrain& terrain) {
     os << "MAP_WIDTH: " << terrain.MAX_X << '\n';
     os << "MAP_HEIGHT: " << terrain.MAX_Y << '\n';
@@ -151,4 +158,4 @@ std::ostream& operator<<(std::ostream& os, const Terrain& terrain) {
 
     return os;
 }
-
+*/

@@ -162,10 +162,12 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
         SDL_SetRenderDrawColor(renderer_, 255, 0, 0, 255);      
         drawCircle(x, y, scale_factor_ * 1.4);
     }
-
+/*
     if (e->getId() == Obstacle_) {
         return;
     }
+*/
+
     SDL_Rect hp_bar;
     hp_bar.x = x;
     hp_bar.y = y - scale_factor_ / 4;

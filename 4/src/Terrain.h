@@ -1,16 +1,19 @@
 #pragma once
 #include "Point.h"
 #include "Type.h"
+//#include "School.h"
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <list>
 #include <memory>
+#include <typeinfo>
 
 
 class Terrain;
 class Summoner;
 class Entity;
+class School;
 
 std::istream& operator>>(std::istream& is, Terrain& terrain);
 std::ostream& operator<<(std::ostream& os, const Terrain& terrain);
@@ -30,7 +33,7 @@ public:
     int MAX_Y;
 
     Terrain(const std::string& cfg_filename); //add
-    void addSquad(Type id, Point); //called from summoner may be
+    void addSquad(School*, Point); //called from summoner may be
     void live();
 
     std::shared_ptr<Summoner> getSummonerFirst() {

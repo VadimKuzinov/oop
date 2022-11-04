@@ -3,8 +3,7 @@
 
 
 int main() {
-    Entity* e = new GeneralSquad(nullptr, {0, 0});
-    std::cout << isInstanceOf<GeneralSquad>(e);
-    std::cout << (typeid(GeneralSquad) == typeid(*e));
+    auto e = createPtrToInstanceOf(typeid(GeneralSquad));
+    std::cout << e->getCoords();
     return 0;
 }

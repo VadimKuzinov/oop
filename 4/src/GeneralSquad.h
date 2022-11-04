@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils.h"
+//#include "Utils.h"
 #include "Type.h"
 #include "Obstacle.h"
 #include "Point.h"
@@ -21,7 +21,8 @@ protected:
     std::shared_ptr<Summoner> summoner_ = nullptr;
 
 public:
-    GeneralSquad(Terrain*, Point coords, Type = General_);
+//    GeneralSquad(Terrain*, Pint coords, Type = General_);
+    GeneralSquad() = default;
     virtual ~GeneralSquad() = default;
 
     void setSummoner(std::shared_ptr<Summoner> summoner) {

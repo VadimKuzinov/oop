@@ -1,5 +1,5 @@
 #pragma once
-#include "Utils.h"
+//#include "Utils.h"
 #include "Entity.h"
 #include "Type.h"
 #include "Point.h"
@@ -11,7 +11,7 @@ class Terrain;
 
 class Obstacle : public Entity {
 protected:
-    Type id_;
+//    Type id_;
 
     Terrain* terrain_;
     Point coords_;
@@ -23,8 +23,16 @@ protected:
     Point target_coords_;
 
 public:
-    Obstacle(Terrain*, Point coords, Type = Obstacle_);
+    Obstacle() = default;
     virtual ~Obstacle() = default;
+
+    void setTerrain(Terrain* terrain) {
+        terrain_ = terrain;
+    }
+
+    void setCoords(Point where) {
+        coords_ = where;
+    }
 
     void setCaptured(std::shared_ptr<Entity> captured) {
         captured_ = captured;
@@ -48,11 +56,11 @@ public:
     int getPriority() const override {
         return priority_;
     }
-
+/*
     Type getId() const override {
         return id_;
     }
-
+*/
     Point getCoords() const override {
         return coords_;
     }
@@ -67,3 +75,4 @@ public:
     
     std::vector<std::pair<std::string, std::string>> serialize() const override;
 };
+

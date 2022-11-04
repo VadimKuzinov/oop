@@ -7,7 +7,7 @@
 
 class Entity : public std::enable_shared_from_this<Entity> {
 public:
-    virtual Type getId() const = 0;
+//    virtual Type getId() const = 0;
     virtual Point getCoords() const = 0;
     virtual int getPriority() const = 0;
     virtual bool isAlive() const = 0;

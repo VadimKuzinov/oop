@@ -3,10 +3,10 @@
 #include "Point.h"
 #include <iostream>
 
-
+/*
 GeneralSquad::GeneralSquad(Terrain* terrain, Point coords, Type id) : Obstacle(terrain, coords, id) {
 }
-
+*/
 void GeneralSquad::update() {
     if (captured_ && !captured_->isAlive()) {
         captured_ = nullptr;

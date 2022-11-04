@@ -12,13 +12,13 @@ constexpr void for_sequence(std::integer_sequence<T, S...>, F&& f) {
 // Sample implementation of a json-like data structure. It is only there for the example to compile and actually produce a testable output
 namespace Json {
     struct Value;
-    
+
     struct ValueData {
         std::map<std::string, Value> subObject;
         std::string string;
         int number = 0;
     };
-    
+
     struct Value {
         ValueData data;
         

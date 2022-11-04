@@ -2,8 +2,11 @@
 #include "Terrain.h"
 #include "Type.h"
 #include "Obstacle.h"
+//#include "School.h"
+
 #include <memory>
 
+class School;
 
 class Summoner: public Obstacle {
 protected:
@@ -17,9 +20,11 @@ protected:
     bool summoning_ = false;
     bool upgrading_ = false;
     Type summoned_id_ = Obstacle_;
+    School* summoned_school_ = nullptr;
 
 public:
-    Summoner(Terrain* terrain, Point coords, Type = Summoner_);
+    //Summoner(Terrain* terrain, Point coords, Type = Summoner_);
+    Summoner() = default;
     ~Summoner() = default;
   
     void tryToAccumulate() {
@@ -40,9 +45,8 @@ public:
         upgrading_ = true; 
     }
 
-    void setSummonedId(Type id) {
-        std::cout << "ID that is taken: " << id << '\n';
-        summoned_id_ = id;
+    void setSummoned(School* school) {
+        summoned_school_ = school;
     }
 
     Terrain* getTerrain() const {

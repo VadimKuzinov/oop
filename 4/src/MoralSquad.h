@@ -9,9 +9,10 @@ protected:
     double stabilization_speed_ = Moral_Stab_;
 
 public:
-    MoralSquad(Terrain*, Point coords, Type = Moral_);
+//    MoralSquad(Terrain*, Point coords, Type = Moral_);
+    MoralSquad() = default;
     virtual ~MoralSquad() = default;
-   
+
     std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
 
     void stabilizeMorality();

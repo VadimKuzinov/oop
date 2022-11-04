@@ -6,7 +6,8 @@
 
 class MoralHealingSquad : public MoralSquad, public GeneralHealingSquad {
 public:
-    MoralHealingSquad(Terrain*, Point coords, Type = MoralHealing_);
+//    MoralHealingSquad(Terrain*, Point coords, Type = MoralHealing_);
+    MoralHealingSquad() = default;
     virtual ~MoralHealingSquad() = default;
 
     std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
