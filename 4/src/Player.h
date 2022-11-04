@@ -14,6 +14,7 @@ public:
     }
 
     void setActive(Point where) {
+        std::cout << "Inside set active" << std::endl;
         active_ = terrain_->map_[where.y][where.x];
     }
 
@@ -26,12 +27,19 @@ public:
     }
 
     void catchClick(Point where) {
+        if (terrain_ == nullptr) std::cout << "TERRAIN IS NULLPTR" << std::endl;
+        std::cout << "Catched click: ";
+        std::cout << where << std::endl;
         if (where.y >= terrain_->MAX_Y || where.x >= terrain_->MAX_X) {
+            std::cout << "INSIDE IF" << std::endl;
             return;
         }
-    
+        std::cout << "IN RANGE" << std::endl;
+
         if (active_ == nullptr) {
+            std::cout << "before setActive()" << std::endl;
             setActive(where);
+            std::cout << "After" << std::endl;
         }
         else if (active_ == terrain_->map_[where.y][where.x]) {
             active_ = nullptr;

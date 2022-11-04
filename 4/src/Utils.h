@@ -4,14 +4,13 @@
 #include <memory>
 
 #include "Entity.h"
-/*
 #include "Obstacle.h"
 #include "GeneralSquad.h"
 #include "MoralSquad.h"
 #include "GeneralHealingSquad.h"
 #include "MoralHealingSquad.h"
 #include "Summoner.h"
-*/
+
 
 /*
 template <typename T>
@@ -78,5 +77,29 @@ inline std::shared_ptr<Entity> createPtrToInstanceOf(const std::type_info& type)
 template <typename U, typename T>
 inline constexpr bool isInstanceOf(const T* v) {
     return typeid(U) == typeid(*v);
+}
+
+inline const std::type_info& getTypeInfoFromString(const std::string& type) {
+    if (type == "Obstacle") {
+        return typeid(Obstacle);
+    }
+    else if (type == "GeneralSquad") {
+        return typeid(GeneralSquad);
+    }
+    else if (type == "MoralSquad") {
+        return typeid(MoralSquad);
+    }
+    else if (type == "GeneralHealingSquad") {
+        return typeid(GeneralHealingSquad);
+    }
+    else if (type == "MoralHealingSquad") {
+        return typeid(MoralHealingSquad);
+    }
+    else if (type == "Summoner") {
+        return typeid(Summoner);
+    }
+    else {
+        return typeid(Entity);
+    }
 }
 

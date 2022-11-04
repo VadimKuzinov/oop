@@ -19,16 +19,29 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
     SDL_RenderClear(renderer_);
 
+    auto academy = terrain->getAcademy();
+    auto schools = academy.getSchools();
+    for (auto&& [name, school] : schools) {
+        auto abilities = school.getAbilities();
+        for (auto&& [name, ability] : abilities) {
+            auto model = ability.getModel();
+            auto pct_file = model->getPictureFileName();
+            SDL_Surface* surface = SDL_LoadBMP(pct_file.c_str());
+            SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
+            textures_[pct_file] = texture;
+            SDL_FreeSurface(surface);
+        }
+    }
 
     SDL_Surface* backround = SDL_LoadBMP("grey.bmp");
-    SDL_Surface* obstacle = SDL_LoadBMP("obstacle.bmp");
+//    SDL_Surface* obstacle = SDL_LoadBMP("obstacle.bmp");
     backround_ = SDL_CreateTextureFromSurface(renderer_, backround);
-    obstacle_ = SDL_CreateTextureFromSurface(renderer_, obstacle);
+  //  obstacle_ = SDL_CreateTextureFromSurface(renderer_, obstacle);
 //    SDL_Rect rect;
 //    rect.x = 0; rect.y = 0; rect.w = MAX_X_; rect.h = MAX_Y_;
 //    SDL_RenderCopy(renderer_, texture, NULL, &rect);
     SDL_FreeSurface(backround);
-    SDL_FreeSurface(obstacle);
+    //SDL_FreeSurface(obstacle);
 }
 
 Application::~Application() {
@@ -111,27 +124,7 @@ void Application::loop() {
 }
 
 void Application::drawSquad(std::shared_ptr<Entity> e) {
-    int r, g, b;
-    switch (e->getId()) {
-        case Obstacle_:
-            r = 0; g = 0; b = 0;
-            break;
-        case General_:
-            r = 100; g = 100; b = 100;
-            break;
-        case Moral_:
-            r = 200; g = 200; b = 200;
-            break;
-        case GeneralHealing_:
-            r = 100; g = 0; b = 0;
-            break;
-        case MoralHealing_:
-            r = 0; g = 100; b = 0;
-            break;
-        case Summoner_:
-            r = 0; g = 0; b = 100;
-            break;
-    }
+    auto pct_file = e->getPictureFileName();
 
     auto coords = e->getCoords();
     coords = Point::withIntCfs(coords);
@@ -140,7 +133,6 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
 
     int x = scale_factor_ * x0;
     int y = MAX_Y_ - scale_factor_ * (y0 + 1);
-
 
 //    int x = static_cast<int>(coords.x * scale_factor_);
 //    int y = static_cast<int>(MAX_Y_ - scale_factor_ * coords.y);
@@ -151,11 +143,7 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
 
     SDL_Rect rect;
     rect.x = x; rect.y = y; rect.w = scale_factor_; rect.h = scale_factor_;
-    SDL_SetRenderDrawColor(renderer_, r, g, b, 255);
-    if (e->getId() != Obstacle_)
-    SDL_RenderFillRect(renderer_, &rect);
-    else
-    SDL_RenderCopy(renderer_, obstacle_, NULL, &rect);
+    SDL_RenderCopy(renderer_, textures_[pct_file], NULL, &rect);
 
     if (player_->getActive() == e) {
 //        std::cout << "PLAYER: " << player_ << '\n';   

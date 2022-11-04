@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include "Game.h"
 
-
+/*
 void Game::initializeSocket() {
    //set struct info
     struct sockaddr_in server_info = {0};
@@ -52,7 +52,7 @@ void Game::catchClicks() {
         }
         if (active != nullptr) {
             std::cout << "Not nullptr!" << std::endl;
-/*            auto menu_v = menu(active);
+            auto menu_v = menu(active);
             if (active->getId() == Obstacle_)
                 menu_v = menu(std::dynamic_pointer_cast<Obstacle>(active));
             else if (active->getId() ==  General_)
@@ -66,7 +66,7 @@ void Game::catchClicks() {
             else if (active->getId() ==  Summoner_)
                 menu_v = menu(std::dynamic_pointer_cast<Summoner>(active));
             
-*/          auto menu_v = active->getMenu();
+          auto menu_v = active->getMenu();
             std::cout << "Menu's been created!" << std::endl;
             for (auto&& [func, what] : menu_v) {
                 std::cout << what << std::endl;
@@ -75,7 +75,7 @@ void Game::catchClicks() {
 
     }
 }   
-
+*/
 void Game::run() {
    // std::thread thr1(&Terrain::live, terrain_);
 //  terrain_->live();    

@@ -1,24 +1,19 @@
 #include "Summoner.h"
 
-/*
-Summoner::Summoner(Terrain* terrain, Point coords, Type id) : Obstacle(terrain, coords, id) {
-}
-*/
+
 void Summoner::accumulateEnergy() {
     cur_energy_ = std::min(max_energy_, cur_energy_ + energy_regen_speed_);
 }
 
 void Summoner::summon() {
-    if (summoned_school_ == nullptr) {
-        return;
-    }
-
     auto distance = Point::distance(coords_, target_coords_);
     if (distance > summon_range_) {
         return;
     }
 
-    terrain_->addSquad(summoned_school_, target_coords_);
+    if (summoned_school_.size() && summoned_ability_.size()) {
+        terrain_->addSquad(summoned_school_, summoned_ability_, target_coords_);
+    }
 }
 
 void Summoner::upgradeSchool() {

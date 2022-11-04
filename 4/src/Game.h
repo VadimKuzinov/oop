@@ -13,10 +13,10 @@
 class Game {
     Terrain* terrain_;
     std::pair<Player*, Player*> players_;
-    int sfd; 
-    int connfd;
+//    int sfd; 
+//    int connfd;
 
-    void initializeSocket();
+//    void initializeSocket();
 
 public:
 /*    template <typename T>
@@ -44,8 +44,8 @@ public:
         return choices;
     }
 */
-    Game(const std::string& filename) : 
-                    terrain_(new Terrain(filename)), 
+    Game(const std::string& academy_cfg, const std::string& map_cfg) : 
+                    terrain_(new Terrain(academy_cfg, map_cfg)), 
                     players_(std::make_pair<Player*, Player*>(new Player(terrain_->getSummonerFirst()), new Player(terrain_->getSummonerSecond()))) {
 //        initializeSocket();                        
     }

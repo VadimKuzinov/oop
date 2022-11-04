@@ -1,0 +1,17 @@
+1
+summoner
+1
+summoner
+100
+0
+Summoner
+9
+max_hp 5000
+cur_hp 5000
+priority 6
+summon_range 10
+max_energy 1000
+cur_energy 1000
+xp 0
+energy_regen_speed 0.001
+picture_filename obstacle.bmp

@@ -1,9 +1,8 @@
 #pragma once
-//#include "Utils.h"
+#include "Setter.h"
 #include "Entity.h"
 #include "Type.h"
 #include "Point.h"
-//#include "Terrain.h"
 #include <memory>
 
 
@@ -11,26 +10,41 @@ class Terrain;
 
 class Obstacle : public Entity {
 protected:
-//    Type id_;
-
-    Terrain* terrain_;
-    Point coords_;
+    Terrain* terrain_ = nullptr;
+    Point coords_ = {0, 0};
     double max_hp_ = Obstacle_Mhp_;
     double cur_hp_ = max_hp_;
     int priority_ = Obstacle_Pr_;
     
     std::shared_ptr<Entity> captured_ = nullptr;
-    Point target_coords_;
+    Point target_coords_ = {0, 0};
+
+    std::string picture_filename_;
+
+    constexpr static auto properties_ = std::make_tuple(std::make_pair(&Obstacle::coords_, "coords"),
+                                                        std::make_pair(&Obstacle::max_hp_, "max_hp"),
+                                                        std::make_pair(&Obstacle::cur_hp_, "cur_hp"),
+                                                        std::make_pair(&Obstacle::priority_, "priority"),
+                                                        std::make_pair(&Obstacle::picture_filename_, "picture_filename"));
+
+    void set(const std::string& name, const std::string& value) override {
+        return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
+    }
 
 public:
     Obstacle() = default;
     virtual ~Obstacle() = default;
+    Obstacle(const Obstacle&) = default;
+
+    std::shared_ptr<Entity> clone() const override {
+        return std::shared_ptr<Entity>(new Obstacle(*this));
+    }
 
     void setTerrain(Terrain* terrain) {
         terrain_ = terrain;
     }
 
-    void setCoords(Point where) {
+    void setCoords(Point where) override {
         coords_ = where;
     }
 
@@ -56,11 +70,6 @@ public:
     int getPriority() const override {
         return priority_;
     }
-/*
-    Type getId() const override {
-        return id_;
-    }
-*/
     Point getCoords() const override {
         return coords_;
     }
@@ -74,5 +83,9 @@ public:
     }
     
     std::vector<std::pair<std::string, std::string>> serialize() const override;
+
+    const std::string& getPictureFileName() const override {
+        return picture_filename_;
+    }
 };
 
