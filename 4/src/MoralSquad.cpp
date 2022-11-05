@@ -50,7 +50,7 @@ void MoralSquad::act() {
     }
 }
 
-std::vector<std::pair<void (*)(Entity*), const char*>> MoralSquad::getMenu() const {
+std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralSquad::getMenu() const {
     auto choices = GeneralSquad::getMenu();
     return choices;
 }

@@ -20,7 +20,7 @@ public:
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new MoralHealingSquad(*this));
     }  
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
+    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
 
     void act() override;
     void heal() override;

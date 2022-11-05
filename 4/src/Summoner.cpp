@@ -11,9 +11,25 @@ void Summoner::summon() {
         return;
     }
 
-    if (summoned_school_.size() && summoned_ability_.size()) {
-        terrain_->addSquad(summoned_school_, summoned_ability_, target_coords_);
+    if (summoned_school_ == "" || summoned_ability_ == "") {
+        return;
     }
+
+    auto ability = terrain_->getAcademy()[summoned_school_][summoned_ability_];
+    if (ability.getEnergyCost() > cur_energy_) {
+        return;
+    }
+
+    std::cout << "required level: " << ability.getRequiredLevelOfSchool();
+    int cur_level = levels_of_schools_[summoned_school_];
+    if (ability.getRequiredLevelOfSchool() > cur_level) {
+        return;
+    }
+
+    std::cout << "after 4ifs\n";
+    cur_energy_ -= ability.getEnergyCost();
+
+    terrain_->addSquad(terrain_->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords_);
 }
 
 void Summoner::upgradeSchool() {
@@ -39,11 +55,11 @@ void Summoner::act() {
     }
 }
 
-std::vector<std::pair<void (*)(Entity*), const char*>> Summoner::getMenu() const {
+std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> Summoner::getMenu() const {
     auto choices = Obstacle::getMenu();
-    choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToAccumulate(); }, "Accumulate"});
-    choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToSummon(); }, "Summon"});
-    choices.push_back({[](Entity* e){ return dynamic_cast<Summoner*>(e)->tryToUpgrade(); }, "Upgrade"});
+    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToAccumulate(); }, "Accumulate"});
+    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToSummon(); }, "Summon"});
+    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToUpgrade(); }, "Upgrade"});
     return choices;
 }
 
@@ -54,6 +70,8 @@ std::vector<std::pair<std::string, std::string>> Summoner::serialize() const {
     res.push_back(std::make_pair("cur_energy", std::to_string(cur_energy_)));
     res.push_back(std::make_pair("xp", std::to_string(xp_)));
     res.push_back(std::make_pair("en_reg_speed", std::to_string(energy_regen_speed_)));
+    res.push_back(std::make_pair("summoned_school", summoned_school_));
+    res.push_back(std::make_pair("summoned_ability", summoned_ability_));
     return res;
 }
 

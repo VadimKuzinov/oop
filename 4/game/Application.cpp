@@ -15,6 +15,7 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
 
     menu_window_ = new MenuWindow(MAX_X_, 0, MENU_W_, 4 * MAX_Y_ / 5, renderer_, player_->getSummoner());
     summoner_window_ = new SummonerWindow(MAX_X_, 4 * MAX_Y_ / 5, MENU_W_, MAX_Y_ / 5, renderer_, player_->getSummoner());
+    academy_window_ = new AcademyWindow(MAX_X_, 4 * MAX_Y_ / 5, MENU_W_, MAX_Y_ / 5, renderer_, player_->getSummoner());
 
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
     SDL_RenderClear(renderer_);
@@ -66,7 +67,16 @@ void Application::draw() {
 
     menu_window_->clearTextures();
     menu_window_->setActive(player_->getActive());
-    menu_window_->draw();
+
+    academy_window_->clearTextures();
+    academy_window_->setActive(player_->getActive());
+
+    if (player_->getActive() == nullptr) {
+        academy_window_->draw();
+    }
+    else {
+        menu_window_->draw();
+    }
 
     for (auto&& squad : game_->getTerrain()->getMap()) {
         drawSquad(squad);
@@ -97,7 +107,12 @@ void Application::loop() {
                 case SDL_MOUSEBUTTONDOWN:
                     SDL_GetMouseState(&x, &y);
                     if (x >= MAX_X_) {
-                        menu_window_->catchClick(y);
+                        if (player_->getActive() == nullptr) {
+                            academy_window_->catchClick(y);
+                        }
+                        else {
+                            menu_window_->catchClick(y);
+                        }
                         break;
                     }
                     renderCoords(&x, &y);

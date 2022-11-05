@@ -29,23 +29,18 @@ void MenuWindow::setActive(std::shared_ptr<Entity> active) { //make menu of choi
 
     if (active == nullptr) {
         for (auto&& [name, school] : summoner_->getTerrain()->getAcademy().getSchools()) {
-            addChoice(std::make_tuple<void (*)(Entity*), const char*, MenuWindow*>(
-                        [](Entity* e) { 
-                            return dynamic_cast<Summoner*>(e)->setSummonedSchool(name); 
-                        },
-                        name.c_str(), 
-                        nullptr));
+            addChoice(name);
         }
         return;
     }
 
     auto menu = active->getMenu();
     for (auto&& pair: menu) {
-        addChoice(std::make_tuple<void (*&)(Entity*), const char*&, MenuWindow*>(pair.first, pair.second, nullptr));
+        addChoice(pair.second);
     }
 }
 
-void MenuWindow::addChoice(const std::tuple<void (*)(Entity*), const char*, MenuWindow*>& choice) {
+void MenuWindow::addChoice(const std::string& choice) {
     choices_.push_back(choice);
 }
 
@@ -66,7 +61,7 @@ void MenuWindow::draw() {
     int text_h;
      
     for (int it = 0; it < qty; ++it) {
-        SDL_Surface* surface = TTF_RenderText_Solid(font_, std::get<1>(choices_[it]), textColor);
+        SDL_Surface* surface = TTF_RenderText_Solid(font_, choices_[it].c_str(), textColor);
         SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
         textures_.push_back(texture);
         text_w = surface->w;
@@ -87,12 +82,18 @@ void MenuWindow::catchClick(int y) {
     if (y >= qty) {
         return;
     }
+    chosen_ = choices_[y];
 
     if (active_ == nullptr) {
-        std::get<0>(choices_[y])(summoner_.get());
+        std::cout << chosen_ << std::endl;
     }
     else {
-        std::get<0>(choices_[y])(active_.get());
+        for (auto&& [func, name] : active_->getMenu()) {
+            if (name == chosen_) {
+                func(active_);
+            }
+        }
+        chosen_ = "";
     }
 }
 

@@ -45,3 +45,13 @@ std::shared_ptr<Entity> Ability::getModel() const {
     return model_->clone();
 }
 
+std::shared_ptr<Entity> Ability::getModelWithLevel(int level) const {
+    auto model = getModel();
+    auto model_casted = std::dynamic_pointer_cast<GeneralSquad>(getModel());
+    if (model_casted == nullptr) {
+        return model;
+    }
+
+    model_casted->setQuantity(level * qty_kf_);
+    return model_casted;
+}   

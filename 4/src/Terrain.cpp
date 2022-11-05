@@ -46,8 +46,13 @@ void Terrain::addSummoner(std::shared_ptr<Entity> e) {
     }
 }
 
-void Terrain::addSquad(const std::string& school, const std::string& ability, Point where) {
-    auto new_squad = academy_[school][ability].getModel();
+void Terrain::loadSchoolsToSummoner(std::shared_ptr<Summoner> summoner) {
+    for (auto&& [name, school] : academy_.getSchools()) {
+        summoner->getLevelsOfSchools()[name] = 1;
+    }
+}
+
+void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where) {
     new_squad->setCoords(where);
     new_squad->setTerrain(this);
     if (typeid(*new_squad) == typeid(Summoner)) {
@@ -68,7 +73,7 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     std::string school, ability;
     while (qty--) {
         is >> coords >> school >> ability;
-        terrain.addSquad(school, ability, coords);
+        terrain.addSquad(terrain.academy_[school][ability].getModel(), coords);
     }
 
     return is;

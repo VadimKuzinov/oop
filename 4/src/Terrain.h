@@ -20,10 +20,11 @@ private:
     friend std::istream& operator>>(std::istream& is, Terrain& terrain);
 
     void addSummoner(std::shared_ptr<Entity>);
+    void loadSchoolsToSummoner(std::shared_ptr<Summoner>);
 
 public:
     Terrain(const std::string& academy_cfg, const std::string& map_cfg);
-    void addSquad(const std::string&, const std::string&, Point);
+    void addSquad(std::shared_ptr<Entity>, Point);
     void live();
 
     std::shared_ptr<Summoner> getSummonerFirst() {
@@ -34,7 +35,7 @@ public:
         return summoners_.second;
     }
 
-    const Academy& getAcademy() const {
+    Academy& getAcademy() {
         return academy_;
     }
 

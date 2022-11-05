@@ -21,6 +21,7 @@ private:
     double energy_cost_;
     int required_level_of_school_;
     std::shared_ptr<Entity> model_;
+    double qty_kf_ = 1.0;
     friend std::istream& operator>>(std::istream&, Ability&);
 
 public:
@@ -29,12 +30,21 @@ public:
     }
 
     std::shared_ptr<Entity> getModel() const;
+
+    double getEnergyCost() const {
+        return energy_cost_;
+    }
+
+    double getRequiredLevelOfSchool() const {
+        return required_level_of_school_;
+    }
+
+    std::shared_ptr<Entity> getModelWithLevel(int level) const;
 };
 
 class School {
 private:
     std::string name_;
-    int level_ = 0;
     std::unordered_map<std::string, Ability> abilities_;
     friend std::istream& operator>>(std::istream&, School&);
 
@@ -43,13 +53,9 @@ public:
         return name_;
     }
 
-    int getLevel() const {
-        return level_;
-    }
-
     Ability& operator[](const std::string&);
 
-    const auto& getAbilities() const {
+    auto& getAbilities() {
         return abilities_;
     }
 };
@@ -61,7 +67,8 @@ private:
 
 public:
     School& operator[](const std::string&);
-    const auto& getSchools() const {
+
+    auto& getSchools() {
         return schools_;
     }
 };

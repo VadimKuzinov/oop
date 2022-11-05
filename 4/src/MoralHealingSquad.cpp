@@ -25,7 +25,7 @@ void MoralHealingSquad::act() {
     }
 }
 
-std::vector<std::pair<void (*)(Entity*), const char*>> MoralHealingSquad::getMenu() const {
+std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralHealingSquad::getMenu() const {
     auto choices = GeneralHealingSquad::getMenu();
     return choices;
 }

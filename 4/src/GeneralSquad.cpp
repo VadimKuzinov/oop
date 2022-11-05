@@ -65,10 +65,10 @@ void GeneralSquad::act() {
     }
 }
 
-std::vector<std::pair<void (*)(Entity*), const char*>> GeneralSquad::getMenu() const {
+std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralSquad::getMenu() const {
     auto choices = Obstacle::getMenu();
-    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToMove(); }, "Move"});
-    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralSquad*>(e)->tryToAttack(); }, "Attack"});
+    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<GeneralSquad>(e)->tryToMove(); }, "Move"});
+    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<GeneralSquad>(e)->tryToAttack(); }, "Attack"});
     return choices;
 }   
 

@@ -43,6 +43,10 @@ public:
         summoner_ = summoner;
     }
 
+    void setQuantity(int quantity) {
+        quantity_ = quantity;
+    }
+
     void tryToMove() {
         moving_ = true;
         attacking_ = false;
@@ -53,7 +57,7 @@ public:
         attacking_ = true;
     }
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
+    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
 
     void act() override;
     virtual void update();

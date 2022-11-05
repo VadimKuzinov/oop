@@ -4,6 +4,7 @@
 #include "../src/Game.h"
 #include "MenuWindow.h"
 #include "SummonerWindow.h"
+#include "AcademyWindow.h"
 #include <memory>
 #include <unordered_map>
 
@@ -15,7 +16,7 @@ private:
     int scale_factor_ = 25;
     int MAX_X_;
     int MAX_Y_;
-    int MENU_W_ = 200;
+    int MENU_W_ = 250; //200
 
     SDL_Window* window_;
     SDL_Renderer* renderer_;
@@ -25,6 +26,7 @@ private:
 
     MenuWindow* menu_window_;
     SummonerWindow* summoner_window_;
+    AcademyWindow* academy_window_;
 
     void draw();
     void drawCircle(int, int, int);

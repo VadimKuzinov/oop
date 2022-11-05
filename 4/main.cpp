@@ -4,7 +4,7 @@
 
 
 int main() {
-    auto game = new Game("cfg/academy", "cfg/map");
+    auto game = new Game("cfg/academy", "cfg/map2");
     auto app = new Application(game, game->getFirstPlayer());
 //    auto app2 = new Application(game, game->getSecondPlayer());
     std::thread thr1(&Game::run, game);

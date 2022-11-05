@@ -3,6 +3,7 @@
 #include "Obstacle.h"
 #include <memory>
 #include <string>
+#include <unordered_map>
 
 
 class Summoner: public Obstacle {
@@ -19,6 +20,7 @@ protected:
 
     std::string summoned_school_;
     std::string summoned_ability_;
+    std::unordered_map<std::string, int> levels_of_schools_;
 
     constexpr static auto properties_ = std::tuple_cat(Obstacle::properties_, 
                                         std::make_tuple(std::make_pair(&Summoner::summon_range_, "summon_range"),
@@ -64,7 +66,11 @@ public:
         summoned_ability_ = summoned_ability;
     }
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
+    auto& getLevelsOfSchools() {
+        return levels_of_schools_;
+    }
+
+    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
     std::vector<std::pair<std::string, std::string>> serialize() const override;
 
     void summon();

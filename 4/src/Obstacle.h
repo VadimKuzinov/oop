@@ -58,7 +58,7 @@ public:
         return max_hp_;
     }
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
+    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
 
     void act() override {
     }

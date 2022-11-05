@@ -23,7 +23,7 @@ public:
         return std::shared_ptr<Entity>(new MoralSquad(*this));
     } 
 
-    std::vector<std::pair<void (*)(Entity*), const char*>> getMenu() const override;
+    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
 
     void stabilizeMorality();
 

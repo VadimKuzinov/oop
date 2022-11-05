@@ -25,9 +25,9 @@ void GeneralHealingSquad::act() {
     }
 }
   
-std::vector<std::pair<void (*)(Entity*), const char*>> GeneralHealingSquad::getMenu() const {
+std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralHealingSquad::getMenu() const {
     auto choices = GeneralSquad::getMenu();
-    choices.push_back({[](Entity* e){ return dynamic_cast<GeneralHealingSquad*>(e)->tryToHeal(); }, "Heal"});
+    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<GeneralHealingSquad>(e)->tryToHeal(); }, "Heal"});
     return choices;
 }
 
