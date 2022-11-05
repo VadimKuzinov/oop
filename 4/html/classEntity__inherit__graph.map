@@ -1,9 +1,0 @@
-<map id="Entity" name="Entity">
-<area shape="rect" id="node1" title=" " alt="" coords="600,5,1188,215"/>
-<area shape="rect" id="node2" href="$classObstacle.html" title=" " alt="" coords="605,263,1183,648"/>
-<area shape="rect" id="node3" href="$classGeneralSquad.html" title=" " alt="" coords="305,711,883,1052"/>
-<area shape="rect" id="node7" href="$classSummoner.html" title=" " alt="" coords="907,696,1484,1067"/>
-<area shape="rect" id="node4" href="$classGeneralHealingSquad.html" title=" " alt="" coords="5,1122,583,1317"/>
-<area shape="rect" id="node6" href="$classMoralSquad.html" title=" " alt="" coords="607,1115,1184,1324"/>
-<area shape="rect" id="node5" href="$classMoralHealingSquad.html" title=" " alt="" coords="305,1372,883,1537"/>
-</map>

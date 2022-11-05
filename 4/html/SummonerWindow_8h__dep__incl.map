@@ -1,7 +1,0 @@
-<map id="game/SummonerWindow.h" name="game/SummonerWindow.h">
-<area shape="rect" id="node1" title=" " alt="" coords="187,5,384,31"/>
-<area shape="rect" id="node2" href="$Application_8h.html" title=" " alt="" coords="110,79,258,104"/>
-<area shape="rect" id="node5" href="$SummonerWindow_8cpp.html" title=" " alt="" coords="282,79,494,104"/>
-<area shape="rect" id="node3" href="$Application_8cpp.html" title=" " alt="" coords="5,152,168,177"/>
-<area shape="rect" id="node4" href="$MenuWindow_8cpp.html" title=" " alt="" coords="193,152,370,177"/>
-</map>

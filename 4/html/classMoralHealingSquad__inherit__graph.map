@@ -1,9 +1,0 @@
-<map id="MoralHealingSquad" name="MoralHealingSquad">
-<area shape="rect" id="node1" title=" " alt="" coords="305,1732,883,1941"/>
-<area shape="rect" id="node2" href="$classMoralSquad.html" title=" " alt="" coords="5,1416,583,1684"/>
-<area shape="rect" id="node3" href="$classGeneralSquad.html" title=" " alt="" coords="305,968,883,1368"/>
-<area shape="rect" id="node7" href="$classGeneralHealingSquad.html" title=" " alt="" coords="607,1423,1184,1677"/>
-<area shape="rect" id="node4" href="$classObstacle.html" title=" " alt="" coords="305,447,883,920"/>
-<area shape="rect" id="node5" href="$structEntity.html" title=" " alt="" coords="300,131,888,399"/>
-<area shape="rect" id="node6" title=" " alt="" coords="453,5,735,83"/>
-</map>

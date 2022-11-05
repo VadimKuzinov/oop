@@ -1,9 +1,0 @@
-<map id="GeneralHealingSquad" name="GeneralHealingSquad">
-<area shape="rect" id="node1" title=" " alt="" coords="568,1405,1145,1659"/>
-<area shape="rect" id="node2" href="$classGeneralSquad.html" title=" " alt="" coords="568,956,1145,1356"/>
-<area shape="rect" id="node3" href="$classObstacle.html" title=" " alt="" coords="568,477,1145,907"/>
-<area shape="rect" id="node4" href="$structEntity.html" title=" " alt="" coords="5,132,593,400"/>
-<area shape="rect" id="node5" title=" " alt="" coords="158,5,441,83"/>
-<area shape="rect" id="node6" href="$classTerrain.html" title=" " alt="" coords="617,183,1096,349"/>
-<area shape="rect" id="node7" href="$structPoint.html" title=" " alt="" coords="1121,198,1523,334"/>
-</map>

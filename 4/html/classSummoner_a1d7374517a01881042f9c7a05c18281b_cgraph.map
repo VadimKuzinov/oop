@@ -1,8 +1,0 @@
-<map id="Summoner::summon" name="Summoner::summon">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,164,81"/>
-<area shape="rect" id="node2" href="$classTerrain.html#ab4d397c4469e0ca89f2805707d3a84ad" title=" " alt="" coords="212,31,351,56"/>
-<area shape="rect" id="node6" href="$structPoint.html#ad883843137a07ea2bf51219c7afe5ac3" title=" " alt="" coords="222,80,341,105"/>
-<area shape="rect" id="node3" href="$classMap.html#afa06a6650f10c9275e0ccebdead113ae" title=" " alt="" coords="399,31,521,56"/>
-<area shape="rect" id="node4" href="$classMap.html#afabc9a0a12bffad30af761fc0df09766" title=" " alt="" coords="569,5,664,31"/>
-<area shape="rect" id="node5" href="$classMap.html#a8692c5821e05eb2dcb9a2c376c649ba7" title=" " alt="" coords="575,55,658,80"/>
-</map>

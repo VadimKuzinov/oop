@@ -1,7 +1,0 @@
-<map id="Player::catchClick" name="Player::catchClick">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,144,107"/>
-<area shape="rect" id="node2" href="$classMap.html#a9e36106c4c02a9c6508e142f24e9253b" title=" " alt="" coords="197,5,319,31"/>
-<area shape="rect" id="node3" href="$classTerrain.html#ac67977924d06aa032580dd1bd1ee24a0" title=" " alt="" coords="372,107,495,132"/>
-<area shape="rect" id="node4" href="$classMap.html#a7dd31cf45e318ef93b4d68fb63ddea8f" title=" " alt="" coords="199,107,317,132"/>
-<area shape="rect" id="node5" href="$classPlayer.html#ad9475052d2c532058d9c45250b106650" title=" " alt="" coords="192,156,324,181"/>
-</map>

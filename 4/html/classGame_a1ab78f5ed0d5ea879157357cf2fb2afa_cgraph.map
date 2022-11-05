@@ -1,8 +1,0 @@
-<map id="Game::run" name="Game::run">
-<area shape="rect" id="node1" title=" " alt="" coords="5,55,96,80"/>
-<area shape="rect" id="node2" href="$classTerrain.html#a113b4afe15b29c8407c056d4cafe4c92" title=" " alt="" coords="144,55,243,80"/>
-<area shape="rect" id="node3" href="$classMap.html#af50860e77d8752e4ec90b578557b9eb2" title=" " alt="" coords="326,5,469,31"/>
-<area shape="rect" id="node5" href="$classTerrain.html#a2f7dec94c282474f74ef83022a893d2a" title=" " alt="" coords="300,55,495,80"/>
-<area shape="rect" id="node6" href="$classTerrain.html#a415fe72fe896627045df35446ad65866" title=" " alt="" coords="291,104,504,129"/>
-<area shape="rect" id="node4" href="$structPoint.html#a40bfbab108a7d5e754e04e6dc7ac245e" title=" " alt="" coords="552,5,681,31"/>
-</map>
