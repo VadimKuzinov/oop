@@ -11,7 +11,7 @@ Inheritance diagram for Moral\+Healing\+Squad\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classMoralHealingSquad__inherit__graph}
+\includegraphics[height=550pt]{classMoralHealingSquad__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -27,11 +27,15 @@ Collaboration diagram for Moral\+Healing\+Squad\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMoralHealingSquad_ad7e7cd85d93d73fd899dbddd5e72d87e}{Moral\+Healing\+Squad}} (\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}=\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7a85805cf2d7e003ed42c61b69b4ab6b57}{Moral\+Healing\+\_\+}})
+\mbox{\hyperlink{classMoralHealingSquad_a8c7739dbe424a17b7f287eef7e3de664}{Moral\+Healing\+Squad}} ()=default
 \item 
 virtual \mbox{\hyperlink{classMoralHealingSquad_aba765497a58569df923ea51f59abab34}{$\sim$\+Moral\+Healing\+Squad}} ()=default
 \item 
-std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}{get\+Menu}} () const override
+\mbox{\hyperlink{classMoralHealingSquad_a076cfcfc6f81cc6b5aad3ef2f22b44c9}{Moral\+Healing\+Squad}} (const \mbox{\hyperlink{classMoralHealingSquad}{Moral\+Healing\+Squad}} \&)=default
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ \mbox{\hyperlink{classMoralHealingSquad_aed80cbf022232d8354084855b80a0151}{clone}} () const
+\item 
+std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{structEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}{get\+Menu}} () const override
 \item 
 void \mbox{\hyperlink{classMoralHealingSquad_a6182aacf94380eab0bc9c11ee9779319}{act}} () override
 \item 
@@ -41,21 +45,37 @@ void \mbox{\hyperlink{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6}{
 \item 
 std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57}{serialize}} () const override
 \end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMoralHealingSquad_ac474d2732aab77714c517682936aaac9}{set}} (const std\+::string \&name, const std\+::string \&value) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{classMoralHealingSquad_a10cf43ba422fae0c03117abbb5c2543d}{properties\+\_\+}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classMoralHealingSquad_ad7e7cd85d93d73fd899dbddd5e72d87e}\label{classMoralHealingSquad_ad7e7cd85d93d73fd899dbddd5e72d87e}} 
+\mbox{\Hypertarget{classMoralHealingSquad_a8c7739dbe424a17b7f287eef7e3de664}\label{classMoralHealingSquad_a8c7739dbe424a17b7f287eef7e3de664}} 
 \index{MoralHealingSquad@{MoralHealingSquad}!MoralHealingSquad@{MoralHealingSquad}}
 \index{MoralHealingSquad@{MoralHealingSquad}!MoralHealingSquad@{MoralHealingSquad}}
-\doxysubsubsection{\texorpdfstring{MoralHealingSquad()}{MoralHealingSquad()}}
-{\footnotesize\ttfamily Moral\+Healing\+Squad\+::\+Moral\+Healing\+Squad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$}]{terrain,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{coords,  }\item[{\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{id = {\ttfamily \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7a85805cf2d7e003ed42c61b69b4ab6b57}{Moral\+Healing\+\_\+}}} }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{MoralHealingSquad()}{MoralHealingSquad()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Moral\+Healing\+Squad\+::\+Moral\+Healing\+Squad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classMoralHealingSquad_aba765497a58569df923ea51f59abab34}\label{classMoralHealingSquad_aba765497a58569df923ea51f59abab34}} 
 \index{MoralHealingSquad@{MoralHealingSquad}!````~MoralHealingSquad@{$\sim$MoralHealingSquad}}
 \index{````~MoralHealingSquad@{$\sim$MoralHealingSquad}!MoralHealingSquad@{MoralHealingSquad}}
 \doxysubsubsection{\texorpdfstring{$\sim$MoralHealingSquad()}{~MoralHealingSquad()}}
 {\footnotesize\ttfamily virtual Moral\+Healing\+Squad\+::$\sim$\+Moral\+Healing\+Squad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classMoralHealingSquad_a076cfcfc6f81cc6b5aad3ef2f22b44c9}\label{classMoralHealingSquad_a076cfcfc6f81cc6b5aad3ef2f22b44c9}} 
+\index{MoralHealingSquad@{MoralHealingSquad}!MoralHealingSquad@{MoralHealingSquad}}
+\index{MoralHealingSquad@{MoralHealingSquad}!MoralHealingSquad@{MoralHealingSquad}}
+\doxysubsubsection{\texorpdfstring{MoralHealingSquad()}{MoralHealingSquad()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Moral\+Healing\+Squad\+::\+Moral\+Healing\+Squad (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMoralHealingSquad}{Moral\+Healing\+Squad}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -78,18 +98,35 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classMoralHealingSquad_a6182aacf94380eab0bc9c11ee9779319_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classMoralHealingSquad_aed80cbf022232d8354084855b80a0151}\label{classMoralHealingSquad_aed80cbf022232d8354084855b80a0151}} 
+\index{MoralHealingSquad@{MoralHealingSquad}!clone@{clone}}
+\index{clone@{clone}!MoralHealingSquad@{MoralHealingSquad}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ Moral\+Healing\+Squad\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralHealingSquad_a57e9f294d2190e3a25bb2a4593a6b8bf}{General\+Healing\+Squad}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMoralHealingSquad_aed80cbf022232d8354084855b80a0151_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}\label{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}} 
 \index{MoralHealingSquad@{MoralHealingSquad}!getMenu@{getMenu}}
 \index{getMenu@{getMenu}!MoralHealingSquad@{MoralHealingSquad}}
 \doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Moral\+Healing\+Squad\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{structEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Moral\+Healing\+Squad\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Reimplemented from \mbox{\hyperlink{classGeneralHealingSquad_abc7f5856fe749151d0fe4e00823ec785}{General\+Healing\+Squad}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -116,12 +153,29 @@ Reimplemented from \mbox{\hyperlink{classGeneralHealingSquad_a028f01c5bf0fac4579
 
 Reimplemented from \mbox{\hyperlink{classGeneralHealingSquad_a413ba1c881b666447d1a1dc1b5f48a0d}{General\+Healing\+Squad}}.
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMoralHealingSquad_ac474d2732aab77714c517682936aaac9}\label{classMoralHealingSquad_ac474d2732aab77714c517682936aaac9}} 
+\index{MoralHealingSquad@{MoralHealingSquad}!set@{set}}
+\index{set@{set}!MoralHealingSquad@{MoralHealingSquad}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Moral\+Healing\+Squad\+::set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralHealingSquad_a236115ae3e0ecc19a3d2f66abacd240f}{General\+Healing\+Squad}}.
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57_cgraph}
+\includegraphics[width=350pt]{classMoralHealingSquad_ac474d2732aab77714c517682936aaac9_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6}\label{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6}} 
@@ -134,14 +188,29 @@ Here is the call graph for this function\+:
 
 Reimplemented from \mbox{\hyperlink{classGeneralHealingSquad_af9222affae474a0c29a9f8cabeb50539}{General\+Healing\+Squad}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6_cgraph}
 \end{center}
 \end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classMoralHealingSquad_a10cf43ba422fae0c03117abbb5c2543d}\label{classMoralHealingSquad_a10cf43ba422fae0c03117abbb5c2543d}} 
+\index{MoralHealingSquad@{MoralHealingSquad}!properties\_@{properties\_}}
+\index{properties\_@{properties\_}!MoralHealingSquad@{MoralHealingSquad}}
+\doxysubsubsection{\texorpdfstring{properties\_}{properties\_}}
+{\footnotesize\ttfamily constexpr auto Moral\+Healing\+Squad\+::properties\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= std::tuple\_cat(\mbox{\hyperlink{classGeneralHealingSquad_a2923358e4447f65e8908352ff51371de}{GeneralHealingSquad::properties\_}}, }
+\DoxyCodeLine{                                        std::make\_tuple(std::make\_pair(\&\mbox{\hyperlink{classMoralSquad_af62b8e095c9084059497f45fa1b95061}{MoralHealingSquad::morality\_}}, \textcolor{stringliteral}{"{}morality"{}}),}
+\DoxyCodeLine{                                                        std::make\_pair(\&\mbox{\hyperlink{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}{MoralHealingSquad::stabilization\_speed\_}}, \textcolor{stringliteral}{"{}stabilization\_speed"{}})))}
+
+\end{DoxyCode}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

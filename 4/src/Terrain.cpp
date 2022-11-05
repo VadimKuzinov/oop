@@ -9,6 +9,7 @@
 #include <memory>
 #include <chrono>
 #include <thread>
+#include <fstream>
 
 
 Terrain::Terrain(const std::string& file_academy, const std::string& file_terrain) {
@@ -45,7 +46,7 @@ void Terrain::addSummoner(std::shared_ptr<Entity> e) {
     }
 }
 
-void Terrain::addSquad(const std::string& school, const std::string& ability, Point where) { // -> addSquad(string school, string ability. get Academy[school][ability]->getInstaceWithLVl
+void Terrain::addSquad(const std::string& school, const std::string& ability, Point where) {
     auto new_squad = academy_[school][ability].getModel();
     new_squad->setCoords(where);
     new_squad->setTerrain(this);

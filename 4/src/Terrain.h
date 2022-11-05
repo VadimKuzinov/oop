@@ -1,14 +1,8 @@
 #pragma once
-#include "Point.h"
-#include "Type.h"
 #include "Map.h"
 #include "Academy.h"
 #include <iostream>
-#include <fstream>
-#include <vector>
-#include <list>
 #include <memory>
-#include <typeinfo>
 
 
 class Terrain;

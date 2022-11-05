@@ -1,9 +1,10 @@
 <map id="Obstacle" name="Obstacle">
-<area shape="rect" id="node1" title=" " alt="" coords="605,263,1183,648"/>
-<area shape="rect" id="node3" href="$classGeneralSquad.html" title=" " alt="" coords="305,711,883,1052"/>
-<area shape="rect" id="node7" href="$classSummoner.html" title=" " alt="" coords="907,696,1484,1067"/>
-<area shape="rect" id="node2" href="$classEntity.html" title=" " alt="" coords="600,5,1188,215"/>
-<area shape="rect" id="node4" href="$classGeneralHealingSquad.html" title=" " alt="" coords="5,1122,583,1317"/>
-<area shape="rect" id="node6" href="$classMoralSquad.html" title=" " alt="" coords="607,1115,1184,1324"/>
-<area shape="rect" id="node5" href="$classMoralHealingSquad.html" title=" " alt="" coords="305,1372,883,1537"/>
+<area shape="rect" id="node1" title=" " alt="" coords="605,447,1183,920"/>
+<area shape="rect" id="node4" href="$classGeneralSquad.html" title=" " alt="" coords="305,997,883,1397"/>
+<area shape="rect" id="node8" href="$classSummoner.html" title=" " alt="" coords="907,968,1484,1427"/>
+<area shape="rect" id="node2" href="$structEntity.html" title=" " alt="" coords="600,131,1188,399"/>
+<area shape="rect" id="node3" title=" " alt="" coords="753,5,1035,83"/>
+<area shape="rect" id="node5" href="$classGeneralHealingSquad.html" title=" " alt="" coords="5,1482,583,1735"/>
+<area shape="rect" id="node7" href="$classMoralSquad.html" title=" " alt="" coords="607,1475,1184,1743"/>
+<area shape="rect" id="node6" href="$classMoralHealingSquad.html" title=" " alt="" coords="305,1791,883,2000"/>
 </map>

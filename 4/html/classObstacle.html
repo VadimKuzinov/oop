@@ -71,7 +71,9 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classObstacle-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Obstacle Class Reference</div></div>
 </div><!--header-->
@@ -83,13 +85,14 @@ Inheritance diagram for Obstacle:</div>
 <div class="dyncontent">
 <div class="center"><img src="classObstacle__inherit__graph.png" border="0" usemap="#aObstacle_inherit__map" alt="Inheritance graph"/></div>
 <map name="aObstacle_inherit__map" id="aObstacle_inherit__map">
-<area shape="rect" title=" " alt="" coords="605,263,1183,648"/>
-<area shape="rect" href="classGeneralSquad.html" title=" " alt="" coords="305,711,883,1052"/>
-<area shape="rect" href="classSummoner.html" title=" " alt="" coords="907,696,1484,1067"/>
-<area shape="rect" href="classEntity.html" title=" " alt="" coords="600,5,1188,215"/>
-<area shape="rect" href="classGeneralHealingSquad.html" title=" " alt="" coords="5,1122,583,1317"/>
-<area shape="rect" href="classMoralSquad.html" title=" " alt="" coords="607,1115,1184,1324"/>
-<area shape="rect" href="classMoralHealingSquad.html" title=" " alt="" coords="305,1372,883,1537"/>
+<area shape="rect" title=" " alt="" coords="605,447,1183,920"/>
+<area shape="rect" href="classGeneralSquad.html" title=" " alt="" coords="305,997,883,1397"/>
+<area shape="rect" href="classSummoner.html" title=" " alt="" coords="907,968,1484,1427"/>
+<area shape="rect" href="structEntity.html" title=" " alt="" coords="600,131,1188,399"/>
+<area shape="rect" title=" " alt="" coords="753,5,1035,83"/>
+<area shape="rect" href="classGeneralHealingSquad.html" title=" " alt="" coords="5,1482,583,1735"/>
+<area shape="rect" href="classMoralSquad.html" title=" " alt="" coords="607,1475,1184,1743"/>
+<area shape="rect" href="classMoralHealingSquad.html" title=" " alt="" coords="305,1791,883,2000"/>
 </map>
 </div>
 <div class="dynheader">
@@ -97,28 +100,37 @@ Collaboration diagram for Obstacle:</div>
 <div class="dyncontent">
 <div class="center"><img src="classObstacle__coll__graph.png" border="0" usemap="#aObstacle_coll__map" alt="Collaboration graph"/></div>
 <map name="aObstacle_coll__map" id="aObstacle_coll__map">
-<area shape="rect" title=" " alt="" coords="549,292,1127,633"/>
-<area shape="rect" href="classEntity.html" title=" " alt="" coords="5,5,593,215"/>
-<area shape="rect" href="classTerrain.html" title=" " alt="" coords="618,13,1058,207"/>
-<area shape="rect" href="structPoint.html" title=" " alt="" coords="1082,42,1485,178"/>
+<area shape="rect" title=" " alt="" coords="568,477,1145,907"/>
+<area shape="rect" href="structEntity.html" title=" " alt="" coords="5,132,593,400"/>
+<area shape="rect" title=" " alt="" coords="158,5,441,83"/>
+<area shape="rect" href="classTerrain.html" title=" " alt="" coords="617,183,1096,349"/>
+<area shape="rect" href="structPoint.html" title=" " alt="" coords="1121,198,1523,334"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a80817d16cf6843b172ee41cda0c9c9c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a80817d16cf6843b172ee41cda0c9c9c6">Obstacle</a> (<a class="el" href="classTerrain.html">Terrain</a> *, <a class="el" href="structPoint.html">Point</a> coords, <a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>=<a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7adbf44951b3f1f3259044f1f764f3f46f">Obstacle_</a>)</td></tr>
-<tr class="separator:a80817d16cf6843b172ee41cda0c9c9c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca1c426c77a3e2763250434ab51dae4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2ca1c426c77a3e2763250434ab51dae4">Obstacle</a> ()=default</td></tr>
+<tr class="separator:a2ca1c426c77a3e2763250434ab51dae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0cbf2b7a0f06b6e836b5e5c8d5cfc5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#aeb0cbf2b7a0f06b6e836b5e5c8d5cfc5">~Obstacle</a> ()=default</td></tr>
 <tr class="separator:aeb0cbf2b7a0f06b6e836b5e5c8d5cfc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31ad8d494434f62ed3b85f7b617b61db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a31ad8d494434f62ed3b85f7b617b61db">setCaptured</a> (std::shared_ptr&lt; <a class="el" href="classEntity.html">Entity</a> &gt; captured)</td></tr>
+<tr class="memitem:ad7d135bbb0c8b641525557ea1d718d4b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ad7d135bbb0c8b641525557ea1d718d4b">Obstacle</a> (const <a class="el" href="classObstacle.html">Obstacle</a> &amp;)=default</td></tr>
+<tr class="separator:ad7d135bbb0c8b641525557ea1d718d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc354cc84c0fb60d05972a13055d61c8"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#afc354cc84c0fb60d05972a13055d61c8">clone</a> () const override</td></tr>
+<tr class="separator:afc354cc84c0fb60d05972a13055d61c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac64beacb65a061594ae8c39b79a62619"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ac64beacb65a061594ae8c39b79a62619">setTerrain</a> (<a class="el" href="classTerrain.html">Terrain</a> *terrain)</td></tr>
+<tr class="separator:ac64beacb65a061594ae8c39b79a62619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12807e2a89efa1453aebc025c8f7c80f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a12807e2a89efa1453aebc025c8f7c80f">setCoords</a> (<a class="el" href="structPoint.html">Point</a> where) override</td></tr>
+<tr class="separator:a12807e2a89efa1453aebc025c8f7c80f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ad8d494434f62ed3b85f7b617b61db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a31ad8d494434f62ed3b85f7b617b61db">setCaptured</a> (std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt; captured)</td></tr>
 <tr class="separator:a31ad8d494434f62ed3b85f7b617b61db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68a2716aaa5f0c04b2a320105fb68df5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a68a2716aaa5f0c04b2a320105fb68df5">setTargetCoords</a> (<a class="el" href="structPoint.html">Point</a> target_coords)</td></tr>
 <tr class="separator:a68a2716aaa5f0c04b2a320105fb68df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fe8af7b32d84527861ce76c0516964f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a3fe8af7b32d84527861ce76c0516964f">setDefaults</a> ()</td></tr>
-<tr class="separator:a3fe8af7b32d84527861ce76c0516964f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c66e7be50580c57ba95df7c9e68f246"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2c66e7be50580c57ba95df7c9e68f246">receiveDamage</a> (double) override</td></tr>
 <tr class="separator:a2c66e7be50580c57ba95df7c9e68f246"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeae0c019baf07c628d32d6b04415f372"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; void(*)(<a class="el" href="classEntity.html">Entity</a> *), const char * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#aeae0c019baf07c628d32d6b04415f372">getMenu</a> () const override</td></tr>
+<tr class="memitem:ae14708e9c77a2645cf06f4d11a3e4f44"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ae14708e9c77a2645cf06f4d11a3e4f44">getMaxHp</a> () const</td></tr>
+<tr class="separator:ae14708e9c77a2645cf06f4d11a3e4f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeae0c019baf07c628d32d6b04415f372"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; void(*)(<a class="el" href="structEntity.html">Entity</a> *), const char * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#aeae0c019baf07c628d32d6b04415f372">getMenu</a> () const override</td></tr>
 <tr class="separator:aeae0c019baf07c628d32d6b04415f372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3be68686c3c9d4e82def8dbf38ac1eaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a3be68686c3c9d4e82def8dbf38ac1eaf">act</a> () override</td></tr>
 <tr class="separator:a3be68686c3c9d4e82def8dbf38ac1eaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,8 +138,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2ac21dd14b863e139d33a1a2e0ea7bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3a68ebf32fa3c16e319d55a77ceaf4f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ac3a68ebf32fa3c16e319d55a77ceaf4f">getPriority</a> () const override</td></tr>
 <tr class="separator:ac3a68ebf32fa3c16e319d55a77ceaf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc63409fc69821b0bafde6d55f4babb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#afbc63409fc69821b0bafde6d55f4babb">getId</a> () const override</td></tr>
-<tr class="separator:afbc63409fc69821b0bafde6d55f4babb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a488d92d04aa14a36c650ec33531c8ec5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a488d92d04aa14a36c650ec33531c8ec5">getCoords</a> () const override</td></tr>
 <tr class="separator:a488d92d04aa14a36c650ec33531c8ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a962a61ccd7cdbbf0cd33679f75201245"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a962a61ccd7cdbbf0cd33679f75201245">getCurHp</a> () const</td></tr>
@@ -136,88 +146,90 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7d51afb55f3bb9da87ba374062fd6804"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30b61324898ee3a68b30fecc9e9401b6"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a30b61324898ee3a68b30fecc9e9401b6">serialize</a> () const override</td></tr>
 <tr class="separator:a30b61324898ee3a68b30fecc9e9401b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classEntity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classEntity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classEntity.html">Entity</a></td></tr>
-<tr class="memitem:a3281c194f0f968741e80b311d57be7b8 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a3281c194f0f968741e80b311d57be7b8">getId</a> () const =0</td></tr>
-<tr class="separator:a3281c194f0f968741e80b311d57be7b8 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affff2db5822b044edcd36a15aa777b5e inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#affff2db5822b044edcd36a15aa777b5e">getCoords</a> () const =0</td></tr>
-<tr class="separator:affff2db5822b044edcd36a15aa777b5e inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bcbcdb082bbb1cf2693d1308d0c48c5 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a5bcbcdb082bbb1cf2693d1308d0c48c5">getPriority</a> () const =0</td></tr>
-<tr class="separator:a5bcbcdb082bbb1cf2693d1308d0c48c5 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56002c792a216fedc78f5aa2bce75161 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a56002c792a216fedc78f5aa2bce75161">isAlive</a> () const =0</td></tr>
-<tr class="separator:a56002c792a216fedc78f5aa2bce75161 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69ce9ad1123a7cb30c142c7ec45e387 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ad69ce9ad1123a7cb30c142c7ec45e387">act</a> ()=0</td></tr>
-<tr class="separator:ad69ce9ad1123a7cb30c142c7ec45e387 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab37147920ef7534ea188452a5cf0deec inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ab37147920ef7534ea188452a5cf0deec">receiveDamage</a> (double)=0</td></tr>
-<tr class="separator:ab37147920ef7534ea188452a5cf0deec inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae710fa33b9de440d8532bc1d0bb2b963 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::pair&lt; void(*)(<a class="el" href="classEntity.html">Entity</a> *), const char * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ae710fa33b9de440d8532bc1d0bb2b963">getMenu</a> () const =0</td></tr>
-<tr class="separator:ae710fa33b9de440d8532bc1d0bb2b963 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe386549463d98d4225ba02b3c949784 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#abe386549463d98d4225ba02b3c949784">killMySelf</a> ()=0</td></tr>
-<tr class="separator:abe386549463d98d4225ba02b3c949784 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9eae1970289e40192828e1c64f596fd7 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#a9eae1970289e40192828e1c64f596fd7">serialize</a> () const =0</td></tr>
-<tr class="separator:a9eae1970289e40192828e1c64f596fd7 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac479d009ddde62dfb378ca0a70d81307 inherit pub_methods_classEntity"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntity.html#ac479d009ddde62dfb378ca0a70d81307">~Entity</a> ()=default</td></tr>
-<tr class="separator:ac479d009ddde62dfb378ca0a70d81307 inherit pub_methods_classEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a814bfe7805cd26e2e2f3fb6576a72e17"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a814bfe7805cd26e2e2f3fb6576a72e17">getPictureFileName</a> () const override</td></tr>
+<tr class="separator:a814bfe7805cd26e2e2f3fb6576a72e17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_structEntity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_structEntity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="structEntity.html">Entity</a></td></tr>
+<tr class="memitem:a0c0c45acc589635309432626b582b27e inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#a0c0c45acc589635309432626b582b27e">clone</a> () const =0</td></tr>
+<tr class="separator:a0c0c45acc589635309432626b582b27e inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affff2db5822b044edcd36a15aa777b5e inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#affff2db5822b044edcd36a15aa777b5e">getCoords</a> () const =0</td></tr>
+<tr class="separator:affff2db5822b044edcd36a15aa777b5e inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6405af5024ccab9f517f57c347a9f42c inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#a6405af5024ccab9f517f57c347a9f42c">setCoords</a> (<a class="el" href="structPoint.html">Point</a>)=0</td></tr>
+<tr class="separator:a6405af5024ccab9f517f57c347a9f42c inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c3dbb2a3306b351468cd0e4f28fdf7 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#a18c3dbb2a3306b351468cd0e4f28fdf7">setTerrain</a> (<a class="el" href="classTerrain.html">Terrain</a> *)=0</td></tr>
+<tr class="separator:a18c3dbb2a3306b351468cd0e4f28fdf7 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcbcdb082bbb1cf2693d1308d0c48c5 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#a5bcbcdb082bbb1cf2693d1308d0c48c5">getPriority</a> () const =0</td></tr>
+<tr class="separator:a5bcbcdb082bbb1cf2693d1308d0c48c5 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56002c792a216fedc78f5aa2bce75161 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#a56002c792a216fedc78f5aa2bce75161">isAlive</a> () const =0</td></tr>
+<tr class="separator:a56002c792a216fedc78f5aa2bce75161 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69ce9ad1123a7cb30c142c7ec45e387 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#ad69ce9ad1123a7cb30c142c7ec45e387">act</a> ()=0</td></tr>
+<tr class="separator:ad69ce9ad1123a7cb30c142c7ec45e387 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37147920ef7534ea188452a5cf0deec inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#ab37147920ef7534ea188452a5cf0deec">receiveDamage</a> (double)=0</td></tr>
+<tr class="separator:ab37147920ef7534ea188452a5cf0deec inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae710fa33b9de440d8532bc1d0bb2b963 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::pair&lt; void(*)(<a class="el" href="structEntity.html">Entity</a> *), const char * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#ae710fa33b9de440d8532bc1d0bb2b963">getMenu</a> () const =0</td></tr>
+<tr class="separator:ae710fa33b9de440d8532bc1d0bb2b963 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe386549463d98d4225ba02b3c949784 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#abe386549463d98d4225ba02b3c949784">killMySelf</a> ()=0</td></tr>
+<tr class="separator:abe386549463d98d4225ba02b3c949784 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af533392a3d9f0d77cbace143645a2ff3 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#af533392a3d9f0d77cbace143645a2ff3">getPictureFileName</a> () const =0</td></tr>
+<tr class="separator:af533392a3d9f0d77cbace143645a2ff3 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea5e4ec358365cc4824fbc4379efe59 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#aeea5e4ec358365cc4824fbc4379efe59">set</a> (const std::string &amp;field_name, const std::string &amp;value)=0</td></tr>
+<tr class="separator:aeea5e4ec358365cc4824fbc4379efe59 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eae1970289e40192828e1c64f596fd7 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#a9eae1970289e40192828e1c64f596fd7">serialize</a> () const =0</td></tr>
+<tr class="separator:a9eae1970289e40192828e1c64f596fd7 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac479d009ddde62dfb378ca0a70d81307 inherit pub_methods_structEntity"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structEntity.html#ac479d009ddde62dfb378ca0a70d81307">~Entity</a> ()=default</td></tr>
+<tr class="separator:ac479d009ddde62dfb378ca0a70d81307 inherit pub_methods_structEntity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5fc11267fffbc4d05ff9034d440a06dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a5fc11267fffbc4d05ff9034d440a06dc">set</a> (const std::string &amp;name, const std::string &amp;value) override</td></tr>
+<tr class="separator:a5fc11267fffbc4d05ff9034d440a06dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a2199fdd3b94723a93f5aade0a29e33bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2199fdd3b94723a93f5aade0a29e33bc">id_</a></td></tr>
-<tr class="separator:a2199fdd3b94723a93f5aade0a29e33bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10c2b9343bea1309d2e833759def4ab6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTerrain.html">Terrain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a10c2b9343bea1309d2e833759def4ab6">terrain_</a></td></tr>
+<tr class="memitem:a10c2b9343bea1309d2e833759def4ab6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTerrain.html">Terrain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a10c2b9343bea1309d2e833759def4ab6">terrain_</a> = nullptr</td></tr>
 <tr class="separator:a10c2b9343bea1309d2e833759def4ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3fa3b29511957cd062e490a861a82c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#af3fa3b29511957cd062e490a861a82c7">coords_</a></td></tr>
+<tr class="memitem:af3fa3b29511957cd062e490a861a82c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#af3fa3b29511957cd062e490a861a82c7">coords_</a> = {0, 0}</td></tr>
 <tr class="separator:af3fa3b29511957cd062e490a861a82c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14c03bdd994c4f91a8563fe4fe78dae3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a14c03bdd994c4f91a8563fe4fe78dae3">max_hp_</a> = <a class="el" href="Type_8cpp.html#afaa1219305d8d2ce46a4312c2d7581d3">Obstacle_Mhp_</a></td></tr>
+<tr class="memitem:a14c03bdd994c4f91a8563fe4fe78dae3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a14c03bdd994c4f91a8563fe4fe78dae3">max_hp_</a></td></tr>
 <tr class="separator:a14c03bdd994c4f91a8563fe4fe78dae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e68188bd4098859096b957c9c548a49"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2e68188bd4098859096b957c9c548a49">cur_hp_</a> = <a class="el" href="classObstacle.html#a14c03bdd994c4f91a8563fe4fe78dae3">max_hp_</a></td></tr>
+<tr class="memitem:a2e68188bd4098859096b957c9c548a49"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2e68188bd4098859096b957c9c548a49">cur_hp_</a></td></tr>
 <tr class="separator:a2e68188bd4098859096b957c9c548a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace2435d0a30b62d8935a52075cdf249b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ace2435d0a30b62d8935a52075cdf249b">priority_</a> = <a class="el" href="Type_8cpp.html#ad6750ff0255cfcaf9a8435bb08690f54">Obstacle_Pr_</a></td></tr>
+<tr class="memitem:ace2435d0a30b62d8935a52075cdf249b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ace2435d0a30b62d8935a52075cdf249b">priority_</a></td></tr>
 <tr class="separator:ace2435d0a30b62d8935a52075cdf249b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2496ff92e67ffa3b0871b4755df32df3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2496ff92e67ffa3b0871b4755df32df3">captured_</a> = nullptr</td></tr>
+<tr class="memitem:a2496ff92e67ffa3b0871b4755df32df3"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a2496ff92e67ffa3b0871b4755df32df3">captured_</a> = nullptr</td></tr>
 <tr class="separator:a2496ff92e67ffa3b0871b4755df32df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad990cb56f13823ad8cd34fdc8a3404bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ad990cb56f13823ad8cd34fdc8a3404bb">target_coords_</a></td></tr>
+<tr class="memitem:ad990cb56f13823ad8cd34fdc8a3404bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint.html">Point</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#ad990cb56f13823ad8cd34fdc8a3404bb">target_coords_</a> = {0, 0}</td></tr>
 <tr class="separator:ad990cb56f13823ad8cd34fdc8a3404bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b230ee5e3ec03225dbd974ed35d601"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a18b230ee5e3ec03225dbd974ed35d601">picture_filename_</a></td></tr>
+<tr class="separator:a18b230ee5e3ec03225dbd974ed35d601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a0d501acc067ea027010ed4f4e469c693"><td class="memItemLeft" align="right" valign="top">static constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObstacle.html#a0d501acc067ea027010ed4f4e469c693">properties_</a></td></tr>
+<tr class="separator:a0d501acc067ea027010ed4f4e469c693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a80817d16cf6843b172ee41cda0c9c9c6" name="a80817d16cf6843b172ee41cda0c9c9c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80817d16cf6843b172ee41cda0c9c9c6">&#9670;&#160;</a></span>Obstacle()</h2>
+<a id="a2ca1c426c77a3e2763250434ab51dae4" name="a2ca1c426c77a3e2763250434ab51dae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca1c426c77a3e2763250434ab51dae4">&#9670;&#160;</a></span>Obstacle() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Obstacle::Obstacle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classTerrain.html">Terrain</a> *&#160;</td>
-          <td class="paramname"><em>terrain</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
-          <td class="paramname"><em>coords</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a>&#160;</td>
-          <td class="paramname"><em>id</em> = <code><a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7adbf44951b3f1f3259044f1f764f3f46f">Obstacle_</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classObstacle_a80817d16cf6843b172ee41cda0c9c9c6_cgraph.png" border="0" usemap="#aclassObstacle_a80817d16cf6843b172ee41cda0c9c9c6_cgraph" alt=""/></div>
-<map name="aclassObstacle_a80817d16cf6843b172ee41cda0c9c9c6_cgraph" id="aclassObstacle_a80817d16cf6843b172ee41cda0c9c9c6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,149,31"/>
-<area shape="rect" href="classObstacle.html#a3fe8af7b32d84527861ce76c0516964f" title=" " alt="" coords="197,5,360,31"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -240,6 +252,32 @@ Here is the call graph for this function:</div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7d135bbb0c8b641525557ea1d718d4b" name="ad7d135bbb0c8b641525557ea1d718d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d135bbb0c8b641525557ea1d718d4b">&#9670;&#160;</a></span>Obstacle() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Obstacle::Obstacle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classObstacle.html">Obstacle</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -270,9 +308,47 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#ad69ce9ad1123a7cb30c142c7ec45e387">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#ad69ce9ad1123a7cb30c142c7ec45e387">Entity</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classSummoner.html#a9f230646ba11cb765d014889afed55a4">Summoner</a>.</p>
+
+</div>
+</div>
+<a id="afc354cc84c0fb60d05972a13055d61c8" name="afc354cc84c0fb60d05972a13055d61c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc354cc84c0fb60d05972a13055d61c8">&#9670;&#160;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt; Obstacle::clone </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structEntity.html#a0c0c45acc589635309432626b582b27e">Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classSummoner.html#aadab26973135e56803b1a410cd44c969">Summoner</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classObstacle_afc354cc84c0fb60d05972a13055d61c8_cgraph.png" border="0" usemap="#aclassObstacle_afc354cc84c0fb60d05972a13055d61c8_cgraph" alt=""/></div>
+<map name="aclassObstacle_afc354cc84c0fb60d05972a13055d61c8_cgraph" id="aclassObstacle_afc354cc84c0fb60d05972a13055d61c8_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,128,31"/>
+<area shape="rect" href="classObstacle.html#a2ca1c426c77a3e2763250434ab51dae4" title=" " alt="" coords="176,5,320,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -299,7 +375,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#affff2db5822b044edcd36a15aa777b5e">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#affff2db5822b044edcd36a15aa777b5e">Entity</a>.</p>
 
 </div>
 </div>
@@ -328,8 +404,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="afbc63409fc69821b0bafde6d55f4babb" name="afbc63409fc69821b0bafde6d55f4babb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbc63409fc69821b0bafde6d55f4babb">&#9670;&#160;</a></span>getId()</h2>
+<a id="ae14708e9c77a2645cf06f4d11a3e4f44" name="ae14708e9c77a2645cf06f4d11a3e4f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14708e9c77a2645cf06f4d11a3e4f44">&#9670;&#160;</a></span>getMaxHp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +414,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> Obstacle::getId </td>
+          <td class="memname">double Obstacle::getMaxHp </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -346,12 +422,10 @@ Here is the call graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Implements <a class="el" href="classEntity.html#a3281c194f0f968741e80b311d57be7b8">Entity</a>.</p>
 
 </div>
 </div>
@@ -365,7 +439,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt; std::pair&lt; void(*)(<a class="el" href="classEntity.html">Entity</a> *), const char * &gt; &gt; Obstacle::getMenu </td>
+          <td class="memname">std::vector&lt; std::pair&lt; void(*)(<a class="el" href="structEntity.html">Entity</a> *), const char * &gt; &gt; Obstacle::getMenu </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -378,9 +452,36 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#ae710fa33b9de440d8532bc1d0bb2b963">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#ae710fa33b9de440d8532bc1d0bb2b963">Entity</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classSummoner.html#a700a8790f706117719f7fc8f353a7aa5">Summoner</a>.</p>
+
+</div>
+</div>
+<a id="a814bfe7805cd26e2e2f3fb6576a72e17" name="a814bfe7805cd26e2e2f3fb6576a72e17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a814bfe7805cd26e2e2f3fb6576a72e17">&#9670;&#160;</a></span>getPictureFileName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string &amp; Obstacle::getPictureFileName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structEntity.html#af533392a3d9f0d77cbace143645a2ff3">Entity</a>.</p>
 
 </div>
 </div>
@@ -407,7 +508,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#a5bcbcdb082bbb1cf2693d1308d0c48c5">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#a5bcbcdb082bbb1cf2693d1308d0c48c5">Entity</a>.</p>
 
 </div>
 </div>
@@ -434,7 +535,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#a56002c792a216fedc78f5aa2bce75161">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#a56002c792a216fedc78f5aa2bce75161">Entity</a>.</p>
 
 </div>
 </div>
@@ -461,7 +562,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#abe386549463d98d4225ba02b3c949784">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#abe386549463d98d4225ba02b3c949784">Entity</a>.</p>
 
 </div>
 </div>
@@ -489,7 +590,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#ab37147920ef7534ea188452a5cf0deec">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#ab37147920ef7534ea188452a5cf0deec">Entity</a>.</p>
 
 </div>
 </div>
@@ -516,9 +617,59 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classEntity.html#a9eae1970289e40192828e1c64f596fd7">Entity</a>.</p>
+<p>Implements <a class="el" href="structEntity.html#a9eae1970289e40192828e1c64f596fd7">Entity</a>.</p>
 
 <p>Reimplemented in <a class="el" href="classSummoner.html#ad92fd2d728ce30614afa85b3be5de48f">Summoner</a>.</p>
+
+</div>
+</div>
+<a id="a5fc11267fffbc4d05ff9034d440a06dc" name="a5fc11267fffbc4d05ff9034d440a06dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fc11267fffbc4d05ff9034d440a06dc">&#9670;&#160;</a></span>set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Obstacle::set </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structEntity.html#aeea5e4ec358365cc4824fbc4379efe59">Entity</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classSummoner.html#a5463a13a202f4372456716831bc95ceb">Summoner</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classObstacle_a5fc11267fffbc4d05ff9034d440a06dc_cgraph.png" border="0" usemap="#aclassObstacle_a5fc11267fffbc4d05ff9034d440a06dc_cgraph" alt=""/></div>
+<map name="aclassObstacle_a5fc11267fffbc4d05ff9034d440a06dc_cgraph" id="aclassObstacle_a5fc11267fffbc4d05ff9034d440a06dc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" href="Setter_8h.html#aa53f1c1b75196a48c0c99db0faa215fb" title=" " alt="" coords="160,5,231,31"/>
+<area shape="rect" href="Setter_8h.html#af81844bfe0c796fbd4b736a319abd70a" title=" " alt="" coords="279,5,413,31"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -534,7 +685,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void Obstacle::setCaptured </td>
           <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classEntity.html">Entity</a> &gt;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt;&#160;</td>
           <td class="paramname"><em>captured</em></td><td>)</td>
           <td></td>
         </tr>
@@ -548,20 +699,31 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="a3fe8af7b32d84527861ce76c0516964f" name="a3fe8af7b32d84527861ce76c0516964f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fe8af7b32d84527861ce76c0516964f">&#9670;&#160;</a></span>setDefaults()</h2>
+<a id="a12807e2a89efa1453aebc025c8f7c80f" name="a12807e2a89efa1453aebc025c8f7c80f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12807e2a89efa1453aebc025c8f7c80f">&#9670;&#160;</a></span>setCoords()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Obstacle::setDefaults </td>
+          <td class="memname">void Obstacle::setCoords </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structPoint.html">Point</a>&#160;</td>
+          <td class="paramname"><em>where</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="structEntity.html#a6405af5024ccab9f517f57c347a9f42c">Entity</a>.</p>
 
 </div>
 </div>
@@ -570,9 +732,6 @@ Here is the call graph for this function:</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Obstacle::setTargetCoords </td>
@@ -582,12 +741,35 @@ Here is the call graph for this function:</div>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac64beacb65a061594ae8c39b79a62619" name="ac64beacb65a061594ae8c39b79a62619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac64beacb65a061594ae8c39b79a62619">&#9670;&#160;</a></span>setTerrain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Obstacle::setTerrain </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTerrain.html">Terrain</a> *&#160;</td>
+          <td class="paramname"><em>terrain</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Implements <a class="el" href="structEntity.html#a18c3dbb2a3306b351468cd0e4f28fdf7">Entity</a>.</p>
 
 </div>
 </div>
@@ -602,7 +784,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt;<a class="el" href="classEntity.html">Entity</a>&gt; Obstacle::captured_ = nullptr</td>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="structEntity.html">Entity</a>&gt; Obstacle::captured_ = nullptr</td>
         </tr>
       </table>
   </td>
@@ -624,7 +806,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structPoint.html">Point</a> Obstacle::coords_</td>
+          <td class="memname"><a class="el" href="structPoint.html">Point</a> Obstacle::coords_ = {0, 0}</td>
         </tr>
       </table>
   </td>
@@ -646,29 +828,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Obstacle::cur_hp_ = <a class="el" href="classObstacle.html#a14c03bdd994c4f91a8563fe4fe78dae3">max_hp_</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2199fdd3b94723a93f5aade0a29e33bc" name="a2199fdd3b94723a93f5aade0a29e33bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2199fdd3b94723a93f5aade0a29e33bc">&#9670;&#160;</a></span>id_</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7">Type</a> Obstacle::id_</td>
+          <td class="memname">double Obstacle::cur_hp_</td>
         </tr>
       </table>
   </td>
@@ -690,7 +850,29 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">double Obstacle::max_hp_ = <a class="el" href="Type_8cpp.html#afaa1219305d8d2ce46a4312c2d7581d3">Obstacle_Mhp_</a></td>
+          <td class="memname">double Obstacle::max_hp_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18b230ee5e3ec03225dbd974ed35d601" name="a18b230ee5e3ec03225dbd974ed35d601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b230ee5e3ec03225dbd974ed35d601">&#9670;&#160;</a></span>picture_filename_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Obstacle::picture_filename_</td>
         </tr>
       </table>
   </td>
@@ -712,7 +894,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Obstacle::priority_ = <a class="el" href="Type_8cpp.html#ad6750ff0255cfcaf9a8435bb08690f54">Obstacle_Pr_</a></td>
+          <td class="memname">int Obstacle::priority_</td>
         </tr>
       </table>
   </td>
@@ -722,6 +904,38 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a0d501acc067ea027010ed4f4e469c693" name="a0d501acc067ea027010ed4f4e469c693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d501acc067ea027010ed4f4e469c693">&#9670;&#160;</a></span>properties_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto Obstacle::properties_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= std::make_tuple(std::make_pair(&amp;<a class="code hl_variable" href="classObstacle.html#af3fa3b29511957cd062e490a861a82c7">Obstacle::coords_</a>, <span class="stringliteral">&quot;coords&quot;</span>),</div>
+<div class="line">                                                        std::make_pair(&amp;<a class="code hl_variable" href="classObstacle.html#a14c03bdd994c4f91a8563fe4fe78dae3">Obstacle::max_hp_</a>, <span class="stringliteral">&quot;max_hp&quot;</span>),</div>
+<div class="line">                                                        std::make_pair(&amp;<a class="code hl_variable" href="classObstacle.html#a2e68188bd4098859096b957c9c548a49">Obstacle::cur_hp_</a>, <span class="stringliteral">&quot;cur_hp&quot;</span>),</div>
+<div class="line">                                                        std::make_pair(&amp;<a class="code hl_variable" href="classObstacle.html#ace2435d0a30b62d8935a52075cdf249b">Obstacle::priority_</a>, <span class="stringliteral">&quot;priority&quot;</span>),</div>
+<div class="line">                                                        std::make_pair(&amp;<a class="code hl_variable" href="classObstacle.html#a18b230ee5e3ec03225dbd974ed35d601">Obstacle::picture_filename_</a>, <span class="stringliteral">&quot;picture_filename&quot;</span>))</div>
+<div class="ttc" id="aclassObstacle_html_a14c03bdd994c4f91a8563fe4fe78dae3"><div class="ttname"><a href="classObstacle.html#a14c03bdd994c4f91a8563fe4fe78dae3">Obstacle::max_hp_</a></div><div class="ttdeci">double max_hp_</div><div class="ttdef"><b>Definition:</b> Obstacle.h:14</div></div>
+<div class="ttc" id="aclassObstacle_html_a18b230ee5e3ec03225dbd974ed35d601"><div class="ttname"><a href="classObstacle.html#a18b230ee5e3ec03225dbd974ed35d601">Obstacle::picture_filename_</a></div><div class="ttdeci">std::string picture_filename_</div><div class="ttdef"><b>Definition:</b> Obstacle.h:21</div></div>
+<div class="ttc" id="aclassObstacle_html_a2e68188bd4098859096b957c9c548a49"><div class="ttname"><a href="classObstacle.html#a2e68188bd4098859096b957c9c548a49">Obstacle::cur_hp_</a></div><div class="ttdeci">double cur_hp_</div><div class="ttdef"><b>Definition:</b> Obstacle.h:15</div></div>
+<div class="ttc" id="aclassObstacle_html_ace2435d0a30b62d8935a52075cdf249b"><div class="ttname"><a href="classObstacle.html#ace2435d0a30b62d8935a52075cdf249b">Obstacle::priority_</a></div><div class="ttdeci">int priority_</div><div class="ttdef"><b>Definition:</b> Obstacle.h:16</div></div>
+<div class="ttc" id="aclassObstacle_html_af3fa3b29511957cd062e490a861a82c7"><div class="ttname"><a href="classObstacle.html#af3fa3b29511957cd062e490a861a82c7">Obstacle::coords_</a></div><div class="ttdeci">Point coords_</div><div class="ttdef"><b>Definition:</b> Obstacle.h:13</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ad990cb56f13823ad8cd34fdc8a3404bb" name="ad990cb56f13823ad8cd34fdc8a3404bb"></a>
@@ -734,7 +948,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structPoint.html">Point</a> Obstacle::target_coords_</td>
+          <td class="memname"><a class="el" href="structPoint.html">Point</a> Obstacle::target_coords_ = {0, 0}</td>
         </tr>
       </table>
   </td>
@@ -756,7 +970,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classTerrain.html">Terrain</a>* Obstacle::terrain_</td>
+          <td class="memname"><a class="el" href="classTerrain.html">Terrain</a>* Obstacle::terrain_ = nullptr</td>
         </tr>
       </table>
   </td>

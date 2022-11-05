@@ -1,9 +1,6 @@
 #include "GeneralHealingSquad.h"
 
-/*
-GeneralHealingSquad::GeneralHealingSquad(Terrain* terrain, Point coords, Type id) : GeneralSquad(terrain, coords, id) {
-}
-*/
+
 void GeneralHealingSquad::heal() {
     cur_hp_ = std::min(max_hp_, cur_hp_ + healing_speed_);
 }

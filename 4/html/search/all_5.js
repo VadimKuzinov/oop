@@ -1,31 +1,4 @@
 var searchData=
 [
-  ['game_0',['Game',['../classGame.html',1,'Game'],['../classGame.html#a6b665f86ac6711daee79e648d7276fd7',1,'Game::Game()']]],
-  ['game_2ecpp_1',['Game.cpp',['../Game_8cpp.html',1,'']]],
-  ['game_2eh_2',['Game.h',['../Game_8h.html',1,'']]],
-  ['general_5f_3',['General_',['../Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7ac11191abcbc7032995de91ad6a708915',1,'Type.h']]],
-  ['general_5fmhp_5f_4',['General_Mhp_',['../Type_8h.html#ae757d7b639932680cba30d7c8c95ad64',1,'General_Mhp_():&#160;Type.cpp'],['../Type_8cpp.html#ae757d7b639932680cba30d7c8c95ad64',1,'General_Mhp_():&#160;Type.cpp']]],
-  ['general_5fpr_5f_5',['General_Pr_',['../Type_8h.html#a2d0707db3df80a58ec6b603c84f31862',1,'General_Pr_():&#160;Type.cpp'],['../Type_8cpp.html#a2d0707db3df80a58ec6b603c84f31862',1,'General_Pr_():&#160;Type.cpp']]],
-  ['generalhealing_5f_6',['GeneralHealing_',['../Type_8h.html#a1d1cfd8ffb84e947f82999c682b666a7aaef5d137f58f4efe20cf837c235a9ae6',1,'Type.h']]],
-  ['generalhealing_5fmhp_5f_7',['GeneralHealing_Mhp_',['../Type_8h.html#a6ed2da6fb9491560a1d1848cb1758d3b',1,'GeneralHealing_Mhp_():&#160;Type.cpp'],['../Type_8cpp.html#a6ed2da6fb9491560a1d1848cb1758d3b',1,'GeneralHealing_Mhp_():&#160;Type.cpp']]],
-  ['generalhealing_5fpr_5f_8',['GeneralHealing_Pr_',['../Type_8h.html#a4ba683b4cd7b541745e9e2771521c1dc',1,'GeneralHealing_Pr_():&#160;Type.cpp'],['../Type_8cpp.html#a4ba683b4cd7b541745e9e2771521c1dc',1,'GeneralHealing_Pr_():&#160;Type.cpp']]],
-  ['generalhealingsquad_9',['GeneralHealingSquad',['../classGeneralHealingSquad.html',1,'GeneralHealingSquad'],['../classGeneralHealingSquad.html#a581ddeba725b4eac0c65832520a92c3d',1,'GeneralHealingSquad::GeneralHealingSquad()']]],
-  ['generalhealingsquad_2ecpp_10',['GeneralHealingSquad.cpp',['../GeneralHealingSquad_8cpp.html',1,'']]],
-  ['generalhealingsquad_2eh_11',['GeneralHealingSquad.h',['../GeneralHealingSquad_8h.html',1,'']]],
-  ['generalsquad_12',['GeneralSquad',['../classGeneralSquad.html',1,'GeneralSquad'],['../classGeneralSquad.html#a6ec285fb62ca0438c656861228ac17b4',1,'GeneralSquad::GeneralSquad()']]],
-  ['generalsquad_2ecpp_13',['GeneralSquad.cpp',['../GeneralSquad_8cpp.html',1,'']]],
-  ['generalsquad_2eh_14',['GeneralSquad.h',['../GeneralSquad_8h.html',1,'']]],
-  ['getactive_15',['getActive',['../classPlayer.html#a66c6583ac9470e3b684d29b1c0b37527',1,'Player']]],
-  ['getcoords_16',['getCoords',['../classEntity.html#affff2db5822b044edcd36a15aa777b5e',1,'Entity::getCoords()'],['../classObstacle.html#a488d92d04aa14a36c650ec33531c8ec5',1,'Obstacle::getCoords() const override']]],
-  ['getcurhp_17',['getCurHp',['../classObstacle.html#a962a61ccd7cdbbf0cd33679f75201245',1,'Obstacle']]],
-  ['getfirstplayer_18',['getFirstPlayer',['../classGame.html#a6ae136b7747dbf388ad0206b0f1a1bd7',1,'Game']]],
-  ['getid_19',['getId',['../classEntity.html#a3281c194f0f968741e80b311d57be7b8',1,'Entity::getId()'],['../classObstacle.html#afbc63409fc69821b0bafde6d55f4babb',1,'Obstacle::getId()']]],
-  ['getmenu_20',['getMenu',['../classEntity.html#ae710fa33b9de440d8532bc1d0bb2b963',1,'Entity::getMenu()'],['../classGeneralHealingSquad.html#abc7f5856fe749151d0fe4e00823ec785',1,'GeneralHealingSquad::getMenu()'],['../classGeneralSquad.html#af342bccc032db47fb00ce76c8649e8ca',1,'GeneralSquad::getMenu()'],['../classMoralHealingSquad.html#af77f6358ab9ee69d9d1df5d88e875792',1,'MoralHealingSquad::getMenu()'],['../classMoralSquad.html#a00bdfdb81a0840b35686168d97c9d53f',1,'MoralSquad::getMenu()'],['../classObstacle.html#aeae0c019baf07c628d32d6b04415f372',1,'Obstacle::getMenu()'],['../classSummoner.html#a700a8790f706117719f7fc8f353a7aa5',1,'Summoner::getMenu()']]],
-  ['getpriority_21',['getPriority',['../classEntity.html#a5bcbcdb082bbb1cf2693d1308d0c48c5',1,'Entity::getPriority()'],['../classObstacle.html#ac3a68ebf32fa3c16e319d55a77ceaf4f',1,'Obstacle::getPriority()']]],
-  ['getsecondplayer_22',['getSecondPlayer',['../classGame.html#a80b8cf9054bc64d3435860b136059334',1,'Game']]],
-  ['getsummoner_23',['getSummoner',['../classPlayer.html#ae440978ce11310398006125c179215f6',1,'Player']]],
-  ['getsummonerfirst_24',['getSummonerFirst',['../classTerrain.html#a2f7dec94c282474f74ef83022a893d2a',1,'Terrain']]],
-  ['getsummonersecond_25',['getSummonerSecond',['../classTerrain.html#a415fe72fe896627045df35446ad65866',1,'Terrain']]],
-  ['getterrain_26',['getTerrain',['../classSummoner.html#a3cd139b6dc95a0a195b40330ba8604d4',1,'Summoner::getTerrain()'],['../classGame.html#ac8a5d07c9b86f3ce9ebbe21d530100c2',1,'Game::getTerrain()']]],
-  ['givedamage_27',['giveDamage',['../classMoralSquad.html#ab96f0c0d16531bf913d16e8a7a032301',1,'MoralSquad::giveDamage()'],['../classGeneralSquad.html#acd1a57e97e3af1fcd9a000dc9fefbfb2',1,'GeneralSquad::giveDamage()']]]
+  ['flipyincoords_0',['flipYInCoords',['../classApplication.html#a31b5523ac5de7185e99b89396e1b3db9',1,'Application']]]
 ];

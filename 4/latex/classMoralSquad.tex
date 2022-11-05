@@ -27,11 +27,15 @@ Collaboration diagram for Moral\+Squad\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classMoralSquad_ad7189d454edfdbd73fd256a9e2e3ef8c}{Moral\+Squad}} (\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}=\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7a5d2587984e2067ae7422183ccf7c4a64}{Moral\+\_\+}})
+\mbox{\hyperlink{classMoralSquad_aef781b260b2ee0fc175f4db093931622}{Moral\+Squad}} ()=default
 \item 
 virtual \mbox{\hyperlink{classMoralSquad_aac27679330de2fa8fb6df88429418886}{$\sim$\+Moral\+Squad}} ()=default
 \item 
-std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classMoralSquad_a00bdfdb81a0840b35686168d97c9d53f}{get\+Menu}} () const override
+\mbox{\hyperlink{classMoralSquad_ab4bcba5530164769ad0ed47882892221}{Moral\+Squad}} (const \mbox{\hyperlink{classMoralSquad}{Moral\+Squad}} \&)=default
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ \mbox{\hyperlink{classMoralSquad_a57dadc2b7d695ba31205de2ff479e389}{clone}} () const
+\item 
+std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{structEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classMoralSquad_a00bdfdb81a0840b35686168d97c9d53f}{get\+Menu}} () const override
 \item 
 void \mbox{\hyperlink{classMoralSquad_a8c654d67921615738d5865657bef6ad2}{stabilize\+Morality}} ()
 \item 
@@ -45,27 +49,43 @@ void \mbox{\hyperlink{classMoralSquad_ab96f0c0d16531bf913d16e8a7a032301}{give\+D
 \item 
 std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classMoralSquad_a43c3aaa0093022aeb0690cbce204aa0c}{serialize}} () const override
 \end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMoralSquad_a7f55bf29884b9eae6c45d76614ef9ce6}{set}} (const std\+::string \&name, const std\+::string \&value) override
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{classMoralSquad_af62b8e095c9084059497f45fa1b95061}{morality\+\_\+}} = 0
 \item 
-double \mbox{\hyperlink{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}{stabilization\+\_\+speed\+\_\+}} = \mbox{\hyperlink{Type_8cpp_ac749cfbdb15e56f076640edad4c96235}{Moral\+\_\+\+Stab\+\_\+}}
+double \mbox{\hyperlink{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}{stabilization\+\_\+speed\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{classMoralSquad_a7db3ed3ae0b3099139d5890ef22b2b7a}{properties\+\_\+}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classMoralSquad_ad7189d454edfdbd73fd256a9e2e3ef8c}\label{classMoralSquad_ad7189d454edfdbd73fd256a9e2e3ef8c}} 
+\mbox{\Hypertarget{classMoralSquad_aef781b260b2ee0fc175f4db093931622}\label{classMoralSquad_aef781b260b2ee0fc175f4db093931622}} 
 \index{MoralSquad@{MoralSquad}!MoralSquad@{MoralSquad}}
 \index{MoralSquad@{MoralSquad}!MoralSquad@{MoralSquad}}
-\doxysubsubsection{\texorpdfstring{MoralSquad()}{MoralSquad()}}
-{\footnotesize\ttfamily Moral\+Squad\+::\+Moral\+Squad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$}]{terrain,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{coords,  }\item[{\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{id = {\ttfamily \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7a5d2587984e2067ae7422183ccf7c4a64}{Moral\+\_\+}}} }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{MoralSquad()}{MoralSquad()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Moral\+Squad\+::\+Moral\+Squad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classMoralSquad_aac27679330de2fa8fb6df88429418886}\label{classMoralSquad_aac27679330de2fa8fb6df88429418886}} 
 \index{MoralSquad@{MoralSquad}!````~MoralSquad@{$\sim$MoralSquad}}
 \index{````~MoralSquad@{$\sim$MoralSquad}!MoralSquad@{MoralSquad}}
 \doxysubsubsection{\texorpdfstring{$\sim$MoralSquad()}{~MoralSquad()}}
 {\footnotesize\ttfamily virtual Moral\+Squad\+::$\sim$\+Moral\+Squad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classMoralSquad_ab4bcba5530164769ad0ed47882892221}\label{classMoralSquad_ab4bcba5530164769ad0ed47882892221}} 
+\index{MoralSquad@{MoralSquad}!MoralSquad@{MoralSquad}}
+\index{MoralSquad@{MoralSquad}!MoralSquad@{MoralSquad}}
+\doxysubsubsection{\texorpdfstring{MoralSquad()}{MoralSquad()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Moral\+Squad\+::\+Moral\+Squad (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMoralSquad}{Moral\+Squad}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -98,26 +118,42 @@ Here is the call graph for this function\+:
 
 Reimplemented from \mbox{\hyperlink{classGeneralSquad_a5cb0049360741624ebccc107b7b41086}{General\+Squad}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classMoralSquad_af7c525bfbc673ef0a99f5e89420d7a53_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classMoralSquad_a57dadc2b7d695ba31205de2ff479e389}\label{classMoralSquad_a57dadc2b7d695ba31205de2ff479e389}} 
+\index{MoralSquad@{MoralSquad}!clone@{clone}}
+\index{clone@{clone}!MoralSquad@{MoralSquad}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ Moral\+Squad\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSquad_a3ebc4f0af837e1d6e4ba6be14f6ca20c}{General\+Squad}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMoralSquad_a57dadc2b7d695ba31205de2ff479e389_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classMoralSquad_a00bdfdb81a0840b35686168d97c9d53f}\label{classMoralSquad_a00bdfdb81a0840b35686168d97c9d53f}} 
 \index{MoralSquad@{MoralSquad}!getMenu@{getMenu}}
 \index{getMenu@{getMenu}!MoralSquad@{MoralSquad}}
 \doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Moral\+Squad\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{structEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Moral\+Squad\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Reimplemented from \mbox{\hyperlink{classGeneralSquad_af342bccc032db47fb00ce76c8649e8ca}{General\+Squad}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -144,12 +180,29 @@ Reimplemented from \mbox{\hyperlink{classGeneralSquad_acd1a57e97e3af1fcd9a000dc9
 
 Reimplemented from \mbox{\hyperlink{classGeneralSquad_a3142e6a4d4baa63384208f03e6c8f06c}{General\+Squad}}.
 
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMoralSquad_a43c3aaa0093022aeb0690cbce204aa0c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMoralSquad_a7f55bf29884b9eae6c45d76614ef9ce6}\label{classMoralSquad_a7f55bf29884b9eae6c45d76614ef9ce6}} 
+\index{MoralSquad@{MoralSquad}!set@{set}}
+\index{set@{set}!MoralSquad@{MoralSquad}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Moral\+Squad\+::set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classGeneralSquad_a7cc34cf88dc3ca32ce6d4a79c3f40c48}{General\+Squad}}.
+
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{classMoralSquad_a43c3aaa0093022aeb0690cbce204aa0c_cgraph}
+\includegraphics[width=350pt]{classMoralSquad_a7f55bf29884b9eae6c45d76614ef9ce6_cgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{classMoralSquad_a8c654d67921615738d5865657bef6ad2}\label{classMoralSquad_a8c654d67921615738d5865657bef6ad2}} 
@@ -168,8 +221,7 @@ Here is the call graph for this function\+:
 
 Reimplemented from \mbox{\hyperlink{classGeneralSquad_af8cf10005c9fac930c58ec4c31f51254}{General\+Squad}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -185,11 +237,24 @@ Here is the call graph for this function\+:
 \doxysubsubsection{\texorpdfstring{morality\_}{morality\_}}
 {\footnotesize\ttfamily double Moral\+Squad\+::morality\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
 
+\mbox{\Hypertarget{classMoralSquad_a7db3ed3ae0b3099139d5890ef22b2b7a}\label{classMoralSquad_a7db3ed3ae0b3099139d5890ef22b2b7a}} 
+\index{MoralSquad@{MoralSquad}!properties\_@{properties\_}}
+\index{properties\_@{properties\_}!MoralSquad@{MoralSquad}}
+\doxysubsubsection{\texorpdfstring{properties\_}{properties\_}}
+{\footnotesize\ttfamily constexpr auto Moral\+Squad\+::properties\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= std::tuple\_cat(\mbox{\hyperlink{classGeneralSquad_a4fd9b0f2be5c1b4e33140d5033e3e96c}{GeneralSquad::properties\_}}, }
+\DoxyCodeLine{                                        std::make\_tuple(std::make\_pair(\&\mbox{\hyperlink{classMoralSquad_af62b8e095c9084059497f45fa1b95061}{MoralSquad::morality\_}}, \textcolor{stringliteral}{"{}morality"{}}),}
+\DoxyCodeLine{                                                        std::make\_pair(\&\mbox{\hyperlink{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}{MoralSquad::stabilization\_speed\_}}, \textcolor{stringliteral}{"{}stablization\_speed"{}})))}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}\label{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}} 
 \index{MoralSquad@{MoralSquad}!stabilization\_speed\_@{stabilization\_speed\_}}
 \index{stabilization\_speed\_@{stabilization\_speed\_}!MoralSquad@{MoralSquad}}
 \doxysubsubsection{\texorpdfstring{stabilization\_speed\_}{stabilization\_speed\_}}
-{\footnotesize\ttfamily double Moral\+Squad\+::stabilization\+\_\+speed\+\_\+ = \mbox{\hyperlink{Type_8cpp_ac749cfbdb15e56f076640edad4c96235}{Moral\+\_\+\+Stab\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily double Moral\+Squad\+::stabilization\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

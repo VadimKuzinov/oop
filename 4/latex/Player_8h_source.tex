@@ -18,42 +18,39 @@
 \DoxyCodeLine{14     \}}
 \DoxyCodeLine{15 }
 \DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayer_ad9475052d2c532058d9c45250b106650}{setActive}}(\mbox{\hyperlink{structPoint}{Point}} where) \{}
-\DoxyCodeLine{17         active\_ = terrain\_-\/>\mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}}[where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}}][where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}}];}
-\DoxyCodeLine{18         \textcolor{keywordflow}{if} (active\_ == \textcolor{keyword}{nullptr}) \{}
-\DoxyCodeLine{19             std::cout << \textcolor{stringliteral}{"{}Set to nullptr"{}} << std::endl;}
-\DoxyCodeLine{20         \}}
-\DoxyCodeLine{21         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{22             std::cout << \textcolor{stringliteral}{"{}Set to: "{}} << active\_-\/>getId() << std::endl;}
-\DoxyCodeLine{23         \}}
-\DoxyCodeLine{24     \}}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26     std::shared\_ptr<Entity> \mbox{\hyperlink{classPlayer_a66c6583ac9470e3b684d29b1c0b37527}{getActive}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{27         \textcolor{keywordflow}{return} active\_;}
-\DoxyCodeLine{28     \}}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayer_a3c382bbcba079f45c88c65212ed39457}{catchClick}}(\mbox{\hyperlink{structPoint}{Point}} where) \{}
-\DoxyCodeLine{31         \textcolor{keywordflow}{if} (where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}} >= terrain\_-\/>\mbox{\hyperlink{classTerrain_a3441f4ae8b67eb8ee4e9f67fca8d4f9a}{MAX\_Y}} || where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}} >= terrain\_-\/>\mbox{\hyperlink{classTerrain_aa08ef05d4c8b4b66c6e8162dfe19df7b}{MAX\_X}}) \{}
-\DoxyCodeLine{32             std::cout << \textcolor{stringliteral}{"{}Out of range of the map"{}} << \textcolor{charliteral}{'\(\backslash\)n'};}
-\DoxyCodeLine{33             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{34         \}}
-\DoxyCodeLine{35     }
-\DoxyCodeLine{36         \textcolor{keywordflow}{if} (active\_ == \textcolor{keyword}{nullptr}) \{}
-\DoxyCodeLine{37             \mbox{\hyperlink{classPlayer_ad9475052d2c532058d9c45250b106650}{setActive}}(where);}
+\DoxyCodeLine{17         active\_ = terrain\_-\/>\mbox{\hyperlink{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}{getMap}}()[where];}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayer_a1c6daa43275f0d6bac55ecebcfcf37f1}{resetActive}}() \{}
+\DoxyCodeLine{21         active\_ = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{22     \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     std::shared\_ptr<Entity> \mbox{\hyperlink{classPlayer_a66c6583ac9470e3b684d29b1c0b37527}{getActive}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{return} active\_;}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{classPlayer_a3c382bbcba079f45c88c65212ed39457}{catchClick}}(\mbox{\hyperlink{structPoint}{Point}} where) \{}
+\DoxyCodeLine{29         \textcolor{keywordflow}{if} (where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}} >= terrain\_-\/>\mbox{\hyperlink{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}{getMap}}().\mbox{\hyperlink{classMap_a9e36106c4c02a9c6508e142f24e9253b}{getHeight}}() || where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}} >= terrain\_-\/>\mbox{\hyperlink{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}{getMap}}().\mbox{\hyperlink{classMap_a7dd31cf45e318ef93b4d68fb63ddea8f}{getWidth}}()) \{}
+\DoxyCodeLine{30             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{31         \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keywordflow}{if} (active\_ == \textcolor{keyword}{nullptr}) \{}
+\DoxyCodeLine{34             \mbox{\hyperlink{classPlayer_ad9475052d2c532058d9c45250b106650}{setActive}}(where);}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (active\_ == terrain\_-\/>\mbox{\hyperlink{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}{getMap}}()[where]) \{}
+\DoxyCodeLine{37             active\_ = \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{38         \}}
-\DoxyCodeLine{39         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (active\_ == terrain\_-\/>\mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\_}}[where.\mbox{\hyperlink{structPoint_afa38be143ae800e6ad69ce8ed4df62d8}{y}}][where.\mbox{\hyperlink{structPoint_ab99c56589bc8ad5fa5071387110a5bc7}{x}}]) \{}
-\DoxyCodeLine{40             active\_ = \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{41         \}}
-\DoxyCodeLine{42         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{43             \textcolor{keyword}{auto} casted = std::dynamic\_pointer\_cast<Obstacle>(active\_);}
-\DoxyCodeLine{44             casted-\/>setTargetCoords(where);}
-\DoxyCodeLine{45         \}}
-\DoxyCodeLine{46     \}}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{48     std::shared\_ptr<Summoner> \mbox{\hyperlink{classPlayer_ae440978ce11310398006125c179215f6}{getSummoner}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{49         \textcolor{keywordflow}{return} summoner\_;}
-\DoxyCodeLine{50     \}}
-\DoxyCodeLine{51     \textcolor{comment}{//class Game\{ ... some method() \{player1-\/>setActive()\}....\}  }}
-\DoxyCodeLine{52 \};}
-\DoxyCodeLine{53 }
+\DoxyCodeLine{39         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{40             \textcolor{keyword}{auto} casted = std::dynamic\_pointer\_cast<Obstacle>(active\_);}
+\DoxyCodeLine{41             casted-\/>setTargetCoords(where);}
+\DoxyCodeLine{42             casted-\/>setCaptured(terrain\_-\/>\mbox{\hyperlink{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}{getMap}}()[where]);}
+\DoxyCodeLine{43         \}}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     std::shared\_ptr<Summoner> \mbox{\hyperlink{classPlayer_ae440978ce11310398006125c179215f6}{getSummoner}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{47         \textcolor{keywordflow}{return} summoner\_;}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
 
 \end{DoxyCode}

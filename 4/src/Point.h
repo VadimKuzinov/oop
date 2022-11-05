@@ -27,9 +27,6 @@ struct Point {
             return p;
         }
         auto len = distance(p, Point{0, 0});
-//        std::cout << "DISTANCE  TO 00: " << len << '\n';
-//        std::cout << "Point to normalize: " << p << '\n';
-//        std::cout << p.x / len << " --- " << p.y / len << '\n';
         return {p.x / len, p.y / len};
     }
 
@@ -52,7 +49,6 @@ inline Point operator+(const Point& p1, const Point& p2) {
 }
 
 inline Point operator*(const Point& p, double cf) {
-//    std::cout << "Point : " << p << "Is multyplying by :" << cf << '\n';
     return {p.x * cf, p.y * cf};
 }
 

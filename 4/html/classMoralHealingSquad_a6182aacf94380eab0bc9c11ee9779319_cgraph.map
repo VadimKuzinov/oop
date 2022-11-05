@@ -1,14 +1,15 @@
 <map id="MoralHealingSquad::act" name="MoralHealingSquad::act">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,183,132"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,183,157"/>
 <area shape="rect" id="node2" href="$classMoralSquad.html#af7c525bfbc673ef0a99f5e89420d7a53" title=" " alt="" coords="258,29,406,55"/>
-<area shape="rect" id="node5" href="$classMoralHealingSquad.html#aed7ded0316af1210a42d870cf6310ca3" title=" " alt="" coords="239,81,425,107"/>
-<area shape="rect" id="node6" href="$classGeneralSquad.html#ace6975bdff5f20efa159155efb31a1d9" title=" " alt="" coords="253,131,411,156"/>
-<area shape="rect" id="node9" href="$classMoralHealingSquad.html#ad95fdf2efcb471aee678ebd3d189c3c6" title=" " alt="" coords="231,204,433,229"/>
+<area shape="rect" id="node5" href="$classMoralHealingSquad.html#aed7ded0316af1210a42d870cf6310ca3" title=" " alt="" coords="239,107,425,132"/>
+<area shape="rect" id="node6" href="$classGeneralSquad.html#ace6975bdff5f20efa159155efb31a1d9" title=" " alt="" coords="253,156,411,181"/>
+<area shape="rect" id="node10" href="$classMoralHealingSquad.html#ad95fdf2efcb471aee678ebd3d189c3c6" title=" " alt="" coords="231,229,433,255"/>
 <area shape="rect" id="node3" href="$structPoint.html#ad883843137a07ea2bf51219c7afe5ac3" title=" " alt="" coords="769,80,887,105"/>
 <area shape="rect" id="node4" href="$classMoralSquad.html#ab96f0c0d16531bf913d16e8a7a032301" title=" " alt="" coords="481,29,672,55"/>
-<area shape="rect" id="node7" href="$structPoint.html#a37406f22c3b74582eb3a7d9bf1ab3e8f" title=" " alt="" coords="509,131,645,156"/>
-<area shape="rect" id="node8" href="$structPoint.html#a40bfbab108a7d5e754e04e6dc7ac245e" title=" " alt="" coords="512,180,641,205"/>
-<area shape="rect" id="node10" href="$classMoralSquad.html#a4c3df16fe46791827166342cabf468b3" title=" " alt="" coords="501,229,653,255"/>
-<area shape="rect" id="node11" href="$classMoralSquad.html#a8c654d67921615738d5865657bef6ad2" title=" " alt="" coords="720,204,936,229"/>
-<area shape="rect" id="node12" href="$classGeneralSquad.html#af8cf10005c9fac930c58ec4c31f51254" title=" " alt="" coords="745,253,911,279"/>
+<area shape="rect" id="node7" href="$classTerrain.html#ac67977924d06aa032580dd1bd1ee24a0" title=" " alt="" coords="515,131,638,156"/>
+<area shape="rect" id="node8" href="$structPoint.html#a37406f22c3b74582eb3a7d9bf1ab3e8f" title=" " alt="" coords="509,180,645,205"/>
+<area shape="rect" id="node9" href="$structPoint.html#a40bfbab108a7d5e754e04e6dc7ac245e" title=" " alt="" coords="512,229,641,255"/>
+<area shape="rect" id="node11" href="$classMoralSquad.html#a4c3df16fe46791827166342cabf468b3" title=" " alt="" coords="501,279,653,304"/>
+<area shape="rect" id="node12" href="$classMoralSquad.html#a8c654d67921615738d5865657bef6ad2" title=" " alt="" coords="720,253,936,279"/>
+<area shape="rect" id="node13" href="$classGeneralSquad.html#af8cf10005c9fac930c58ec4c31f51254" title=" " alt="" coords="745,303,911,328"/>
 </map>

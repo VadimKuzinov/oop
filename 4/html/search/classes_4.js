@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['menuwindow_0',['MenuWindow',['../classMenuWindow.html',1,'']]],
-  ['moralhealingsquad_1',['MoralHealingSquad',['../classMoralHealingSquad.html',1,'']]],
-  ['moralsquad_2',['MoralSquad',['../classMoralSquad.html',1,'']]]
+  ['map_0',['Map',['../classMap.html',1,'']]],
+  ['menuwindow_1',['MenuWindow',['../classMenuWindow.html',1,'']]],
+  ['moralhealingsquad_2',['MoralHealingSquad',['../classMoralHealingSquad.html',1,'']]],
+  ['moralsquad_3',['MoralSquad',['../classMoralSquad.html',1,'']]]
 ];

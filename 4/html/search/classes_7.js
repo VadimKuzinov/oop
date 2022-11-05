@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['summoner_0',['Summoner',['../classSummoner.html',1,'']]],
-  ['summonerwindow_1',['SummonerWindow',['../classSummonerWindow.html',1,'']]]
+  ['school_0',['School',['../classSchool.html',1,'']]],
+  ['summoner_1',['Summoner',['../classSummoner.html',1,'']]],
+  ['summonerwindow_2',['SummonerWindow',['../classSummonerWindow.html',1,'']]]
 ];

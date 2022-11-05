@@ -1,5 +1,4 @@
 #pragma once
-#include "Type.h"
 #include "Point.h"
 #include <vector>
 #include <memory>
@@ -20,7 +19,6 @@ struct Entity : public std::enable_shared_from_this<Entity> {
     virtual void killMySelf() = 0;
     virtual const std::string& getPictureFileName() const = 0;    
     virtual void set(const std::string& field_name, const std::string& value) = 0;
-
     virtual std::vector<std::pair<std::string, std::string>> serialize() const = 0;
     virtual ~Entity() = default;
 };

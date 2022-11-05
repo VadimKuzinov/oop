@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['killmyself_0',['killMySelf',['../classEntity.html#abe386549463d98d4225ba02b3c949784',1,'Entity::killMySelf()'],['../classObstacle.html#a7d51afb55f3bb9da87ba374062fd6804',1,'Obstacle::killMySelf()']]]
+  ['isalive_0',['isAlive',['../structEntity.html#a56002c792a216fedc78f5aa2bce75161',1,'Entity::isAlive()'],['../classObstacle.html#a2ac21dd14b863e139d33a1a2e0ea7bda',1,'Obstacle::isAlive()']]],
+  ['isinstanceof_1',['isInstanceOf',['../Utils_8h.html#a533410c4800ae8591c1a5efe9716cef7',1,'Utils.h']]]
 ];

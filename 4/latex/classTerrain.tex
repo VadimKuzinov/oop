@@ -17,64 +17,63 @@ Collaboration diagram for Terrain\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTerrain_a93f5df56779b779ffd4b6b8292d3e6f8}{Terrain}} (const std\+::string \&cfg\+\_\+filename)
+\mbox{\hyperlink{classTerrain_a19456a4afdd6e0b0085a3a2363e36dad}{Terrain}} (const std\+::string \&academy\+\_\+cfg, const std\+::string \&map\+\_\+cfg)
 \item 
-void \mbox{\hyperlink{classTerrain_a119ce517f39dd11eafb8fd9c476d216f}{add\+Squad}} (\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} id, \mbox{\hyperlink{structPoint}{Point}})
+void \mbox{\hyperlink{classTerrain_ab4d397c4469e0ca89f2805707d3a84ad}{add\+Squad}} (const std\+::string \&, const std\+::string \&, \mbox{\hyperlink{structPoint}{Point}})
 \item 
 void \mbox{\hyperlink{classTerrain_a113b4afe15b29c8407c056d4cafe4c92}{live}} ()
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSummoner}{Summoner}} $>$ \mbox{\hyperlink{classTerrain_a2f7dec94c282474f74ef83022a893d2a}{get\+Summoner\+First}} ()
 \item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSummoner}{Summoner}} $>$ \mbox{\hyperlink{classTerrain_a415fe72fe896627045df35446ad65866}{get\+Summoner\+Second}} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
 \item 
-std\+::pair$<$ \mbox{\hyperlink{structPoint}{Point}}, \mbox{\hyperlink{structPoint}{Point}} $>$ \mbox{\hyperlink{classTerrain_ac82d8381d83e3bc472e549ab30118310}{summoners\+\_\+coords\+\_\+}}
+const \mbox{\hyperlink{classAcademy}{Academy}} \& \mbox{\hyperlink{classTerrain_a65a9452b0e3eaddf7c9efbba06ddfcad}{get\+Academy}} () const
 \item 
-std\+::vector$<$ std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ $>$ $>$ \mbox{\hyperlink{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}{map\+\_\+}}
-\item 
-std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classEntity}{Entity}} $>$ $>$ \mbox{\hyperlink{classTerrain_a387ed3c536605a5b97b411c7cc0747f9}{squads\+\_\+}}
-\item 
-int \mbox{\hyperlink{classTerrain_aa08ef05d4c8b4b66c6e8162dfe19df7b}{MAX\+\_\+X}}
-\item 
-int \mbox{\hyperlink{classTerrain_a3441f4ae8b67eb8ee4e9f67fca8d4f9a}{MAX\+\_\+Y}}
+\mbox{\hyperlink{classMap}{Map}} \& \mbox{\hyperlink{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}{get\+Map}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classTerrain_ade84f176a6c0f76cde63e7da4c492be9}{Summoner}}
-\item 
 std\+::istream \& \mbox{\hyperlink{classTerrain_ab1980fa60b56c6e7e383aa5ea69ce488}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classTerrain}{Terrain}} \&terrain)
-\item 
-std\+::ostream \& \mbox{\hyperlink{classTerrain_a58ce8b1ca8e72bf24f3e8cc414820daf}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classTerrain}{Terrain}} \&terrain)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classTerrain_a93f5df56779b779ffd4b6b8292d3e6f8}\label{classTerrain_a93f5df56779b779ffd4b6b8292d3e6f8}} 
+\mbox{\Hypertarget{classTerrain_a19456a4afdd6e0b0085a3a2363e36dad}\label{classTerrain_a19456a4afdd6e0b0085a3a2363e36dad}} 
 \index{Terrain@{Terrain}!Terrain@{Terrain}}
 \index{Terrain@{Terrain}!Terrain@{Terrain}}
 \doxysubsubsection{\texorpdfstring{Terrain()}{Terrain()}}
-{\footnotesize\ttfamily Terrain\+::\+Terrain (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cfg\+\_\+filename }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Terrain\+::\+Terrain (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{academy\+\_\+cfg,  }\item[{const std\+::string \&}]{map\+\_\+cfg }\end{DoxyParamCaption})}
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classTerrain_a119ce517f39dd11eafb8fd9c476d216f}\label{classTerrain_a119ce517f39dd11eafb8fd9c476d216f}} 
+\mbox{\Hypertarget{classTerrain_ab4d397c4469e0ca89f2805707d3a84ad}\label{classTerrain_ab4d397c4469e0ca89f2805707d3a84ad}} 
 \index{Terrain@{Terrain}!addSquad@{addSquad}}
 \index{addSquad@{addSquad}!Terrain@{Terrain}}
 \doxysubsubsection{\texorpdfstring{addSquad()}{addSquad()}}
-{\footnotesize\ttfamily void Terrain\+::add\+Squad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{id,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{where }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Terrain\+::add\+Squad (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{school,  }\item[{const std\+::string \&}]{ability,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{where }\end{DoxyParamCaption})}
 
 Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=321pt]{classTerrain_a119ce517f39dd11eafb8fd9c476d216f_cgraph}
+\includegraphics[width=350pt]{classTerrain_ab4d397c4469e0ca89f2805707d3a84ad_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classTerrain_a65a9452b0e3eaddf7c9efbba06ddfcad}\label{classTerrain_a65a9452b0e3eaddf7c9efbba06ddfcad}} 
+\index{Terrain@{Terrain}!getAcademy@{getAcademy}}
+\index{getAcademy@{getAcademy}!Terrain@{Terrain}}
+\doxysubsubsection{\texorpdfstring{getAcademy()}{getAcademy()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classAcademy}{Academy}} \& Terrain\+::get\+Academy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}\label{classTerrain_ac67977924d06aa032580dd1bd1ee24a0}} 
+\index{Terrain@{Terrain}!getMap@{getMap}}
+\index{getMap@{getMap}!Terrain@{Terrain}}
+\doxysubsubsection{\texorpdfstring{getMap()}{getMap()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMap}{Map}} \& Terrain\+::get\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{classTerrain_a2f7dec94c282474f74ef83022a893d2a}\label{classTerrain_a2f7dec94c282474f74ef83022a893d2a}} 
 \index{Terrain@{Terrain}!getSummonerFirst@{getSummonerFirst}}
 \index{getSummonerFirst@{getSummonerFirst}!Terrain@{Terrain}}
@@ -104,56 +103,11 @@ Here is the call graph for this function\+:
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{classTerrain_a58ce8b1ca8e72bf24f3e8cc414820daf}\label{classTerrain_a58ce8b1ca8e72bf24f3e8cc414820daf}} 
-\index{Terrain@{Terrain}!operator$<$$<$@{operator$<$$<$}}
-\index{operator$<$$<$@{operator$<$$<$}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
-{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classTerrain}{Terrain}} \&}]{terrain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
 \mbox{\Hypertarget{classTerrain_ab1980fa60b56c6e7e383aa5ea69ce488}\label{classTerrain_ab1980fa60b56c6e7e383aa5ea69ce488}} 
 \index{Terrain@{Terrain}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!Terrain@{Terrain}}
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
 {\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classTerrain}{Terrain}} \&}]{terrain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
-\mbox{\Hypertarget{classTerrain_ade84f176a6c0f76cde63e7da4c492be9}\label{classTerrain_ade84f176a6c0f76cde63e7da4c492be9}} 
-\index{Terrain@{Terrain}!Summoner@{Summoner}}
-\index{Summoner@{Summoner}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{Summoner}{Summoner}}
-{\footnotesize\ttfamily friend class \mbox{\hyperlink{classSummoner}{Summoner}}\hspace{0.3cm}{\ttfamily [friend]}}
-
-
-
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}\label{classTerrain_ab2bea5e06f38bbab6037daf1a5fc64b4}} 
-\index{Terrain@{Terrain}!map\_@{map\_}}
-\index{map\_@{map\_}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{map\_}{map\_}}
-{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classEntity}{Entity}}$>$ $>$ $>$ Terrain\+::map\+\_\+}
-
-\mbox{\Hypertarget{classTerrain_aa08ef05d4c8b4b66c6e8162dfe19df7b}\label{classTerrain_aa08ef05d4c8b4b66c6e8162dfe19df7b}} 
-\index{Terrain@{Terrain}!MAX\_X@{MAX\_X}}
-\index{MAX\_X@{MAX\_X}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{MAX\_X}{MAX\_X}}
-{\footnotesize\ttfamily int Terrain\+::\+MAX\+\_\+X}
-
-\mbox{\Hypertarget{classTerrain_a3441f4ae8b67eb8ee4e9f67fca8d4f9a}\label{classTerrain_a3441f4ae8b67eb8ee4e9f67fca8d4f9a}} 
-\index{Terrain@{Terrain}!MAX\_Y@{MAX\_Y}}
-\index{MAX\_Y@{MAX\_Y}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{MAX\_Y}{MAX\_Y}}
-{\footnotesize\ttfamily int Terrain\+::\+MAX\+\_\+Y}
-
-\mbox{\Hypertarget{classTerrain_a387ed3c536605a5b97b411c7cc0747f9}\label{classTerrain_a387ed3c536605a5b97b411c7cc0747f9}} 
-\index{Terrain@{Terrain}!squads\_@{squads\_}}
-\index{squads\_@{squads\_}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{squads\_}{squads\_}}
-{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classEntity}{Entity}}$>$ $>$ Terrain\+::squads\+\_\+}
-
-\mbox{\Hypertarget{classTerrain_ac82d8381d83e3bc472e549ab30118310}\label{classTerrain_ac82d8381d83e3bc472e549ab30118310}} 
-\index{Terrain@{Terrain}!summoners\_coords\_@{summoners\_coords\_}}
-\index{summoners\_coords\_@{summoners\_coords\_}!Terrain@{Terrain}}
-\doxysubsubsection{\texorpdfstring{summoners\_coords\_}{summoners\_coords\_}}
-{\footnotesize\ttfamily std\+::pair$<$\mbox{\hyperlink{structPoint}{Point}}, \mbox{\hyperlink{structPoint}{Point}}$>$ Terrain\+::summoners\+\_\+coords\+\_\+}
 
 
 

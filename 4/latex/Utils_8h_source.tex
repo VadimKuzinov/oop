@@ -4,36 +4,108 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{3 }
-\DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{6 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptMoving}{Moving}} = \textcolor{keyword}{requires}(T sq) \{}
-\DoxyCodeLine{7     sq.tryToMove();}
-\DoxyCodeLine{8 \};}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{11 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptAttacking}{Attacking}} = \textcolor{keyword}{requires}(T sq) \{}
-\DoxyCodeLine{12     sq.tryToAttack();}
-\DoxyCodeLine{13 \};}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Obstacle_8h}{Obstacle.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{GeneralSquad_8h}{GeneralSquad.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MoralSquad_8h}{MoralSquad.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{GeneralHealingSquad_8h}{GeneralHealingSquad.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MoralHealingSquad_8h}{MoralHealingSquad.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Summoner_8h}{Summoner.h}}"{}}}
+\DoxyCodeLine{13 }
 \DoxyCodeLine{14 }
-\DoxyCodeLine{15 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{16 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptSummoning}{Summoning}} = \textcolor{keyword}{requires}(T sq) \{}
-\DoxyCodeLine{17     sq.tryToSummon();}
-\DoxyCodeLine{18 \};}
-\DoxyCodeLine{19 }
-\DoxyCodeLine{20 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{21 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptAccumulating}{Accumulating}} = \textcolor{keyword}{requires}(T sq) \{}
-\DoxyCodeLine{22     sq.tryToAccumulate();}
-\DoxyCodeLine{23 \};}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{26 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptUpgrading}{Upgrading}} = \textcolor{keyword}{requires}(T sq) \{}
-\DoxyCodeLine{27     sq.tryToUpgrade();}
-\DoxyCodeLine{28 \};}
-\DoxyCodeLine{29 }
-\DoxyCodeLine{30 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
-\DoxyCodeLine{31 \textcolor{keyword}{concept }\mbox{\hyperlink{conceptHealing}{Healing}} = \textcolor{keyword}{requires}(T sq) \{}
-\DoxyCodeLine{32     sq.tryToHeal();}
-\DoxyCodeLine{33 \};}
+\DoxyCodeLine{15 \textcolor{comment}{/*}}
+\DoxyCodeLine{16 \textcolor{comment}{template <typename T>}}
+\DoxyCodeLine{17 \textcolor{comment}{concept Moving = requires(T sq) \{}}
+\DoxyCodeLine{18 \textcolor{comment}{    sq.tryToMove();}}
+\DoxyCodeLine{19 \textcolor{comment}{\};}}
+\DoxyCodeLine{20 \textcolor{comment}{}}
+\DoxyCodeLine{21 \textcolor{comment}{template <typename T>}}
+\DoxyCodeLine{22 \textcolor{comment}{concept Attacking = requires(T sq) \{}}
+\DoxyCodeLine{23 \textcolor{comment}{    sq.tryToAttack();}}
+\DoxyCodeLine{24 \textcolor{comment}{\};}}
+\DoxyCodeLine{25 \textcolor{comment}{}}
+\DoxyCodeLine{26 \textcolor{comment}{template <typename T>}}
+\DoxyCodeLine{27 \textcolor{comment}{concept Summoning = requires(T sq) \{}}
+\DoxyCodeLine{28 \textcolor{comment}{    sq.tryToSummon();}}
+\DoxyCodeLine{29 \textcolor{comment}{\};}}
+\DoxyCodeLine{30 \textcolor{comment}{}}
+\DoxyCodeLine{31 \textcolor{comment}{template <typename T>}}
+\DoxyCodeLine{32 \textcolor{comment}{concept Accumulating = requires(T sq) \{}}
+\DoxyCodeLine{33 \textcolor{comment}{    sq.tryToAccumulate();}}
+\DoxyCodeLine{34 \textcolor{comment}{\};}}
+\DoxyCodeLine{35 \textcolor{comment}{}}
+\DoxyCodeLine{36 \textcolor{comment}{template <typename T>}}
+\DoxyCodeLine{37 \textcolor{comment}{concept Upgrading = requires(T sq) \{}}
+\DoxyCodeLine{38 \textcolor{comment}{    sq.tryToUpgrade();}}
+\DoxyCodeLine{39 \textcolor{comment}{\};}}
+\DoxyCodeLine{40 \textcolor{comment}{}}
+\DoxyCodeLine{41 \textcolor{comment}{template <typename T>}}
+\DoxyCodeLine{42 \textcolor{comment}{concept Healing = requires(T sq) \{}}
+\DoxyCodeLine{43 \textcolor{comment}{    sq.tryToHeal();}}
+\DoxyCodeLine{44 \textcolor{comment}{\};}}
+\DoxyCodeLine{45 \textcolor{comment}{*/}}
+\DoxyCodeLine{46 \textcolor{comment}{/*}}
+\DoxyCodeLine{47 \textcolor{comment}{class Entity;}}
+\DoxyCodeLine{48 \textcolor{comment}{class Obstacle;}}
+\DoxyCodeLine{49 \textcolor{comment}{class GeneralSquad;}}
+\DoxyCodeLine{50 \textcolor{comment}{class MoralSquad;}}
+\DoxyCodeLine{51 \textcolor{comment}{class GeneralHealingSquad;}}
+\DoxyCodeLine{52 \textcolor{comment}{class MoralHealingSquad;}}
+\DoxyCodeLine{53 \textcolor{comment}{class Summoner;}}
+\DoxyCodeLine{54 \textcolor{comment}{*/}}
+\DoxyCodeLine{55 \textcolor{keyword}{template} <\textcolor{keyword}{typename} Head>}
+\DoxyCodeLine{56 \textcolor{keyword}{inline} std::shared\_ptr<Entity> \mbox{\hyperlink{Utils_8h_aa07d1f1d9492fdaa542a2bffcdb93358}{createPtrToInstanceOfImpl}}(\textcolor{keyword}{const} std::type\_info\& type) \{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{if} (\textcolor{keyword}{typeid}(Head) == type) \{}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} std::shared\_ptr<Entity>(\textcolor{keyword}{new} Head);}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{62 \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keyword}{template} <\textcolor{keyword}{typename} Head, \textcolor{keyword}{typename}... Args>}
+\DoxyCodeLine{65 \textcolor{keyword}{inline} std::enable\_if<\textcolor{keyword}{sizeof}...(Args) != 0, std::shared\_ptr<Entity>>::type \mbox{\hyperlink{Utils_8h_aa07d1f1d9492fdaa542a2bffcdb93358}{createPtrToInstanceOfImpl}}(\textcolor{keyword}{const} std::type\_info\& type) \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{if} (\textcolor{keyword}{typeid}(Head) == type) \{}
+\DoxyCodeLine{67         \textcolor{keywordflow}{return} std::shared\_ptr<Entity>(\textcolor{keyword}{new} Head);}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     }
+\DoxyCodeLine{70     \textcolor{keywordflow}{return} \mbox{\hyperlink{Utils_8h_aa07d1f1d9492fdaa542a2bffcdb93358}{createPtrToInstanceOfImpl}}<Args...>(type);}
+\DoxyCodeLine{71 \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 \textcolor{keyword}{inline} std::shared\_ptr<Entity> \mbox{\hyperlink{Utils_8h_a5b12ff633678778f0bba909e2c2d3547}{createPtrToInstanceOf}}(\textcolor{keyword}{const} std::type\_info\& type) \{}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} createPtrToInstanceOfImpl<Obstacle, GeneralSquad, MoralSquad, GeneralHealingSquad, MoralHealingSquad, Summoner>(type);}
+\DoxyCodeLine{75 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 \textcolor{keyword}{template} <\textcolor{keyword}{typename} U, \textcolor{keyword}{typename} T>}
+\DoxyCodeLine{78 \textcolor{keyword}{inline} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{bool} \mbox{\hyperlink{Utils_8h_a533410c4800ae8591c1a5efe9716cef7}{isInstanceOf}}(\textcolor{keyword}{const} T* v) \{}
+\DoxyCodeLine{79     \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(U) == \textcolor{keyword}{typeid}(*v);}
+\DoxyCodeLine{80 \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82 \textcolor{keyword}{inline} \textcolor{keyword}{const} std::type\_info\& \mbox{\hyperlink{Utils_8h_a1eb010d5988c158f2a198beddf3842c6}{getTypeInfoFromString}}(\textcolor{keyword}{const} std::string\& type) \{}
+\DoxyCodeLine{83     \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}Obstacle"{}}) \{}
+\DoxyCodeLine{84         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{classObstacle}{Obstacle}});}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}GeneralSquad"{}}) \{}
+\DoxyCodeLine{87         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{classGeneralSquad}{GeneralSquad}});}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}MoralSquad"{}}) \{}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{classMoralSquad}{MoralSquad}});}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}GeneralHealingSquad"{}}) \{}
+\DoxyCodeLine{93         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}});}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}MoralHealingSquad"{}}) \{}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{classMoralHealingSquad}{MoralHealingSquad}});}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (type == \textcolor{stringliteral}{"{}Summoner"{}}) \{}
+\DoxyCodeLine{99         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{classSummoner}{Summoner}});}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{102         \textcolor{keywordflow}{return} \textcolor{keyword}{typeid}(\mbox{\hyperlink{structEntity}{Entity}});}
+\DoxyCodeLine{103     \}}
+\DoxyCodeLine{104 \}}
+\DoxyCodeLine{105 }
 
 \end{DoxyCode}

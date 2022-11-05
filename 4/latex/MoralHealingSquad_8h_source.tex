@@ -3,24 +3,36 @@
 \mbox{\hyperlink{MoralHealingSquad_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
-\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Type_8h}{Type.h}}"{}}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MoralSquad_8h}{MoralSquad.h}}"{}}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{GeneralHealingSquad_8h}{GeneralHealingSquad.h}}"{}}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{MoralSquad_8h}{MoralSquad.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{GeneralHealingSquad_8h}{GeneralHealingSquad.h}}"{}}}
+\DoxyCodeLine{4 }
 \DoxyCodeLine{5 }
-\DoxyCodeLine{6 }
-\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{classMoralHealingSquad}{MoralHealingSquad}} : \textcolor{keyword}{public} \mbox{\hyperlink{classMoralSquad}{MoralSquad}}, \textcolor{keyword}{public} \mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}} \{}
-\DoxyCodeLine{8 \textcolor{keyword}{public}:}
-\DoxyCodeLine{9     \mbox{\hyperlink{classMoralHealingSquad}{MoralHealingSquad}}(\mbox{\hyperlink{classTerrain}{Terrain}}*, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7a85805cf2d7e003ed42c61b69b4ab6b57}{MoralHealing\_}});}
-\DoxyCodeLine{10     \textcolor{keyword}{virtual} \mbox{\hyperlink{classMoralHealingSquad_aba765497a58569df923ea51f59abab34}{\string~MoralHealingSquad}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{classMoralHealingSquad}{MoralHealingSquad}} : \textcolor{keyword}{public} \mbox{\hyperlink{classMoralSquad}{MoralSquad}}, \textcolor{keyword}{public} \mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}} \{}
+\DoxyCodeLine{7 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{8     \textcolor{keyword}{constexpr} \textcolor{keyword}{static} \textcolor{keyword}{auto} \mbox{\hyperlink{classMoralHealingSquad_a10cf43ba422fae0c03117abbb5c2543d}{properties\_}} = std::tuple\_cat(\mbox{\hyperlink{classGeneralHealingSquad_a2923358e4447f65e8908352ff51371de}{GeneralHealingSquad::properties\_}}, }
+\DoxyCodeLine{9                                         std::make\_tuple(std::make\_pair(\&\mbox{\hyperlink{classMoralSquad_af62b8e095c9084059497f45fa1b95061}{MoralHealingSquad::morality\_}}, \textcolor{stringliteral}{"{}morality"{}}),}
+\DoxyCodeLine{10                                                         std::make\_pair(\&\mbox{\hyperlink{classMoralSquad_a21ba1830220479b6eb22d2512079fb6a}{MoralHealingSquad::stabilization\_speed\_}}, \textcolor{stringliteral}{"{}stabilization\_speed"{}})));}
 \DoxyCodeLine{11 }
-\DoxyCodeLine{12     std::vector<std::pair<void (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
-\DoxyCodeLine{13 }
-\DoxyCodeLine{14     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_a6182aacf94380eab0bc9c11ee9779319}{act}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_aed7ded0316af1210a42d870cf6310ca3}{heal}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{16     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6}{update}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57}{serialize}}() \textcolor{keyword}{const override};}
-\DoxyCodeLine{19 \};}
-\DoxyCodeLine{20 }
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_ac474d2732aab77714c517682936aaac9}{set}}(\textcolor{keyword}{const} std::string\& name, \textcolor{keyword}{const} std::string\& value)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{13         \textcolor{keywordflow}{return} \mbox{\hyperlink{Setter_8h_aa53f1c1b75196a48c0c99db0faa215fb}{setImpl}}(*\textcolor{keyword}{this}, \mbox{\hyperlink{classMoralHealingSquad_a10cf43ba422fae0c03117abbb5c2543d}{properties\_}}, name, value, std::make\_index\_sequence<std::tuple\_size\_v<\textcolor{keyword}{decltype}(\mbox{\hyperlink{classMoralHealingSquad_a10cf43ba422fae0c03117abbb5c2543d}{properties\_}})>>\{\});}
+\DoxyCodeLine{14     \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17 \textcolor{comment}{//    MoralHealingSquad(Terrain*, Point coords, Type = MoralHealing\_);}}
+\DoxyCodeLine{18     \mbox{\hyperlink{classMoralHealingSquad_a8c7739dbe424a17b7f287eef7e3de664}{MoralHealingSquad}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{19     \textcolor{keyword}{virtual} \mbox{\hyperlink{classMoralHealingSquad_aba765497a58569df923ea51f59abab34}{\string~MoralHealingSquad}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{20     \mbox{\hyperlink{classMoralHealingSquad_a076cfcfc6f81cc6b5aad3ef2f22b44c9}{MoralHealingSquad}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMoralHealingSquad}{MoralHealingSquad}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{21     std::shared\_ptr<Entity> \mbox{\hyperlink{classMoralHealingSquad_aed80cbf022232d8354084855b80a0151}{clone}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{22         \textcolor{keywordflow}{return} std::shared\_ptr<Entity>(\textcolor{keyword}{new} \mbox{\hyperlink{classMoralHealingSquad_a8c7739dbe424a17b7f287eef7e3de664}{MoralHealingSquad}}(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{23     \}  }
+\DoxyCodeLine{24     std::vector<std::pair<void (*)(\mbox{\hyperlink{structEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classMoralHealingSquad_af77f6358ab9ee69d9d1df5d88e875792}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_a6182aacf94380eab0bc9c11ee9779319}{act}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_aed7ded0316af1210a42d870cf6310ca3}{heal}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMoralHealingSquad_ad95fdf2efcb471aee678ebd3d189c3c6}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classMoralHealingSquad_a81eaa93856c773f0ceb2b59980b07a57}{serialize}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 }
 
 \end{DoxyCode}

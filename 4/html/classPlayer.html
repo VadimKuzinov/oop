@@ -82,7 +82,7 @@ Collaboration diagram for Player:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlayer__coll__graph.png" border="0" usemap="#aPlayer_coll__map" alt="Collaboration graph"/></div>
 <map name="aPlayer_coll__map" id="aPlayer_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,415,141"/>
+<area shape="rect" title=" " alt="" coords="5,5,415,156"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -92,7 +92,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a30441d88419aa6e7a9ddd0918beb1398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9475052d2c532058d9c45250b106650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#ad9475052d2c532058d9c45250b106650">setActive</a> (<a class="el" href="structPoint.html">Point</a> where)</td></tr>
 <tr class="separator:ad9475052d2c532058d9c45250b106650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66c6583ac9470e3b684d29b1c0b37527"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a66c6583ac9470e3b684d29b1c0b37527">getActive</a> () const</td></tr>
+<tr class="memitem:a1c6daa43275f0d6bac55ecebcfcf37f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a1c6daa43275f0d6bac55ecebcfcf37f1">resetActive</a> ()</td></tr>
+<tr class="separator:a1c6daa43275f0d6bac55ecebcfcf37f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66c6583ac9470e3b684d29b1c0b37527"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a66c6583ac9470e3b684d29b1c0b37527">getActive</a> () const</td></tr>
 <tr class="separator:a66c6583ac9470e3b684d29b1c0b37527"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c382bbcba079f45c88c65212ed39457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlayer.html#a3c382bbcba079f45c88c65212ed39457">catchClick</a> (<a class="el" href="structPoint.html">Point</a> where)</td></tr>
 <tr class="separator:a3c382bbcba079f45c88c65212ed39457"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,8 +157,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlayer_a3c382bbcba079f45c88c65212ed39457_cgraph.png" border="0" usemap="#aclassPlayer_a3c382bbcba079f45c88c65212ed39457_cgraph" alt=""/></div>
 <map name="aclassPlayer_a3c382bbcba079f45c88c65212ed39457_cgraph" id="aclassPlayer_a3c382bbcba079f45c88c65212ed39457_cgraph">
-<area shape="rect" title=" " alt="" coords="5,5,144,31"/>
-<area shape="rect" href="classPlayer.html#ad9475052d2c532058d9c45250b106650" title=" " alt="" coords="192,5,324,31"/>
+<area shape="rect" title=" " alt="" coords="5,81,144,107"/>
+<area shape="rect" href="classMap.html#a9e36106c4c02a9c6508e142f24e9253b" title=" " alt="" coords="197,5,319,31"/>
+<area shape="rect" href="classTerrain.html#ac67977924d06aa032580dd1bd1ee24a0" title=" " alt="" coords="372,107,495,132"/>
+<area shape="rect" href="classMap.html#a7dd31cf45e318ef93b4d68fb63ddea8f" title=" " alt="" coords="199,107,317,132"/>
+<area shape="rect" href="classPlayer.html#ad9475052d2c532058d9c45250b106650" title=" " alt="" coords="192,156,324,181"/>
 </map>
 </div>
 
@@ -172,7 +177,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::shared_ptr&lt; <a class="el" href="classEntity.html">Entity</a> &gt; Player::getActive </td>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structEntity.html">Entity</a> &gt; Player::getActive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -212,6 +217,31 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="a1c6daa43275f0d6bac55ecebcfcf37f1" name="a1c6daa43275f0d6bac55ecebcfcf37f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6daa43275f0d6bac55ecebcfcf37f1">&#9670;&#160;</a></span>resetActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Player::resetActive </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad9475052d2c532058d9c45250b106650" name="ad9475052d2c532058d9c45250b106650"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9475052d2c532058d9c45250b106650">&#9670;&#160;</a></span>setActive()</h2>
 
@@ -235,6 +265,15 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPlayer_ad9475052d2c532058d9c45250b106650_cgraph.png" border="0" usemap="#aclassPlayer_ad9475052d2c532058d9c45250b106650_cgraph" alt=""/></div>
+<map name="aclassPlayer_ad9475052d2c532058d9c45250b106650_cgraph" id="aclassPlayer_ad9475052d2c532058d9c45250b106650_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,137,31"/>
+<area shape="rect" href="classTerrain.html#ac67977924d06aa032580dd1bd1ee24a0" title=" " alt="" coords="185,5,308,31"/>
+</map>
+</div>
 
 </div>
 </div>

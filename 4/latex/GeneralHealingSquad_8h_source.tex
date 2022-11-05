@@ -4,30 +4,40 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{GeneralSquad_8h}{GeneralSquad.h}}"{}}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Type_8h}{Type.h}}"{}}}
+\DoxyCodeLine{3 }
 \DoxyCodeLine{4 }
-\DoxyCodeLine{5 }
-\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}} : \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classGeneralSquad}{GeneralSquad}} \{}
-\DoxyCodeLine{7 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{8     \textcolor{keywordtype}{double} \mbox{\hyperlink{classGeneralHealingSquad_a9ed9c451ba194118c05f4605e6272953}{healing\_speed\_}} = \mbox{\hyperlink{Type_8cpp_a3271e667b2cfd1789f91247fa9f7cd0d}{Healing\_Speed\_}};}
-\DoxyCodeLine{9     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGeneralHealingSquad_a58299e8900115512c63f1a82b2bfaa29}{healing\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{keyword}{public}:}
-\DoxyCodeLine{12     \mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}}(\mbox{\hyperlink{classTerrain}{Terrain}}*, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7aaef5d137f58f4efe20cf837c235a9ae6}{GeneralHealing\_}});}
-\DoxyCodeLine{13     \textcolor{keyword}{virtual} \mbox{\hyperlink{classGeneralHealingSquad_a273511ca08cb4701493c68cfd6984bd4}{\string~GeneralHealingSquad}}() = \textcolor{keywordflow}{default};    }
-\DoxyCodeLine{14 }
-\DoxyCodeLine{15     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a2e43e28212833cbd406e5de61a8f6031}{tryToHeal}}() \{}
-\DoxyCodeLine{16         \mbox{\hyperlink{classGeneralHealingSquad_a58299e8900115512c63f1a82b2bfaa29}{healing\_}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{17     \}}
-\DoxyCodeLine{18   }
-\DoxyCodeLine{19     std::vector<std::pair<void (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classGeneralHealingSquad_abc7f5856fe749151d0fe4e00823ec785}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a028f01c5bf0fac457926760e1ea6eeaf}{heal}}();}
-\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a59ab858c0da159fd0ef9635cb39e9635}{act}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_af9222affae474a0c29a9f8cabeb50539}{update}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classGeneralHealingSquad_a413ba1c881b666447d1a1dc1b5f48a0d}{serialize}}() \textcolor{keyword}{const override};}
-\DoxyCodeLine{26 \};}
-\DoxyCodeLine{27 }
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}} : \textcolor{keyword}{virtual} \textcolor{keyword}{public} \mbox{\hyperlink{classGeneralSquad}{GeneralSquad}} \{}
+\DoxyCodeLine{6 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{7     \textcolor{keywordtype}{double} \mbox{\hyperlink{classGeneralHealingSquad_a9ed9c451ba194118c05f4605e6272953}{healing\_speed\_}};}
+\DoxyCodeLine{8     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classGeneralHealingSquad_a58299e8900115512c63f1a82b2bfaa29}{healing\_}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keyword}{constexpr} \textcolor{keyword}{static} \textcolor{keyword}{auto} \mbox{\hyperlink{classGeneralHealingSquad_a2923358e4447f65e8908352ff51371de}{properties\_}} = std::tuple\_cat(\mbox{\hyperlink{classGeneralSquad_a4fd9b0f2be5c1b4e33140d5033e3e96c}{GeneralSquad::properties\_}}, std::make\_tuple(}
+\DoxyCodeLine{11                                             std::make\_pair(\&\mbox{\hyperlink{classGeneralHealingSquad_a9ed9c451ba194118c05f4605e6272953}{GeneralHealingSquad::healing\_speed\_}}, \textcolor{stringliteral}{"{}healing\_speed"{}})));}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a236115ae3e0ecc19a3d2f66abacd240f}{set}}(\textcolor{keyword}{const} std::string\& name, \textcolor{keyword}{const} std::string\& value)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{14         \textcolor{keywordflow}{return} \mbox{\hyperlink{Setter_8h_aa53f1c1b75196a48c0c99db0faa215fb}{setImpl}}(*\textcolor{keyword}{this}, \mbox{\hyperlink{classGeneralHealingSquad_a2923358e4447f65e8908352ff51371de}{properties\_}}, name, value, std::make\_index\_sequence<std::tuple\_size\_v<\textcolor{keyword}{decltype}(\mbox{\hyperlink{classGeneralHealingSquad_a2923358e4447f65e8908352ff51371de}{properties\_}})>>\{\});}
+\DoxyCodeLine{15     \} }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18 \textcolor{comment}{//    GeneralHealingSquad(Terrain*, Point coords, Type = GeneralHealing\_);}}
+\DoxyCodeLine{19     \mbox{\hyperlink{classGeneralHealingSquad_ac8b47b9c5f7aabdda061cc1b6ae7d749}{GeneralHealingSquad}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{20     \textcolor{keyword}{virtual} \mbox{\hyperlink{classGeneralHealingSquad_a273511ca08cb4701493c68cfd6984bd4}{\string~GeneralHealingSquad}}() = \textcolor{keywordflow}{default};    }
+\DoxyCodeLine{21     \mbox{\hyperlink{classGeneralHealingSquad_a4dc80c82797cfcd1d6a994be3ac3a150}{GeneralHealingSquad}}(\textcolor{keyword}{const} \mbox{\hyperlink{classGeneralHealingSquad}{GeneralHealingSquad}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{22     std::shared\_ptr<Entity> \mbox{\hyperlink{classGeneralHealingSquad_a57e9f294d2190e3a25bb2a4593a6b8bf}{clone}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{23         \textcolor{keywordflow}{return} std::shared\_ptr<Entity>(\textcolor{keyword}{new} \mbox{\hyperlink{classGeneralHealingSquad_ac8b47b9c5f7aabdda061cc1b6ae7d749}{GeneralHealingSquad}}(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{24     \}  }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a2e43e28212833cbd406e5de61a8f6031}{tryToHeal}}() \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{classGeneralHealingSquad_a58299e8900115512c63f1a82b2bfaa29}{healing\_}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28   }
+\DoxyCodeLine{29     std::vector<std::pair<void (*)(\mbox{\hyperlink{structEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classGeneralHealingSquad_abc7f5856fe749151d0fe4e00823ec785}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a028f01c5bf0fac457926760e1ea6eeaf}{heal}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_a59ab858c0da159fd0ef9635cb39e9635}{act}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGeneralHealingSquad_af9222affae474a0c29a9f8cabeb50539}{update}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classGeneralHealingSquad_a413ba1c881b666447d1a1dc1b5f48a0d}{serialize}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
 
 \end{DoxyCode}

@@ -1,11 +1,10 @@
 #pragma once
 #include "GeneralSquad.h"
-#include "Type.h"
 
 
 class GeneralHealingSquad : virtual public GeneralSquad {
 protected:
-    double healing_speed_ = Healing_Speed_;
+    double healing_speed_;
     bool healing_ = false;
 
     constexpr static auto properties_ = std::tuple_cat(GeneralSquad::properties_, std::make_tuple(
@@ -16,7 +15,6 @@ protected:
     } 
 
 public:
-//    GeneralHealingSquad(Terrain*, Point coords, Type = GeneralHealing_);
     GeneralHealingSquad() = default;
     virtual ~GeneralHealingSquad() = default;    
     GeneralHealingSquad(const GeneralHealingSquad&) = default;

@@ -9,5 +9,4 @@
 #include "Squads.h"
 #include "Summoner.h"
 #include "Terrain.h"
-#include "Type.h"
 

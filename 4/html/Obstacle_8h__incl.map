@@ -1,13 +1,13 @@
 <map id="src/Obstacle.h" name="src/Obstacle.h">
-<area shape="rect" id="node1" title=" " alt="" coords="123,5,237,31"/>
-<area shape="rect" id="node2" href="$Utils_8h.html" title=" " alt="" coords="5,79,69,104"/>
-<area shape="rect" id="node4" href="$Entity_8h.html" title=" " alt="" coords="145,79,215,104"/>
-<area shape="rect" id="node5" href="$Type_8h.html" title=" " alt="" coords="121,152,185,177"/>
-<area shape="rect" id="node6" href="$Point_8h.html" title=" " alt="" coords="215,152,281,177"/>
-<area shape="rect" id="node11" title=" " alt="" coords="291,79,368,104"/>
-<area shape="rect" id="node3" title=" " alt="" coords="25,152,87,177"/>
-<area shape="rect" id="node7" title=" " alt="" coords="69,225,149,251"/>
-<area shape="rect" id="node8" title=" " alt="" coords="174,225,237,251"/>
-<area shape="rect" id="node9" title=" " alt="" coords="261,225,320,251"/>
-<area shape="rect" id="node10" title=" " alt="" coords="344,225,419,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="188,5,303,31"/>
+<area shape="rect" id="node2" href="$Setter_8h.html" title=" " alt="" coords="84,79,156,104"/>
+<area shape="rect" id="node5" href="$Entity_8h.html" title=" " alt="" coords="247,79,318,104"/>
+<area shape="rect" id="node6" href="$Point_8h.html" title=" " alt="" coords="176,152,243,177"/>
+<area shape="rect" id="node11" title=" " alt="" coords="405,152,483,177"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,225,64,251"/>
+<area shape="rect" id="node4" title=" " alt="" coords="93,152,147,177"/>
+<area shape="rect" id="node7" title=" " alt="" coords="275,225,355,251"/>
+<area shape="rect" id="node10" title=" " alt="" coords="318,152,381,177"/>
+<area shape="rect" id="node8" title=" " alt="" coords="89,225,151,251"/>
+<area shape="rect" id="node9" title=" " alt="" coords="176,225,251,251"/>
 </map>

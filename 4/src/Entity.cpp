@@ -14,7 +14,6 @@ std::istream& operator>>(std::istream& is, std::shared_ptr<Entity>& e) {
         e->set(name, value);
     }
 
-    std::cout << "CREATED ENTITY: " << std::endl;
     auto v = e->serialize();
     for (auto&& [name, value] : v) {
         std::cout << name << " " << value << std::endl;

@@ -1,14 +1,15 @@
 \hypertarget{Entity_8h}{}\doxysection{src/\+Entity.h File Reference}
 \label{Entity_8h}\index{src/Entity.h@{src/Entity.h}}
-{\ttfamily \#include \char`\"{}Type.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}Point.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
 Include dependency graph for Entity.\+h\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=342pt]{Entity_8h__incl}
+\includegraphics[width=349pt]{Entity_8h__incl}
 \end{center}
 \end{figure}
 This graph shows which files directly or indirectly include this file\+:
@@ -22,5 +23,27 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-class \mbox{\hyperlink{classEntity}{Entity}}
+struct \mbox{\hyperlink{structEntity}{Entity}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::istream \& \mbox{\hyperlink{Entity_8h_a9cab77dd26a3e6bf8203e142271bddd4}{operator$>$$>$}} (std\+::istream \&, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Entity_8h_a9cab77dd26a3e6bf8203e142271bddd4}\label{Entity_8h_a9cab77dd26a3e6bf8203e142271bddd4}} 
+\index{Entity.h@{Entity.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Entity.h@{Entity.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ \&}]{e }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{Entity_8h_a9cab77dd26a3e6bf8203e142271bddd4_cgraph}
+\end{center}
+\end{figure}

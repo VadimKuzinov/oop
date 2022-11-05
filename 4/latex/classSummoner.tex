@@ -27,9 +27,13 @@ Collaboration diagram for Summoner\+:
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSummoner_a62391cf0cf82a1ff7ac5f95c6e1f31a7}{Summoner}} (\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$terrain, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}=\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7aa5a0c75b8db831d0e394470490231d4d}{Summoner\+\_\+}})
+\mbox{\hyperlink{classSummoner_a49f219345d78dd5f7e2d3ca697b0ef16}{Summoner}} ()=default
 \item 
 \mbox{\hyperlink{classSummoner_ad5cda98f5ad6d654f0f3e5ca6eaf391a}{$\sim$\+Summoner}} ()=default
+\item 
+\mbox{\hyperlink{classSummoner_a0ad02dbb99e451d00b07e1bd44482c32}{Summoner}} (const \mbox{\hyperlink{classSummoner}{Summoner}} \&)=default
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ \mbox{\hyperlink{classSummoner_aadab26973135e56803b1a410cd44c969}{clone}} () const
 \item 
 void \mbox{\hyperlink{classSummoner_ae419363d4cf7ea3aee67a96f89fc1cbb}{try\+To\+Accumulate}} ()
 \item 
@@ -37,11 +41,13 @@ void \mbox{\hyperlink{classSummoner_aadb51df3955c85f9a0b532ef73173a3d}{try\+To\+
 \item 
 void \mbox{\hyperlink{classSummoner_a6874f8221a02ed969f2f8ecd04a6199d}{try\+To\+Upgrade}} ()
 \item 
-void \mbox{\hyperlink{classSummoner_a56b6550c92913c30b664f0b08383f788}{set\+Summoned\+Id}} (\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} id)
-\item 
 \mbox{\hyperlink{classTerrain}{Terrain}} $\ast$ \mbox{\hyperlink{classSummoner_a3cd139b6dc95a0a195b40330ba8604d4}{get\+Terrain}} () const
 \item 
-std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classSummoner_a700a8790f706117719f7fc8f353a7aa5}{get\+Menu}} () const override
+void \mbox{\hyperlink{classSummoner_a455db4cb816ff5bc60ddd1eeeb5774a0}{set\+Summoned\+School}} (const std\+::string \&summoned\+\_\+school)
+\item 
+void \mbox{\hyperlink{classSummoner_a3fd6d60f16ea308760c10cb257bad17d}{set\+Summoned\+Ability}} (const std\+::string \&summoned\+\_\+ability)
+\item 
+std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{structEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ \mbox{\hyperlink{classSummoner_a700a8790f706117719f7fc8f353a7aa5}{get\+Menu}} () const override
 \item 
 std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classSummoner_ad92fd2d728ce30614afa85b3be5de48f}{serialize}} () const override
 \item 
@@ -53,18 +59,23 @@ void \mbox{\hyperlink{classSummoner_a69d6829fe6d123d652d1ffe19a568803}{upgrade\+
 \item 
 void \mbox{\hyperlink{classSummoner_a9f230646ba11cb765d014889afed55a4}{act}} () override
 \end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSummoner_a5463a13a202f4372456716831bc95ceb}{set}} (const std\+::string \&name, const std\+::string \&value) override
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-double \mbox{\hyperlink{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}{summon\+\_\+range\+\_\+}} = \mbox{\hyperlink{Type_8cpp_a1366757f293c549701e59c0956745f16}{Summoner\+\_\+\+Summon\+\_\+\+Range\+\_\+}}
+double \mbox{\hyperlink{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}{summon\+\_\+range\+\_\+}}
 \item 
-double \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\+\_\+energy\+\_\+}} = \mbox{\hyperlink{Type_8cpp_a7aaf85c4fe7476b3bc8bfbd3d1b75a5b}{Summoner\+\_\+\+Energy\+\_\+}}
+double \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\+\_\+energy\+\_\+}}
 \item 
-double \mbox{\hyperlink{classSummoner_a2ae2109d7da2c5ada180930ba3999af3}{cur\+\_\+energy\+\_\+}} = \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\+\_\+energy\+\_\+}}
+double \mbox{\hyperlink{classSummoner_a2ae2109d7da2c5ada180930ba3999af3}{cur\+\_\+energy\+\_\+}}
 \item 
 double \mbox{\hyperlink{classSummoner_a34fd3b693a77560ac910d7f286640f18}{xp\+\_\+}} = 0
 \item 
-double \mbox{\hyperlink{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}{energy\+\_\+regen\+\_\+speed\+\_\+}} = \mbox{\hyperlink{Type_8cpp_a06408eaac7214b89b25ce3d8b870b65b}{Summoner\+\_\+\+Energy\+\_\+\+Regen\+\_\+\+Speed\+\_\+}}
+double \mbox{\hyperlink{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}{energy\+\_\+regen\+\_\+speed\+\_\+}}
 \item 
 bool \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\+\_\+}} = true
 \item 
@@ -72,22 +83,35 @@ bool \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning
 \item 
 bool \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\+\_\+}} = false
 \item 
-\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{classSummoner_a4ca8378d28da5882083997afaa73f18c}{summoned\+\_\+id\+\_\+}} = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7adbf44951b3f1f3259044f1f764f3f46f}{Obstacle\+\_\+}}
+std\+::string \mbox{\hyperlink{classSummoner_a424c8b9665d7949c840391be6a2f2f03}{summoned\+\_\+school\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{classSummoner_a522452caf46b09b8e8b9abee43bdbd0f}{summoned\+\_\+ability\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr auto \mbox{\hyperlink{classSummoner_aa2062d117e28b19396917e7502ad4d07}{properties\+\_\+}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classSummoner_a62391cf0cf82a1ff7ac5f95c6e1f31a7}\label{classSummoner_a62391cf0cf82a1ff7ac5f95c6e1f31a7}} 
+\mbox{\Hypertarget{classSummoner_a49f219345d78dd5f7e2d3ca697b0ef16}\label{classSummoner_a49f219345d78dd5f7e2d3ca697b0ef16}} 
 \index{Summoner@{Summoner}!Summoner@{Summoner}}
 \index{Summoner@{Summoner}!Summoner@{Summoner}}
-\doxysubsubsection{\texorpdfstring{Summoner()}{Summoner()}}
-{\footnotesize\ttfamily Summoner\+::\+Summoner (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTerrain}{Terrain}} $\ast$}]{terrain,  }\item[{\mbox{\hyperlink{structPoint}{Point}}}]{coords,  }\item[{\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{id = {\ttfamily \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7aa5a0c75b8db831d0e394470490231d4d}{Summoner\+\_\+}}} }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{Summoner()}{Summoner()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Summoner\+::\+Summoner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 \mbox{\Hypertarget{classSummoner_ad5cda98f5ad6d654f0f3e5ca6eaf391a}\label{classSummoner_ad5cda98f5ad6d654f0f3e5ca6eaf391a}} 
 \index{Summoner@{Summoner}!````~Summoner@{$\sim$Summoner}}
 \index{````~Summoner@{$\sim$Summoner}!Summoner@{Summoner}}
 \doxysubsubsection{\texorpdfstring{$\sim$Summoner()}{~Summoner()}}
 {\footnotesize\ttfamily Summoner\+::$\sim$\+Summoner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classSummoner_a0ad02dbb99e451d00b07e1bd44482c32}\label{classSummoner_a0ad02dbb99e451d00b07e1bd44482c32}} 
+\index{Summoner@{Summoner}!Summoner@{Summoner}}
+\index{Summoner@{Summoner}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{Summoner()}{Summoner()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Summoner\+::\+Summoner (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classSummoner}{Summoner}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
@@ -116,18 +140,35 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{classSummoner_a9f230646ba11cb765d014889afed55a4_cgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{classSummoner_aadab26973135e56803b1a410cd44c969}\label{classSummoner_aadab26973135e56803b1a410cd44c969}} 
+\index{Summoner@{Summoner}!clone@{clone}}
+\index{clone@{clone}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structEntity}{Entity}} $>$ Summoner\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classObstacle_afc354cc84c0fb60d05972a13055d61c8}{Obstacle}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{classSummoner_aadab26973135e56803b1a410cd44c969_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSummoner_a700a8790f706117719f7fc8f353a7aa5}\label{classSummoner_a700a8790f706117719f7fc8f353a7aa5}} 
 \index{Summoner@{Summoner}!getMenu@{getMenu}}
 \index{getMenu@{getMenu}!Summoner@{Summoner}}
 \doxysubsubsection{\texorpdfstring{getMenu()}{getMenu()}}
-{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{classEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Summoner\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ void($\ast$)(\mbox{\hyperlink{structEntity}{Entity}} $\ast$), const char $\ast$ $>$ $>$ Summoner\+::get\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
 Reimplemented from \mbox{\hyperlink{classObstacle_aeae0c019baf07c628d32d6b04415f372}{Obstacle}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,19 +191,42 @@ Here is the call graph for this function\+:
 
 Reimplemented from \mbox{\hyperlink{classObstacle_a30b61324898ee3a68b30fecc9e9401b6}{Obstacle}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=340pt]{classSummoner_ad92fd2d728ce30614afa85b3be5de48f_cgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{classSummoner_a56b6550c92913c30b664f0b08383f788}\label{classSummoner_a56b6550c92913c30b664f0b08383f788}} 
-\index{Summoner@{Summoner}!setSummonedId@{setSummonedId}}
-\index{setSummonedId@{setSummonedId}!Summoner@{Summoner}}
-\doxysubsubsection{\texorpdfstring{setSummonedId()}{setSummonedId()}}
-{\footnotesize\ttfamily void Summoner\+::set\+Summoned\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}}}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\Hypertarget{classSummoner_a5463a13a202f4372456716831bc95ceb}\label{classSummoner_a5463a13a202f4372456716831bc95ceb}} 
+\index{Summoner@{Summoner}!set@{set}}
+\index{set@{set}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Summoner\+::set (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classObstacle_a5fc11267fffbc4d05ff9034d440a06dc}{Obstacle}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSummoner_a5463a13a202f4372456716831bc95ceb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSummoner_a3fd6d60f16ea308760c10cb257bad17d}\label{classSummoner_a3fd6d60f16ea308760c10cb257bad17d}} 
+\index{Summoner@{Summoner}!setSummonedAbility@{setSummonedAbility}}
+\index{setSummonedAbility@{setSummonedAbility}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{setSummonedAbility()}{setSummonedAbility()}}
+{\footnotesize\ttfamily void Summoner\+::set\+Summoned\+Ability (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{summoned\+\_\+ability }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classSummoner_a455db4cb816ff5bc60ddd1eeeb5774a0}\label{classSummoner_a455db4cb816ff5bc60ddd1eeeb5774a0}} 
+\index{Summoner@{Summoner}!setSummonedSchool@{setSummonedSchool}}
+\index{setSummonedSchool@{setSummonedSchool}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{setSummonedSchool()}{setSummonedSchool()}}
+{\footnotesize\ttfamily void Summoner\+::set\+Summoned\+School (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{summoned\+\_\+school }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 \mbox{\Hypertarget{classSummoner_a1d7374517a01881042f9c7a05c18281b}\label{classSummoner_a1d7374517a01881042f9c7a05c18281b}} 
 \index{Summoner@{Summoner}!summon@{summon}}
@@ -215,31 +279,53 @@ Here is the call graph for this function\+:
 \index{Summoner@{Summoner}!cur\_energy\_@{cur\_energy\_}}
 \index{cur\_energy\_@{cur\_energy\_}!Summoner@{Summoner}}
 \doxysubsubsection{\texorpdfstring{cur\_energy\_}{cur\_energy\_}}
-{\footnotesize\ttfamily double Summoner\+::cur\+\_\+energy\+\_\+ = \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\+\_\+energy\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily double Summoner\+::cur\+\_\+energy\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}\label{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}} 
 \index{Summoner@{Summoner}!energy\_regen\_speed\_@{energy\_regen\_speed\_}}
 \index{energy\_regen\_speed\_@{energy\_regen\_speed\_}!Summoner@{Summoner}}
 \doxysubsubsection{\texorpdfstring{energy\_regen\_speed\_}{energy\_regen\_speed\_}}
-{\footnotesize\ttfamily double Summoner\+::energy\+\_\+regen\+\_\+speed\+\_\+ = \mbox{\hyperlink{Type_8cpp_a06408eaac7214b89b25ce3d8b870b65b}{Summoner\+\_\+\+Energy\+\_\+\+Regen\+\_\+\+Speed\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily double Summoner\+::energy\+\_\+regen\+\_\+speed\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}\label{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}} 
 \index{Summoner@{Summoner}!max\_energy\_@{max\_energy\_}}
 \index{max\_energy\_@{max\_energy\_}!Summoner@{Summoner}}
 \doxysubsubsection{\texorpdfstring{max\_energy\_}{max\_energy\_}}
-{\footnotesize\ttfamily double Summoner\+::max\+\_\+energy\+\_\+ = \mbox{\hyperlink{Type_8cpp_a7aaf85c4fe7476b3bc8bfbd3d1b75a5b}{Summoner\+\_\+\+Energy\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily double Summoner\+::max\+\_\+energy\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
+\mbox{\Hypertarget{classSummoner_aa2062d117e28b19396917e7502ad4d07}\label{classSummoner_aa2062d117e28b19396917e7502ad4d07}} 
+\index{Summoner@{Summoner}!properties\_@{properties\_}}
+\index{properties\_@{properties\_}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{properties\_}{properties\_}}
+{\footnotesize\ttfamily constexpr auto Summoner\+::properties\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= std::tuple\_cat(\mbox{\hyperlink{classObstacle_a0d501acc067ea027010ed4f4e469c693}{Obstacle::properties\_}}, }
+\DoxyCodeLine{                                        std::make\_tuple(std::make\_pair(\&\mbox{\hyperlink{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}{Summoner::summon\_range\_}}, \textcolor{stringliteral}{"{}summon\_range"{}}),}
+\DoxyCodeLine{                                                        std::make\_pair(\&\mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{Summoner::max\_energy\_}}, \textcolor{stringliteral}{"{}max\_energy"{}}),}
+\DoxyCodeLine{                                                        std::make\_pair(\&\mbox{\hyperlink{classSummoner_a2ae2109d7da2c5ada180930ba3999af3}{Summoner::cur\_energy\_}}, \textcolor{stringliteral}{"{}cur\_energy"{}}),}
+\DoxyCodeLine{                                                        std::make\_pair(\&\mbox{\hyperlink{classSummoner_a34fd3b693a77560ac910d7f286640f18}{Summoner::xp\_}}, \textcolor{stringliteral}{"{}xp"{}}),}
+\DoxyCodeLine{                                                        std::make\_pair(\&\mbox{\hyperlink{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}{Summoner::energy\_regen\_speed\_}}, \textcolor{stringliteral}{"{}energy\_regen\_speed"{}})))}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}\label{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}} 
 \index{Summoner@{Summoner}!summon\_range\_@{summon\_range\_}}
 \index{summon\_range\_@{summon\_range\_}!Summoner@{Summoner}}
 \doxysubsubsection{\texorpdfstring{summon\_range\_}{summon\_range\_}}
-{\footnotesize\ttfamily double Summoner\+::summon\+\_\+range\+\_\+ = \mbox{\hyperlink{Type_8cpp_a1366757f293c549701e59c0956745f16}{Summoner\+\_\+\+Summon\+\_\+\+Range\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily double Summoner\+::summon\+\_\+range\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
-\mbox{\Hypertarget{classSummoner_a4ca8378d28da5882083997afaa73f18c}\label{classSummoner_a4ca8378d28da5882083997afaa73f18c}} 
-\index{Summoner@{Summoner}!summoned\_id\_@{summoned\_id\_}}
-\index{summoned\_id\_@{summoned\_id\_}!Summoner@{Summoner}}
-\doxysubsubsection{\texorpdfstring{summoned\_id\_}{summoned\_id\_}}
-{\footnotesize\ttfamily \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} Summoner\+::summoned\+\_\+id\+\_\+ = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7adbf44951b3f1f3259044f1f764f3f46f}{Obstacle\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classSummoner_a522452caf46b09b8e8b9abee43bdbd0f}\label{classSummoner_a522452caf46b09b8e8b9abee43bdbd0f}} 
+\index{Summoner@{Summoner}!summoned\_ability\_@{summoned\_ability\_}}
+\index{summoned\_ability\_@{summoned\_ability\_}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{summoned\_ability\_}{summoned\_ability\_}}
+{\footnotesize\ttfamily std\+::string Summoner\+::summoned\+\_\+ability\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classSummoner_a424c8b9665d7949c840391be6a2f2f03}\label{classSummoner_a424c8b9665d7949c840391be6a2f2f03}} 
+\index{Summoner@{Summoner}!summoned\_school\_@{summoned\_school\_}}
+\index{summoned\_school\_@{summoned\_school\_}!Summoner@{Summoner}}
+\doxysubsubsection{\texorpdfstring{summoned\_school\_}{summoned\_school\_}}
+{\footnotesize\ttfamily std\+::string Summoner\+::summoned\+\_\+school\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
 
 \mbox{\Hypertarget{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}\label{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}} 
 \index{Summoner@{Summoner}!summoning\_@{summoning\_}}

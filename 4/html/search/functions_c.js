@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['player_0',['Player',['../classPlayer.html#a30441d88419aa6e7a9ddd0918beb1398',1,'Player']]]
+  ['normalized_0',['normalized',['../structPoint.html#a37406f22c3b74582eb3a7d9bf1ab3e8f',1,'Point']]]
 ];

@@ -1,5 +1,4 @@
 #include "GeneralSquad.h"
-#include "Type.h"
 #include "Point.h"
 #include <iostream>
 

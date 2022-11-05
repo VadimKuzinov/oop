@@ -1,10 +1,11 @@
 <map id="GeneralSquad::act" name="GeneralSquad::act">
-<area shape="rect" id="node1" title=" " alt="" coords="5,110,147,135"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,135,147,161"/>
 <area shape="rect" id="node2" href="$classGeneralSquad.html#a5cb0049360741624ebccc107b7b41086" title=" " alt="" coords="197,34,359,59"/>
-<area shape="rect" id="node5" href="$classGeneralSquad.html#ace6975bdff5f20efa159155efb31a1d9" title=" " alt="" coords="199,110,357,135"/>
-<area shape="rect" id="node8" href="$classGeneralSquad.html#af8cf10005c9fac930c58ec4c31f51254" title=" " alt="" coords="195,159,361,185"/>
+<area shape="rect" id="node5" href="$classGeneralSquad.html#ace6975bdff5f20efa159155efb31a1d9" title=" " alt="" coords="199,135,357,161"/>
+<area shape="rect" id="node9" href="$classGeneralSquad.html#af8cf10005c9fac930c58ec4c31f51254" title=" " alt="" coords="195,185,361,210"/>
 <area shape="rect" id="node3" href="$structPoint.html#ad883843137a07ea2bf51219c7afe5ac3" title=" " alt="" coords="661,85,780,110"/>
 <area shape="rect" id="node4" href="$classGeneralSquad.html#acd1a57e97e3af1fcd9a000dc9fefbfb2" title=" " alt="" coords="409,34,613,59"/>
-<area shape="rect" id="node6" href="$structPoint.html#a37406f22c3b74582eb3a7d9bf1ab3e8f" title=" " alt="" coords="443,135,579,161"/>
-<area shape="rect" id="node7" href="$structPoint.html#a40bfbab108a7d5e754e04e6dc7ac245e" title=" " alt="" coords="447,185,576,210"/>
+<area shape="rect" id="node6" href="$classTerrain.html#ac67977924d06aa032580dd1bd1ee24a0" title=" " alt="" coords="450,135,573,161"/>
+<area shape="rect" id="node7" href="$structPoint.html#a37406f22c3b74582eb3a7d9bf1ab3e8f" title=" " alt="" coords="443,185,579,210"/>
+<area shape="rect" id="node8" href="$structPoint.html#a40bfbab108a7d5e754e04e6dc7ac245e" title=" " alt="" coords="447,234,576,259"/>
 </map>

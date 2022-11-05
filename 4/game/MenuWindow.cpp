@@ -23,17 +23,19 @@ void MenuWindow::clearTextures() {
     textures_ = {};
 }
 
-void MenuWindow::setActive(std::shared_ptr<Entity> active) {
+void MenuWindow::setActive(std::shared_ptr<Entity> active) { //make menu of choices to return string; menu ca be constructed from fun
     choices_ = {};
     active_ = active;
 
     if (active == nullptr) {
-        addChoice(std::make_tuple<void (*)(Entity*), const char*, MenuWindow*>(
-                    [](Entity* e) { 
-                        return dynamic_cast<Summoner*>(e)->setSummonedSchool("summoner"); 
-                    },
-                    "Summoner", 
-                    nullptr));
+        for (auto&& [name, school] : summoner_->getTerrain()->getAcademy().getSchools()) {
+            addChoice(std::make_tuple<void (*)(Entity*), const char*, MenuWindow*>(
+                        [](Entity* e) { 
+                            return dynamic_cast<Summoner*>(e)->setSummonedSchool(name); 
+                        },
+                        name.c_str(), 
+                        nullptr));
+        }
         return;
     }
 

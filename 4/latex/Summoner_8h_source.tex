@@ -4,65 +4,80 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Terrain_8h}{Terrain.h}}"{}}}
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Type_8h}{Type.h}}"{}}}
-\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Obstacle_8h}{Obstacle.h}}"{}}}
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Obstacle_8h}{Obstacle.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
 \DoxyCodeLine{6 }
 \DoxyCodeLine{7 }
 \DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classSummoner}{Summoner}}: \textcolor{keyword}{public} \mbox{\hyperlink{classObstacle}{Obstacle}} \{}
 \DoxyCodeLine{9 \textcolor{keyword}{protected}:}
-\DoxyCodeLine{10     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}{summon\_range\_}} = \mbox{\hyperlink{Type_8cpp_a1366757f293c549701e59c0956745f16}{Summoner\_Summon\_Range\_}};}
-\DoxyCodeLine{11     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\_energy\_}} = \mbox{\hyperlink{Type_8cpp_a7aaf85c4fe7476b3bc8bfbd3d1b75a5b}{Summoner\_Energy\_}};}
-\DoxyCodeLine{12     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_a2ae2109d7da2c5ada180930ba3999af3}{cur\_energy\_}} = \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\_energy\_}};}
+\DoxyCodeLine{10     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}{summon\_range\_}};}
+\DoxyCodeLine{11     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{max\_energy\_}};}
+\DoxyCodeLine{12     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_a2ae2109d7da2c5ada180930ba3999af3}{cur\_energy\_}};}
 \DoxyCodeLine{13     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_a34fd3b693a77560ac910d7f286640f18}{xp\_}} = 0;}
-\DoxyCodeLine{14     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}{energy\_regen\_speed\_}} = \mbox{\hyperlink{Type_8cpp_a06408eaac7214b89b25ce3d8b870b65b}{Summoner\_Energy\_Regen\_Speed\_}};}
+\DoxyCodeLine{14     \textcolor{keywordtype}{double} \mbox{\hyperlink{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}{energy\_regen\_speed\_}};}
 \DoxyCodeLine{15 }
 \DoxyCodeLine{16     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{true};}
 \DoxyCodeLine{17     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{18     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{19     \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \mbox{\hyperlink{classSummoner_a4ca8378d28da5882083997afaa73f18c}{summoned\_id\_}} = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7adbf44951b3f1f3259044f1f764f3f46f}{Obstacle\_}};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 \textcolor{keyword}{public}:}
-\DoxyCodeLine{22     \mbox{\hyperlink{classSummoner}{Summoner}}(\mbox{\hyperlink{classTerrain}{Terrain}}* terrain, \mbox{\hyperlink{structPoint}{Point}} coords, \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} = \mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7aa5a0c75b8db831d0e394470490231d4d}{Summoner\_}});}
-\DoxyCodeLine{23     \mbox{\hyperlink{classSummoner_ad5cda98f5ad6d654f0f3e5ca6eaf391a}{\string~Summoner}}() = \textcolor{keywordflow}{default};}
-\DoxyCodeLine{24   }
-\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_ae419363d4cf7ea3aee67a96f89fc1cbb}{tryToAccumulate}}() \{}
-\DoxyCodeLine{26         \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{27         \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{28         \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{29     \}}
-\DoxyCodeLine{30 }
-\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_aadb51df3955c85f9a0b532ef73173a3d}{tryToSummon}}() \{}
-\DoxyCodeLine{32         \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{33         \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{34         \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{35     \}}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a6874f8221a02ed969f2f8ecd04a6199d}{tryToUpgrade}}() \{}
-\DoxyCodeLine{38         \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{39         \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{false};}
-\DoxyCodeLine{40         \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{true}; }
-\DoxyCodeLine{41     \}}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a56b6550c92913c30b664f0b08383f788}{setSummonedId}}(\mbox{\hyperlink{Type_8h_a1d1cfd8ffb84e947f82999c682b666a7}{Type}} \textcolor{keywordtype}{id}) \{}
-\DoxyCodeLine{44         std::cout << \textcolor{stringliteral}{"{}ID that taken: "{}} << \textcolor{keywordtype}{id} << \textcolor{charliteral}{'\(\backslash\)n'};}
-\DoxyCodeLine{45         \mbox{\hyperlink{classSummoner_a4ca8378d28da5882083997afaa73f18c}{summoned\_id\_}} = id;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     std::string \mbox{\hyperlink{classSummoner_a424c8b9665d7949c840391be6a2f2f03}{summoned\_school\_}};}
+\DoxyCodeLine{21     std::string \mbox{\hyperlink{classSummoner_a522452caf46b09b8e8b9abee43bdbd0f}{summoned\_ability\_}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{constexpr} \textcolor{keyword}{static} \textcolor{keyword}{auto} \mbox{\hyperlink{classSummoner_aa2062d117e28b19396917e7502ad4d07}{properties\_}} = std::tuple\_cat(\mbox{\hyperlink{classObstacle_a0d501acc067ea027010ed4f4e469c693}{Obstacle::properties\_}}, }
+\DoxyCodeLine{24                                         std::make\_tuple(std::make\_pair(\&\mbox{\hyperlink{classSummoner_ab49df20775f6d3a7dda82647c6cad00c}{Summoner::summon\_range\_}}, \textcolor{stringliteral}{"{}summon\_range"{}}),}
+\DoxyCodeLine{25                                                         std::make\_pair(\&\mbox{\hyperlink{classSummoner_a59594a145056ac1e3fb3d2f6bd5e3fab}{Summoner::max\_energy\_}}, \textcolor{stringliteral}{"{}max\_energy"{}}),}
+\DoxyCodeLine{26                                                         std::make\_pair(\&\mbox{\hyperlink{classSummoner_a2ae2109d7da2c5ada180930ba3999af3}{Summoner::cur\_energy\_}}, \textcolor{stringliteral}{"{}cur\_energy"{}}),}
+\DoxyCodeLine{27                                                         std::make\_pair(\&\mbox{\hyperlink{classSummoner_a34fd3b693a77560ac910d7f286640f18}{Summoner::xp\_}}, \textcolor{stringliteral}{"{}xp"{}}),}
+\DoxyCodeLine{28                                                         std::make\_pair(\&\mbox{\hyperlink{classSummoner_ad491d01af3720d3359c8855a8c1ce9bb}{Summoner::energy\_regen\_speed\_}}, \textcolor{stringliteral}{"{}energy\_regen\_speed"{}})));}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a5463a13a202f4372456716831bc95ceb}{set}}(\textcolor{keyword}{const} std::string\& name, \textcolor{keyword}{const} std::string\& value)\textcolor{keyword}{ override }\{}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} \mbox{\hyperlink{Setter_8h_aa53f1c1b75196a48c0c99db0faa215fb}{setImpl}}(*\textcolor{keyword}{this}, \mbox{\hyperlink{classSummoner_aa2062d117e28b19396917e7502ad4d07}{properties\_}}, name, value, std::make\_index\_sequence<std::tuple\_size\_v<\textcolor{keyword}{decltype}(\mbox{\hyperlink{classSummoner_aa2062d117e28b19396917e7502ad4d07}{properties\_}})>>\{\});}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \textcolor{comment}{//Summoner(Terrain* terrain, Point coords, Type = Summoner\_);}}
+\DoxyCodeLine{36     \mbox{\hyperlink{classSummoner_a49f219345d78dd5f7e2d3ca697b0ef16}{Summoner}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{37     \mbox{\hyperlink{classSummoner_ad5cda98f5ad6d654f0f3e5ca6eaf391a}{\string~Summoner}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{38     \mbox{\hyperlink{classSummoner_a0ad02dbb99e451d00b07e1bd44482c32}{Summoner}}(\textcolor{keyword}{const} \mbox{\hyperlink{classSummoner}{Summoner}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     std::shared\_ptr<Entity> \mbox{\hyperlink{classSummoner_aadab26973135e56803b1a410cd44c969}{clone}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{41         \textcolor{keywordflow}{return} std::shared\_ptr<Entity>(\textcolor{keyword}{new} \mbox{\hyperlink{classSummoner_a49f219345d78dd5f7e2d3ca697b0ef16}{Summoner}}(*\textcolor{keyword}{this}));}
+\DoxyCodeLine{42     \}  }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_ae419363d4cf7ea3aee67a96f89fc1cbb}{tryToAccumulate}}() \{}
+\DoxyCodeLine{45         \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{true}; \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{false}; \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{46     \}}
 \DoxyCodeLine{47 }
-\DoxyCodeLine{48     \mbox{\hyperlink{classTerrain}{Terrain}}* \mbox{\hyperlink{classSummoner_a3cd139b6dc95a0a195b40330ba8604d4}{getTerrain}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{49         \textcolor{keywordflow}{return} \mbox{\hyperlink{classObstacle_a10c2b9343bea1309d2e833759def4ab6}{terrain\_}};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_aadb51df3955c85f9a0b532ef73173a3d}{tryToSummon}}() \{}
+\DoxyCodeLine{49         \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{true}; \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{false}; \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{false};}
 \DoxyCodeLine{50     \}}
 \DoxyCodeLine{51 }
-\DoxyCodeLine{52     std::vector<std::pair<void (*)(\mbox{\hyperlink{classEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classSummoner_a700a8790f706117719f7fc8f353a7aa5}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
-\DoxyCodeLine{53     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classSummoner_ad92fd2d728ce30614afa85b3be5de48f}{serialize}}() \textcolor{keyword}{const override};}
-\DoxyCodeLine{54 }
-\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a1d7374517a01881042f9c7a05c18281b}{summon}}();}
-\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a94055b0b5d4fd579432ddb53b68e8167}{accumulateEnergy}}();}
-\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a69d6829fe6d123d652d1ffe19a568803}{upgradeSchool}}();}
-\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a9f230646ba11cb765d014889afed55a4}{act}}() \textcolor{keyword}{override};}
-\DoxyCodeLine{59 \};}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a6874f8221a02ed969f2f8ecd04a6199d}{tryToUpgrade}}() \{}
+\DoxyCodeLine{53         \mbox{\hyperlink{classSummoner_aa7c2a9da912e00ad4a93833f360a1210}{summoning\_}} = \textcolor{keyword}{false}; \mbox{\hyperlink{classSummoner_a7b4fae4af44bdd86498bfee87e5e9f7e}{accumulating\_}} = \textcolor{keyword}{false}; \mbox{\hyperlink{classSummoner_aba2313dfd1b8c75c18d78d4bdb617d8c}{upgrading\_}} = \textcolor{keyword}{true}; }
+\DoxyCodeLine{54     \}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \mbox{\hyperlink{classTerrain}{Terrain}}* \mbox{\hyperlink{classSummoner_a3cd139b6dc95a0a195b40330ba8604d4}{getTerrain}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classObstacle_a10c2b9343bea1309d2e833759def4ab6}{terrain\_}} == \textcolor{keyword}{nullptr}) std::cout << \textcolor{stringliteral}{"{}TERRAIN IS NULLPTR"{}} << std::endl;}
+\DoxyCodeLine{58         \textcolor{keywordflow}{return} \mbox{\hyperlink{classObstacle_a10c2b9343bea1309d2e833759def4ab6}{terrain\_}};}
+\DoxyCodeLine{59     \}}
 \DoxyCodeLine{60 }
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a455db4cb816ff5bc60ddd1eeeb5774a0}{setSummonedSchool}}(\textcolor{keyword}{const} std::string\& summoned\_school) \{}
+\DoxyCodeLine{62         \mbox{\hyperlink{classSummoner_a424c8b9665d7949c840391be6a2f2f03}{summoned\_school\_}} = summoned\_school;}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a3fd6d60f16ea308760c10cb257bad17d}{setSummonedAbility}}(\textcolor{keyword}{const} std::string\& summoned\_ability) \{}
+\DoxyCodeLine{66         \mbox{\hyperlink{classSummoner_a522452caf46b09b8e8b9abee43bdbd0f}{summoned\_ability\_}} = summoned\_ability;}
+\DoxyCodeLine{67     \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69     std::vector<std::pair<void (*)(\mbox{\hyperlink{structEntity}{Entity}}*), \textcolor{keyword}{const} \textcolor{keywordtype}{char}*>> \mbox{\hyperlink{classSummoner_a700a8790f706117719f7fc8f353a7aa5}{getMenu}}() \textcolor{keyword}{const} \textcolor{keyword}{override};}
+\DoxyCodeLine{70     std::vector<std::pair<std::string, std::string>> \mbox{\hyperlink{classSummoner_ad92fd2d728ce30614afa85b3be5de48f}{serialize}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a1d7374517a01881042f9c7a05c18281b}{summon}}();}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a94055b0b5d4fd579432ddb53b68e8167}{accumulateEnergy}}();}
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a69d6829fe6d123d652d1ffe19a568803}{upgradeSchool}}();}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} \mbox{\hyperlink{classSummoner_a9f230646ba11cb765d014889afed55a4}{act}}() \textcolor{keyword}{override};}
+\DoxyCodeLine{76 \};}
+\DoxyCodeLine{77 }
 
 \end{DoxyCode}

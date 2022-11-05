@@ -21,8 +21,6 @@ private:
     SDL_Renderer* renderer_;
     SDL_Event event_;
     SDL_Texture* backround_;
-//    SDL_Texture* obstacle_;
-
     std::unordered_map<std::string, SDL_Texture*> textures_;
 
     MenuWindow* menu_window_;

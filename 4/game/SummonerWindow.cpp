@@ -45,7 +45,6 @@ void SummonerWindow::draw() {
     int y_pos = y_ + h_;
     for (auto&& [name, value] : serialized) {
         field = name + ": " + value;
-        //std::cout << field.c_str() << '\n';
         TTF_SizeText(font_, field.c_str(), &rect.w, &rect.h);
         y_pos -= rect.h;
         rect.y = y_pos;

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['energy_5fregen_5fspeed_5f_0',['energy_regen_speed_',['../classSummoner.html#ad491d01af3720d3359c8855a8c1ce9bb',1,'Summoner']]],
-  ['entity_1',['Entity',['../classEntity.html',1,'']]],
-  ['entity_2eh_2',['Entity.h',['../Entity_8h.html',1,'']]]
+  ['damage_5f_0',['damage_',['../classGeneralSquad.html#a8962cdbe992d29124dfb19c0785db77a',1,'GeneralSquad']]],
+  ['distance_1',['distance',['../structPoint.html#ad883843137a07ea2bf51219c7afe5ac3',1,'Point']]],
+  ['draw_2',['draw',['../classMenuWindow.html#ad57e8229e78a97b405a7b6d03672c430',1,'MenuWindow::draw()'],['../classSummonerWindow.html#a9d844262c72f594c6fd3f39d03264cb6',1,'SummonerWindow::draw()']]]
 ];

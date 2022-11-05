@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['live_0',['live',['../classTerrain.html#a113b4afe15b29c8407c056d4cafe4c92',1,'Terrain']]],
-  ['loop_1',['loop',['../classApplication.html#a6d8650e05b79e76e688a38fb9b92bbb9',1,'Application']]]
+  ['killmyself_0',['killMySelf',['../structEntity.html#abe386549463d98d4225ba02b3c949784',1,'Entity::killMySelf()'],['../classObstacle.html#a7d51afb55f3bb9da87ba374062fd6804',1,'Obstacle::killMySelf()']]]
 ];

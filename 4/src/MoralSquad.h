@@ -1,12 +1,11 @@
 #pragma once
 #include "GeneralSquad.h"
-#include "Type.h"
 
 
 class MoralSquad : virtual public GeneralSquad {
 protected:
     double morality_ = 0;
-    double stabilization_speed_ = Moral_Stab_;
+    double stabilization_speed_;
     
     constexpr static auto properties_ = std::tuple_cat(GeneralSquad::properties_, 
                                         std::make_tuple(std::make_pair(&MoralSquad::morality_, "morality"),
@@ -17,7 +16,6 @@ protected:
     }
 
 public:
-//    MoralSquad(Terrain*, Point coords, Type = Moral_);
     MoralSquad() = default;
     virtual ~MoralSquad() = default;
     MoralSquad(const MoralSquad&) = default;

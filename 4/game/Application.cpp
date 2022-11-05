@@ -8,7 +8,7 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
     auto terrain = game->getTerrain();
     MAX_X_ = scale_factor_ * terrain->getMap().getWidth();
     MAX_Y_ = scale_factor_ * terrain->getMap().getHeight();
-    //menu at the right side of screen
+
     SDL_Init(SDL_INIT_EVERYTHING);
     window_ = SDL_CreateWindow("sss", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, MAX_X_ + MENU_W_, MAX_Y_, SDL_WINDOW_SHOWN);
     renderer_ = SDL_CreateRenderer(window_, -1, 0);
@@ -34,14 +34,8 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
     }
 
     SDL_Surface* backround = SDL_LoadBMP("grey.bmp");
-//    SDL_Surface* obstacle = SDL_LoadBMP("obstacle.bmp");
     backround_ = SDL_CreateTextureFromSurface(renderer_, backround);
-  //  obstacle_ = SDL_CreateTextureFromSurface(renderer_, obstacle);
-//    SDL_Rect rect;
-//    rect.x = 0; rect.y = 0; rect.w = MAX_X_; rect.h = MAX_Y_;
-//    SDL_RenderCopy(renderer_, texture, NULL, &rect);
     SDL_FreeSurface(backround);
-    //SDL_FreeSurface(obstacle);
 }
 
 Application::~Application() {
@@ -109,7 +103,7 @@ void Application::loop() {
                     renderCoords(&x, &y);
                     flipYInCoords(&x, &y);
                     //std::cout << "After correcting: " << x << ' ' << y << '\n';
-                    player_->catchClick(Point{x, y});
+                    player_->catchClick(Point{static_cast<double>(x), static_cast<double>(y)});
                     break;
                case SDL_KEYDOWN:
                     if (event_.key.keysym.sym == SDLK_a) {
@@ -134,8 +128,6 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     int x = scale_factor_ * x0;
     int y = MAX_Y_ - scale_factor_ * (y0 + 1);
 
-//    int x = static_cast<int>(coords.x * scale_factor_);
-//    int y = static_cast<int>(MAX_Y_ - scale_factor_ * coords.y);
     auto point = Point::withIntCfs(e->getCoords() * scale_factor_);
     x = (int)point.x;
     y = (int)point.y;
@@ -146,15 +138,9 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     SDL_RenderCopy(renderer_, textures_[pct_file], NULL, &rect);
 
     if (player_->getActive() == e) {
-//        std::cout << "PLAYER: " << player_ << '\n';   
         SDL_SetRenderDrawColor(renderer_, 255, 0, 0, 255);      
         drawCircle(x, y, scale_factor_ * 1.4);
     }
-/*
-    if (e->getId() == Obstacle_) {
-        return;
-    }
-*/
 
     SDL_Rect hp_bar;
     hp_bar.x = x;

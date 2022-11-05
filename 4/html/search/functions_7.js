@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['killmyself_0',['killMySelf',['../classEntity.html#abe386549463d98d4225ba02b3c949784',1,'Entity::killMySelf()'],['../classObstacle.html#a7d51afb55f3bb9da87ba374062fd6804',1,'Obstacle::killMySelf()']]]
+  ['heal_0',['heal',['../classGeneralHealingSquad.html#a028f01c5bf0fac457926760e1ea6eeaf',1,'GeneralHealingSquad::heal()'],['../classMoralHealingSquad.html#aed7ded0316af1210a42d870cf6310ca3',1,'MoralHealingSquad::heal()']]]
 ];

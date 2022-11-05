@@ -1,6 +1,5 @@
 #pragma once
 #include "Terrain.h"
-#include "Type.h"
 #include "Obstacle.h"
 #include <memory>
 #include <string>
@@ -8,11 +7,11 @@
 
 class Summoner: public Obstacle {
 protected:
-    double summon_range_ = Summoner_Summon_Range_;
-    double max_energy_ = Summoner_Energy_;
-    double cur_energy_ = max_energy_;
+    double summon_range_;
+    double max_energy_;
+    double cur_energy_;
     double xp_ = 0;
-    double energy_regen_speed_ = Summoner_Energy_Regen_Speed_;
+    double energy_regen_speed_;
 
     bool accumulating_ = true;
     bool summoning_ = false;
@@ -33,7 +32,6 @@ protected:
     }
 
 public:
-    //Summoner(Terrain* terrain, Point coords, Type = Summoner_);
     Summoner() = default;
     ~Summoner() = default;
     Summoner(const Summoner&) = default;
@@ -55,7 +53,6 @@ public:
     }
 
     Terrain* getTerrain() const {
-        if (terrain_ == nullptr) std::cout << "TERRAIN IS NULLPTR" << std::endl;
         return terrain_;
     }
 

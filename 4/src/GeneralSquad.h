@@ -1,6 +1,4 @@
 #pragma once
-//#include "Utils.h"
-#include "Type.h"
 #include "Obstacle.h"
 #include "Point.h"
 #include "Summoner.h"
@@ -20,7 +18,7 @@ protected:
 
     std::shared_ptr<Summoner> summoner_ = nullptr;
 
-    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::properties_, 
+    constexpr static auto properties_ = std::tuple_cat(Obstacle::properties_, 
                                         std::make_tuple(std::make_pair(&GeneralSquad::damage_, "damage"),
                                                         std::make_pair(&GeneralSquad::velocity_, "velocity"),
                                                         std::make_pair(&GeneralSquad::quantity_, "quantity"),

@@ -1,7 +1,6 @@
 #pragma once
 #include "Setter.h"
 #include "Entity.h"
-#include "Type.h"
 #include "Point.h"
 #include <memory>
 
@@ -12,9 +11,9 @@ class Obstacle : public Entity {
 protected:
     Terrain* terrain_ = nullptr;
     Point coords_ = {0, 0};
-    double max_hp_ = Obstacle_Mhp_;
-    double cur_hp_ = max_hp_;
-    int priority_ = Obstacle_Pr_;
+    double max_hp_;
+    double cur_hp_;
+    int priority_;
     
     std::shared_ptr<Entity> captured_ = nullptr;
     Point target_coords_ = {0, 0};

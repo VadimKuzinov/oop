@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['live_0',['live',['../classTerrain.html#a113b4afe15b29c8407c056d4cafe4c92',1,'Terrain']]],
-  ['loop_1',['loop',['../classApplication.html#a6d8650e05b79e76e688a38fb9b92bbb9',1,'Application']]]
+  ['isalive_0',['isAlive',['../structEntity.html#a56002c792a216fedc78f5aa2bce75161',1,'Entity::isAlive()'],['../classObstacle.html#a2ac21dd14b863e139d33a1a2e0ea7bda',1,'Obstacle::isAlive()']]],
+  ['isinstanceof_1',['isInstanceOf',['../Utils_8h.html#a533410c4800ae8591c1a5efe9716cef7',1,'Utils.h']]]
 ];

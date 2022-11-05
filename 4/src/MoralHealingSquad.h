@@ -1,5 +1,4 @@
 #pragma once
-#include "Type.h"
 #include "MoralSquad.h"
 #include "GeneralHealingSquad.h"
 
@@ -15,7 +14,6 @@ protected:
     }
 
 public:
-//    MoralHealingSquad(Terrain*, Point coords, Type = MoralHealing_);
     MoralHealingSquad() = default;
     virtual ~MoralHealingSquad() = default;
     MoralHealingSquad(const MoralHealingSquad&) = default;

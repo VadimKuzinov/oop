@@ -17,59 +17,61 @@
 \DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{classGame}{Game}} \{}
 \DoxyCodeLine{14     \mbox{\hyperlink{classTerrain}{Terrain}}* terrain\_;}
 \DoxyCodeLine{15     std::pair<Player*, Player*> players\_;}
-\DoxyCodeLine{16     \textcolor{keywordtype}{int} sfd; }
-\DoxyCodeLine{17     \textcolor{keywordtype}{int} connfd;}
+\DoxyCodeLine{16 \textcolor{comment}{//    int sfd; }}
+\DoxyCodeLine{17 \textcolor{comment}{//    int connfd;}}
 \DoxyCodeLine{18 }
-\DoxyCodeLine{19     \textcolor{keywordtype}{void} initializeSocket();}
+\DoxyCodeLine{19 \textcolor{comment}{//    void initializeSocket();}}
 \DoxyCodeLine{20 }
 \DoxyCodeLine{21 \textcolor{keyword}{public}:}
 \DoxyCodeLine{22 \textcolor{comment}{/*    template <typename T>}}
-\DoxyCodeLine{23 \textcolor{comment}{    static auto menu(T* squad) \{}}
-\DoxyCodeLine{24 \textcolor{comment}{        std::vector<std::pair<void (*)(Entity*), const char*>> choices; }}
+\DoxyCodeLine{23 \textcolor{comment}{    static auto menu(std::shared\_ptr<T> squad) \{}}
+\DoxyCodeLine{24 \textcolor{comment}{        std::vector<std::pair<void (*)(std::shared\_ptr<Entity>), const char*>> choices; }}
 \DoxyCodeLine{25 \textcolor{comment}{        if constexpr (Attacking<T>) \{}}
-\DoxyCodeLine{26 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ dynamic\_pointer\_cast<T>(squad)-\/>tryToAttack(); \}, "{}Attack"{}));}}
+\DoxyCodeLine{26 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ std::dynamic\_pointer\_cast<T>(squad)-\/>tryToAttack(); \}, "{}Attack"{}));}}
 \DoxyCodeLine{27 \textcolor{comment}{        \}}}
 \DoxyCodeLine{28 \textcolor{comment}{        if constexpr (Moving<T>) \{}}
-\DoxyCodeLine{29 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ dynamic\_pointer\_cast<T>(squad)-\/>tryToMove(); \}, "{}Move"{}));}}
+\DoxyCodeLine{29 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ std::dynamic\_pointer\_cast<T>(squad)-\/>tryToMove(); \}, "{}Move"{}));}}
 \DoxyCodeLine{30 \textcolor{comment}{        \}}}
 \DoxyCodeLine{31 \textcolor{comment}{        if constexpr (Summoning<T>) \{}}
-\DoxyCodeLine{32 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ dynamic\_pointer\_cast<T>(squad)-\/>tryToSummon(); \}, "{}Summon"{}));}}
+\DoxyCodeLine{32 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ std::dynamic\_pointer\_cast<T>(squad)-\/>tryToSummon(); \}, "{}Summon"{}));}}
 \DoxyCodeLine{33 \textcolor{comment}{        \}}}
 \DoxyCodeLine{34 \textcolor{comment}{        if constexpr (Accumulating<T>) \{}}
-\DoxyCodeLine{35 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ dynamic\_pointer\_cast<T>(squad)-\/>tryToAccumulate(); \}, "{}Accumulate"{}));}}
+\DoxyCodeLine{35 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ std::dynamic\_pointer\_cast<T>(squad)-\/>tryToAccumulate(); \}, "{}Accumulate"{}));}}
 \DoxyCodeLine{36 \textcolor{comment}{        \}}}
 \DoxyCodeLine{37 \textcolor{comment}{        if constexpr (Upgrading<T>) \{}}
-\DoxyCodeLine{38 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ dynamic\_pointer\_cast<T>(squad)-\/>tryToUpgrade(); \}, "{}Upgrade"{}));}}
+\DoxyCodeLine{38 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ std::dynamic\_pointer\_cast<T>(squad)-\/>tryToUpgrade(); \}, "{}Upgrade"{}));}}
 \DoxyCodeLine{39 \textcolor{comment}{        \}}}
 \DoxyCodeLine{40 \textcolor{comment}{        if constexpr (Healing<T>) \{}}
-\DoxyCodeLine{41 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ dynamic\_pointer\_cast<T>(squad)-\/>tryToHeal(); \}, "{}Heal"{}));}}
+\DoxyCodeLine{41 \textcolor{comment}{            choices.push\_back(std::make\_pair([](Entity* squad)\{ std::dynamic\_pointer\_cast<T>(squad)-\/>tryToHeal(); \}, "{}Heal"{}));}}
 \DoxyCodeLine{42 \textcolor{comment}{        \}}}
 \DoxyCodeLine{43 \textcolor{comment}{}}
 \DoxyCodeLine{44 \textcolor{comment}{        return choices;}}
 \DoxyCodeLine{45 \textcolor{comment}{    \}}}
 \DoxyCodeLine{46 \textcolor{comment}{*/}}
-\DoxyCodeLine{47     \mbox{\hyperlink{classGame_a6b665f86ac6711daee79e648d7276fd7}{Game}}(\textcolor{keyword}{const} std::string\& filename) : }
-\DoxyCodeLine{48                     terrain\_(new \mbox{\hyperlink{classTerrain}{Terrain}}(filename)), }
-\DoxyCodeLine{49                     players\_(\mbox{\hyperlink{namespacestd}{std}}::make\_pair<\mbox{\hyperlink{classPlayer}{Player}}*, \mbox{\hyperlink{classPlayer}{Player}}*>(new \mbox{\hyperlink{classPlayer}{Player}}(terrain\_-\/>getSummonerFirst()), new \mbox{\hyperlink{classPlayer}{Player}}(terrain\_-\/>getSummonerSecond()))) \{}
-\DoxyCodeLine{50 \textcolor{comment}{//        initializeSocket();                        }}
-\DoxyCodeLine{51     \}}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53     \mbox{\hyperlink{classPlayer}{Player}}* \mbox{\hyperlink{classGame_a6ae136b7747dbf388ad0206b0f1a1bd7}{getFirstPlayer}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{54         \textcolor{keywordflow}{return} players\_.first;}
-\DoxyCodeLine{55     \}}
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57     \mbox{\hyperlink{classPlayer}{Player}}* \mbox{\hyperlink{classGame_a80b8cf9054bc64d3435860b136059334}{getSecondPlayer}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{58         \textcolor{keywordflow}{return} players\_.second;}
-\DoxyCodeLine{59     \}}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61     \mbox{\hyperlink{classTerrain}{Terrain}}* \mbox{\hyperlink{classGame_ac8a5d07c9b86f3ce9ebbe21d530100c2}{getTerrain}}()\textcolor{keyword}{ const }\{}
-\DoxyCodeLine{62         \textcolor{keywordflow}{return} terrain\_;}
-\DoxyCodeLine{63     \}}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_ad6ebedce63a860c2e5c3b476b4b9711b}{catchClicks}}();}
-\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}(); }
-\DoxyCodeLine{67     }
-\DoxyCodeLine{68 \};}
-\DoxyCodeLine{69 }
+\DoxyCodeLine{47     \mbox{\hyperlink{classGame_a4632e98bc534bd1b84b3a914f232aa1b}{Game}}(\textcolor{keyword}{const} std::string\& academy\_cfg, \textcolor{keyword}{const} std::string\& map\_cfg) : }
+\DoxyCodeLine{48                     terrain\_(new \mbox{\hyperlink{classTerrain}{Terrain}}(academy\_cfg, map\_cfg)), }
+\DoxyCodeLine{49                     players\_(\mbox{\hyperlink{namespacestd}{std}}::make\_pair<\mbox{\hyperlink{classPlayer}{Player}}*, \mbox{\hyperlink{classPlayer}{Player}}*>(}
+\DoxyCodeLine{50                                 new \mbox{\hyperlink{classPlayer}{Player}}(terrain\_-\/>getSummonerFirst()), }
+\DoxyCodeLine{51                                 new \mbox{\hyperlink{classPlayer}{Player}}(terrain\_-\/>getSummonerSecond()))) \{}
+\DoxyCodeLine{52 \textcolor{comment}{//        initializeSocket();                        }}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \mbox{\hyperlink{classPlayer}{Player}}* \mbox{\hyperlink{classGame_a6ae136b7747dbf388ad0206b0f1a1bd7}{getFirstPlayer}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} players\_.first;}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \mbox{\hyperlink{classPlayer}{Player}}* \mbox{\hyperlink{classGame_a80b8cf9054bc64d3435860b136059334}{getSecondPlayer}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{return} players\_.second;}
+\DoxyCodeLine{61     \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63     \mbox{\hyperlink{classTerrain}{Terrain}}* \mbox{\hyperlink{classGame_ac8a5d07c9b86f3ce9ebbe21d530100c2}{getTerrain}}()\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{return} terrain\_;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_ad6ebedce63a860c2e5c3b476b4b9711b}{catchClicks}}();}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a1ab78f5ed0d5ea879157357cf2fb2afa}{run}}(); }
+\DoxyCodeLine{69     }
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 }
 
 \end{DoxyCode}
