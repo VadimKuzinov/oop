@@ -9,7 +9,7 @@ protected:
     
     constexpr static auto properties_ = std::tuple_cat(GeneralSquad::properties_, 
                                         std::make_tuple(std::make_pair(&MoralSquad::morality_, "morality"),
-                                                        std::make_pair(&MoralSquad::stabilization_speed_, "stablization_speed")));
+                                                        std::make_pair(&MoralSquad::stabilization_speed_, "stabilization_speed")));
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});

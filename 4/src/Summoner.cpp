@@ -20,20 +20,28 @@ void Summoner::summon() {
         return;
     }
 
-    std::cout << "required level: " << ability.getRequiredLevelOfSchool();
     int cur_level = levels_of_schools_[summoned_school_];
     if (ability.getRequiredLevelOfSchool() > cur_level) {
         return;
     }
 
-    std::cout << "after 4ifs\n";
     cur_energy_ -= ability.getEnergyCost();
 
     terrain_->addSquad(terrain_->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords_);
 }
 
 void Summoner::upgradeSchool() {
-    return;
+    if (summoned_school_ == "") {
+        return;
+    }
+
+    auto school = terrain_->getAcademy()[summoned_school_];
+    if (school.getRequiredXpForUpgrading() > xp_) {
+        return;
+    }
+
+    ++levels_of_schools_[summoned_school_];
+    xp_ -= school.getRequiredXpForUpgrading();
 }
 
 void Summoner::act() {

@@ -11,56 +11,24 @@
 
 
 class Game {
-    Terrain* terrain_;
-    std::pair<Player*, Player*> players_;
-//    int sfd; 
-//    int connfd;
-
-//    void initializeSocket();
+    std::shared_ptr<Terrain> terrain_;
+    std::pair<std::shared_ptr<Player>, std::shared_ptr<Player>> players_;
 
 public:
-/*    template <typename T>
-    static auto menu(std::shared_ptr<T> squad) {
-        std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> choices; 
-        if constexpr (Attacking<T>) {
-            choices.push_back(std::make_pair([](Entity* squad){ std::dynamic_pointer_cast<T>(squad)->tryToAttack(); }, "Attack"));
-        }
-		if constexpr (Moving<T>) {
-			choices.push_back(std::make_pair([](Entity* squad){ std::dynamic_pointer_cast<T>(squad)->tryToMove(); }, "Move"));
-		}
-		if constexpr (Summoning<T>) {
-			choices.push_back(std::make_pair([](Entity* squad){ std::dynamic_pointer_cast<T>(squad)->tryToSummon(); }, "Summon"));
-		}
-		if constexpr (Accumulating<T>) {
-			choices.push_back(std::make_pair([](Entity* squad){ std::dynamic_pointer_cast<T>(squad)->tryToAccumulate(); }, "Accumulate"));
-		}
-		if constexpr (Upgrading<T>) {
-			choices.push_back(std::make_pair([](Entity* squad){ std::dynamic_pointer_cast<T>(squad)->tryToUpgrade(); }, "Upgrade"));
-		}
-		if constexpr (Healing<T>) {
-			choices.push_back(std::make_pair([](Entity* squad){ std::dynamic_pointer_cast<T>(squad)->tryToHeal(); }, "Heal"));
-        }
-
-        return choices;
-    }
-*/
-    Game(const std::string& academy_cfg, const std::string& map_cfg) : 
-                    terrain_(new Terrain(academy_cfg, map_cfg)), 
-                    players_(std::make_pair<Player*, Player*>(
-                                new Player(terrain_->getSummonerFirst()), 
-                                new Player(terrain_->getSummonerSecond()))) {
-//        initializeSocket();                        
+    Game(const std::string& academy_cfg, const std::string& map_cfg) : terrain_(new Terrain) {
+        terrain_->init(academy_cfg, map_cfg);
+        players_ = {std::shared_ptr<Player>(new Player(terrain_->getSummonerFirst())), std::shared_ptr<Player>(new Player(terrain_->getSummonerSecond()))};
     }
 
-    Player* getFirstPlayer() const {
+    std::shared_ptr<Player> getFirstPlayer() const {
         return players_.first;
     }
 
-    Player* getSecondPlayer() const {
+    std::shared_ptr<Player> getSecondPlayer() const {
         return players_.second;
     }
 
-    Terrain* getTerrain() const {
+    std::shared_ptr<Terrain> getTerrain() const {
         return terrain_;
     }
 

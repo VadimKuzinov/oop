@@ -13,13 +13,10 @@ AcademyWindow::AcademyWindow(int x, int y, int w, int h, SDL_Renderer* renderer,
 }
 
 AcademyWindow::~AcademyWindow() {
-    clearTextures();
+    TTF_CloseFont(font_);
 }
 
 void AcademyWindow::clearTextures() {
-    for (auto&& texture : textures_) {
-        SDL_DestroyTexture(texture);
-    }
     textures_ = {};
 }
 
@@ -84,6 +81,7 @@ void AcademyWindow::catchClick(int y) {
         chosen_school_ = choices_[y];
         summoner_->setSummonedSchool(chosen_school_);
         setActive(nullptr);
+        chosen_ability_ = "";
     }
     else {
         chosen_ability_ = choices_[y];

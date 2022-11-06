@@ -13,13 +13,10 @@ MenuWindow::MenuWindow(int x, int y, int w, int h, SDL_Renderer* renderer, std::
 }
 
 MenuWindow::~MenuWindow() {
-    clearTextures();
+    TTF_CloseFont(font_);
 }
 
 void MenuWindow::clearTextures() {
-    for (auto&& texture : textures_) {
-        SDL_DestroyTexture(texture);
-    }
     textures_ = {};
 }
 
@@ -78,7 +75,6 @@ void MenuWindow::draw() {
 void MenuWindow::catchClick(int y) { 
     int qty = static_cast<int>(choices_.size());
     y /= ch_h_;
-    std::cout << "Caught: " << y << "option" << '\n';
     if (y >= qty) {
         return;
     }

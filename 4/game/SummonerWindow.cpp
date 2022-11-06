@@ -14,7 +14,7 @@ SummonerWindow::SummonerWindow(int x, int y, int w, int h, SDL_Renderer* rendere
 }
 
 SummonerWindow::~SummonerWindow() {
-    clearTextures();
+    TTF_CloseFont(font_);
 }
 
 void SummonerWindow::clearTextures() {

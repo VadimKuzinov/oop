@@ -46,6 +46,7 @@ class School {
 private:
     std::string name_;
     std::unordered_map<std::string, Ability> abilities_;
+    double required_xp_for_upgrading_ = 15;
     friend std::istream& operator>>(std::istream&, School&);
 
 public:
@@ -57,6 +58,10 @@ public:
 
     auto& getAbilities() {
         return abilities_;
+    }
+
+    double getRequiredXpForUpgrading() const {
+        return required_xp_for_upgrading_;
     }
 };
 

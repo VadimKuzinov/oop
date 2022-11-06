@@ -43,15 +43,7 @@ concept Healing = requires(T sq) {
     sq.tryToHeal();
 };
 */
-/*
-class Entity;
-class Obstacle;
-class GeneralSquad;
-class MoralSquad;
-class GeneralHealingSquad;
-class MoralHealingSquad;
-class Summoner;
-*/
+
 template <typename Head>
 inline std::shared_ptr<Entity> createPtrToInstanceOfImpl(const std::type_info& type) {
     if (typeid(Head) == type) {

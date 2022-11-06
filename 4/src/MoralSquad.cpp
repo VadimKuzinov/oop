@@ -1,5 +1,5 @@
 #include "MoralSquad.h"
-
+#include <iostream>
 
 void MoralSquad::stabilizeMorality() {
     if (morality_ < 0) {
@@ -58,7 +58,7 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralSqua
 std::vector<std::pair<std::string, std::string>> MoralSquad::serialize() const {
     auto res = GeneralSquad::serialize();
     res.push_back(std::make_pair("morality", std::to_string(morality_)));
-    res.push_back(std::make_pair("stab_speed", std::to_string(stabilization_speed_)));
+    res.push_back(std::make_pair("stabilization_speed", std::to_string(stabilization_speed_)));
     return res;
 }
 

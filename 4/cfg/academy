@@ -12,7 +12,7 @@ priority 6
 summon_range 10
 max_energy 1000
 cur_energy 1000
-xp 0
+xp 10000
 energy_regen_speed 0.001
 picture_filename wolf.bmp
 nonmoving
@@ -27,7 +27,7 @@ cur_hp 300
 priority 0
 picture_filename obstacle.bmp
 parallel_universes
-2
+3
 kaneki
 200
 0
@@ -37,7 +37,7 @@ max_hp 1200
 cur_hp 1200
 priority 3
 damage 4
-velocity 0.0222
+velocity 0.0333
 quantity 1
 xp_for_destroying 3
 attack_range 2
@@ -51,10 +51,27 @@ max_hp 1500
 cur_hp 1500
 priority 4
 damage 4
-velocity 0.0122
+velocity 0.0722
 quantity 1
 xp_for_destroying 3
 attack_range 2
 picture_filename naruto.bmp
 morality 1234
 stabilization_speed 0.03
+tsunade
+350
+0
+MoralHealingSquad
+12
+max_hp 700
+cur_hp 700
+priority 4
+damage 4
+velocity 0.0522
+quantity 1
+xp_for_destroying 3
+attack_range 2
+picture_filename tsunade.bmp
+morality 1234
+stabilization_speed 0.03
+healing_speed 2.5

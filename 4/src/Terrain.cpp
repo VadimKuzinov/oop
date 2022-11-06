@@ -12,7 +12,11 @@
 #include <fstream>
 
 
-Terrain::Terrain(const std::string& file_academy, const std::string& file_terrain) {
+void Terrain::init(const std::string& file_academy, const std::string& file_terrain) {
+    std::cout << "test shared from this\n";
+//    shared_from_this();
+    std::cout << "after test\n";
+
     std::ifstream ifs(file_academy);
     ifs >> academy_;
 
@@ -54,7 +58,7 @@ void Terrain::loadSchoolsToSummoner(std::shared_ptr<Summoner> summoner) {
 
 void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where) {
     new_squad->setCoords(where);
-    new_squad->setTerrain(this);
+    new_squad->setTerrain(shared_from_this());
     if (typeid(*new_squad) == typeid(Summoner)) {
         addSummoner(new_squad);
     }

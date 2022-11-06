@@ -6,7 +6,7 @@
 
 class Player {
     std::shared_ptr<Summoner> summoner_;
-    Terrain* terrain_;
+    std::shared_ptr<Terrain> terrain_;
     std::shared_ptr<Entity> active_ = nullptr;
 
 public:

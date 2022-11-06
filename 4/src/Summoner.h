@@ -54,10 +54,6 @@ public:
         summoning_ = false; accumulating_ = false; upgrading_ = true; 
     }
 
-    Terrain* getTerrain() const {
-        return terrain_;
-    }
-
     void setSummonedSchool(const std::string& summoned_school) {
         summoned_school_ = summoned_school;
     }

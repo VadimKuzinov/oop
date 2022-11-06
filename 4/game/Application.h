@@ -12,7 +12,8 @@
 class Application {
 private:
     Game* game_;
-    Player* player_;
+    //Player* player_;
+    std::shared_ptr<Player> player_;
     int scale_factor_ = 25;
     int MAX_X_;
     int MAX_Y_;
@@ -36,7 +37,7 @@ public:
     void renderCoords(int*, int*);
     void flipYInCoords(int*, int*);
 
-    Application(Game*, Player*);
+    Application(Game*, std::shared_ptr<Player>);
     ~Application();
     
     void loop();

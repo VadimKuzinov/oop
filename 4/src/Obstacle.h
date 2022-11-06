@@ -9,7 +9,7 @@ class Terrain;
 
 class Obstacle : public Entity {
 protected:
-    Terrain* terrain_ = nullptr;
+    std::shared_ptr<Terrain> terrain_ = nullptr;
     Point coords_ = {0, 0};
     double max_hp_;
     double cur_hp_;
@@ -39,8 +39,12 @@ public:
         return std::shared_ptr<Entity>(new Obstacle(*this));
     }
 
-    void setTerrain(Terrain* terrain) {
+    void setTerrain(std::shared_ptr<Terrain> terrain) override {
         terrain_ = terrain;
+    }
+
+    std::shared_ptr<Terrain> getTerrain() const {
+        return terrain_;
     }
 
     void setCoords(Point where) override {

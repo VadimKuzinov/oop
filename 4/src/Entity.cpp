@@ -14,10 +14,6 @@ std::istream& operator>>(std::istream& is, std::shared_ptr<Entity>& e) {
         e->set(name, value);
     }
 
-    auto v = e->serialize();
-    for (auto&& [name, value] : v) {
-        std::cout << name << " " << value << std::endl;
-    }
-
     return is;
 }
+

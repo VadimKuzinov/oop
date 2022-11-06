@@ -12,7 +12,7 @@ class School;
 
 std::istream& operator>>(std::istream& is, Terrain& terrain);
 
-class Terrain {
+class Terrain : public std::enable_shared_from_this<Terrain> {
 private:
     std::pair<std::shared_ptr<Summoner>, std::shared_ptr<Summoner>> summoners_;
     Map map_;
@@ -23,7 +23,9 @@ private:
     void loadSchoolsToSummoner(std::shared_ptr<Summoner>);
 
 public:
-    Terrain(const std::string& academy_cfg, const std::string& map_cfg);
+    Terrain() = default;
+    void init(const std::string& academy_cfg, const std::string& map_cfg);
+
     void addSquad(std::shared_ptr<Entity>, Point);
     void live();
 

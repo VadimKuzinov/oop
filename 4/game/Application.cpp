@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-Application::Application(Game* game, Player* player) : game_(game), player_(player) {
+Application::Application(Game* game, std::shared_ptr<Player> player) : game_(game), player_(player) {
     auto terrain = game->getTerrain();
     MAX_X_ = scale_factor_ * terrain->getMap().getWidth();
     MAX_Y_ = scale_factor_ * terrain->getMap().getHeight();
@@ -40,7 +40,12 @@ Application::Application(Game* game, Player* player) : game_(game), player_(play
 }
 
 Application::~Application() {
+    SDL_DestroyRenderer(renderer_);
     SDL_DestroyWindow(window_);
+    delete menu_window_;
+    delete summoner_window_;
+    delete academy_window_;
+    TTF_Quit();
     SDL_Quit();
 }
 
@@ -92,7 +97,6 @@ void Application::loop() {
     int x, y;
     bool running = true;
     std::shared_ptr<Summoner> s = nullptr;
-    SDL_Window* popup = nullptr;
     std::vector<std::pair<void (*)(Entity*), const char*>> menu;
     std::shared_ptr<Entity> active;
     while (running) {
