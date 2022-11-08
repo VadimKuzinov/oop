@@ -32,8 +32,6 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralHe
 }
 
 std::vector<std::pair<std::string, std::string>> GeneralHealingSquad::serialize() const {
-    auto res = GeneralSquad::serialize();
-    res.push_back(std::make_pair("healing_speed", std::to_string(healing_speed_)));
-    return res;
+    return serializeImpl(*this, properties_);
 }
 

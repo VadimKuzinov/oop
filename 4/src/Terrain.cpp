@@ -13,10 +13,6 @@
 
 
 void Terrain::init(const std::string& file_academy, const std::string& file_terrain) {
-    std::cout << "test shared from this\n";
-//    shared_from_this();
-    std::cout << "after test\n";
-
     std::ifstream ifs(file_academy);
     ifs >> academy_;
 

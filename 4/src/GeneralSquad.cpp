@@ -73,12 +73,6 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralSq
 }   
 
 std::vector<std::pair<std::string, std::string>> GeneralSquad::serialize() const {
-    auto res = Obstacle::serialize();
-    res.push_back(std::make_pair("damage", std::to_string(damage_)));
-    res.push_back(std::make_pair("velocity", std::to_string(velocity_)));
-    res.push_back(std::make_pair("qty", std::to_string(quantity_)));
-    res.push_back(std::make_pair("xp_for_dsrt", std::to_string(xp_for_destroying_)));
-    res.push_back(std::make_pair("attack_range", std::to_string(attack_range_)));
-    return res;
+    return serializeImpl(*this, properties_);
 } 
 

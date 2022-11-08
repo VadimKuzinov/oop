@@ -7,18 +7,19 @@
 
 class GeneralSquad : public Obstacle {
 protected:
-    double damage_ = 4;
-    double velocity_ = 0.014;
-    int quantity_ = 1;
-    double xp_for_destroying_ = 3;
-    double attack_range_ = 2;
+    double damage_;
+    double velocity_;
+    int quantity_;
+    double xp_for_destroying_;
+    double attack_range_;
 
     bool moving_ = false;
     bool attacking_ = false;
 
     std::shared_ptr<Summoner> summoner_ = nullptr;
 
-    constexpr static auto properties_ = std::tuple_cat(Obstacle::properties_, 
+private:
+    constexpr static auto properties_ = std::tuple_cat(Obstacle::getProperties(), 
                                         std::make_tuple(std::make_pair(&GeneralSquad::damage_, "damage"),
                                                         std::make_pair(&GeneralSquad::velocity_, "velocity"),
                                                         std::make_pair(&GeneralSquad::quantity_, "quantity"),
@@ -29,8 +30,12 @@ protected:
         return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
     }
 
+protected:
+    constexpr static auto getProperties() {
+        return properties_;
+    }
+
 public:
-//    GeneralSquad(Terrain*, Pint coords, Type = General_);
     GeneralSquad() = default;
     virtual ~GeneralSquad() = default;
     GeneralSquad(const GeneralSquad&) = default;

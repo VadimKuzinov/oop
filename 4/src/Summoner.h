@@ -22,7 +22,7 @@ protected:
     std::string summoned_ability_;
     std::unordered_map<std::string, int> levels_of_schools_;
 
-    constexpr static auto properties_ = std::tuple_cat(Obstacle::properties_, 
+    constexpr static auto properties_ = std::tuple_cat(Obstacle::getProperties(), 
                                         std::make_tuple(std::make_pair(&Summoner::summon_range_, "summon_range"),
                                                         std::make_pair(&Summoner::max_energy_, "max_energy"),
                                                         std::make_pair(&Summoner::cur_energy_, "cur_energy"),

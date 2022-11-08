@@ -5,8 +5,6 @@
 #include <memory>
 
 
-class Terrain;
-
 class Obstacle : public Entity {
 protected:
     std::shared_ptr<Terrain> terrain_ = nullptr;
@@ -20,14 +18,19 @@ protected:
 
     std::string picture_filename_;
 
-    constexpr static auto properties_ = std::make_tuple(std::make_pair(&Obstacle::coords_, "coords"),
-                                                        std::make_pair(&Obstacle::max_hp_, "max_hp"),
+private:
+    constexpr static auto properties_ = std::make_tuple(std::make_pair(&Obstacle::max_hp_, "max_hp"),
                                                         std::make_pair(&Obstacle::cur_hp_, "cur_hp"),
                                                         std::make_pair(&Obstacle::priority_, "priority"),
                                                         std::make_pair(&Obstacle::picture_filename_, "picture_filename"));
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
+    }
+
+protected:
+    constexpr static auto getProperties() {
+        return properties_;
     }
 
 public:

@@ -6,7 +6,12 @@
 
 
 class Terrain;
-struct Entity : public std::enable_shared_from_this<Entity> {
+class Entity {
+private:
+    virtual void set(const std::string&, const std::string&) = 0;    
+    friend std::istream& operator>>(std::istream&, std::shared_ptr<Entity>&);
+
+public:
     virtual std::shared_ptr<Entity> clone() const = 0;
     virtual Point getCoords() const = 0;
     virtual void setCoords(Point) = 0;
@@ -18,7 +23,6 @@ struct Entity : public std::enable_shared_from_this<Entity> {
     virtual std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const = 0;
     virtual void killMySelf() = 0;
     virtual const std::string& getPictureFileName() const = 0;    
-    virtual void set(const std::string& field_name, const std::string& value) = 0;
     virtual std::vector<std::pair<std::string, std::string>> serialize() const = 0;
     virtual ~Entity() = default;
 };

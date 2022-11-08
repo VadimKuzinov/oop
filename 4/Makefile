@@ -13,7 +13,7 @@ LIB=-L$(LIB_PATH)/ -l$(LIB_NAME) -Wl,-rpath,$(LIB_PATH)/
 all: $(LIB_PATH)/lib$(LIB_NAME).a
 
 main: $(LIB_PATH)/lib$(LIB_NAME).a
-	$(CC) -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(wildcard game/*.cpp) $(LIB) -lSDL2main -lSDL2_ttf -lSDL2 $(STD) $(FLAGS)
+	$(CC) -O3 -o $(LIB_PATH)/$@ $(CUR_DIR)/$@.cpp $(wildcard game/*.cpp) $(LIB) -lSDL2main -lSDL2_ttf -lSDL2 $(STD) $(FLAGS)
 
 $(LIB_PATH)/lib$(LIB_NAME).a: $(addprefix $(LIB_PATH)/, $(OBJ))
 	ar rc $@ $^

@@ -18,11 +18,6 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> Obstacle:
 }
 
 std::vector<std::pair<std::string, std::string>> Obstacle::serialize() const {
-    std::vector<std::pair<std::string, std::string>> res;
-    res.push_back(std::make_pair("coords", std::string(coords_)));
-    res.push_back(std::make_pair("max_hp", std::to_string(max_hp_)));
-    res.push_back(std::make_pair("cur_hp", std::to_string(cur_hp_)));
-    res.push_back(std::make_pair("trg_coords", std::string(target_coords_)));
-    return res;
-}
+    return serializeImpl(*this, properties_);
+ }
 

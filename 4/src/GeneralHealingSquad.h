@@ -7,12 +7,19 @@ protected:
     double healing_speed_;
     bool healing_ = false;
 
-    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::properties_, std::make_tuple(
+
+private:
+    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::getProperties(), std::make_tuple(
                                             std::make_pair(&GeneralHealingSquad::healing_speed_, "healing_speed")));
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
     } 
+
+protected:
+    constexpr static auto getProperties() {
+        return properties_;
+    }
 
 public:
     GeneralHealingSquad() = default;

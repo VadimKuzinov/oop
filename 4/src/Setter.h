@@ -1,5 +1,9 @@
+#pragma once
 #include <string>
 #include <tuple>
+#include <vector>
+#include "toString.h"
+
 
 template<typename T, typename Head>
 void setImplUnpacked(T& t, const std::string& name, const std::string& value, Head pair_head) {
@@ -25,5 +29,23 @@ std::enable_if<sizeof...(Args) != 0>::type setImplUnpacked(T& t, const std::stri
 template <typename T, typename... Args, std::size_t... I>
 void setImpl(T& t, const std::tuple<Args...>& tuple, const std::string& name, const std::string& value, std::index_sequence<I...>) {
     setImplUnpacked(t, name, value, std::get<I>(tuple)...);
+}
+
+template <typename T, typename... Args>
+auto serializeImplUnpacked(T& t, Args... pairs) {
+    std::vector<std::pair<std::string, std::string>> result;
+    (result.push_back({toString(t.*pairs.first), pairs.second}), ...);
+    return result;
+}
+
+template <typename T, typename... Args, std::size_t... I>
+auto serializeImpl(T& t, const std::tuple<Args...>& tuple, std::index_sequence<I...>) {
+    return serializeImplUnpacked(t, std::get<I>(tuple)...);
+}
+
+template <typename T, typename... Args>
+auto serializeImpl(T& t, const std::tuple<Args...>& tuple) {
+    auto indices = std::make_index_sequence<sizeof...(Args)>{};
+    return serializeImpl(t, tuple, indices);
 }
 

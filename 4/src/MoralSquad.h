@@ -6,13 +6,20 @@ class MoralSquad : virtual public GeneralSquad {
 protected:
     double morality_ = 0;
     double stabilization_speed_;
-    
-    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::properties_, 
+
+
+private:    
+    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::getProperties(), 
                                         std::make_tuple(std::make_pair(&MoralSquad::morality_, "morality"),
                                                         std::make_pair(&MoralSquad::stabilization_speed_, "stabilization_speed")));
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
+    }
+
+protected:
+    constexpr static auto getProperties() {
+        return properties_;
     }
 
 public:

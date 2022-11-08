@@ -43,7 +43,7 @@ void SummonerWindow::draw() {
     SDL_Color color = {0, 0, 0, 255};
     std::string field;
     int y_pos = y_ + h_;
-    for (auto&& [name, value] : serialized) {
+    for (auto&& [value, name] : serialized) {
         field = name + ": " + value;
         TTF_SizeText(font_, field.c_str(), &rect.w, &rect.h);
         y_pos -= rect.h;

@@ -26,7 +26,7 @@ void Summoner::summon() {
     }
 
     cur_energy_ -= ability.getEnergyCost();
-
+    terrain_->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level);
     terrain_->addSquad(terrain_->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords_);
 }
 
@@ -72,14 +72,6 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> Summoner:
 }
 
 std::vector<std::pair<std::string, std::string>> Summoner::serialize() const {
-    auto res = Obstacle::serialize();
-    res.push_back(std::make_pair("summon_range", std::to_string(summon_range_)));
-    res.push_back(std::make_pair("max_energy", std::to_string(max_energy_)));
-    res.push_back(std::make_pair("cur_energy", std::to_string(cur_energy_)));
-    res.push_back(std::make_pair("xp", std::to_string(xp_)));
-    res.push_back(std::make_pair("en_reg_speed", std::to_string(energy_regen_speed_)));
-    res.push_back(std::make_pair("summoned_school", summoned_school_));
-    res.push_back(std::make_pair("summoned_ability", summoned_ability_));
-    return res;
+    return serializeImpl(*this, properties_);
 }
 
