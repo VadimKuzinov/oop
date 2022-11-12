@@ -1,25 +1,28 @@
 #pragma once
-#include "Obstacle.h"
+#include "InteractiveSquad.h"
 #include "Point.h"
 #include "Summoner.h"
 #include <memory>
 
 
-class GeneralSquad : public Obstacle {
+class GeneralSquad : public InteractiveSquad {
 protected:
     double damage_;
     double velocity_;
     int quantity_;
     double xp_for_destroying_;
     double attack_range_;
-
+/*
+    std::shared_ptr<Entity> captured_ = nullptr;
+    Point target_coords_ = {0, 0};
+*/
     bool moving_ = false;
     bool attacking_ = false;
 
     std::shared_ptr<Summoner> summoner_ = nullptr;
 
 private:
-    constexpr static auto properties_ = std::tuple_cat(Obstacle::getProperties(), 
+    constexpr static auto properties_ = std::tuple_cat(InteractiveSquad::getProperties(),
                                         std::make_tuple(std::make_pair(&GeneralSquad::damage_, "damage"),
                                                         std::make_pair(&GeneralSquad::velocity_, "velocity"),
                                                         std::make_pair(&GeneralSquad::quantity_, "quantity"),
@@ -27,7 +30,7 @@ private:
                                                         std::make_pair(&GeneralSquad::attack_range_, "attack_range")));
 
     void set(const std::string& name, const std::string& value) override {
-        return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
+        return setImpl(*this, properties_, name, value);
     }
 
 protected:
@@ -36,9 +39,12 @@ protected:
     }
 
 public:
-    GeneralSquad() = default;
+    std::vector<std::pair<std::string, std::string>> serialize() const override {
+        return serializeImpl(*this, properties_);
+    }
+
+public:
     virtual ~GeneralSquad() = default;
-    GeneralSquad(const GeneralSquad&) = default;
 
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new GeneralSquad(*this));
@@ -70,6 +76,5 @@ public:
     virtual void attack();
 
     virtual void giveDamage();
-    std::vector<std::pair<std::string, std::string>> serialize() const override;
 };
 

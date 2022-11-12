@@ -1,5 +1,6 @@
 #pragma once
 #include "Entity.h"
+#include "InteractiveSquad.h"
 #include "Obstacle.h"
 #include "GeneralHealingSquad.h"
 #include "GeneralSquad.h"

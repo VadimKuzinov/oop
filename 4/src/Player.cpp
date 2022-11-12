@@ -1,4 +1,5 @@
 #include "Player.h"
+#include "GeneralSquad.h"
 
 
 void Player::catchClick(Point where) {
@@ -13,7 +14,7 @@ void Player::catchClick(Point where) {
         active_ = nullptr;
     }
     else {
-        auto casted = std::dynamic_pointer_cast<Obstacle>(active_);
+        auto casted = std::dynamic_pointer_cast<InteractiveSquad>(active_);
         casted->setTargetCoords(where);
         casted->setCaptured(terrain_->getMap()[where]);
     }

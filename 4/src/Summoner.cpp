@@ -6,7 +6,11 @@ void Summoner::accumulateEnergy() {
 }
 
 void Summoner::summon() {
-    auto distance = Point::distance(coords_, target_coords_);
+    auto coords = getCoords();
+    auto target_coords = getTargetCoords();
+    auto terrain = getTerrain();
+
+    auto distance = Point::distance(coords, target_coords);
     if (distance > summon_range_) {
         return;
     }
@@ -15,7 +19,7 @@ void Summoner::summon() {
         return;
     }
 
-    auto ability = terrain_->getAcademy()[summoned_school_][summoned_ability_];
+    auto ability = terrain->getAcademy()[summoned_school_][summoned_ability_];
     if (ability.getEnergyCost() > cur_energy_) {
         return;
     }
@@ -26,16 +30,18 @@ void Summoner::summon() {
     }
 
     cur_energy_ -= ability.getEnergyCost();
-    terrain_->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level);
-    terrain_->addSquad(terrain_->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords_);
+    terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level);
+    terrain->addSquad(terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords);
 }
 
 void Summoner::upgradeSchool() {
+    auto terrain = getTerrain();
+
     if (summoned_school_ == "") {
         return;
     }
 
-    auto school = terrain_->getAcademy()[summoned_school_];
+    auto school = terrain->getAcademy()[summoned_school_];
     if (school.getRequiredXpForUpgrading() > xp_) {
         return;
     }
@@ -69,9 +75,5 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> Summoner:
     choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToSummon(); }, "Summon"});
     choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToUpgrade(); }, "Upgrade"});
     return choices;
-}
-
-std::vector<std::pair<std::string, std::string>> Summoner::serialize() const {
-    return serializeImpl(*this, properties_);
 }
 

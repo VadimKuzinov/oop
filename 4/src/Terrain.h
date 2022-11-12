@@ -19,6 +19,7 @@ private:
     Academy academy_;
     friend std::istream& operator>>(std::istream& is, Terrain& terrain);
 
+    void linkSquad(std::shared_ptr<Entity>, Point);
     void addSummoner(std::shared_ptr<Entity>);
     void loadSchoolsToSummoner(std::shared_ptr<Summoner>);
 

@@ -5,47 +5,23 @@
 #include "toString.h"
 
 
-template<typename T, typename Head>
-void setImplUnpacked(T& t, const std::string& name, const std::string& value, Head pair_head) {
-    auto str = std::string(pair_head.second);
-    if (str != name) {
-        return;
-    }
-
-    std::istringstream(value) >> t.*pair_head.first;
-}
-
-template<typename T, typename Head, typename... Args>
-std::enable_if<sizeof...(Args) != 0>::type setImplUnpacked(T& t, const std::string& name, const std::string& value, Head pair_head, Args... pairs) {
-    auto str = std::string(pair_head.second);
-    if (str != name) {
-        setImplUnpacked(t, name, value, pairs...);
-        return;
-    }
-
-    std::istringstream(value) >> t.*pair_head.first;
-}
-
-template <typename T, typename... Args, std::size_t... I>
-void setImpl(T& t, const std::tuple<Args...>& tuple, const std::string& name, const std::string& value, std::index_sequence<I...>) {
-    setImplUnpacked(t, name, value, std::get<I>(tuple)...);
-}
-
 template <typename T, typename... Args>
-auto serializeImplUnpacked(T& t, Args... pairs) {
-    std::vector<std::pair<std::string, std::string>> result;
-    (result.push_back({toString(t.*pairs.first), pairs.second}), ...);
-    return result;
-}
-
-template <typename T, typename... Args, std::size_t... I>
-auto serializeImpl(T& t, const std::tuple<Args...>& tuple, std::index_sequence<I...>) {
-    return serializeImplUnpacked(t, std::get<I>(tuple)...);
+void setImpl(T& t, const std::tuple<Args...>& tuple, const std::string& name, const std::string& value) {
+    std::apply(
+            [&t, &name, &value](auto&&... pairs) {
+                (((std::string(pairs.second) == name) && (std::istringstream(value) >> t.*pairs.first)), ...);
+            }, tuple
+    );
 }
 
 template <typename T, typename... Args>
 auto serializeImpl(T& t, const std::tuple<Args...>& tuple) {
-    auto indices = std::make_index_sequence<sizeof...(Args)>{};
-    return serializeImpl(t, tuple, indices);
+    std::vector<std::pair<std::string, std::string>> result;
+    std::apply(
+            [&result, &t](auto&&... pairs) {
+                (result.push_back({toString(t.*pairs.first), pairs.second}), ...);
+            }, tuple
+    );
+    return result;
 }
 

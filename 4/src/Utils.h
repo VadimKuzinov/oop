@@ -2,6 +2,7 @@
 #include <vector>
 #include <typeinfo>
 #include <memory>
+#include <array>
 
 #include "Entity.h"
 #include "Obstacle.h"
@@ -11,7 +12,31 @@
 #include "MoralHealingSquad.h"
 #include "Summoner.h"
 
+struct BasePtrToDerivedInstance {
+    template <typename T>
+    std::shared_ptr<Entity> operator()(std::shared_ptr<T> ptr) {
+        return std::shared_ptr<Entity>(new T);
+    }
+};
 
+template <typename Func, typename Head>
+auto applyFunctionToCastedImpl(const std::type_info& type, Func func, std::shared_ptr<Entity> e) {
+    return func(std::dynamic_pointer_cast<Head>(e));
+}
+
+template <typename Func, typename Head, typename... Args>
+auto applyFunctionToCastedImpl(const std::type_info& type, Func func, std::shared_ptr<Entity> e) -> std::enable_if<sizeof...(Args) != 0, decltype(func(e))>::type{ 
+    if (typeid(Head) == type) {
+        return func(std::dynamic_pointer_cast<Head>(e));
+    }
+
+    return applyFunctionToCastedImpl<Func, Args...>(type, func, e);
+}
+
+template <typename Func>
+auto applyFunctionToCasted(const std::type_info& type, Func func, std::shared_ptr<Entity> e = nullptr) {
+    return applyFunctionToCastedImpl<Func, Obstacle, GeneralSquad, MoralSquad, GeneralHealingSquad, MoralHealingSquad, Summoner>(type, func, e);
+}
 /*
 template <typename T>
 concept Moving = requires(T sq) {
@@ -44,33 +69,6 @@ concept Healing = requires(T sq) {
 };
 */
 
-template <typename Head>
-inline std::shared_ptr<Entity> createPtrToInstanceOfImpl(const std::type_info& type) {
-    if (typeid(Head) == type) {
-        return std::shared_ptr<Entity>(new Head);
-    }
-
-    return nullptr;
-}
-
-template <typename Head, typename... Args>
-inline std::enable_if<sizeof...(Args) != 0, std::shared_ptr<Entity>>::type createPtrToInstanceOfImpl(const std::type_info& type) {
-    if (typeid(Head) == type) {
-        return std::shared_ptr<Entity>(new Head);
-    }
-    
-    return createPtrToInstanceOfImpl<Args...>(type);
-}
-
-inline std::shared_ptr<Entity> createPtrToInstanceOf(const std::type_info& type) {
-    return createPtrToInstanceOfImpl<Obstacle, GeneralSquad, MoralSquad, GeneralHealingSquad, MoralHealingSquad, Summoner>(type);
-}
-
-template <typename U, typename T>
-inline constexpr bool isInstanceOf(const T* v) {
-    return typeid(U) == typeid(*v);
-}
-
 inline const std::type_info& getTypeInfoFromString(const std::string& type) {
     if (type == "Obstacle") {
         return typeid(Obstacle);
@@ -94,4 +92,3 @@ inline const std::type_info& getTypeInfoFromString(const std::string& type) {
         return typeid(Entity);
     }
 }
-

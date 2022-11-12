@@ -1,12 +1,12 @@
 #pragma once
 #include "Terrain.h"
-#include "Obstacle.h"
+#include "InteractiveSquad.h"
 #include <memory>
 #include <string>
 #include <unordered_map>
 
 
-class Summoner: public Obstacle {
+class Summoner: public InteractiveSquad {
 protected:
     double summon_range_;
     double max_energy_;
@@ -22,7 +22,8 @@ protected:
     std::string summoned_ability_;
     std::unordered_map<std::string, int> levels_of_schools_;
 
-    constexpr static auto properties_ = std::tuple_cat(Obstacle::getProperties(), 
+private:
+    constexpr static auto properties_ = std::tuple_cat(InteractiveSquad::getProperties(), 
                                         std::make_tuple(std::make_pair(&Summoner::summon_range_, "summon_range"),
                                                         std::make_pair(&Summoner::max_energy_, "max_energy"),
                                                         std::make_pair(&Summoner::cur_energy_, "cur_energy"),
@@ -30,13 +31,20 @@ protected:
                                                         std::make_pair(&Summoner::energy_regen_speed_, "energy_regen_speed")));
 
     void set(const std::string& name, const std::string& value) override {
-        return setImpl(*this, properties_, name, value, std::make_index_sequence<std::tuple_size_v<decltype(properties_)>>{});
+        return setImpl(*this, properties_, name, value);
+    }
+
+    constexpr static auto getProperties() {
+        return properties_;
     }
 
 public:
-    Summoner() = default;
+    std::vector<std::pair<std::string, std::string>> serialize() const override {
+        return serializeImpl(*this, properties_);
+    }
+
+public:
     ~Summoner() = default;
-    Summoner(const Summoner&) = default;
 
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new Summoner(*this));
@@ -67,7 +75,6 @@ public:
     }
 
     std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
-    std::vector<std::pair<std::string, std::string>> serialize() const override;
 
     void summon();
     void accumulateEnergy();

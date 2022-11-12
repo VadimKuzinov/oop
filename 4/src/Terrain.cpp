@@ -1,10 +1,6 @@
 #include "Terrain.h"
 #include "Point.h"
 #include "Summoner.h"
-#include "GeneralSquad.h"
-#include "MoralSquad.h"
-#include "GeneralHealingSquad.h"
-#include "MoralHealingSquad.h"
 #include "Utils.h"
 #include <memory>
 #include <chrono>
@@ -37,6 +33,12 @@ void Terrain::live() {
     }
 }
 
+void Terrain::linkSquad(std::shared_ptr<Entity> e, Point where) {
+    auto casted = std::static_pointer_cast<Obstacle>(e);
+    casted->coords_ = where;
+    casted->terrain_ = shared_from_this();
+}
+
 void Terrain::addSummoner(std::shared_ptr<Entity> e) {
     if (summoners_.first == nullptr) {
         summoners_.first = std::dynamic_pointer_cast<Summoner>(e);
@@ -53,8 +55,7 @@ void Terrain::loadSchoolsToSummoner(std::shared_ptr<Summoner> summoner) {
 }
 
 void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where) {
-    new_squad->setCoords(where);
-    new_squad->setTerrain(shared_from_this());
+    linkSquad(new_squad, where);
     if (typeid(*new_squad) == typeid(Summoner)) {
         addSummoner(new_squad);
     }

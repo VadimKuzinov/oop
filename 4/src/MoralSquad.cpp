@@ -23,15 +23,17 @@ void MoralSquad::update() {
 
 void MoralSquad::giveDamage() {
     double value = damage_;
-    captured_->receiveDamage(value);
+    auto captured = getCaptured();
+    captured->receiveDamage(value);
 }
 
 void MoralSquad::attack() {
-    if (captured_ == nullptr) {
+    auto captured = getCaptured();
+    if (captured == nullptr) {
         return;
     }
 
-    auto distance = Point::distance(coords_, captured_->getCoords());
+    auto distance = Point::distance(getCoords(), captured->getCoords());
     if (distance > attack_range_) {
         return;
     }
@@ -54,9 +56,5 @@ void MoralSquad::act() {
 std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralSquad::getMenu() const {
     auto choices = GeneralSquad::getMenu();
     return choices;
-}
-
-std::vector<std::pair<std::string, std::string>> MoralSquad::serialize() const {
-    return serializeImpl(*this, properties_);
 }
 

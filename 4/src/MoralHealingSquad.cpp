@@ -30,7 +30,3 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralHeal
     return choices;
 }
 
-std::vector<std::pair<std::string, std::string>> MoralHealingSquad::serialize() const {
-    return serializeImpl(*this, properties_);
-}
-

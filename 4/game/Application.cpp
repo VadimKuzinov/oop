@@ -106,7 +106,7 @@ void Application::loop() {
                 case SDL_QUIT:
                     running = false;
                     s = player_->getSummoner();
-                    s->killMySelf();
+                    s->receiveDamage(s->getCurHp());
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                     SDL_GetMouseState(&x, &y);
@@ -164,7 +164,7 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
     SDL_Rect hp_bar;
     hp_bar.x = x;
     hp_bar.y = y - scale_factor_ / 4;
-    auto casted_to_obstacle = std::dynamic_pointer_cast<Obstacle>(e);
+    auto casted_to_obstacle = std::static_pointer_cast<Obstacle>(e);
     hp_bar.w = scale_factor_ * (casted_to_obstacle->getCurHp() / casted_to_obstacle->getMaxHp());
     hp_bar.h = scale_factor_ / 4;
     SDL_SetRenderDrawColor(renderer_, 11, 102, 35, 111);

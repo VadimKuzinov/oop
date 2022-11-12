@@ -31,7 +31,3 @@ std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralHe
     return choices;
 }
 
-std::vector<std::pair<std::string, std::string>> GeneralHealingSquad::serialize() const {
-    return serializeImpl(*this, properties_);
-}
-
