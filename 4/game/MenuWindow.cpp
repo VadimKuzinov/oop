@@ -31,7 +31,8 @@ void MenuWindow::setActive(std::shared_ptr<Entity> active) { //make menu of choi
         return;
     }
 
-    auto menu = active->getMenu();
+    auto menu = applyFunctionToCasted(typeid(*active), MenuCaller{}, active);
+    //auto menu = active->getMenu();
     for (auto&& pair: menu) {
         addChoice(pair.second);
     }
@@ -84,7 +85,7 @@ void MenuWindow::catchClick(int y) {
         std::cout << chosen_ << std::endl;
     }
     else {
-        for (auto&& [func, name] : active_->getMenu()) {
+        for (auto&& [func, name] : applyFunctionToCasted(typeid(*active_), MenuCaller{}, active_)) {
             if (name == chosen_) {
                 func(active_);
             }

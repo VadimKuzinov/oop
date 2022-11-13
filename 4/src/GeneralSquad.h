@@ -12,14 +12,11 @@ protected:
     int quantity_;
     double xp_for_destroying_;
     double attack_range_;
-/*
-    std::shared_ptr<Entity> captured_ = nullptr;
-    Point target_coords_ = {0, 0};
-*/
+
     bool moving_ = false;
     bool attacking_ = false;
 
-    std::shared_ptr<Summoner> summoner_ = nullptr;
+    //std::shared_ptr<Summoner> summoner_ = nullptr;
 
 private:
     constexpr static auto properties_ = std::tuple_cat(InteractiveSquad::getProperties(),
@@ -48,10 +45,6 @@ public:
 
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new GeneralSquad(*this));
-    }
-
-    void setSummoner(std::shared_ptr<Summoner> summoner) {
-        summoner_ = summoner;
     }
 
     void setQuantity(int quantity) {

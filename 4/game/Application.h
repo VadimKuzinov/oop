@@ -12,12 +12,11 @@
 class Application {
 private:
     Game* game_;
-    //Player* player_;
     std::shared_ptr<Player> player_;
-    int scale_factor_ = 25;
+    int scale_factor_ = 35; //25
     int MAX_X_;
     int MAX_Y_;
-    int MENU_W_ = 250; //200
+    int MENU_W_ = 250;
 
     SDL_Window* window_;
     SDL_Renderer* renderer_;
