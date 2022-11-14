@@ -18,6 +18,8 @@ std::istream& operator>>(std::istream&, Academy&);
 class Ability {
 private:
     std::string name_;
+    std::string school_name_;
+
     double energy_cost_;
     int required_level_of_school_;
     std::shared_ptr<Entity> model_;
@@ -25,6 +27,10 @@ private:
     friend std::istream& operator>>(std::istream&, Ability&);
 
 public:
+    void setSchoolName(const std::string school_name) {
+        school_name_ = school_name;
+    }
+
     const std::string& getName() const {
         return name_;
     }

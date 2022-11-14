@@ -7,11 +7,16 @@
 
 class Obstacle : public Entity {
 private:
-    std::shared_ptr<Terrain> terrain_;
+    std::weak_ptr<Terrain> terrain_;
     Point coords_ = {0, 0};
     friend class Terrain;
 
-protected:
+private:
+    std::string school_name_;
+    std::string ability_name_;
+    friend class Ability;
+
+private:
     double max_hp_;
     double cur_hp_;
     int priority_;
@@ -19,11 +24,15 @@ protected:
     std::string picture_filename_;
 
 private:
-    constexpr static auto properties_ = std::make_tuple(std::make_pair(&Obstacle::max_hp_, "max_hp"),
-                                                        std::make_pair(&Obstacle::cur_hp_, "cur_hp"),
-                                                        std::make_pair(&Obstacle::priority_, "priority"),
-                                                        std::make_pair(&Obstacle::picture_filename_, "picture_filename"),
-                                                        std::make_pair(&Obstacle::coords_, "coords"));
+    constexpr static auto properties_ = std::make_tuple(
+                                            std::make_pair(&Obstacle::max_hp_, "max_hp"),
+                                            std::make_pair(&Obstacle::cur_hp_, "cur_hp"),
+                                            std::make_pair(&Obstacle::priority_, "priority"),
+                                            std::make_pair(&Obstacle::picture_filename_, "picture_filename"),
+                                            std::make_pair(&Obstacle::coords_, "coords"),
+                                            std::make_pair(&Obstacle::school_name_, "school_name"),
+                                            std::make_pair(&Obstacle::ability_name_, "ability_name")
+                                        );
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value);
@@ -46,34 +55,59 @@ public:
         return std::shared_ptr<Entity>(new Obstacle(*this));
     }
 
+private:
+    void setSchoolName(const std::string& school_name) {
+        school_name_ = school_name;
+    }
+
+    void setAbilityName(const std::string& ability_name) {
+        ability_name_ = ability_name;
+    }
+
+
+public:
+    const std::string& getSchoolName() const {
+        return school_name_;
+    }
+
+    const std::string& getAbilityName() const {
+        return ability_name_;
+    }
+
 protected:
     void setCoords(Point new_coords) {
         coords_ = new_coords;
     }
 
-public:
-    std::shared_ptr<Terrain> getTerrain() const {
-        return terrain_;
+    void setCurHp(double cur_hp) {
+        cur_hp_ = cur_hp;
     }
 
-    Point getCoords() const override {
+public:
+    std::shared_ptr<Terrain> getTerrain() const {
+        return std::shared_ptr(terrain_);
+    }
+
+    Point getCoords() const final {
         return coords_;
     }
 
-    void receiveDamage(double) override;
+    void receiveDamage(double dmg_value) override {
+        cur_hp_ -= dmg_value;
+    }
 
     double getMaxHp() const {
         return max_hp_;
     }
 
-    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
-
     void act() override {
     }
 
-    bool isAlive() const override;
+    bool isAlive() const final {
+        return cur_hp_ > 0;
+    }
 
-    int getPriority() const override {
+    int getPriority() const final {
         return priority_;
     }
 
@@ -81,7 +115,7 @@ public:
         return cur_hp_;
     }
 
-    const std::string& getPictureFileName() const override {
+    const std::string& getPictureFileName() const final {
         return picture_filename_;
     }
 };

@@ -15,7 +15,7 @@ class Game {
     std::pair<std::shared_ptr<Player>, std::shared_ptr<Player>> players_;
 
 public:
-    Game(const std::string& academy_cfg, const std::string& map_cfg) : terrain_(new Terrain) {
+    Game(const std::string& academy_cfg, const std::string& map_cfg, const std::string& sprite_cfg = "") : terrain_(new Terrain) {
         terrain_->init(academy_cfg, map_cfg);
         players_ = {std::shared_ptr<Player>(new Player(terrain_->getSummonerFirst())), std::shared_ptr<Player>(new Player(terrain_->getSummonerSecond()))};
     }

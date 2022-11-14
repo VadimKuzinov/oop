@@ -51,29 +51,21 @@ void Summoner::upgradeSchool() {
 }
 
 void Summoner::act() {
-    if (accumulating_) {
+    if (isAccumulating()) {
         accumulateEnergy();
         return;
     }
 
-    if (summoning_) {
+    if (isSummoning()) {
         summon();
         summoning_ = false;
         return;
     }
 
-    if (upgrading_) {
+    if (isUpgrading()) {
         upgradeSchool();
         upgrading_ = false;
         return;
     }
-}
-
-std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> Summoner::getMenu() const {
-    auto choices = Obstacle::getMenu();
-    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToAccumulate(); }, "Accumulate"});
-    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToSummon(); }, "Summon"});
-    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<Summoner>(e)->tryToUpgrade(); }, "Upgrade"});
-    return choices;
 }
 

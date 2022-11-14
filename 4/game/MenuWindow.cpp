@@ -12,12 +12,12 @@ MenuWindow::MenuWindow(int x, int y, int w, int h, SDL_Renderer* renderer, std::
     font_ = TTF_OpenFont(font_path, 23);
 }
 
-MenuWindow::~MenuWindow() {
-    TTF_CloseFont(font_);
-}
-
 void MenuWindow::clearTextures() {
     textures_ = {};
+}
+
+void MenuWindow::clear() {
+    TTF_CloseFont(font_);
 }
 
 void MenuWindow::setActive(std::shared_ptr<Entity> active) { //make menu of choices to return string; menu ca be constructed from fun
@@ -32,7 +32,6 @@ void MenuWindow::setActive(std::shared_ptr<Entity> active) { //make menu of choi
     }
 
     auto menu = applyFunctionToCasted(typeid(*active), MenuCaller{}, active);
-    //auto menu = active->getMenu();
     for (auto&& pair: menu) {
         addChoice(pair.second);
     }

@@ -47,32 +47,6 @@ void Game::catchClicks() {
         iss >> coords;
         player1->catchClick(coords);
         auto active = player1->getActive();
-        if (active == nullptr) {
-            std::cout << "Nulltpr for some reason" << std::endl;
-        }
-        if (active != nullptr) {
-            std::cout << "Not nullptr!" << std::endl;
-            auto menu_v = menu(active);
-            if (active->getId() == Obstacle_)
-                menu_v = menu(std::dynamic_pointer_cast<Obstacle>(active));
-            else if (active->getId() ==  General_)
-                menu_v = menu(std::dynamic_pointer_cast<GeneralSquad>(active));
-            else if (active->getId() ==  Moral_)
-                menu_v = menu(std::dynamic_pointer_cast<MoralSquad>(active));
-            else if (active->getId() ==  GeneralHealing_)
-                menu_v = menu(std::dynamic_pointer_cast<GeneralHealingSquad>(active));
-            else if (active->getId() ==  MoralHealing_)
-                menu_v = menu(std::dynamic_pointer_cast<MoralHealingSquad>(active));
-            else if (active->getId() ==  Summoner_)
-                menu_v = menu(std::dynamic_pointer_cast<Summoner>(active));
-            
-          auto menu_v = active->getMenu();
-            std::cout << "Menu's been created!" << std::endl;
-            for (auto&& [func, what] : menu_v) {
-                std::cout << what << std::endl;
-            }
-        }
-
     }
 }   
 */

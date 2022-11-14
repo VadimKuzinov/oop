@@ -2,7 +2,9 @@
 
 
 void MoralHealingSquad::heal() {
-    cur_hp_ = std::min(max_hp_, cur_hp_ + healing_speed_);
+    auto cur_hp = getCurHp();
+    auto max_hp = getMaxHp();
+    setCurHp(std::min(max_hp, cur_hp + healing_speed_));
 }
 
 void MoralHealingSquad::update() {
@@ -12,21 +14,16 @@ void MoralHealingSquad::update() {
 void MoralHealingSquad::act() {
     update();
 
-    if (moving_) {
+    if (isMoving()) {
         move();
     }
 
-    if (attacking_) {
+    if (isAttacking()) {
         attack();
     }
 
-    if (healing_) {
+    if (isHealing()) {
         heal();
     }
-}
-
-std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralHealingSquad::getMenu() const {
-    auto choices = GeneralHealingSquad::getMenu();
-    return choices;
 }
 

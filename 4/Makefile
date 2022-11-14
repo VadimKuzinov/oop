@@ -18,7 +18,7 @@ main: $(LIB_PATH)/lib$(LIB_NAME).a
 $(LIB_PATH)/lib$(LIB_NAME).a: $(addprefix $(LIB_PATH)/, $(OBJ))
 	ar rc $@ $^
 
-$(LIB_PATH)/%.o: $(SRC_PATH)/%.cpp
+$(LIB_PATH)/%.o: $(SRC_PATH)/%.cpp $(SRC_PATH)/%.h
 	$(CC) -O3 -c $< -o $@ $(STD) $(FLAGS)
 
 run: lib$(LIB_NAME).a

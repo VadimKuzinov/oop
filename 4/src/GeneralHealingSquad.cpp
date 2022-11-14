@@ -2,7 +2,9 @@
 
 
 void GeneralHealingSquad::heal() {
-    cur_hp_ = std::min(max_hp_, cur_hp_ + healing_speed_);
+    auto cur_hp = getCurHp();
+    auto max_hp = getMaxHp();
+    setCurHp(std::min(max_hp, cur_hp + healing_speed_));
 }
 
 void GeneralHealingSquad::update() {
@@ -12,22 +14,16 @@ void GeneralHealingSquad::update() {
 void GeneralHealingSquad::act() {
     update();
 
-    if (moving_) {
+    if (isMoving()) {
         move();
     }
 
-    if (attacking_) {
+    if (isAttacking()) {
         attack();
     }
 
-    if (healing_) {
+    if (isHealing()) {
         heal();
     }
-}
-  
-std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralHealingSquad::getMenu() const {
-    auto choices = GeneralSquad::getMenu();
-    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<GeneralHealingSquad>(e)->tryToHeal(); }, "Heal"});
-    return choices;
 }
 

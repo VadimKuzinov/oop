@@ -22,7 +22,7 @@ void MoralSquad::update() {
 }
 
 void MoralSquad::giveDamage() {
-    double value = damage_;
+    double value = getDamage();
     auto captured = getCaptured();
     captured->receiveDamage(value);
 }
@@ -34,7 +34,7 @@ void MoralSquad::attack() {
     }
 
     auto distance = Point::distance(getCoords(), captured->getCoords());
-    if (distance > attack_range_) {
+    if (distance > getAttackRange()) {
         return;
     }
 
@@ -44,17 +44,12 @@ void MoralSquad::attack() {
 void MoralSquad::act() {
     update();
 
-    if (moving_) {
+    if (isMoving()) {
         move();
     }
 
-    if (attacking_) {
+    if (isAttacking()) {
         attack();
     }
-}
-
-std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> MoralSquad::getMenu() const {
-    auto choices = GeneralSquad::getMenu();
-    return choices;
 }
 

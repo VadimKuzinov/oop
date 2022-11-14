@@ -24,8 +24,7 @@ public:
     virtual bool isAlive() const = 0;
     virtual void act() = 0;
     virtual void receiveDamage(double) = 0;
-    virtual std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const = 0;
-    virtual const std::string& getPictureFileName() const = 0;    
+    virtual const std::string& getPictureFileName() const = 0;
 };
 
 

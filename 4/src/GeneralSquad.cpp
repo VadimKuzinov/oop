@@ -42,7 +42,7 @@ void GeneralSquad::move() {
 }
 
 void GeneralSquad::giveDamage() {
-    double value = damage_;
+    double value = getDamage();
     auto captured = getCaptured();
     captured->receiveDamage(value);
 }
@@ -63,19 +63,12 @@ void GeneralSquad::attack() {
 
 void GeneralSquad::act() {
     update();
-    if (moving_) {
+    if (isMoving()) {
         move();
     }
 
-    if (attacking_) {
+    if (isAttacking()) {
         attack();
     }
 }
-
-std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> GeneralSquad::getMenu() const {
-    auto choices = Obstacle::getMenu();
-    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<GeneralSquad>(e)->tryToMove(); }, "Move"});
-    choices.push_back({[](std::shared_ptr<Entity> e){ return std::dynamic_pointer_cast<GeneralSquad>(e)->tryToAttack(); }, "Attack"});
-    return choices;
-}   
 

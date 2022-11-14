@@ -22,9 +22,10 @@ void Terrain::live() {
     auto lastFrame = nextFrame - frames{1};
     auto summoner1 = getSummonerFirst();
     auto summoner2 = getSummonerSecond();
+    
     while (summoner1->isAlive() && summoner2->isAlive()) {
         map_.clearCorpses();
-        for (auto&& squad : map_) {
+        for (auto&& squad : map_) {//stlparralel
             squad->act();
         }
         std::this_thread::sleep_until(nextFrame);

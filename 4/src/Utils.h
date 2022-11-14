@@ -22,7 +22,6 @@ struct BasePtrToDerivedInstance {
     }
 };
 
-
 struct MenuCaller {
     template <typename T>
     auto operator()(std::shared_ptr<T> e) {
@@ -56,14 +55,13 @@ struct MenuCaller {
     }
 };
 
-
 template <typename Func, typename Head>
 auto applyFunctionToCastedImpl(const std::type_info& type, Func func, std::shared_ptr<Entity> e) {
     return func(std::dynamic_pointer_cast<Head>(e));
 }
 
 template <typename Func, typename Head, typename... Args>
-auto applyFunctionToCastedImpl(const std::type_info& type, Func func, std::shared_ptr<Entity> e) -> std::enable_if<sizeof...(Args) != 0, decltype(func(e))>::type{ 
+auto applyFunctionToCastedImpl(const std::type_info& type, Func func, std::shared_ptr<Entity> e) -> std::enable_if<sizeof...(Args), decltype(func(e))>::type { 
     if (typeid(Head) == type) {
         return func(std::dynamic_pointer_cast<Head>(e));
     }

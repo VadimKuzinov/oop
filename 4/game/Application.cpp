@@ -39,9 +39,12 @@ Application::Application(Game* game, std::shared_ptr<Player> player) : game_(gam
     SDL_FreeSurface(backround);
 }
 
-Application::~Application() {
+void Application::clear() {
     SDL_DestroyRenderer(renderer_);
     SDL_DestroyWindow(window_);
+    menu_window_->clear();
+    summoner_window_->clear();
+    academy_window_->clear();
     delete menu_window_;
     delete summoner_window_;
     delete academy_window_;

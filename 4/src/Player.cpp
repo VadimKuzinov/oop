@@ -15,6 +15,10 @@ void Player::catchClick(Point where) {
     }
     else {
         auto casted = std::dynamic_pointer_cast<InteractiveSquad>(active_);
+        if (casted == nullptr) {
+            return;
+        }
+        
         casted->setTargetCoords(where);
         casted->setCaptured(terrain_->getMap()[where]);
     }

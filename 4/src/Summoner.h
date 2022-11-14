@@ -7,7 +7,7 @@
 
 
 class Summoner: public InteractiveSquad {
-protected:
+private:
     double summon_range_;
     double max_energy_;
     double cur_energy_;
@@ -24,16 +24,20 @@ protected:
 
 private:
     constexpr static auto properties_ = std::tuple_cat(InteractiveSquad::getProperties(), 
-                                        std::make_tuple(std::make_pair(&Summoner::summon_range_, "summon_range"),
-                                                        std::make_pair(&Summoner::max_energy_, "max_energy"),
-                                                        std::make_pair(&Summoner::cur_energy_, "cur_energy"),
-                                                        std::make_pair(&Summoner::xp_, "xp"),
-                                                        std::make_pair(&Summoner::energy_regen_speed_, "energy_regen_speed")));
+                                            std::make_tuple(
+                                                std::make_pair(&Summoner::summon_range_, "summon_range"),
+                                                std::make_pair(&Summoner::max_energy_, "max_energy"),
+                                                std::make_pair(&Summoner::cur_energy_, "cur_energy"),
+                                                std::make_pair(&Summoner::xp_, "xp"),
+                                                std::make_pair(&Summoner::energy_regen_speed_, "energy_regen_speed")
+                                            )
+                                        );
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value);
     }
 
+protected:
     constexpr static auto getProperties() {
         return properties_;
     }
@@ -44,7 +48,7 @@ public:
     }
 
 public:
-    ~Summoner() = default;
+    virtual ~Summoner() = default;
 
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new Summoner(*this));
@@ -62,6 +66,18 @@ public:
         summoning_ = false; accumulating_ = false; upgrading_ = true; 
     }
 
+    bool isAccumulating() const {
+        return accumulating_;
+    }
+
+    bool isSummoning() const {
+        return summoning_;
+    }
+
+    bool isUpgrading() const {
+        return upgrading_;
+    }
+
     void setSummonedSchool(const std::string& summoned_school) {
         summoned_school_ = summoned_school;
     }
@@ -73,8 +89,6 @@ public:
     auto& getLevelsOfSchools() {
         return levels_of_schools_;
     }
-
-    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
 
     void summon();
     void accumulateEnergy();

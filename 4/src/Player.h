@@ -4,7 +4,8 @@
 #include <iostream>
 
 
-class Player {
+class Player final {
+private:
     std::shared_ptr<Summoner> summoner_;
     std::shared_ptr<Terrain> terrain_;
     std::shared_ptr<Entity> active_ = nullptr;

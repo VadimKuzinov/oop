@@ -12,12 +12,12 @@ AcademyWindow::AcademyWindow(int x, int y, int w, int h, SDL_Renderer* renderer,
     font_ = TTF_OpenFont(font_path, 23);
 }
 
-AcademyWindow::~AcademyWindow() {
-    TTF_CloseFont(font_);
-}
-
 void AcademyWindow::clearTextures() {
     textures_ = {};
+}
+
+void AcademyWindow::clear() {
+    TTF_CloseFont(font_);
 }
 
 void AcademyWindow::addChoice(const std::string& choice) {

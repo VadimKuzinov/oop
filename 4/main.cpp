@@ -8,17 +8,18 @@ int main() {
     auto app = new Application(game, game->getFirstPlayer());
 //    auto app2 = new Application(game, game->getSecondPlayer());
     std::thread thr1(&Game::run, game);
- //   game->run();
+//   game->run();
     std::thread thr2(&Application::loop, app);
 //    app->loop();
-  //  std::thread thr3(&Application::loop, app2);
+//    std::thread thr3(&Application::loop, app2);
 
     thr1.join();
     thr2.join();
-    //thr3.join();
+//    thr3.join();
 
+    app->clear();
     delete app;
-    //delete app2;
+ //   delete app2;
     delete game;
 
     return 0;

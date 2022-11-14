@@ -3,20 +3,27 @@
 
 
 class MoralSquad : virtual public GeneralSquad {
-protected:
+private:
     double morality_ = 0;
     double stabilization_speed_;
 
 private:
-    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::getProperties(),
-                                        std::make_tuple(std::make_pair(&MoralSquad::morality_, "morality"),
-                                                        std::make_pair(&MoralSquad::stabilization_speed_, "stabilization_speed")));
+    constexpr static auto unique_properties_ = std::make_tuple(
+                                                    std::make_pair(&MoralSquad::morality_, "morality"),
+                                                    std::make_pair(&MoralSquad::stabilization_speed_, "stabilization_speed")
+                                               );
+
+    constexpr static auto properties_ = std::tuple_cat(GeneralSquad::getProperties(), unique_properties_);
 
     void set(const std::string& name, const std::string& value) override {
         return setImpl(*this, properties_, name, value);
     }
 
 protected:
+    constexpr static auto getUniqueProperties() {
+        return unique_properties_;
+    }
+
     constexpr static auto getProperties() {
         return properties_;
     }
@@ -33,7 +40,13 @@ public:
         return std::shared_ptr<Entity>(new MoralSquad(*this));
     }
 
-    std::vector<std::pair<void (*)(std::shared_ptr<Entity>), const char*>> getMenu() const override;
+    double getMorality() const {
+        return morality_;
+    }
+
+    double getStabilizationSpeed() const {
+        return stabilization_speed_;
+    }
 
     void stabilizeMorality();
 

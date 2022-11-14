@@ -1,0 +1,2582 @@
+desc: (none)
+cmd: ./build/main
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=8570604
+mem_heap_B=37
+mem_heap_extra_B=19
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=18986345
+mem_heap_B=954404
+mem_heap_extra_B=23772
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=28903459
+mem_heap_B=1052068
+mem_heap_extra_B=23772
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=45314372
+mem_heap_B=1194628
+mem_heap_extra_B=23772
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=55253641
+mem_heap_B=1217956
+mem_heap_extra_B=23788
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=67986855
+mem_heap_B=1340428
+mem_heap_extra_B=23796
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=76861448
+mem_heap_B=1357924
+mem_heap_extra_B=23804
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=87309926
+mem_heap_B=1534784
+mem_heap_extra_B=35680
+mem_stacks_B=0
+heap_tree=detailed
+n16: 1534784 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 257856 0x57431B7: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 257856 0x5743A08: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n2: 257856 0x5743EB0: ??? (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+    n1: 257696 0x5744EA5: xcb_wait_for_reply64 (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+     n2: 257696 0x52A921B: _XReply (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+      n1: 257696 0x799FE86: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 257696 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 257696 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n1: 257696 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+          n1: 257696 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 257696 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 257696 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 257696 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 257696 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+               n1: 257696 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                n1: 257696 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+                 n0: 257696 0x10FD0A: main (main.cpp:8)
+      n0: 0 in 23 places, all below massif's threshold (1.00%)
+    n0: 160 in 1 place, below massif's threshold (1.00%)
+ n1: 239232 0x799EC06: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n2: 239232 0x799FBFB: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 163968 0x799FEAD: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 163968 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 163968 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 163968 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 163968 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 163968 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 163968 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 163968 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 163968 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 163968 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 163968 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+              n0: 163968 0x10FD0A: main (main.cpp:8)
+   n1: 75264 0x799FDEC: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 75264 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 75264 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 75264 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 75264 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 75264 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 75264 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 75264 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 75264 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 75264 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 75264 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+              n0: 75264 0x10FD0A: main (main.cpp:8)
+ n0: 172955 in 273 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 52488 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 52488 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 52488 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 52488 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 52488 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 52488 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 52488 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 52488 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 52488 0x10FD0A: main (main.cpp:8)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n2: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n1: 21168 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 21168 0x10FD0A: main (main.cpp:8)
+     n1: 21168 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 21168 0x10FD0A: main (main.cpp:8)
+ n2: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 18816 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 18816 0x10FD0A: main (main.cpp:8)
+  n1: 18816 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 18816 0x10FD0A: main (main.cpp:8)
+ n1: 33600 0x149936: allocate (new_allocator.h:137)
+  n1: 33600 0x149936: allocate (allocator.h:183)
+   n1: 33600 0x149936: allocate (alloc_traits.h:464)
+    n1: 33600 0x149936: _M_allocate (stl_vector.h:378)
+     n1: 33600 0x149936: _M_create_storage (stl_vector.h:395)
+      n1: 33600 0x149936: _Vector_base (stl_vector.h:332)
+       n1: 33600 0x149936: vector (stl_vector.h:598)
+        n1: 33600 0x149936: _Construct<std::vector<std::shared_ptr<Entity> >, const std::vector<std::shared_ptr<Entity>, std::allocator<std::shared_ptr<Entity> > >&> (stl_construct.h:119)
+         n1: 33600 0x149936: __do_uninit_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:267)
+          n1: 33600 0x149936: __uninit_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:284)
+           n1: 33600 0x149936: uninitialized_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:327)
+            n1: 33600 0x149936: __uninitialized_fill_n_a<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> >, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:467)
+             n1: 33600 0x149936: _M_fill_initialize (stl_vector.h:1702)
+              n1: 33600 0x149936: vector (stl_vector.h:567)
+               n1: 33600 0x149936: _M_fill_assign (vector.tcc:269)
+                n1: 33600 0x149936: _M_fill_assign (vector.tcc:264)
+                 n1: 33600 0x149936: assign (stl_vector.h:804)
+                  n1: 33600 0x149936: setSizes (Map.h:24)
+                   n1: 33600 0x149936: operator>>(std::istream&, Terrain&) (Terrain.cpp:72)
+                    n1: 33600 0x14A500: Terrain::init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Terrain.cpp:16)
+                     n1: 33600 0x1117B9: Game::Game(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Game.h:19)
+                      n0: 33600 0x10FC6F: main (main.cpp:7)
+ n2: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 16384 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 16384 0x10FD0A: main (main.cpp:8)
+  n1: 16384 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 16384 0x10FD0A: main (main.cpp:8)
+ n1: 26244 0x52CC1C3: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 26244 0x10FD0A: main (main.cpp:8)
+ n1: 26244 0x52CC5D2: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 26244 0x10FD0A: main (main.cpp:8)
+ n1: 19520 0x12D541: Obstacle::clone() const (Obstacle.h:55)
+  n1: 19520 0x14A7F5: Ability::getModel() const (Academy.cpp:46)
+   n1: 19520 0x149751: operator>>(std::istream&, Terrain&) (Terrain.cpp:80)
+    n1: 19520 0x14A500: Terrain::init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Terrain.cpp:16)
+     n1: 19520 0x1117B9: Game::Game(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Game.h:19)
+      n0: 19520 0x10FC6F: main (main.cpp:7)
+ n2: 16576 0x555F718: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+  n1: 16384 0x555FB63: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+   n1: 16384 0x551FBA8: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+    n1: 16384 0x400647D: call_init.part.0 (dl-init.c:70)
+     n1: 16384 0x4006567: call_init (dl-init.c:33)
+      n1: 16384 0x4006567: _dl_init (dl-init.c:117)
+       n0: 16384 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 16552 0x57464FB: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 16552 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 16552 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 16552 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n0: 16552 in 2 places, all below massif's threshold (1.00%)
+ n1: 15709 0x400DA02: calloc (rtld-malloc.h:44)
+  n1: 15709 0x400DA02: _dl_new_object (dl-object.c:92)
+   n1: 15709 0x4008C82: _dl_map_object_from_fd (dl-load.c:1063)
+    n1: 15709 0x400A600: _dl_map_object (dl-load.c:2327)
+     n0: 15709 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=101974436
+mem_heap_B=1302963
+mem_heap_extra_B=36357
+mem_stacks_B=0
+heap_tree=detailed
+n16: 1302963 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 239232 0x799EC06: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n2: 239232 0x799FBFB: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 163968 0x799FEAD: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 163968 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 163968 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 163968 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 163968 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 163968 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 163968 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 163968 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 163968 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 163968 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 163968 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+              n0: 163968 0x10FD0A: main (main.cpp:8)
+   n1: 75264 0x799FDEC: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 75264 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 75264 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 75264 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 75264 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 75264 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 75264 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 75264 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 75264 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 75264 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 75264 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+              n0: 75264 0x10FD0A: main (main.cpp:8)
+ n0: 183813 in 323 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 52488 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 52488 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 52488 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 52488 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 52488 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 52488 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 52488 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 52488 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 52488 0x10FD0A: main (main.cpp:8)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n2: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n1: 21168 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 21168 0x10FD0A: main (main.cpp:8)
+     n1: 21168 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 21168 0x10FD0A: main (main.cpp:8)
+ n2: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 18816 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 18816 0x10FD0A: main (main.cpp:8)
+  n1: 18816 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 18816 0x10FD0A: main (main.cpp:8)
+ n1: 33600 0x149936: allocate (new_allocator.h:137)
+  n1: 33600 0x149936: allocate (allocator.h:183)
+   n1: 33600 0x149936: allocate (alloc_traits.h:464)
+    n1: 33600 0x149936: _M_allocate (stl_vector.h:378)
+     n1: 33600 0x149936: _M_create_storage (stl_vector.h:395)
+      n1: 33600 0x149936: _Vector_base (stl_vector.h:332)
+       n1: 33600 0x149936: vector (stl_vector.h:598)
+        n1: 33600 0x149936: _Construct<std::vector<std::shared_ptr<Entity> >, const std::vector<std::shared_ptr<Entity>, std::allocator<std::shared_ptr<Entity> > >&> (stl_construct.h:119)
+         n1: 33600 0x149936: __do_uninit_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:267)
+          n1: 33600 0x149936: __uninit_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:284)
+           n1: 33600 0x149936: uninitialized_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:327)
+            n1: 33600 0x149936: __uninitialized_fill_n_a<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> >, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:467)
+             n1: 33600 0x149936: _M_fill_initialize (stl_vector.h:1702)
+              n1: 33600 0x149936: vector (stl_vector.h:567)
+               n1: 33600 0x149936: _M_fill_assign (vector.tcc:269)
+                n1: 33600 0x149936: _M_fill_assign (vector.tcc:264)
+                 n1: 33600 0x149936: assign (stl_vector.h:804)
+                  n1: 33600 0x149936: setSizes (Map.h:24)
+                   n1: 33600 0x149936: operator>>(std::istream&, Terrain&) (Terrain.cpp:72)
+                    n1: 33600 0x14A500: Terrain::init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Terrain.cpp:16)
+                     n1: 33600 0x1117B9: Game::Game(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Game.h:19)
+                      n0: 33600 0x10FC6F: main (main.cpp:7)
+ n2: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 16384 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 16384 0x10FD0A: main (main.cpp:8)
+  n1: 16384 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+      n0: 16384 0x10FD0A: main (main.cpp:8)
+ n1: 26244 0x52CC1C3: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 26244 0x10FD0A: main (main.cpp:8)
+ n1: 26244 0x52CC5D2: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 26244 0x10FD0A: main (main.cpp:8)
+ n1: 19520 0x12D541: Obstacle::clone() const (Obstacle.h:55)
+  n1: 19520 0x14A7F5: Ability::getModel() const (Academy.cpp:46)
+   n1: 19520 0x149751: operator>>(std::istream&, Terrain&) (Terrain.cpp:80)
+    n1: 19520 0x14A500: Terrain::init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Terrain.cpp:16)
+     n1: 19520 0x1117B9: Game::Game(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Game.h:19)
+      n0: 19520 0x10FC6F: main (main.cpp:7)
+ n2: 16576 0x555F718: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+  n1: 16384 0x555FB63: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+   n1: 16384 0x551FBA8: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+    n1: 16384 0x400647D: call_init.part.0 (dl-init.c:70)
+     n1: 16384 0x4006567: call_init (dl-init.c:33)
+      n1: 16384 0x4006567: _dl_init (dl-init.c:117)
+       n0: 16384 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 16552 0x57464FB: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 16552 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 16552 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 16552 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n0: 16552 in 2 places, all below massif's threshold (1.00%)
+ n1: 15709 0x400DA02: calloc (rtld-malloc.h:44)
+  n1: 15709 0x400DA02: _dl_new_object (dl-object.c:92)
+   n1: 15709 0x4008C82: _dl_map_object_from_fd (dl-load.c:1063)
+    n1: 15709 0x400A600: _dl_map_object (dl-load.c:2327)
+     n0: 15709 in 2 places, all below massif's threshold (1.00%)
+ n1: 15177 0x57183F4: ??? (in /usr/lib/x86_64-linux-gnu/libdbus-1.so.3.19.13)
+  n0: 15177 in 11 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=151643463
+mem_heap_B=1302251
+mem_heap_extra_B=36829
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=164565039
+mem_heap_B=1743216
+mem_heap_extra_B=109488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=174336011
+mem_heap_B=1742517
+mem_heap_extra_B=110443
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=184105020
+mem_heap_B=1862972
+mem_heap_extra_B=125356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=199961139
+mem_heap_B=1897308
+mem_heap_extra_B=127724
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=214264612
+mem_heap_B=1927236
+mem_heap_extra_B=129788
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=228475425
+mem_heap_B=1960180
+mem_heap_extra_B=132060
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=243013222
+mem_heap_B=1982220
+mem_heap_extra_B=133580
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=253177720
+mem_heap_B=2000084
+mem_heap_extra_B=134812
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=269493670
+mem_heap_B=2034884
+mem_heap_extra_B=137212
+mem_stacks_B=0
+heap_tree=detailed
+n21: 2034884 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n0: 345512 in 515 places, all below massif's threshold (1.00%)
+ n1: 239232 0x799EC06: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n2: 239232 0x799FBFB: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 163968 0x799FEAD: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 163968 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 163968 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 163968 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 163968 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 163968 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 163968 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 163968 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 163968 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 163968 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 163968 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+              n0: 163968 0x10FD0A: main (main.cpp:8)
+   n1: 75264 0x799FDEC: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 75264 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 75264 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 75264 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 75264 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 75264 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 75264 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 75264 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 75264 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 75264 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 75264 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+              n0: 75264 0x10FD0A: main (main.cpp:8)
+ n2: 204392 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n1: 71688 0x79AF10F: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 71688 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 71688 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 71688 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 71688 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 71688 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 71688 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 71688 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 71688 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 71688 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 71688 0x10FD0A: main (main.cpp:8)
+ n1: 81120 0x4D8F791: __new_exitfn (cxa_atexit.c:114)
+  n1: 81120 0x4D8F90A: __internal_atexit (cxa_atexit.c:44)
+   n1: 81120 0x4D8F90A: __cxa_atexit (cxa_atexit.c:70)
+    n0: 81120 in 78 places, all below massif's threshold (1.00%)
+ n2: 76480 0xA11DBDE: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 76310 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 76292 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n0: 76292 in 1693 places, all below massif's threshold (1.00%)
+   n0: 18 in 1 place, below massif's threshold (1.00%)
+  n0: 170 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n2: 57600 0x7B13CAC: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 38400 0x7B1BBF5: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 38400 0x7B1591F: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 38400 0x7B132A3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 38400 0x79AEF53: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 38400 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 38400 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 38400 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 38400 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 38400 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 38400 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 38400 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 38400 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 38400 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+               n0: 38400 0x10FD0A: main (main.cpp:8)
+  n0: 19200 in 1 place, below massif's threshold (1.00%)
+ n1: 52488 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 52488 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 52488 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 52488 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 52488 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 52488 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 52488 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 52488 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 52488 0x10FD0A: main (main.cpp:8)
+ n1: 51840 0xC00232E: std::_Rb_tree_iterator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_insert_unique_<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_Alloc_node>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_Alloc_node&) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 51840 in 720 places, all below massif's threshold (1.00%)
+ n1: 50712 0xA17FA3E: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 50712 0xA1801D2: llvm::StringMapImpl::RehashTable(unsigned int) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 49164 0xA11DC1E: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n1: 49164 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+     n2: 49164 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+      n1: 49164 0xC131FFC: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+       n1: 49164 0xA080F71: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+        n1: 49164 0x400647D: call_init.part.0 (dl-init.c:70)
+         n1: 49164 0x4006567: call_init (dl-init.c:33)
+          n1: 49164 0x4006567: _dl_init (dl-init.c:117)
+           n1: 49164 0x4EBEC84: _dl_catch_exception (dl-error-skeleton.c:182)
+            n1: 49164 0x400DFF5: dl_open_worker (dl-open.c:808)
+             n1: 49164 0x400DFF5: dl_open_worker (dl-open.c:771)
+              n1: 49164 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+               n1: 49164 0x400E34D: _dl_open (dl-open.c:883)
+                n1: 49164 0x4DDA6BB: dlopen_doit (dlopen.c:56)
+                 n1: 49164 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+                  n1: 49164 0x4EBECF2: _dl_catch_error (dl-error-skeleton.c:227)
+                   n1: 49164 0x4DDA1AD: _dlerror_run (dlerror.c:138)
+                    n1: 49164 0x4DDA747: dlopen_implementation (dlopen.c:71)
+                     n1: 49164 0x4DDA747: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                      n1: 49164 0x79B9A19: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                       n1: 49164 0x79B9B0C: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                        n1: 49164 0x7998304: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                         n1: 49164 0x79AEE9B: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                          n1: 49164 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                           n1: 49164 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                            n1: 49164 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                             n1: 49164 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                              n1: 49164 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                               n1: 49164 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                                n1: 49164 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                                 n0: 49164 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n0: 0 in 7 places, all below massif's threshold (1.00%)
+   n0: 1548 in 1 place, below massif's threshold (1.00%)
+ n1: 42576 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n0: 42576 in 8 places, all below massif's threshold (1.00%)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n0: 42336 in 2 places, all below massif's threshold (1.00%)
+ n1: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n0: 37632 in 2 places, all below massif's threshold (1.00%)
+ n1: 33600 0x149936: allocate (new_allocator.h:137)
+  n1: 33600 0x149936: allocate (allocator.h:183)
+   n1: 33600 0x149936: allocate (alloc_traits.h:464)
+    n1: 33600 0x149936: _M_allocate (stl_vector.h:378)
+     n1: 33600 0x149936: _M_create_storage (stl_vector.h:395)
+      n1: 33600 0x149936: _Vector_base (stl_vector.h:332)
+       n1: 33600 0x149936: vector (stl_vector.h:598)
+        n1: 33600 0x149936: _Construct<std::vector<std::shared_ptr<Entity> >, const std::vector<std::shared_ptr<Entity>, std::allocator<std::shared_ptr<Entity> > >&> (stl_construct.h:119)
+         n1: 33600 0x149936: __do_uninit_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:267)
+          n1: 33600 0x149936: __uninit_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:284)
+           n1: 33600 0x149936: uninitialized_fill_n<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:327)
+            n1: 33600 0x149936: __uninitialized_fill_n_a<std::vector<std::shared_ptr<Entity> >*, long unsigned int, std::vector<std::shared_ptr<Entity> >, std::vector<std::shared_ptr<Entity> > > (stl_uninitialized.h:467)
+             n1: 33600 0x149936: _M_fill_initialize (stl_vector.h:1702)
+              n1: 33600 0x149936: vector (stl_vector.h:567)
+               n1: 33600 0x149936: _M_fill_assign (vector.tcc:269)
+                n1: 33600 0x149936: _M_fill_assign (vector.tcc:264)
+                 n1: 33600 0x149936: assign (stl_vector.h:804)
+                  n1: 33600 0x149936: setSizes (Map.h:24)
+                   n1: 33600 0x149936: operator>>(std::istream&, Terrain&) (Terrain.cpp:72)
+                    n1: 33600 0x14A500: Terrain::init(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Terrain.cpp:16)
+                     n1: 33600 0x1117B9: Game::Game(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Game.h:19)
+                      n0: 33600 0x10FC6F: main (main.cpp:7)
+ n1: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n0: 32768 in 2 places, all below massif's threshold (1.00%)
+ n1: 31436 0x400DA02: calloc (rtld-malloc.h:44)
+  n1: 31436 0x400DA02: _dl_new_object (dl-object.c:92)
+   n1: 31436 0x4008C82: _dl_map_object_from_fd (dl-load.c:1063)
+    n2: 31436 0x400A600: _dl_map_object (dl-load.c:2327)
+     n1: 27790 0x4003494: openaux (dl-deps.c:64)
+      n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+       n1: 27790 0x4003C7B: _dl_map_object_deps (dl-deps.c:248)
+        n1: 27790 0x400EA0E: dl_open_worker_begin (dl-open.c:592)
+         n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+          n1: 27790 0x400DF99: dl_open_worker (dl-open.c:782)
+           n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 27790 0x400E34D: _dl_open (dl-open.c:883)
+             n1: 27790 0x4DDA6BB: dlopen_doit (dlopen.c:56)
+              n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+               n1: 27790 0x4EBECF2: _dl_catch_error (dl-error-skeleton.c:227)
+                n1: 27790 0x4DDA1AD: _dlerror_run (dlerror.c:138)
+                 n1: 27790 0x4DDA747: dlopen_implementation (dlopen.c:71)
+                  n1: 27790 0x4DDA747: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                   n0: 27790 in 3 places, all below massif's threshold (1.00%)
+     n0: 3646 in 1 place, below massif's threshold (1.00%)
+ n1: 28800 0xC001F55: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 28800 in 400 places, all below massif's threshold (1.00%)
+ n1: 28800 0xC0021F5: std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > >::_M_insert_<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > >::_Alloc_node&) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 28800 in 400 places, all below massif's threshold (1.00%)
+ n1: 26244 0x52CC1C3: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 26244 0x10FD0A: main (main.cpp:8)
+ n1: 26244 0x52CC5D2: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 26244 0x10FD0A: main (main.cpp:8)
+#-----------
+snapshot=20
+#-----------
+time=279001763
+mem_heap_B=2565830
+mem_heap_extra_B=136178
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=294652607
+mem_heap_B=2566003
+mem_heap_extra_B=136277
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=306555127
+mem_heap_B=2213793
+mem_heap_extra_B=200863
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=314740786
+mem_heap_B=2246561
+mem_heap_extra_B=188479
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=331089351
+mem_heap_B=2213471
+mem_heap_extra_B=200865
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=341111622
+mem_heap_B=4927351
+mem_heap_extra_B=276641
+mem_stacks_B=0
+heap_tree=detailed
+n14: 4927351 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 2286160 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n11: 2168544 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 1196288 in 616 places, all below massif's threshold (1.00%)
+   n2: 222720 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 163200 in 103 places, all below massif's threshold (1.00%)
+    n1: 59520 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 59520 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 59520 in 13 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n2: 112512 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 57600 in 36 places, all below massif's threshold (1.00%)
+    n1: 54912 0x7E41567: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 54912 in 286 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 95200 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 95200 in 298 places, all below massif's threshold (1.00%)
+   n1: 71232 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 71232 in 68 places, all below massif's threshold (1.00%)
+   n1: 64064 0x7E41556: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 64064 in 286 places, all below massif's threshold (1.00%)
+   n1: 59520 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 59520 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 59520 in 13 places, all below massif's threshold (1.00%)
+   n1: 59520 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 59520 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 59520 in 13 places, all below massif's threshold (1.00%)
+   n1: 52800 0x7E4A8EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 52800 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 52800 in 11 places, all below massif's threshold (1.00%)
+  n1: 71104 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 71104 in 11 places, all below massif's threshold (1.00%)
+  n0: 46512 in 13 places, all below massif's threshold (1.00%)
+ n0: 955985 in 690 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n1: 77952 0x79AF10F: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 77952 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 77952 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 77952 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 77952 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 77952 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 77952 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 77952 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 77952 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 77952 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 77952 0x10FD0A: main (main.cpp:8)
+ n1: 81120 0x4D8F791: __new_exitfn (cxa_atexit.c:114)
+  n1: 81120 0x4D8F90A: __internal_atexit (cxa_atexit.c:44)
+   n1: 81120 0x4D8F90A: __cxa_atexit (cxa_atexit.c:70)
+    n0: 81120 in 78 places, all below massif's threshold (1.00%)
+ n2: 76480 0xA11DBDE: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 76310 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 76292 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n0: 76292 in 1693 places, all below massif's threshold (1.00%)
+   n0: 18 in 1 place, below massif's threshold (1.00%)
+  n0: 170 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n2: 62480 0x567DEA2: pa_xmalloc0 (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-15.99.so)
+  n1: 53648 0x5690AD6: pa_flist_new_with_name (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-15.99.so)
+   n0: 53648 in 10 places, all below massif's threshold (1.00%)
+  n0: 8832 in 10 places, all below massif's threshold (1.00%)
+ n1: 59440 0x78BEE9E: ??? (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+  n1: 59440 0x78BFC8A: __glDispatchMakeCurrent (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+   n1: 59440 0x794C79A: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+    n1: 59440 0x7951276: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+     n1: 59440 0x496F035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 59440 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 59440 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 59440 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 59440 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 59440 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+           n0: 59440 0x10FD0A: main (main.cpp:8)
+ n2: 58270 0x48FD76F: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+  n1: 57464 0x48C9DE8: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 57464 0x48CBFD2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 57464 0x49A2DCA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 57464 0x48A4394: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 57464 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+       n0: 57464 0x10FD0A: main (main.cpp:8)
+  n0: 806 in 12 places, all below massif's threshold (1.00%)
+ n1: 57600 0x7B13CAC: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n0: 57600 in 2 places, all below massif's threshold (1.00%)
+ n1: 52488 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 52488 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 52488 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 52488 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 52488 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 52488 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 52488 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 52488 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 52488 0x10FD0A: main (main.cpp:8)
+#-----------
+snapshot=26
+#-----------
+time=350206689
+mem_heap_B=9268040
+mem_heap_extra_B=523264
+mem_stacks_B=0
+heap_tree=detailed
+n7: 9268040 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6378720 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n18: 6183360 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3045424 in 1336 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120512 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120512 in 85 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 105600 0x7E4A8EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 105600 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 105600 in 22 places, all below massif's threshold (1.00%)
+   n1: 100224 0x7E4DE79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 100224 in 522 places, all below massif's threshold (1.00%)
+  n0: 195360 in 25 places, all below massif's threshold (1.00%)
+ n0: 1563744 in 727 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n1: 160952 0x5C06E88: ZSTD_createDCtx_advanced (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+  n1: 160952 0x5C06FBE: ZSTD_createDCtx (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+   n1: 160952 0x5C0D2DC: ZSTD_decompress (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+    n1: 160952 0x7B26B1E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 160952 0x7B1CC43: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n2: 160952 0x7B1D4D4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 160952 0x876AFF7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n2: 160952 0x87758F9: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 160952 0x7C1300C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 160952 0x7C1369C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 160952 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 160952 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+             n1: 160952 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+              n1: 160952 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+               n1: 160952 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                n1: 160952 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                 n1: 160952 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                  n1: 160952 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                   n1: 160952 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                    n1: 160952 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+                     n0: 160952 0x10FD0A: main (main.cpp:8)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=360658829
+mem_heap_B=10192784
+mem_heap_extra_B=556016
+mem_stacks_B=0
+heap_tree=detailed
+n8: 10192784 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6612144 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n15: 6300528 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3474976 in 1339 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120512 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120512 in 85 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+  n0: 183264 in 24 places, all below massif's threshold (1.00%)
+  n1: 128352 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 128352 in 29 places, all below massif's threshold (1.00%)
+ n0: 1892424 in 775 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 354352 0x48B61F8: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+  n2: 354352 0x493DDCF: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 202184 0x493E264: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 202184 0x48DAB90: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 202184 0x1152E8: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:31)
+      n0: 202184 0x10FD0A: main (main.cpp:8)
+   n1: 152168 0x493535C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 152168 0x1152D8: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:30)
+     n0: 152168 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n1: 169240 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=371592128
+mem_heap_B=19921796
+mem_heap_extra_B=560308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=380780794
+mem_heap_B=19921812
+mem_heap_extra_B=560316
+mem_stacks_B=0
+heap_tree=detailed
+n7: 19921812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 10080080 0x48B61F8: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+  n2: 10080080 0x493DDCF: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 5760040 0x493E264: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 5760040 0x48DAB90: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 5760040 0x1152E8: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:31)
+      n0: 5760040 0x10FD0A: main (main.cpp:8)
+   n1: 4320040 0x493535C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 4320040 0x1152D8: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:30)
+     n0: 4320040 0x10FD0A: main (main.cpp:8)
+ n2: 6612144 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n6: 6300528 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 4662208 in 1348 places, all below massif's threshold (1.00%)
+   n2: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 419712 in 151 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+  n0: 311616 in 25 places, all below massif's threshold (1.00%)
+ n0: 2064964 in 780 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n0: 210656 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=389191078
+mem_heap_B=12103712
+mem_heap_extra_B=556272
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=403801671
+mem_heap_B=15613851
+mem_heap_extra_B=559293
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=412531969
+mem_heap_B=23292103
+mem_heap_extra_B=563409
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=424783335
+mem_heap_B=23292119
+mem_heap_extra_B=563417
+mem_stacks_B=0
+heap_tree=peak
+n5: 23292119 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 13440080 0x48B61F8: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+  n2: 13440080 0x493DDCF: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 7680040 0x493E264: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 7680040 0x48DAB90: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 7680040 0x1152E8: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:31)
+      n0: 7680040 0x10FD0A: main (main.cpp:8)
+   n1: 5760040 0x493535C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 5760040 0x1152D8: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:30)
+     n0: 5760040 0x10FD0A: main (main.cpp:8)
+ n2: 6613296 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n5: 6300832 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 4881280 in 1358 places, all below massif's threshold (1.00%)
+   n2: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 419712 in 151 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+  n0: 312464 in 65 places, all below massif's threshold (1.00%)
+ n0: 2497415 in 832 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=439376166
+mem_heap_B=14052971
+mem_heap_extra_B=560541
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=446688422
+mem_heap_B=9895295
+mem_heap_extra_B=559561
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=457532496
+mem_heap_B=9908481
+mem_heap_extra_B=560303
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=464851763
+mem_heap_B=9954259
+mem_heap_extra_B=562045
+mem_stacks_B=0
+heap_tree=detailed
+n7: 9954259 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6615072 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n17: 6300832 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3263120 in 1346 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120512 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120512 in 85 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 105600 0x7E4A8EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 105600 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 105600 in 22 places, all below massif's threshold (1.00%)
+  n0: 184064 in 64 places, all below massif's threshold (1.00%)
+  n1: 130176 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 130176 in 62 places, all below massif's threshold (1.00%)
+ n0: 2005323 in 883 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 169240 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=38
+#-----------
+time=476668383
+mem_heap_B=10125445
+mem_heap_extra_B=580563
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=489934596
+mem_heap_B=10147677
+mem_heap_extra_B=581275
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=502195286
+mem_heap_B=10164181
+mem_heap_extra_B=582035
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=510024772
+mem_heap_B=10171493
+mem_heap_extra_B=582515
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=522228795
+mem_heap_B=10191369
+mem_heap_extra_B=583175
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=534425858
+mem_heap_B=10207353
+mem_heap_extra_B=583975
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=546635058
+mem_heap_B=10224281
+mem_heap_extra_B=584751
+mem_stacks_B=0
+heap_tree=detailed
+n7: 10224281 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6688512 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n15: 6334080 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3508416 in 1372 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120624 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120624 in 86 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+  n0: 209904 in 81 places, all below massif's threshold (1.00%)
+  n1: 144528 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 144528 in 75 places, all below massif's threshold (1.00%)
+ n0: 2193625 in 919 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 177520 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 8280 in 14 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=558832582
+mem_heap_B=10239345
+mem_heap_extra_B=585479
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=571061087
+mem_heap_B=10259865
+mem_heap_extra_B=586295
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=583305929
+mem_heap_B=10278993
+mem_heap_extra_B=587087
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=599940549
+mem_heap_B=10302293
+mem_heap_extra_B=588259
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=612140042
+mem_heap_B=10317357
+mem_heap_extra_B=588859
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=619955744
+mem_heap_B=10327401
+mem_heap_extra_B=589255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=627289091
+mem_heap_B=10348413
+mem_heap_extra_B=589499
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=634608471
+mem_heap_B=10349229
+mem_heap_extra_B=590339
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=642643320
+mem_heap_B=10359953
+mem_heap_extra_B=590743
+mem_stacks_B=0
+heap_tree=detailed
+n8: 10359953 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6690560 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n15: 6334080 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3508416 in 1372 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120624 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120624 in 86 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+  n0: 210080 in 81 places, all below massif's threshold (1.00%)
+  n1: 146400 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 146400 in 75 places, all below massif's threshold (1.00%)
+ n0: 2186025 in 918 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 177520 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 8280 in 14 places, all below massif's threshold (1.00%)
+ n2: 141224 0x7BAED24: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 114536 0x7BAF218: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 114536 0x48DB25D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 114536 0x48DA18B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 114536 0x48DAA8E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n0: 114536 in 4 places, all below massif's threshold (1.00%)
+  n0: 26688 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=650484573
+mem_heap_B=10367409
+mem_heap_extra_B=591327
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=657799132
+mem_heap_B=10369085
+mem_heap_extra_B=591323
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=665128689
+mem_heap_B=10389101
+mem_heap_extra_B=592219
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=673297351
+mem_heap_B=10404953
+mem_heap_extra_B=592831
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=681150895
+mem_heap_B=10412301
+mem_heap_extra_B=593243
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=688463348
+mem_heap_B=10414677
+mem_heap_extra_B=593291
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=695800136
+mem_heap_B=10433425
+mem_heap_extra_B=594087
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=703944081
+mem_heap_B=10447997
+mem_heap_extra_B=594699
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=711774563
+mem_heap_B=10455049
+mem_heap_extra_B=595199
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=719089402
+mem_heap_B=10459869
+mem_heap_extra_B=595115
+mem_stacks_B=0
+heap_tree=detailed
+n8: 10459869 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6696720 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n14: 6334080 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3618624 in 1373 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120624 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120624 in 86 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+  n0: 209904 in 81 places, all below massif's threshold (1.00%)
+  n1: 152736 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 152736 in 75 places, all below massif's threshold (1.00%)
+ n0: 2244197 in 918 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 177520 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 8280 in 14 places, all below massif's threshold (1.00%)
+ n2: 176808 0x7BAED24: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 150120 0x7BAF218: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 150120 0x48DB25D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 150120 0x48DA18B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n2: 150120 0x48DAA8E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 133440 0x1122AF: AcademyWindow::draw() (AcademyWindow.cpp:45)
+       n1: 133440 0x11614B: Application::draw() (Application.cpp:80)
+        n1: 133440 0x116557: Application::loop() (Application.cpp:134)
+         n1: 133440 0x4AF32B2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+          n1: 133440 0x4DDEB42: start_thread (pthread_create.c:442)
+           n0: 133440 0x4E6FBB3: clone (clone.S:100)
+      n0: 16680 in 3 places, all below massif's threshold (1.00%)
+  n0: 26688 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=726407850
+mem_heap_B=10476901
+mem_heap_extra_B=595939
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=734552371
+mem_heap_B=10489089
+mem_heap_extra_B=596479
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=742390064
+mem_heap_B=10496017
+mem_heap_extra_B=596943
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=749706637
+mem_heap_B=10515133
+mem_heap_extra_B=597067
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=757020542
+mem_heap_B=10515509
+mem_heap_extra_B=597811
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=765111246
+mem_heap_B=10532017
+mem_heap_extra_B=598255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=772942007
+mem_heap_B=10539269
+mem_heap_extra_B=598755
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=780255791
+mem_heap_B=10559673
+mem_heap_extra_B=598863
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=787568105
+mem_heap_B=10560321
+mem_heap_extra_B=599671
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=795624315
+mem_heap_B=10569949
+mem_heap_extra_B=600139
+mem_stacks_B=0
+heap_tree=detailed
+n9: 10569949 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6696896 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n14: 6334080 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3618624 in 1373 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120624 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120624 in 86 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+  n0: 210080 in 81 places, all below massif's threshold (1.00%)
+  n1: 152736 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 152736 in 75 places, all below massif's threshold (1.00%)
+ n0: 2181485 in 917 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 224624 0x7BAED24: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 197936 0x7BAF218: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 197936 0x48DB25D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 197936 0x48DA18B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n2: 197936 0x48DAA8E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 176808 0x1122AF: AcademyWindow::draw() (AcademyWindow.cpp:45)
+       n1: 176808 0x11614B: Application::draw() (Application.cpp:80)
+        n1: 176808 0x116557: Application::loop() (Application.cpp:134)
+         n1: 176808 0x4AF32B2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+          n1: 176808 0x4DDEB42: start_thread (pthread_create.c:442)
+           n0: 176808 0x4E6FBB3: clone (clone.S:100)
+      n0: 21128 in 3 places, all below massif's threshold (1.00%)
+  n0: 26688 in 2 places, all below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 177520 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 8280 in 14 places, all below massif's threshold (1.00%)
+ n2: 124800 0x877C231: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n2: 115840 0x877EB8A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 113920 0x7C16A54: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 113920 0x7BD7854: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 113920 0x7BD898B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 113920 0x7BDA62C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 113920 0x7BA03FD: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 113920 0x7BA28F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 113920 0x48DB3EC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 113920 0x48DA18B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 113920 0x48DAA8E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n0: 113920 in 4 places, all below massif's threshold (1.00%)
+   n0: 1920 in 3 places, all below massif's threshold (1.00%)
+  n0: 8960 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=803443590
+mem_heap_B=10576961
+mem_heap_extra_B=600599
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=810762732
+mem_heap_B=10597197
+mem_heap_extra_B=600867
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=818076684
+mem_heap_B=10601957
+mem_heap_extra_B=601507
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=826172890
+mem_heap_B=10614377
+mem_heap_extra_B=602023
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=833995247
+mem_heap_B=10621533
+mem_heap_extra_B=602475
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=841309603
+mem_heap_B=10641913
+mem_heap_extra_B=602703
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=848623091
+mem_heap_B=10642073
+mem_heap_extra_B=603431
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=856687552
+mem_heap_B=10652149
+mem_heap_extra_B=603923
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=864528022
+mem_heap_B=10662841
+mem_heap_extra_B=604327
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=871845979
+mem_heap_B=10682197
+mem_heap_extra_B=604595
+mem_stacks_B=0
+heap_tree=detailed
+n9: 10682197 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6696720 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n14: 6334080 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3618624 in 1373 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120624 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120624 in 86 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+  n0: 209904 in 81 places, all below massif's threshold (1.00%)
+  n1: 152736 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 152736 in 75 places, all below massif's threshold (1.00%)
+ n0: 2237205 in 917 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+         n0: 472368 0x10FD0A: main (main.cpp:8)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 268960 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 260208 0x7BAED24: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 233520 0x7BAF218: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 233520 0x48DB25D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 233520 0x48DA18B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n2: 233520 0x48DAA8E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 216840 0x1122AF: AcademyWindow::draw() (AcademyWindow.cpp:45)
+       n1: 216840 0x11614B: Application::draw() (Application.cpp:80)
+        n1: 216840 0x116557: Application::loop() (Application.cpp:134)
+         n1: 216840 0x4AF32B2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+          n1: 216840 0x4DDEB42: start_thread (pthread_create.c:442)
+           n0: 216840 0x4E6FBB3: clone (clone.S:100)
+      n0: 16680 in 3 places, all below massif's threshold (1.00%)
+  n0: 26688 in 2 places, all below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 212640 0x10FD0A: main (main.cpp:8)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x114E48: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:12)
+            n0: 132704 0x10FD0A: main (main.cpp:8)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 177520 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x114E87: Application::Application(Game*, std::shared_ptr<Player>) (Application.cpp:14)
+               n0: 119560 0x10FD0A: main (main.cpp:8)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 8280 in 14 places, all below massif's threshold (1.00%)
+ n2: 145920 0x877C231: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n2: 136320 0x877EB8A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 134400 0x7C16A54: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 134400 0x7BD7854: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 134400 0x7BD898B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 134400 0x7BDA62C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 134400 0x7BA03FD: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 134400 0x7BA28F1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 134400 0x48DB3EC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 134400 0x48DA18B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 134400 0x48DAA8E: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 124800 0x1122AF: AcademyWindow::draw() (AcademyWindow.cpp:45)
+             n1: 124800 0x11614B: Application::draw() (Application.cpp:80)
+              n1: 124800 0x116557: Application::loop() (Application.cpp:134)
+               n1: 124800 0x4AF32B2: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+                n1: 124800 0x4DDEB42: start_thread (pthread_create.c:442)
+                 n0: 124800 0x4E6FBB3: clone (clone.S:100)
+            n0: 9600 in 3 places, all below massif's threshold (1.00%)
+   n0: 1920 in 3 places, all below massif's threshold (1.00%)
+  n0: 9600 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=84
+#-----------
+time=879164172
+mem_heap_B=10683021
+mem_heap_extra_B=605339
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=887232963
+mem_heap_B=10694393
+mem_heap_extra_B=605815
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=895062958
+mem_heap_B=10701541
+mem_heap_extra_B=606283
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=902391259
+mem_heap_B=10720881
+mem_heap_extra_B=606431
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=909706285
+mem_heap_B=10730473
+mem_heap_extra_B=607119
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=917832083
+mem_heap_B=10742141
+mem_heap_extra_B=607675
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=925658929
+mem_heap_B=10749249
+mem_heap_extra_B=608167
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=932987116
+mem_heap_B=10773235
+mem_heap_extra_B=608245
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=940299416
+mem_heap_B=6417883
+mem_heap_extra_B=389893
+mem_stacks_B=0
+heap_tree=empty

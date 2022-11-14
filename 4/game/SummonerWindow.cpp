@@ -13,31 +13,24 @@ SummonerWindow::SummonerWindow(int x, int y, int w, int h, SDL_Renderer* rendere
     font_ = TTF_OpenFont(font_path, 18);
 }
 
-SummonerWindow::~SummonerWindow() {
-    TTF_CloseFont(font_);
+void SummonerWindow::clearTextures() {
+    textures_ = {};
 }
 
-void SummonerWindow::clearTextures() {
-    for (auto&& texture : textures_) {
-        SDL_DestroyTexture(texture);
-    }
-    textures_ = {};
+void SummonerWindow::clear() {
+    TTF_CloseFont(font_);
 }
 
 void SummonerWindow::draw() { 
     SDL_SetRenderDrawColor(renderer_, 0, 0, 0, 255);
     
-    SDL_Color textColor = {0, 0, 0, 255};
     std::string hp_info; 
 
     SDL_Rect rect;
     rect.x = x_;
     rect.w = w_;
     rect.h = h_;
-    int text_w;
-    int text_h;
     auto serialized = active_->serialize();
-
 
     TTF_Init();
     SDL_Color color = {0, 0, 0, 255};

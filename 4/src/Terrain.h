@@ -25,6 +25,11 @@ private:
 
 public:
     Terrain() = default;
+
+//    ~Terrain() noexcept {
+//        std::cout << "~TERRAIN" << std::endl;
+//    }
+
     void init(const std::string& academy_cfg, const std::string& map_cfg);
 
     void addSquad(std::shared_ptr<Entity>, Point);

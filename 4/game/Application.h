@@ -13,7 +13,7 @@ class Application {
 private:
     Game* game_;
     std::shared_ptr<Player> player_;
-    int scale_factor_ = 35; //25
+    int scale_factor_ = 25; //25
     int MAX_X_;
     int MAX_Y_;
     int MENU_W_ = 250;
@@ -37,7 +37,9 @@ public:
     void flipYInCoords(int*, int*);
 
     Application(Game*, std::shared_ptr<Player>);
-    ~Application();
+
+    void clear();
+    ~Application() = default;
     
     void loop();
 };

@@ -9,7 +9,10 @@ private:
 
 private:
     constexpr static auto properties_ = std::tuple_cat(Obstacle::getProperties(),
-                                        std::make_tuple(std::make_pair(&InteractiveSquad::target_coords_, "target_coords")));
+                                            std::make_tuple(
+                                                std::make_pair(&InteractiveSquad::target_coords_, "target_coords")
+                                            )
+                                        );
 
     void set(const std::string& name, const std::string& value) override {
         setImpl(*this, properties_, name, value);
