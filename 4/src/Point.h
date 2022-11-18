@@ -14,6 +14,9 @@ struct Point {
     double x;
     double y;
 
+    constexpr static double eps = 1e-6;
+    constexpr static double pi = 3.14159265358979323846;
+
     static Point withIntCfs(const Point& p) {
         return {static_cast<double>(lround(p.x)), static_cast<double>(lround(p.y))};
     }
@@ -37,7 +40,7 @@ struct Point {
 
 
 inline bool operator==(const Point& p1, const Point& p2) {
-    return p1.x == p2.x && p1.y == p2.y;
+    return std::abs(p1.x - p2.x) < Point::eps && std::abs(p1.y - p2.y) < Point::eps;
 }
 
 inline Point operator-(const Point& p1, const Point& p2) {

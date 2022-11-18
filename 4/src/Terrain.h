@@ -26,13 +26,9 @@ private:
 public:
     Terrain() = default;
 
-//    ~Terrain() noexcept {
-//        std::cout << "~TERRAIN" << std::endl;
-//    }
-
     void init(const std::string& academy_cfg, const std::string& map_cfg);
 
-    void addSquad(std::shared_ptr<Entity>, Point);
+    void addSquad(std::shared_ptr<Entity>, Point, std::shared_ptr<Summoner> = nullptr);
     void live();
 
     std::shared_ptr<Summoner> getSummonerFirst() {
@@ -50,5 +46,11 @@ public:
     Map& getMap() {
         return map_;
     }
+
+    std::shared_ptr<const Entity> getSquadWithCoords(Point coords) {
+        return std::const_pointer_cast<const Entity>(map_[coords]);
+    }
+
+    void transferSquadToEmptyPlace(std::shared_ptr<Entity> squad, Point target_coords);
 };
 

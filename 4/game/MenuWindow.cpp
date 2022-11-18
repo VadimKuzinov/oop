@@ -13,7 +13,10 @@ MenuWindow::MenuWindow(int x, int y, int w, int h, SDL_Renderer* renderer, std::
 }
 
 void MenuWindow::clearTextures() {
-    textures_ = {};
+     for (auto&& texture : textures_) {
+        SDL_DestroyTexture(texture);
+    }
+    textures_ = {};;
 }
 
 void MenuWindow::clear() {

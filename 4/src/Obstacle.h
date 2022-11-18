@@ -21,14 +21,11 @@ private:
     double cur_hp_;
     int priority_;
 
-    std::string picture_filename_;
-
 private:
     constexpr static auto properties_ = std::make_tuple(
                                             std::make_pair(&Obstacle::max_hp_, "max_hp"),
                                             std::make_pair(&Obstacle::cur_hp_, "cur_hp"),
                                             std::make_pair(&Obstacle::priority_, "priority"),
-                                            std::make_pair(&Obstacle::picture_filename_, "picture_filename"),
                                             std::make_pair(&Obstacle::coords_, "coords"),
                                             std::make_pair(&Obstacle::school_name_, "school_name"),
                                             std::make_pair(&Obstacle::ability_name_, "ability_name")
@@ -66,11 +63,11 @@ private:
 
 
 public:
-    const std::string& getSchoolName() const {
+    const std::string& getSchoolName() const final {
         return school_name_;
     }
 
-    const std::string& getAbilityName() const {
+    const std::string& getAbilityName() const final {
         return ability_name_;
     }
 
@@ -113,10 +110,6 @@ public:
 
     double getCurHp() const {
         return cur_hp_;
-    }
-
-    const std::string& getPictureFileName() const final {
-        return picture_filename_;
     }
 };
 

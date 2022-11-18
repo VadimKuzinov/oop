@@ -2,11 +2,18 @@
 #include "Utils.h"
 
 
+void Ability::linkSquad() const {
+    auto casted = std::static_pointer_cast<Obstacle>(model_);
+    casted->setSchoolName(school_name_);
+    casted->setAbilityName(name_);
+}
+
 std::istream& operator>>(std::istream& is, Ability& ability) {
     is >> ability.name_;
     is >> ability.energy_cost_;
     is >> ability.required_level_of_school_;
     is >> ability.model_;
+    ability.linkSquad();
     return is;
 }
 

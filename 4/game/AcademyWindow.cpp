@@ -13,6 +13,9 @@ AcademyWindow::AcademyWindow(int x, int y, int w, int h, SDL_Renderer* renderer,
 }
 
 void AcademyWindow::clearTextures() {
+    for (auto&& texture : textures_) {
+        SDL_DestroyTexture(texture);
+    }
     textures_ = {};
 }
 

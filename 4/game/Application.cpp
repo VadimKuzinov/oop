@@ -2,9 +2,10 @@
 #include "../src/Point.h"
 #include "../src/Utils.h"
 #include <iostream>
+#include <fstream>
 
 
-Application::Application(Game* game, std::shared_ptr<Player> player) : game_(game), player_(player) {
+Application::Application(Game* game, std::shared_ptr<Player> player, const std::string& txt_f, const std::string& txt_dsc_f) : game_(game), player_(player) {
     auto terrain = game->getTerrain();
     MAX_X_ = scale_factor_ * terrain->getMap().getWidth();
     MAX_Y_ = scale_factor_ * terrain->getMap().getHeight();
@@ -20,18 +21,25 @@ Application::Application(Game* game, std::shared_ptr<Player> player) : game_(gam
     SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
     SDL_RenderClear(renderer_);
 
-    auto academy = terrain->getAcademy();
-    auto schools = academy.getSchools();
-    for (auto&& [name, school] : schools) {
-        auto abilities = school.getAbilities();
-        for (auto&& [name, ability] : abilities) {
-            auto model = ability.getModel();
-            auto pct_file = model->getPictureFileName();
-            SDL_Surface* surface = SDL_LoadBMP(pct_file.c_str());
-            SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer_, surface);
-            textures_[pct_file] = texture;
-            SDL_FreeSurface(surface);
-        }
+    std::ifstream ifs(txt_f);
+    std::size_t qty;
+    ifs >> qty;
+    std::string school, ability, fname;
+    while (qty--) {
+        ifs >> school >> ability >> fname;
+
+        SDL_Surface* surface = SDL_LoadBMP(fname.c_str());
+        textures_[fname] = SDL_CreateTextureFromSurface(renderer_, surface);
+        SDL_FreeSurface(surface);
+
+        ability_texture_[school][ability] = fname;
+    }
+
+    ifs = std::ifstream(txt_dsc_f);
+    ifs >> qty;
+    while (qty--) {
+        ifs >> fname;
+        ifs >> texture_descriptors_[fname];
     }
 
     SDL_Surface* backround = SDL_LoadBMP("grey.bmp");
@@ -136,11 +144,23 @@ void Application::loop() {
         }
         draw();
         SDL_Delay(21);
+        ++frame_it;
     }
 }
 
 void Application::drawSquad(std::shared_ptr<Entity> e) {
-    auto pct_file = e->getPictureFileName();
+    auto acting_status = applyFunctionToCasted(typeid(*e), ActingStatus{}, e);
+    auto angle_degree = 180 * std::static_pointer_cast<InteractiveSquad>(e)->getActingAngle() / Point::pi;
+
+    auto fname = ability_texture_[e->getSchoolName()][e->getAbilityName()];
+
+    auto ash = texture_descriptors_[fname];
+
+    SDL_Texture* texture = textures_[fname];
+    int w;
+    int h;
+    SDL_QueryTexture(texture, NULL, NULL, &w, &h);
+    SDL_Rect src_rect = ash.getNextSpriteRectangle(acting_status, angle_degree, frame_it, w, h);
 
     auto coords = e->getCoords();
     coords = Point::withIntCfs(coords);
@@ -157,19 +177,21 @@ void Application::drawSquad(std::shared_ptr<Entity> e) {
 
     SDL_Rect rect;
     rect.x = x; rect.y = y; rect.w = scale_factor_; rect.h = scale_factor_;
-    SDL_RenderCopy(renderer_, textures_[pct_file], NULL, &rect);
+    SDL_RenderCopy(renderer_, textures_[fname], &src_rect, &rect);
 
     if (player_->getActive() == e) {
         SDL_SetRenderDrawColor(renderer_, 255, 0, 0, 255);      
         drawCircle(x, y, scale_factor_ * 1.4);
     }
 
+    if (typeid(*e) == typeid(Obstacle)) 
+        return;
     SDL_Rect hp_bar;
     hp_bar.x = x;
     hp_bar.y = y - scale_factor_ / 4;
     auto casted_to_obstacle = std::static_pointer_cast<Obstacle>(e);
     hp_bar.w = scale_factor_ * (casted_to_obstacle->getCurHp() / casted_to_obstacle->getMaxHp());
-    hp_bar.h = scale_factor_ / 4;
+    hp_bar.h = scale_factor_ / 8;
     SDL_SetRenderDrawColor(renderer_, 11, 102, 35, 111);
     SDL_RenderFillRect(renderer_, &hp_bar);
 }

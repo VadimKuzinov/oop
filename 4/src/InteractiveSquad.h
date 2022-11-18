@@ -50,5 +50,7 @@ public:
     void setTargetCoords(Point where) {
         target_coords_ = where;
     }
+
+    double getActingAngle() const;
 };
 

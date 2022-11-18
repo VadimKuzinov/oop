@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-class Player final {
+class Player {
 private:
     std::shared_ptr<Summoner> summoner_;
     std::shared_ptr<Terrain> terrain_;

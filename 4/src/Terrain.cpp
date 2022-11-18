@@ -55,8 +55,9 @@ void Terrain::loadSchoolsToSummoner(std::shared_ptr<Summoner> summoner) {
     }
 }
 
-void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where) {
+void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where, std::shared_ptr<Summoner> summoner) {
     linkSquad(new_squad, where);
+    //std::static_pointer_cast<InteractiveSquad>(new_squad)->setSummoner(summoner);
     if (typeid(*new_squad) == typeid(Summoner)) {
         addSummoner(new_squad);
     }
@@ -81,3 +82,11 @@ std::istream& operator>>(std::istream& is, Terrain& terrain) {
     return is;
 }
 
+
+void Terrain::transferSquadToEmptyPlace(std::shared_ptr<Entity> squad, Point target_coords) {
+    auto cur_coords = Point::withIntCfs(squad->getCoords());
+    auto int_target_coords = Point::withIntCfs(target_coords);
+    map_[cur_coords] = nullptr;
+    map_[int_target_coords] = squad;
+    std::static_pointer_cast<Obstacle>(squad)->setCoords(target_coords);
+}

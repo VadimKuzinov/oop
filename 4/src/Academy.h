@@ -26,6 +26,9 @@ private:
     double qty_kf_ = 1.0;
     friend std::istream& operator>>(std::istream&, Ability&);
 
+private:
+    void linkSquad() const;
+
 public:
     void setSchoolName(const std::string school_name) {
         school_name_ = school_name;

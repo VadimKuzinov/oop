@@ -43,9 +43,6 @@ public:
 
 public:
     virtual ~GeneralSquad() = default;
-//    virtual ~GeneralSquad() {
-//        std::cout << "~GENERALSQUAD" << std::endl;
-//    }
 
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new GeneralSquad(*this));

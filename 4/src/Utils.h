@@ -55,6 +55,50 @@ struct MenuCaller {
     }
 };
 
+struct ActingStatus {
+    template <typename T>
+    std::string operator()(std::shared_ptr<T> e) {
+        if constexpr (Attacking<T>) {
+            if (e->isAttacking()) {
+                return "attacking";
+            }
+        }
+
+        if constexpr (Moving<T>) {
+            if (e->isMoving()) {
+                return "moving";
+            }
+        }
+
+        if constexpr (Healing<T>) {
+            if (e->isHealing()) {
+                return "healing";
+            }
+        }
+
+        if constexpr (Summoning<T>) {
+            if (e->isSummoning()) {
+                return "summoning";
+            }
+        }
+
+        if constexpr (Accumulating<T>) {
+            if (e->isAccumulating()) {
+                return "accumulating";
+            }
+        }
+
+        if constexpr (Upgrading<T>) {
+            if (e->isUpgrading()) {
+                return "upgrading";
+            }
+        }
+
+        return "none";
+    }    
+};
+
+
 template <typename Func, typename Head>
 auto applyFunctionToCastedImpl(const std::type_info& type, Func func, std::shared_ptr<Entity> e) {
     return func(std::dynamic_pointer_cast<Head>(e));

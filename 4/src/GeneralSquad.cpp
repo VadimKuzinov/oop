@@ -23,22 +23,18 @@ void GeneralSquad::move() {
     auto vector_direction = Point::normalized(target_coords - coords) * act_velocity;
     auto target_point = coords + vector_direction;
     auto int_target_point = Point::withIntCfs(target_point);
-    if (terrain->getMap()[int_target_point] != nullptr && terrain->getMap()[int_target_point].get() != this) {
+
+    auto entityAtTargetPoint = terrain->getSquadWithCoords(int_target_point);
+    if (entityAtTargetPoint != nullptr && entityAtTargetPoint != shared_from_this()) {
         moving_ = false;
         return;
     }
+    
+    terrain->transferSquadToEmptyPlace(shared_from_this(), target_point);
 
-    Point cur_int_coords_ = Point::withIntCfs(coords);
-    setCoords(target_point);
-
-    if (int_target_point == cur_int_coords_) {
-        if (cur_int_coords_ == target_coords) {
-            moving_ = false;
-        }
-        return;
+    if (target_coords == coords) {
+        moving_ = false;
     }
-    terrain->getMap()[int_target_point] = terrain->getMap()[cur_int_coords_];
-    terrain->getMap()[cur_int_coords_] = nullptr;
 }
 
 void GeneralSquad::giveDamage() {

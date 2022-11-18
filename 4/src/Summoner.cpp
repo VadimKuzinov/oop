@@ -31,7 +31,7 @@ void Summoner::summon() {
 
     cur_energy_ -= ability.getEnergyCost();
     terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level);
-    terrain->addSquad(terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords);
+    terrain->addSquad(terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords, std::static_pointer_cast<Summoner>(shared_from_this()));
 }
 
 void Summoner::upgradeSchool() {
