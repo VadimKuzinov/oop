@@ -46,6 +46,7 @@ void GeneralSquad::giveDamage() {
 void GeneralSquad::attack() {
     auto captured = getCaptured();
     if (captured == nullptr) {
+        attacking_ = false;
         return;
     }
 

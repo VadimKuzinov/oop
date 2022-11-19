@@ -13,7 +13,7 @@ summon_range 10
 max_energy 1000
 cur_energy 1000
 xp 10000
-energy_regen_speed 0.001
+energy_regen_speed 0.5
 nonmoving
 1
 obstacle

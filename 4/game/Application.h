@@ -15,7 +15,7 @@ private:
     std::size_t frame_it = 0;
     Game* game_;
     std::shared_ptr<Player> player_;
-    int scale_factor_ = 30; //25
+    int scale_factor_ = 34; //25
     int MAX_X_;
     int MAX_Y_;
     int MENU_W_ = 250;

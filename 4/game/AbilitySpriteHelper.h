@@ -23,7 +23,7 @@ public:
         result.h = h / h_max_;
         result.x = coords.x * result.w;
         result.y = coords.y * result.h;
-        std::cout << action << " " << result.x << " " << result.y << " " << result.w << " " << result.h << '\n';
+        //std::cout << action << " " << result.x << " " << result.y << " " << result.w << " " << result.h << '\n';
         return result;
     }
 };
@@ -36,14 +36,14 @@ inline std::istream& operator>>(std::istream& is, AbilitySpriteHelper& ash) {
     std::size_t qty_of_sprites;
 
     is >> qty;
-    std::cout << "QTY IS " << qty << '\n';
+    //std::cout << "QTY IS " << qty << '\n';
     while (qty--) {
         is >> status_name;
-        std::cout << "STATUS NAME IS" << status_name << '\n';
+        //std::cout << "STATUS NAME IS" << status_name << '\n';
         is >> qty_of_angles >> qty_of_sprites;
-        std::cout << "QTYA, QTYS: " << qty_of_angles << " " << qty_of_sprites << "\n";
+        //std::cout << "QTYA, QTYS: " << qty_of_angles << " " << qty_of_sprites << "\n";
         is >> ash.h_max_ >> ash.w_max_;
-        std::cout << "WM, HW:" << ash.w_max_ << " " << ash.h_max_ << '\n';
+        //std::cout << "WM, HW:" << ash.w_max_ << " " << ash.h_max_ << '\n';
         std::vector<std::vector<Point>> v(qty_of_angles, std::vector<Point>(qty_of_sprites));
 
         for (auto i = 0u; i < qty_of_angles; ++i) {

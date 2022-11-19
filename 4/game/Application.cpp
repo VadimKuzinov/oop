@@ -5,7 +5,10 @@
 #include <fstream>
 
 
-Application::Application(Game* game, std::shared_ptr<Player> player, const std::string& txt_f, const std::string& txt_dsc_f) : game_(game), player_(player) {
+Application::Application(Game* game, std::shared_ptr<Player> player, const std::string& txt_f, const std::string& txt_dsc_f) 
+                                                                                                              : game_(game), 
+                                                                                                                player_(player) 
+{
     auto terrain = game->getTerrain();
     MAX_X_ = scale_factor_ * terrain->getMap().getWidth();
     MAX_Y_ = scale_factor_ * terrain->getMap().getHeight();
@@ -111,8 +114,11 @@ void Application::loop() {
     std::vector<std::pair<void (*)(Entity*), const char*>> menu;
     std::shared_ptr<Entity> active;
     while (running) {
+        //recv(...);
        // std::cout << "Loop iter\n";
+        //std::cout << "NEW FERAME\n";
         while (SDL_PollEvent(&event_)) {
+            //std::cout << "EVENT";
             switch (event_.type) {
                 case SDL_QUIT:
                     running = false;
@@ -142,7 +148,8 @@ void Application::loop() {
                     break;
             }
         }
-        draw();
+        draw();//will be commented: server side is not drawing anything, it's just updating interior state of terrain class
+               //and sending info to the clients
         SDL_Delay(21);
         ++frame_it;
     }
