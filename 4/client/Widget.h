@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "../src/Point.h"
+#include "Point.h"
 
 
 class Widget {

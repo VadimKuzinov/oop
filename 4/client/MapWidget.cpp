@@ -1,6 +1,6 @@
 #include "MapWidget.h"
 #include "AbilitySpriteHelper.h"
-#include "../src/Point.h"
+#include "Point.h"
 
 
 MapWidget::MapWidget(SDL_Renderer* renderer, SDL_Rect drawing_area) : Widget(renderer, drawing_area) {
@@ -41,7 +41,7 @@ void MapWidget::draw() {
         int y = (int)point.y;
         y = drawing_area.h - y - scale_factor_;
 
-        SDL_Rect dst_rect = {x, y, scale_factor_, scale_factor_};
+        dst_rect = {x, y, scale_factor_, scale_factor_};
         SDL_RenderCopy(renderer, txt_pair.first, &src_rect, &dst_rect);
 
         if (school != "nonmoving") {

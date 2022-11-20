@@ -24,7 +24,7 @@ void interactWithClient(int sfd, std::shared_ptr<Player> player) {
     Point where;
     std::vector<char> result = {};
     auto terrain = player->getSummoner()->getTerrain();
-    auto qty = terrain->getMap().getQuantityOfSquads()+1;
+    auto qty = terrain->getMap().getQuantityOfSquads() + 1;
     pushVarAsChars(result, qty);
     result.push_back('\n');
 
@@ -99,86 +99,8 @@ void interactWithClient(int sfd, std::shared_ptr<Player> player) {
 }
 
 void Server::run() {
-    puts("Server is running");
-    struct sockaddr_in server_info = {0};
-    server_info.sin_family = AF_INET;
-    server_info.sin_port = htons(1337);
-    socklen_t server_info_len = sizeof(server_info);
-    int sfd = socket(AF_INET, SOCK_STREAM, 0);
-    bind(sfd, (struct sockaddr*)&server_info, sizeof(server_info));
-    listen(sfd, 0);
-    struct sockaddr client_info = {0};
-    socklen_t client_info_len = sizeof(client_info);
-    int connfd = accept(sfd, &client_info, &client_info_len);
-
-    auto player1 = game_->getFirstPlayer();
-    auto player2 = game_->getSecondPlayer();
-
-    using frames = std::chrono::duration<int64_t, std::ratio<1, 5>>; //64 fps
-    auto nextFrame = std::chrono::system_clock::now();
-    auto lastFrame = nextFrame - frames{1};
-    char* msg;
-    auto terrain = game_->getTerrain();
-    std::vector<char> result;
-    int it = 0;
-
-    char reply_from_client[100];
-    while (true) {
-        result = {};
-        auto qty = terrain->getMap().getQuantityOfSquads();
-        pushVarAsChars(result, qty);
-        result.push_back('\n');
-
-        for (auto&& squad : terrain->getMap()) {
-            pushVarAsChars(result, squad->getSchoolName());
-            result.push_back(' ');
-            pushVarAsChars(result, squad->getAbilityName());
-            result.push_back(' ');
-            pushVarAsChars(result, squad->getCoords());
-            result.push_back(' ');
-            pushVarAsChars(result, std::static_pointer_cast<InteractiveSquad>(squad)->getActingAngle());
-            result.push_back(' ');
-            pushVarAsChars(result, applyFunctionToCasted(typeid(*squad), ActingStatus{}, squad));
-            result.push_back('\n');
-        }
-
-        auto active = player1->getActive();
-        if (!active->isAlive()) {
-
-        }
-
-        std::shared_ptr<Entity> e = (active == nullptr ? player1->getSummoner() : active);
-        auto serialized = e->serialize();
-
-        result.push_back('0');
-        result.push_back('\n');
-
-        pushVarAsChars(result, serialized.size());
-        result.push_back('\n');
-
-        for (auto&& pair : serialized) {
-            pushVarAsChars(result, pair.first);
-            result.push_back(' ');
-            pushVarAsChars(result, pair.second);
-            result.push_back('\n');
-        }
-        msg = result.data();
-        //std::cout << msg << std::endl;
-        int t = send(connfd, msg, strlen(msg) + 1, 0);
-        std::cout << t << " BYTES ARE SENDED " << "on " << it++ << " iteration\n";  
-        std::this_thread::sleep_until(nextFrame);
-        lastFrame = nextFrame;
-        nextFrame += frames{1};
-
-        t = recv(connfd, reply_from_client, 100, 0);
-        std::cout << "RECEIVED: " << t << " bytes\n";
-        std::cout << "message from client: " << reply_from_client << std::endl;
-    }
-}
-
-void Server::run2() {
     int opt = 1;  
-    int new_socket, activity, max_sd;
+    int new_socket, max_sd;
     struct sockaddr_in address;  
 
     std::pair<int, int> client_sfd_pair = {0, 0};
@@ -189,7 +111,7 @@ void Server::run2() {
     struct sockaddr_in socket_info;  
     socket_info.sin_family = AF_INET;  
     socket_info.sin_addr.s_addr = INADDR_ANY;  
-    socket_info.sin_port = htons( 1337 );  
+    socket_info.sin_port = htons(1337);  
 
     bind(server_socket, (struct sockaddr *)&socket_info, sizeof(socket_info));
     printf("Listener on port %d \n", 1337);  
@@ -226,18 +148,10 @@ void Server::run2() {
         struct timeval tv;
         tv.tv_sec = 0;
         tv.tv_usec = 0;
-        activity = select( max_sd + 1 , &readfds , NULL , NULL , &tv);  
+        select( max_sd + 1 , &readfds , NULL , NULL , &tv);  
     
-        int a, b, c;
-        a = FD_ISSET(server_socket, &readfds);
-        b = FD_ISSET(client_sfd_pair.first, &readfds);
-        c = FD_ISSET(client_sfd_pair.second, &readfds);
-        if (a|b|c)
-            //std::cout << a << b << c << std::endl;
-
         if (FD_ISSET(server_socket, &readfds))  
         {
-            std::cout << "inside server isset" << std::endl;
             new_socket = accept(server_socket, (struct sockaddr *)&socket_info, &socket_info_len);
             printf("New connection , socket fd is %d , ip is : %s , port : %d\n" , new_socket , inet_ntoa(address.sin_addr) , ntohs(address.sin_port));  
   

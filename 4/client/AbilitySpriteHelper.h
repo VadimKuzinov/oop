@@ -1,5 +1,5 @@
 #pragma once
-#include "../src/Point.h"
+#include "Point.h"
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -17,7 +17,7 @@ public:
 
         auto vv = status_sprites_[action];
         int delta = 360 / vv.size();
-        int cur_ind_angle = angle / delta;
+        std::size_t cur_ind_angle = angle / delta;
         if (cur_ind_angle >= vv.size())
             std::cout << "CUR_IND_ANGLE IS: " << cur_ind_angle << std::endl;
 

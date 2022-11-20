@@ -1,5 +1,4 @@
 #pragma once
-#include "Terrain.h"
 #include "InteractiveSquad.h"
 #include <memory>
 #include <string>
@@ -61,7 +60,6 @@ public:
     }
 
     void tryToSummon() {
-        std::cout << "SUMMONING NOW" << std::endl;
         summoning_ = true; accumulating_ = false; upgrading_ = false;
     }
 

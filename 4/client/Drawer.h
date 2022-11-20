@@ -9,8 +9,8 @@
 class Drawer {
     SDL_Window* window_;
     SDL_Renderer* renderer_;
-    int height_;
     int width_;
+    int height_;
     int right_stripe_width_ = 250;
 
     Widget* map_widget_;

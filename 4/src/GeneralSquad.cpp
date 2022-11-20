@@ -1,5 +1,6 @@
 #include "GeneralSquad.h"
 #include "Point.h"
+#include "Terrain.h"
 
 
 void GeneralSquad::update() {

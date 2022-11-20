@@ -8,7 +8,6 @@
 #include <unistd.h>
 #include <string>
 #include <chrono>
-#include "../src/Utils.h"
 
 
 void Client::connectToServer() {
@@ -30,7 +29,7 @@ void Client::act() {
     SDL_Event event_;
     char buf[100000];
     int t;
-    char* temp = "";
+    const char* temp = "";
     send(sfd_, temp, 100, 0);
     using frames = std::chrono::duration<int64_t, std::ratio<1, 64>>;
     auto next_frame = std::chrono::system_clock::now() + frames{1};

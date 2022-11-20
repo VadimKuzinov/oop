@@ -1,8 +1,9 @@
 #include "SerializeWidget.h"
 
+
 SerializeWidget::SerializeWidget(SDL_Renderer* renderer, const SDL_Rect& drawing_area) : Widget(renderer, drawing_area) {
     TTF_Init();
-    const char* font_path = "GummyBears.ttf";
+    const char* font_path = "assets/fonts/GummyBears.ttf";
     font_ = TTF_OpenFont(font_path, 18);
 }
 

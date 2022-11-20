@@ -29,27 +29,27 @@ struct MenuCaller {
         std::vector<std::pair<void (*)(std::shared_ptr<Entity>), std::string>> result;
 
         if constexpr (Attacking<T>) {
-            result.push_back({[](std::shared_ptr<Entity> e) { std::cout<<"aa!"<<std::endl;std::dynamic_pointer_cast<T>(e)->tryToAttack(); }, "Attack"});
+            result.push_back({[](std::shared_ptr<Entity> e) { std::dynamic_pointer_cast<T>(e)->tryToAttack(); }, "Attack"});
         }
 
         if constexpr (Moving<T>) {
-            result.push_back({[](std::shared_ptr<Entity> e) { std::cout<<"m!"<<std::endl;std::dynamic_pointer_cast<T>(e)->tryToMove(); }, "Move"});
+            result.push_back({[](std::shared_ptr<Entity> e) { std::dynamic_pointer_cast<T>(e)->tryToMove(); }, "Move"});
         }
 
         if constexpr (Healing<T>) {
-            result.push_back({[](std::shared_ptr<Entity> e) { std::cout<<"h!"<<std::endl; std::dynamic_pointer_cast<T>(e)->tryToHeal(); }, "Heal"});
+            result.push_back({[](std::shared_ptr<Entity> e) { std::dynamic_pointer_cast<T>(e)->tryToHeal(); }, "Heal"});
         }
 
         if constexpr (Summoning<T>) {
-            result.push_back({[](std::shared_ptr<Entity> e) { std::cout<<"s!"<<std::endl; std::dynamic_pointer_cast<T>(e)->tryToSummon(); }, "Summon"});
+            result.push_back({[](std::shared_ptr<Entity> e) { std::dynamic_pointer_cast<T>(e)->tryToSummon(); }, "Summon"});
         }
 
         if constexpr (Accumulating<T>) {
-            result.push_back({[](std::shared_ptr<Entity> e) { std::cout<<"a!"<<std::endl; std::dynamic_pointer_cast<T>(e)->tryToAccumulate(); }, "Accumulate"});
+            result.push_back({[](std::shared_ptr<Entity> e) { std::dynamic_pointer_cast<T>(e)->tryToAccumulate(); }, "Accumulate"});
         }
 
         if constexpr (Upgrading<T>) {
-            result.push_back({[](std::shared_ptr<Entity> e) { std::cout<<"u!"<<std::endl; std::dynamic_pointer_cast<T>(e)->tryToUpgrade(); }, "Upgrade"});
+            result.push_back({[](std::shared_ptr<Entity> e) { std::dynamic_pointer_cast<T>(e)->tryToUpgrade(); }, "Upgrade"});
         }
 
         return result;

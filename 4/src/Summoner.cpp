@@ -1,4 +1,5 @@
 #include "Summoner.h"
+#include "Terrain.h"
 
 
 void Summoner::accumulateEnergy() {
@@ -6,7 +7,6 @@ void Summoner::accumulateEnergy() {
 }
 
 void Summoner::summon() {
-    std::cout << "Summoner::summon()" << std::endl;
     auto coords = getCoords();
     auto target_coords = getTargetCoords();
     auto terrain = getTerrain();
@@ -34,7 +34,6 @@ void Summoner::summon() {
     terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level);
     auto model = terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level);
     std::static_pointer_cast<InteractiveSquad>(model)->setSummoner(shared_from_this());
-    //terrain->addSquad(terrain->getAcademy()[summoned_school_][summoned_ability_].getModelWithLevel(cur_level), target_coords, std::static_pointer_cast<Summoner>(shared_from_this()));
     terrain->addSquad(model, target_coords);
 }
 

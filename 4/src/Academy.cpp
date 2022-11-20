@@ -1,5 +1,6 @@
 #include "Academy.h"
-#include "Utils.h"
+#include "Obstacle.h"
+#include "GeneralSquad.h"
 
 
 void Ability::linkSquad() const {

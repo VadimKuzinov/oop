@@ -29,7 +29,6 @@ public:
     void init(const std::string& academy_cfg, const std::string& map_cfg);
 
     void addSquad(std::shared_ptr<Entity>, Point);
-    void live();
 
     std::shared_ptr<Summoner> getSummonerFirst() {
         return summoners_.first;

@@ -1,10 +1,6 @@
 #include "Terrain.h"
 #include "Point.h"
 #include "Summoner.h"
-#include "Utils.h"
-#include <memory>
-#include <chrono>
-#include <thread>
 #include <fstream>
 
 
@@ -20,24 +16,6 @@ void Terrain::goToTheNextIteration() {
     map_.clearCorpses();
     for (auto&& squad : map_) {
         squad->act();
-    }
-}
-
-void Terrain::live() {
-    using frames = std::chrono::duration<int64_t, std::ratio<1, 64>>; //64 fps
-    auto nextFrame = std::chrono::system_clock::now();
-    auto lastFrame = nextFrame - frames{1};
-    auto summoner1 = getSummonerFirst();
-    auto summoner2 = getSummonerSecond();
-    
-    while (summoner1->isAlive() && summoner2->isAlive()) {
-        map_.clearCorpses();
-        for (auto&& squad : map_) {//stlparralel
-            squad->act();
-        }
-        std::this_thread::sleep_until(nextFrame);
-        lastFrame = nextFrame;
-        nextFrame += frames{1};
     }
 }
 

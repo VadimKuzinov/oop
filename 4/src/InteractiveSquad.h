@@ -33,7 +33,6 @@ public:
 
 private:
     void setSummoner(std::shared_ptr<Entity> summoner) {
-        std::cout << "SUMMONER SETTED" << std::endl;
         summoner_ = summoner;
     }
 

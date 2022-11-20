@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include "Widget.h"
-#include "../src/Point.h"
+#include "Point.h"
 
 
 class MenuWidget : public Widget {

@@ -1,10 +1,10 @@
 #include "MenuWidget.h"
-#include "../src/Point.h"
+#include "Point.h"
 
 
 MenuWidget::MenuWidget(SDL_Renderer* renderer, const SDL_Rect& drawing_area) : Widget(renderer, drawing_area) {
     TTF_Init();
-    const char* font_path = "JustSquash.ttf";
+    const char* font_path = "assets/fonts/JustSquash.ttf";
     font_ = TTF_OpenFont(font_path, 23);
 }
 
