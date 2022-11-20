@@ -13,6 +13,8 @@ class AbilitySpriteHelper {
 
 public:
     SDL_Rect getNextSpriteRectangle(const std::string& action, double angle, std::size_t frame, int w, int h) {
+        std::cout << "ACTION: " << action << std::endl;
+
         auto vv = status_sprites_[action];
         int delta = 360 / vv.size();
         int cur_ind_angle = angle / delta;

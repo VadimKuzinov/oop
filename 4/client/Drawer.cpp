@@ -19,9 +19,12 @@ Drawer::Drawer(int width, int height, const std::string& cfg_filename) : width_(
 }
 
 void Drawer::draw() {
+    SDL_SetRenderDrawColor(renderer_, 255, 255, 255, 255);
+    SDL_RenderClear(renderer_);
     map_widget_->draw();
     menu_widget_->draw();
     serialize_widget_->draw();
+    SDL_RenderPresent(renderer_);
 }
 
 void Drawer::receiveData(const std::vector<std::string>& map, const std::vector<std::string>& menu, const std::vector<std::string>& serialize) {
@@ -30,6 +33,15 @@ void Drawer::receiveData(const std::vector<std::string>& map, const std::vector<
     serialize_widget_->update(std::move(serialize));
 }
 
-void Drawer::catchClick(int x, int y) {
+std::pair<std::string, Point> Drawer::catchClick(int x, int y) {
+    std::pair<std::string, Point> result;
+    if (x > width_ - right_stripe_width_) {
+        result = menu_widget_->catchClick(x, y);
+    }
+    else {
+        result = map_widget_->catchClick(x, y);
+    }
+
+    return result;
 }
 

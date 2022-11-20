@@ -1,4 +1,5 @@
 #include "MenuWidget.h"
+#include "../src/Point.h"
 
 
 MenuWidget::MenuWidget(SDL_Renderer* renderer, const SDL_Rect& drawing_area) : Widget(renderer, drawing_area) {
@@ -8,6 +9,7 @@ MenuWidget::MenuWidget(SDL_Renderer* renderer, const SDL_Rect& drawing_area) : W
 }
 
 void MenuWidget::draw() { // to do: encircle active entity
+    freeUsedTextures();
     auto drawing_area = getDrawingArea();
     auto renderer = getRenderer();
 
@@ -34,6 +36,12 @@ void MenuWidget::draw() { // to do: encircle active entity
         SDL_RenderDrawLine(renderer, drawing_area.x, rect.y + ch_h, drawing_area.x + drawing_area.w, rect.y + ch_h);
         rect.y += ch_h;
     }
-    freeUsedTextures();
+    //freeUsedTextures();
+}
+
+std::pair<std::string, Point> MenuWidget::catchClick(int x, int y) {
+    auto ch_h = 25;
+    int number_of_option = y / ch_h;
+    return std::make_pair("menu", Point{0, (double)number_of_option});
 }
 

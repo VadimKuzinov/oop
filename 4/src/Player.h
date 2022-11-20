@@ -2,6 +2,8 @@
 #include "Summoner.h"
 #include <memory>
 #include <iostream>
+#include <string>
+#include <vector>
 
 
 class Player {
@@ -9,6 +11,7 @@ private:
     std::shared_ptr<Summoner> summoner_;
     std::shared_ptr<Terrain> terrain_;
     std::shared_ptr<Entity> active_ = nullptr;
+    std::string chosen_school_ = "";
 
 public:
     Player(const std::shared_ptr<Summoner>& summoner) : summoner_(summoner), terrain_(summoner->getTerrain()) {
@@ -26,10 +29,20 @@ public:
         return active_;
     }
 
-    void catchClick(Point where);
+    void catchClick(std::string type, Point where);
 
     std::shared_ptr<Summoner> getSummoner() const {
         return summoner_;
     }
+
+    decltype(auto) getSchoolNames() const {
+        return terrain_->getAcademy().getSchoolNames();
+    }
+
+    decltype(auto) getAbilityNames(const std::string& school_name) const {
+        return terrain_->getAcademy()[school_name].getAbilityNames();
+    }
+
+    std::vector<std::string> getMenuOptions() const;
 };
 

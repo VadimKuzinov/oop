@@ -54,6 +54,7 @@ public:
 class School {
 private:
     std::string name_;
+    std::vector<std::string> ability_names_;
     std::unordered_map<std::string, Ability> abilities_;
     double required_xp_for_upgrading_ = 15;
     friend std::istream& operator>>(std::istream&, School&);
@@ -64,6 +65,10 @@ public:
     }
 
     Ability& operator[](const std::string&);
+
+    const std::vector<std::string>& getAbilityNames() const {
+        return ability_names_;
+    }
 
     auto& getAbilities() {
         return abilities_;
@@ -76,11 +81,16 @@ public:
 
 class Academy { 
 private:
+    std::vector<std::string> school_names_;
     std::unordered_map<std::string, School> schools_;
     friend std::istream& operator>>(std::istream&, Academy&);
 
 public:
     School& operator[](const std::string&);
+
+    const std::vector<std::string>& getSchoolNames() const {
+        return school_names_;
+    }
 
     auto& getSchools() {
         return schools_;

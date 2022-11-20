@@ -1,0 +1,1787 @@
+desc: (none)
+cmd: ./build/test2
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=8569296
+mem_heap_B=37
+mem_heap_extra_B=19
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=18885976
+mem_heap_B=895233
+mem_heap_extra_B=19007
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=25810362
+mem_heap_B=952193
+mem_heap_extra_B=19007
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=35455080
+mem_heap_B=1043777
+mem_heap_extra_B=19007
+mem_stacks_B=0
+heap_tree=detailed
+n10: 1043777 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 531904 0x52CBF0A: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 531904 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 531904 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 531904 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 531904 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 531904 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 531904 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 531904 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 531904 0x10C274: main (test2.cpp:5)
+ n1: 139968 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 139968 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 139968 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 139968 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 139968 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 139968 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 139968 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 139968 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 139968 0x10C274: main (test2.cpp:5)
+ n0: 137785 in 196 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n2: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n1: 21168 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 21168 0x10C274: main (test2.cpp:5)
+     n1: 21168 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 21168 0x10C274: main (test2.cpp:5)
+ n2: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 18816 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 18816 0x10C274: main (test2.cpp:5)
+  n1: 18816 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 18816 0x10C274: main (test2.cpp:5)
+ n2: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 16384 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 16384 0x10C274: main (test2.cpp:5)
+  n1: 16384 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 16384 0x10C274: main (test2.cpp:5)
+ n2: 16576 0x555F718: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+  n1: 16384 0x555FB63: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+   n1: 16384 0x551FBA8: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+    n1: 16384 0x400647D: call_init.part.0 (dl-init.c:70)
+     n1: 16384 0x4006567: call_init (dl-init.c:33)
+      n1: 16384 0x4006567: _dl_init (dl-init.c:117)
+       n0: 16384 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 16552 0x57464FB: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 16552 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 16552 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 16552 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n0: 16552 in 2 places, all below massif's threshold (1.00%)
+ n1: 15552 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 15552 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 15552 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 15552 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 15552 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 15552 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 15552 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 15552 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 15552 0x10C274: main (test2.cpp:5)
+#-----------
+snapshot=5
+#-----------
+time=42156428
+mem_heap_B=1059329
+mem_heap_extra_B=19007
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=49808444
+mem_heap_B=1140977
+mem_heap_extra_B=19007
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=56399799
+mem_heap_B=1152641
+mem_heap_extra_B=19023
+mem_stacks_B=0
+heap_tree=detailed
+n12: 1152641 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 531904 0x52CBF0A: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 531904 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 531904 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 531904 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 531904 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 531904 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 531904 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 531904 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 531904 0x10C274: main (test2.cpp:5)
+ n1: 209952 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 209952 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 209952 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 209952 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 209952 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 209952 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 209952 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 209952 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 209952 0x10C274: main (test2.cpp:5)
+ n0: 122233 in 194 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n2: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n1: 21168 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 21168 0x10C274: main (test2.cpp:5)
+     n1: 21168 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 21168 0x10C274: main (test2.cpp:5)
+ n2: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 18816 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 18816 0x10C274: main (test2.cpp:5)
+  n1: 18816 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 18816 0x10C274: main (test2.cpp:5)
+ n1: 34992 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 34992 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 34992 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 34992 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 34992 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 34992 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 34992 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 34992 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 34992 0x10C274: main (test2.cpp:5)
+ n2: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 16384 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 16384 0x10C274: main (test2.cpp:5)
+  n1: 16384 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 16384 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 16384 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 16384 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 16384 0x10C274: main (test2.cpp:5)
+ n1: 17496 0x52CC1C3: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 17496 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 17496 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 17496 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 17496 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 17496 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 17496 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 17496 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 17496 0x10C274: main (test2.cpp:5)
+ n1: 17496 0x52CC5D2: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 17496 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 17496 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 17496 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 17496 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 17496 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 17496 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 17496 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 17496 0x10C274: main (test2.cpp:5)
+ n2: 16576 0x555F718: g_malloc (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+  n1: 16384 0x555FB63: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+   n1: 16384 0x551FBA8: ??? (in /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.7200.1)
+    n1: 16384 0x400647D: call_init.part.0 (dl-init.c:70)
+     n1: 16384 0x4006567: call_init (dl-init.c:33)
+      n1: 16384 0x4006567: _dl_init (dl-init.c:117)
+       n0: 16384 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+  n0: 192 in 1 place, below massif's threshold (1.00%)
+ n1: 16552 0x57464FB: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 16552 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 16552 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 16552 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n0: 16552 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=61034619
+mem_heap_B=1257617
+mem_heap_extra_B=19023
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=68735226
+mem_heap_B=1275113
+mem_heap_extra_B=19031
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=77107863
+mem_heap_B=1292609
+mem_heap_extra_B=19039
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=83307718
+mem_heap_B=1450049
+mem_heap_extra_B=19039
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=91230302
+mem_heap_B=1233855
+mem_heap_extra_B=31593
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=101728092
+mem_heap_B=1217392
+mem_heap_extra_B=31184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=150985122
+mem_heap_B=1236940
+mem_heap_extra_B=32060
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=160614168
+mem_heap_B=1677418
+mem_heap_extra_B=104694
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=167608417
+mem_heap_B=1673730
+mem_heap_extra_B=104678
+mem_stacks_B=0
+heap_tree=detailed
+n18: 1673730 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n0: 301022 in 455 places, all below massif's threshold (1.00%)
+ n1: 239232 0x799EC06: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n2: 239232 0x799FBFB: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 163968 0x799FEAD: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 163968 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 163968 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 163968 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 163968 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 163968 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 163968 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 163968 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 163968 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 163968 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 163968 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+              n0: 163968 0x10C274: main (test2.cpp:5)
+   n1: 75264 0x799FDEC: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 75264 0x79AEE00: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 75264 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 75264 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 75264 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 75264 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 75264 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 75264 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 75264 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 75264 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 75264 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+              n0: 75264 0x10C274: main (test2.cpp:5)
+ n1: 80080 0x4D8F791: __new_exitfn (cxa_atexit.c:114)
+  n1: 80080 0x4D8F90A: __internal_atexit (cxa_atexit.c:44)
+   n1: 80080 0x4D8F90A: __cxa_atexit (cxa_atexit.c:70)
+    n0: 80080 in 77 places, all below massif's threshold (1.00%)
+ n2: 76480 0xA11DBDE: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 76310 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 76292 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n0: 76292 in 1693 places, all below massif's threshold (1.00%)
+   n0: 18 in 1 place, below massif's threshold (1.00%)
+  n0: 170 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 52488 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 52488 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 52488 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 52488 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 52488 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 52488 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 52488 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 52488 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 52488 0x10C274: main (test2.cpp:5)
+ n1: 51840 0xC00232E: std::_Rb_tree_iterator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_insert_unique_<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_Alloc_node>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_Alloc_node&) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 51840 in 720 places, all below massif's threshold (1.00%)
+ n1: 50712 0xA17FA3E: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 50712 0xA1801D2: llvm::StringMapImpl::RehashTable(unsigned int) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 49164 0xA11DC1E: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n1: 49164 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+     n2: 49164 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+      n1: 49164 0xC131FFC: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+       n1: 49164 0xA080F71: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+        n1: 49164 0x400647D: call_init.part.0 (dl-init.c:70)
+         n1: 49164 0x4006567: call_init (dl-init.c:33)
+          n1: 49164 0x4006567: _dl_init (dl-init.c:117)
+           n1: 49164 0x4EBEC84: _dl_catch_exception (dl-error-skeleton.c:182)
+            n1: 49164 0x400DFF5: dl_open_worker (dl-open.c:808)
+             n1: 49164 0x400DFF5: dl_open_worker (dl-open.c:771)
+              n1: 49164 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+               n1: 49164 0x400E34D: _dl_open (dl-open.c:883)
+                n1: 49164 0x4DDA6BB: dlopen_doit (dlopen.c:56)
+                 n1: 49164 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+                  n1: 49164 0x4EBECF2: _dl_catch_error (dl-error-skeleton.c:227)
+                   n1: 49164 0x4DDA1AD: _dlerror_run (dlerror.c:138)
+                    n1: 49164 0x4DDA747: dlopen_implementation (dlopen.c:71)
+                     n1: 49164 0x4DDA747: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                      n1: 49164 0x79B9A19: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                       n1: 49164 0x79B9B0C: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                        n1: 49164 0x7998304: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                         n1: 49164 0x79AEE9B: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                          n1: 49164 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                           n1: 49164 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                            n1: 49164 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                             n1: 49164 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                              n1: 49164 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                               n1: 49164 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                                n1: 49164 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                                 n0: 49164 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n0: 0 in 7 places, all below massif's threshold (1.00%)
+   n0: 1548 in 1 place, below massif's threshold (1.00%)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n2: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n1: 21168 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 21168 0x10C274: main (test2.cpp:5)
+     n1: 21168 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 21168 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 21168 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 21168 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 21168 0x10C274: main (test2.cpp:5)
+ n2: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 18816 0x4971E7D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 18816 0x10C274: main (test2.cpp:5)
+  n1: 18816 0x4971EF6: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 18816 0x4944A48: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 18816 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 18816 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+      n0: 18816 0x10C274: main (test2.cpp:5)
+ n1: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n0: 32768 in 2 places, all below massif's threshold (1.00%)
+ n1: 31436 0x400DA02: calloc (rtld-malloc.h:44)
+  n1: 31436 0x400DA02: _dl_new_object (dl-object.c:92)
+   n1: 31436 0x4008C82: _dl_map_object_from_fd (dl-load.c:1063)
+    n2: 31436 0x400A600: _dl_map_object (dl-load.c:2327)
+     n1: 27790 0x4003494: openaux (dl-deps.c:64)
+      n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+       n1: 27790 0x4003C7B: _dl_map_object_deps (dl-deps.c:248)
+        n1: 27790 0x400EA0E: dl_open_worker_begin (dl-open.c:592)
+         n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+          n1: 27790 0x400DF99: dl_open_worker (dl-open.c:782)
+           n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+            n1: 27790 0x400E34D: _dl_open (dl-open.c:883)
+             n1: 27790 0x4DDA6BB: dlopen_doit (dlopen.c:56)
+              n1: 27790 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+               n1: 27790 0x4EBECF2: _dl_catch_error (dl-error-skeleton.c:227)
+                n1: 27790 0x4DDA1AD: _dlerror_run (dlerror.c:138)
+                 n1: 27790 0x4DDA747: dlopen_implementation (dlopen.c:71)
+                  n1: 27790 0x4DDA747: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                   n0: 27790 in 3 places, all below massif's threshold (1.00%)
+     n0: 3646 in 1 place, below massif's threshold (1.00%)
+ n1: 28800 0xC001F55: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 28800 in 400 places, all below massif's threshold (1.00%)
+ n1: 28800 0xC0021F5: std::_Rb_tree_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > >::_M_insert_<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > >::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> const&, std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned int> > >::_Alloc_node&) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 28800 in 400 places, all below massif's threshold (1.00%)
+ n1: 26244 0x52CC1C3: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 26244 0x10C274: main (test2.cpp:5)
+ n1: 26244 0x52CC5D2: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 26244 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 26244 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 26244 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 26244 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 26244 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 26244 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 26244 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 26244 0x10C274: main (test2.cpp:5)
+ n2: 22544 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 20384 0x7B227E8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 20384 in 4 places, all below massif's threshold (1.00%)
+  n0: 2160 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=172214873
+mem_heap_B=1677207
+mem_heap_extra_B=105657
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=180515051
+mem_heap_B=1782702
+mem_heap_extra_B=119602
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=185808360
+mem_heap_B=1803582
+mem_heap_extra_B=121042
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=193849871
+mem_heap_B=1821214
+mem_heap_extra_B=122258
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=199256072
+mem_heap_B=1830958
+mem_heap_extra_B=122930
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=210095528
+mem_heap_B=1853230
+mem_heap_extra_B=124466
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=219362793
+mem_heap_B=1872022
+mem_heap_extra_B=125762
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=227205194
+mem_heap_B=1892438
+mem_heap_extra_B=127170
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=234112826
+mem_heap_B=1897078
+mem_heap_extra_B=127490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=240919722
+mem_heap_B=1913086
+mem_heap_extra_B=128594
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=247877896
+mem_heap_B=1926078
+mem_heap_extra_B=129490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=254752156
+mem_heap_B=1937214
+mem_heap_extra_B=130258
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=263881681
+mem_heap_B=1959254
+mem_heap_extra_B=131778
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=270831340
+mem_heap_B=1972014
+mem_heap_extra_B=132658
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=276569056
+mem_heap_B=2497136
+mem_heap_extra_B=129616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=293979900
+mem_heap_B=2499653
+mem_heap_extra_B=131451
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=300636323
+mem_heap_B=2152413
+mem_heap_extra_B=175891
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=307296589
+mem_heap_B=2169449
+mem_heap_extra_B=204511
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=313961797
+mem_heap_B=2126645
+mem_heap_extra_B=161611
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=322836640
+mem_heap_B=2173633
+mem_heap_extra_B=222415
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=327277120
+mem_heap_B=2110427
+mem_heap_extra_B=155205
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=336152175
+mem_heap_B=2174548
+mem_heap_extra_B=206364
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=343588278
+mem_heap_B=2852598
+mem_heap_extra_B=156362
+mem_stacks_B=0
+heap_tree=detailed
+n21: 2852598 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 598821 in 644 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n3: 275744 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n3: 185920 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 113280 in 32 places, all below massif's threshold (1.00%)
+   n1: 37120 0x87713A6: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 37120 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 37120 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 37120 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 37120 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 37120 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n1: 37120 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+          n1: 37120 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+           n2: 37120 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+            n1: 37120 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n2: 37120 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 37120 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+               n1: 37120 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                n1: 37120 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+                 n0: 37120 0x10C274: main (test2.cpp:5)
+              n0: 0 in 1 place, below massif's threshold (1.00%)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 35520 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 35520 in 8 places, all below massif's threshold (1.00%)
+  n1: 60432 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 60432 in 11 places, all below massif's threshold (1.00%)
+  n0: 29392 in 12 places, all below massif's threshold (1.00%)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 132704 0x10C274: main (test2.cpp:5)
+  n1: 77952 0x79AF10F: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 77952 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 77952 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 77952 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 77952 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 77952 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 77952 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 77952 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 77952 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 77952 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 77952 0x10C274: main (test2.cpp:5)
+ n1: 80080 0x4D8F791: __new_exitfn (cxa_atexit.c:114)
+  n1: 80080 0x4D8F90A: __internal_atexit (cxa_atexit.c:44)
+   n1: 80080 0x4D8F90A: __cxa_atexit (cxa_atexit.c:70)
+    n0: 80080 in 77 places, all below massif's threshold (1.00%)
+ n2: 76480 0xA11DBDE: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 76310 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 76292 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n0: 76292 in 1693 places, all below massif's threshold (1.00%)
+   n0: 18 in 1 place, below massif's threshold (1.00%)
+  n0: 170 in 1 place, below massif's threshold (1.00%)
+ n1: 72704 0x4AC1979: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+  n1: 72704 0x400647D: call_init.part.0 (dl-init.c:70)
+   n1: 72704 0x4006567: call_init (dl-init.c:33)
+    n1: 72704 0x4006567: _dl_init (dl-init.c:117)
+     n0: 72704 0x40202E9: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n2: 62480 0x567DEA2: pa_xmalloc0 (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-15.99.so)
+  n1: 53648 0x5690AD6: pa_flist_new_with_name (in /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-15.99.so)
+   n0: 53648 in 10 places, all below massif's threshold (1.00%)
+  n0: 8832 in 10 places, all below massif's threshold (1.00%)
+ n1: 59440 0x78BEE9E: ??? (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+  n1: 59440 0x78BFC8A: __glDispatchMakeCurrent (in /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0)
+   n1: 59440 0x794C79A: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+    n1: 59440 0x7951276: ??? (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+     n1: 59440 0x496F035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 59440 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 59440 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 59440 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 59440 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 59440 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+           n0: 59440 0x10C274: main (test2.cpp:5)
+ n2: 58272 0x48FD76F: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+  n1: 57464 0x48C9DE8: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 57464 0x48CBFD2: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 57464 0x49A2DCA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 57464 0x48A4394: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 57464 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+       n0: 57464 0x10C274: main (test2.cpp:5)
+  n0: 808 in 12 places, all below massif's threshold (1.00%)
+ n2: 57600 0x7B13CAC: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 38400 0x7B1BBF5: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 38400 0x7B1591F: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 38400 0x7B132A3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 38400 0x79AEF53: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 38400 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 38400 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 38400 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 38400 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 38400 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 38400 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 38400 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 38400 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 38400 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+               n0: 38400 0x10C274: main (test2.cpp:5)
+  n0: 19200 in 1 place, below massif's threshold (1.00%)
+ n1: 52488 0x52CC4C7: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 52488 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 52488 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 52488 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 52488 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 52488 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 52488 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 52488 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 52488 0x10C274: main (test2.cpp:5)
+ n1: 51840 0xC00232E: std::_Rb_tree_iterator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_M_insert_unique_<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_Alloc_node>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > const&, std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::_Select1st<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >::_Alloc_node&) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n0: 51840 in 720 places, all below massif's threshold (1.00%)
+ n1: 50712 0xA17FA3E: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+  n2: 50712 0xA1801D2: llvm::StringMapImpl::RehashTable(unsigned int) (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+   n1: 49164 0xA11DC1E: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+    n1: 49164 0xA11DE0B: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+     n2: 49164 0xA11009A: llvm::cl::Option::addArgument() (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+      n1: 49164 0xC131FFC: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+       n1: 49164 0xA080F71: ??? (in /usr/lib/x86_64-linux-gnu/libLLVM-13.so.1)
+        n1: 49164 0x400647D: call_init.part.0 (dl-init.c:70)
+         n1: 49164 0x4006567: call_init (dl-init.c:33)
+          n1: 49164 0x4006567: _dl_init (dl-init.c:117)
+           n1: 49164 0x4EBEC84: _dl_catch_exception (dl-error-skeleton.c:182)
+            n1: 49164 0x400DFF5: dl_open_worker (dl-open.c:808)
+             n1: 49164 0x400DFF5: dl_open_worker (dl-open.c:771)
+              n1: 49164 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+               n1: 49164 0x400E34D: _dl_open (dl-open.c:883)
+                n1: 49164 0x4DDA6BB: dlopen_doit (dlopen.c:56)
+                 n1: 49164 0x4EBEC27: _dl_catch_exception (dl-error-skeleton.c:208)
+                  n1: 49164 0x4EBECF2: _dl_catch_error (dl-error-skeleton.c:227)
+                   n1: 49164 0x4DDA1AD: _dlerror_run (dlerror.c:138)
+                    n1: 49164 0x4DDA747: dlopen_implementation (dlopen.c:71)
+                     n1: 49164 0x4DDA747: dlopen@@GLIBC_2.34 (dlopen.c:81)
+                      n1: 49164 0x79B9A19: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                       n1: 49164 0x79B9B0C: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                        n1: 49164 0x7998304: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                         n1: 49164 0x79AEE9B: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                          n1: 49164 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                           n1: 49164 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+                            n1: 49164 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                             n1: 49164 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                              n1: 49164 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                               n1: 49164 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                                n1: 49164 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                                 n0: 49164 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n0: 0 in 7 places, all below massif's threshold (1.00%)
+   n0: 1548 in 1 place, below massif's threshold (1.00%)
+ n1: 45936 0x7C7644E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n0: 45936 in 3 places, all below massif's threshold (1.00%)
+ n1: 42336 0x5746204: xcb_connect_to_fd (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+  n1: 42336 0x5746E6B: xcb_connect_to_display_with_auth_info (in /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0)
+   n1: 42336 0x52A2DE9: _XConnectXCB (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 42336 0x5292A78: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+     n0: 42336 in 2 places, all below massif's threshold (1.00%)
+ n1: 37632 0x52931A0: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n0: 37632 in 2 places, all below massif's threshold (1.00%)
+ n1: 32768 0x5292DCE: XOpenDisplay (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n0: 32768 in 2 places, all below massif's threshold (1.00%)
+ n1: 32641 0x400DA02: calloc (rtld-malloc.h:44)
+  n1: 32641 0x400DA02: _dl_new_object (dl-object.c:92)
+   n1: 32641 0x4008C82: _dl_map_object_from_fd (dl-load.c:1063)
+    n1: 32641 0x400A600: _dl_map_object (dl-load.c:2327)
+     n0: 32641 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=351258798
+mem_heap_B=7628439
+mem_heap_extra_B=434457
+mem_stacks_B=0
+heap_tree=detailed
+n6: 7628439 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 5033968 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n14: 4883200 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 2553104 in 719 places, all below massif's threshold (1.00%)
+   n2: 511680 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 278592 in 117 places, all below massif's threshold (1.00%)
+    n1: 233088 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 233088 in 1214 places, all below massif's threshold (1.00%)
+   n1: 233088 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 233088 in 1214 places, all below massif's threshold (1.00%)
+   n1: 233088 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 233088 in 1214 places, all below massif's threshold (1.00%)
+   n2: 214944 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 125184 in 79 places, all below massif's threshold (1.00%)
+    n1: 89760 0x7E4DB4F: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 89760 in 935 places, all below massif's threshold (1.00%)
+   n1: 213664 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 213664 in 1214 places, all below massif's threshold (1.00%)
+   n1: 153328 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 153328 in 300 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 116544 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 116544 in 1214 places, all below massif's threshold (1.00%)
+   n1: 112512 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 112512 in 37 places, all below massif's threshold (1.00%)
+   n1: 107712 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 107712 in 68 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 104384 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 104384 in 68 places, all below massif's threshold (1.00%)
+   n1: 94464 0x7E4DE79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 94464 in 492 places, all below massif's threshold (1.00%)
+  n0: 150768 in 15 places, all below massif's threshold (1.00%)
+ n0: 1429847 in 661 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 132704 0x10C274: main (test2.cpp:5)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=355937409
+mem_heap_B=9210198
+mem_heap_extra_B=518794
+mem_stacks_B=0
+heap_tree=detailed
+n7: 9210198 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6378720 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n18: 6183360 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3045424 in 1336 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120512 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120512 in 85 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 105600 0x7E4A8EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 105600 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 105600 in 22 places, all below massif's threshold (1.00%)
+   n1: 100224 0x7E4DE79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 100224 in 522 places, all below massif's threshold (1.00%)
+  n0: 195360 in 25 places, all below massif's threshold (1.00%)
+ n0: 1505902 in 689 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 132704 0x10C274: main (test2.cpp:5)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n1: 160952 0x5C06E88: ZSTD_createDCtx_advanced (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+  n1: 160952 0x5C06FBE: ZSTD_createDCtx (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+   n1: 160952 0x5C0D2DC: ZSTD_decompress (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+    n1: 160952 0x7B26B1E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 160952 0x7B1CC43: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n2: 160952 0x7B1D4D4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 160952 0x876AFF7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n2: 160952 0x87758F9: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 160952 0x7C1300C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 160952 0x7C1369C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 160952 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 160952 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+             n1: 160952 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+              n1: 160952 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+               n1: 160952 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                n1: 160952 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                 n1: 160952 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                  n1: 160952 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                   n1: 160952 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                    n1: 160952 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+                     n0: 160952 0x10C274: main (test2.cpp:5)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=364000106
+mem_heap_B=9722571
+mem_heap_extra_B=545261
+mem_stacks_B=0
+heap_tree=detailed
+n8: 9722571 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6586912 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n17: 6287072 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3249360 in 1337 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120512 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120512 in 85 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 105600 0x7E4A8EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 105600 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 105600 in 22 places, all below massif's threshold (1.00%)
+  n0: 176352 in 24 places, all below massif's threshold (1.00%)
+  n1: 123488 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 123488 in 29 places, all below massif's threshold (1.00%)
+ n0: 1658203 in 688 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 132704 0x10C274: main (test2.cpp:5)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n1: 160952 0x5C06E88: ZSTD_createDCtx_advanced (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+  n1: 160952 0x5C06FBE: ZSTD_createDCtx (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+   n1: 160952 0x5C0D2DC: ZSTD_decompress (in /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8)
+    n1: 160952 0x7B26B1E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 160952 0x7B1CC43: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n2: 160952 0x7B1D4D4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 160952 0x876AFF7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n2: 160952 0x87758F9: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 160952 0x7C1300C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 160952 0x7C1369C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 160952 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 160952 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+             n1: 160952 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+              n1: 160952 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+               n1: 160952 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                n1: 160952 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                 n1: 160952 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+                  n1: 160952 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                   n1: 160952 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+                    n1: 160952 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+                     n0: 160952 0x10C274: main (test2.cpp:5)
+         n0: 0 in 1 place, below massif's threshold (1.00%)
+       n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 151880 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 151880 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 151880 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 111000 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 111000 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 111000 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 111000 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 111000 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 111000 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 111000 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 111000 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 111000 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 111000 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 111000 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 111000 0x10C274: main (test2.cpp:5)
+    n0: 40880 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=370578011
+mem_heap_B=13938297
+mem_heap_extra_B=554343
+mem_stacks_B=0
+heap_tree=peak
+n8: 13938297 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n2: 6612144 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n8: 6300528 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 4307200 in 1346 places, all below massif's threshold (1.00%)
+   n2: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 419712 in 151 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+  n0: 311616 in 25 places, all below massif's threshold (1.00%)
+ n1: 4194344 0x48B61F8: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+  n1: 4194344 0x493DDCF: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+   n1: 4194344 0x493535C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+    n1: 4194344 0x10E157: operator>>(std::istream&, MapWidget&) (MapWidget.cpp:50)
+     n1: 4194344 0x10D70E: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:18)
+      n0: 4194344 0x10C274: main (test2.cpp:5)
+ n0: 1797945 in 724 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n0: 210656 in 2 places, all below massif's threshold (1.00%)
+ n1: 169240 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 169240 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=379825320
+mem_heap_B=11009000
+mem_heap_extra_B=550904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=388828579
+mem_heap_B=9936002
+mem_heap_extra_B=557262
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=395054103
+mem_heap_B=9953806
+mem_heap_extra_B=557362
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=402605438
+mem_heap_B=10018449
+mem_heap_extra_B=557807
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=408928154
+mem_heap_B=9946630
+mem_heap_extra_B=557770
+mem_stacks_B=0
+heap_tree=detailed
+n8: 9946630 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6613632 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n17: 6300832 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3263120 in 1346 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120512 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120512 in 85 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+   n1: 106560 0x7E8EB61: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 106560 in 218 places, all below massif's threshold (1.00%)
+   n1: 105600 0x7E4A8EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 105600 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 105600 in 22 places, all below massif's threshold (1.00%)
+  n0: 184064 in 64 places, all below massif's threshold (1.00%)
+  n1: 128736 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 128736 in 62 places, all below massif's threshold (1.00%)
+ n0: 1876331 in 837 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 132704 0x10C274: main (test2.cpp:5)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 169240 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 119560 0x10C274: main (test2.cpp:5)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 0 in 8 places, all below massif's threshold (1.00%)
+ n2: 122803 0x4F86B08: ??? (in /usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.1)
+  n1: 119000 0x4F8804D: ??? (in /usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.1)
+   n0: 119000 in 12 places, all below massif's threshold (1.00%)
+  n0: 3803 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=49
+#-----------
+time=416465312
+mem_heap_B=9972964
+mem_heap_extra_B=557948
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=420994414
+mem_heap_B=9974713
+mem_heap_extra_B=557967
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=425531996
+mem_heap_B=9976462
+mem_heap_extra_B=557986
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=430123442
+mem_heap_B=9983013
+mem_heap_extra_B=558643
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=434566348
+mem_heap_B=10046966
+mem_heap_extra_B=558834
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=439006885
+mem_heap_B=10091080
+mem_heap_extra_B=575888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=443448706
+mem_heap_B=10085440
+mem_heap_extra_B=575336
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=447889592
+mem_heap_B=10084754
+mem_heap_extra_B=574942
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=454878208
+mem_heap_B=10107113
+mem_heap_extra_B=574943
+mem_stacks_B=0
+heap_tree=detailed
+n8: 10107113 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n3: 6685200 0x7B222F4: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n15: 6334080 0x7B2235D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 3508416 in 1372 places, all below massif's threshold (1.00%)
+   n3: 658368 0x7E3DA89: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 300672 in 150 places, all below massif's threshold (1.00%)
+    n1: 238656 0x7E4D85B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+    n1: 119040 0x7E4A8A0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 283872 0x7E8E529: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 283872 in 119 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D7D7: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 238656 0x7E4D804: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 238656 in 1243 places, all below massif's threshold (1.00%)
+   n1: 218768 0x7E4D883: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 218768 in 1243 places, all below massif's threshold (1.00%)
+   n1: 195072 0x7E8E354: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 195072 in 103 places, all below massif's threshold (1.00%)
+   n1: 159936 0x7E8E587: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 159936 in 308 places, all below massif's threshold (1.00%)
+   n1: 128128 0x7E41533: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 128128 in 286 places, all below massif's threshold (1.00%)
+   n1: 120624 0x7E8E437: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 120624 in 86 places, all below massif's threshold (1.00%)
+   n1: 119328 0x7E4D8FA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 119328 in 1243 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A7DF: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 119040 0x7E4A81B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119040 0x7E47D99: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n0: 119040 in 25 places, all below massif's threshold (1.00%)
+   n1: 115968 0x7E9948C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 115968 in 39 places, all below massif's threshold (1.00%)
+   n1: 110208 0x7E3FA79: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n0: 110208 in 13 places, all below massif's threshold (1.00%)
+  n0: 209904 in 81 places, all below massif's threshold (1.00%)
+  n1: 141216 0x7B224BA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n0: 141216 in 75 places, all below massif's threshold (1.00%)
+ n0: 1956966 in 870 places, all below massif's threshold (1.00%)
+ n1: 472368 0x52CC786: ??? (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+  n1: 472368 0x52CCE6D: _XimLocalOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+   n1: 472368 0x52C489F: _XimOpenIM (in /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0)
+    n1: 472368 0x496B345: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+     n1: 472368 0x4972AFC: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 472368 0x494488D: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 472368 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 472368 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+         n0: 472368 0x10C274: main (test2.cpp:5)
+ n1: 268960 0x7BDE796: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 268960 0x7C0621C: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 268960 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 268960 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 268960 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 268960 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 268960 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 268960 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 268960 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 268960 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 268960 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 268960 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 268960 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 268960 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 268960 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 212640 0x807252E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 212640 0x7C061C0: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n1: 212640 0x7B1937B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 212640 0x7B12EAA: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 212640 0x79AECDE: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+      n1: 212640 0x7998F08: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+       n1: 212640 0x799C537: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+        n1: 212640 0x799C950: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+         n2: 212640 0x795197B: glXCreateContext (in /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0)
+          n1: 212640 0x496A8E5: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n2: 212640 0x4946817: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+            n1: 212640 0x48E32DA: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 212640 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 212640 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 212640 0x10C274: main (test2.cpp:5)
+            n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n2: 210656 0x79986B2: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+  n1: 132704 0x79AF0F7: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+   n1: 132704 0x79A03B8: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+    n1: 132704 0x799BA57: ??? (in /usr/lib/x86_64-linux-gnu/libGLX_mesa.so.0.0.0)
+     n1: 132704 0x496EB2C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+      n1: 132704 0x496EF0C: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+       n1: 132704 0x4945E3B: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+        n1: 132704 0x4944035: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+         n1: 132704 0x4944B60: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+          n1: 132704 0x48A4426: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+           n1: 132704 0x10D526: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:9)
+            n0: 132704 0x10C274: main (test2.cpp:5)
+  n0: 77952 in 1 place, below massif's threshold (1.00%)
+ n2: 177520 0x7F2BC2B: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+  n1: 169240 0x7F91CD3: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+   n2: 169240 0x7F949A8: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+    n1: 119560 0x7C1371E: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+     n1: 119560 0x7C14323: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+      n1: 119560 0x7C1486A: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+       n1: 119560 0x7C16287: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+        n1: 119560 0x7C16718: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+         n1: 119560 0x7D9BD3D: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+          n1: 119560 0x7D883C1: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+           n1: 119560 0x7D698EE: ??? (in /usr/lib/x86_64-linux-gnu/dri/iris_dri.so)
+            n1: 119560 0x48E3C9A: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+             n1: 119560 0x48D9A97: ??? (in /usr/lib/x86_64-linux-gnu/libSDL2-2.0.so.0.18.2)
+              n1: 119560 0x10D55B: Drawer::Drawer(int, int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (Drawer.cpp:11)
+               n0: 119560 0x10C274: main (test2.cpp:5)
+    n0: 49680 in 1 place, below massif's threshold (1.00%)
+  n0: 8280 in 14 places, all below massif's threshold (1.00%)
+ n2: 122803 0x4F86B08: ??? (in /usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.1)
+  n1: 119000 0x4F8804D: ??? (in /usr/lib/x86_64-linux-gnu/libfreetype.so.6.18.1)
+   n0: 119000 in 12 places, all below massif's threshold (1.00%)
+  n0: 3803 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=58
+#-----------
+time=459411165
+mem_heap_B=10108862
+mem_heap_extra_B=574962
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=464839294
+mem_heap_B=10131387
+mem_heap_extra_B=575077
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=469327088
+mem_heap_B=10306951
+mem_heap_extra_B=576009
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=473774093
+mem_heap_B=10110836
+mem_heap_extra_B=575716
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=478239760
+mem_heap_B=10109688
+mem_heap_extra_B=575704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=482800875
+mem_heap_B=10318939
+mem_heap_extra_B=576573
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=487252964
+mem_heap_B=10147932
+mem_heap_extra_B=575276
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=491697055
+mem_heap_B=10133637
+mem_heap_extra_B=575107
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=496137739
+mem_heap_B=3854762
+mem_heap_extra_B=200462
+mem_stacks_B=0
+heap_tree=empty

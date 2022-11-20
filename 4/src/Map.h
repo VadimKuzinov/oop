@@ -31,6 +31,10 @@ public:
     void clearCorpses();
     void addSquad(std::shared_ptr<Entity>, Point);
 
+    std::size_t getQuantityOfSquads() const {
+        return squads_.size();
+    }
+
     auto begin() {
         return squads_.begin();
     }

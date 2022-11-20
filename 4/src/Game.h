@@ -19,6 +19,7 @@ public:
         terrain_->init(academy_cfg, map_cfg);
         players_ = {std::shared_ptr<Player>(new Player(terrain_->getSummonerFirst())), 
                     std::shared_ptr<Player>(new Player(terrain_->getSummonerSecond()))};
+        //terrain_->live();
     }
 
     std::shared_ptr<Player> getFirstPlayer() const {

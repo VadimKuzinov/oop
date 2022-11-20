@@ -7,6 +7,9 @@ private:
     std::shared_ptr<Entity> captured_;
     Point target_coords_ = {0, 0};
 
+    std::shared_ptr<Entity> summoner_;
+    friend class Summoner;
+
 private:
     constexpr static auto properties_ = std::tuple_cat(Obstacle::getProperties(),
                                             std::make_tuple(
@@ -28,8 +31,18 @@ public:
         return serializeImpl(*this, properties_);
     }
 
+private:
+    void setSummoner(std::shared_ptr<Entity> summoner) {
+        std::cout << "SUMMONER SETTED" << std::endl;
+        summoner_ = summoner;
+    }
+
 public:
     virtual ~InteractiveSquad() = default;
+
+    std::shared_ptr<Entity> getSummoner() const {
+        return summoner_;
+    }
 
     std::shared_ptr<Entity> clone() const {
         return std::shared_ptr<Entity>(new InteractiveSquad(*this));

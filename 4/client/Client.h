@@ -1,5 +1,4 @@
 #pragma once
-#include "../game/Application.h"
 #include "Drawer.h"
 
 

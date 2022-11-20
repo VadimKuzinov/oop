@@ -139,7 +139,7 @@ void Application::loop() {
                     renderCoords(&x, &y);
                     flipYInCoords(&x, &y);
                     //std::cout << "After correcting: " << x << ' ' << y << '\n';
-                    player_->catchClick(Point{static_cast<double>(x), static_cast<double>(y)});
+                    player_->catchClick("map", Point{static_cast<double>(x), static_cast<double>(y)});
                     break;
                case SDL_KEYDOWN:
                     if (event_.key.keysym.sym == SDLK_a) {

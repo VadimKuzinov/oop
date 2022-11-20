@@ -16,7 +16,7 @@ void MenuWindow::clearTextures() {
     for (auto&& texture : textures_) {
         SDL_DestroyTexture(texture);
     }
-    textures_ = {};;
+    textures_ = {};
 }
 
 void MenuWindow::clear() {

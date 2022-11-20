@@ -29,7 +29,9 @@ private:
                                                 std::make_pair(&Summoner::max_energy_, "max_energy"),
                                                 std::make_pair(&Summoner::cur_energy_, "cur_energy"),
                                                 std::make_pair(&Summoner::xp_, "xp"),
-                                                std::make_pair(&Summoner::energy_regen_speed_, "energy_regen_speed")
+                                                std::make_pair(&Summoner::energy_regen_speed_, "energy_regen_speed"),
+                                                std::make_pair(&Summoner::summoned_school_, "summoned_school"),
+                                                std::make_pair(&Summoner::summoned_ability_, "summoned_ability")
                                             )
                                         );
 
@@ -59,6 +61,7 @@ public:
     }
 
     void tryToSummon() {
+        std::cout << "SUMMONING NOW" << std::endl;
         summoning_ = true; accumulating_ = false; upgrading_ = false;
     }
 

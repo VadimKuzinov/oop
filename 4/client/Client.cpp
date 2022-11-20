@@ -6,7 +6,9 @@
 #include <sys/socket.h>
 #include <string.h>
 #include <unistd.h>
-
+#include <string>
+#include <chrono>
+#include "../src/Utils.h"
 
 
 void Client::connectToServer() {
@@ -15,22 +17,39 @@ void Client::connectToServer() {
     client_info.sin_addr.s_addr = inet_addr("127.0.0.1"); 
     client_info.sin_port = htons(1337);
     socklen_t client_info_len = sizeof(client_info);
-    int sfd = socket(AF_INET, SOCK_STREAM, 0);
-    connect(sfd, (struct sockaddr*)&client_info, client_info_len);
-    puts("connected");
+    sfd_ = socket(AF_INET, SOCK_STREAM, 0);
+    int t = connect(sfd_, (struct sockaddr*)&client_info, client_info_len);
+    if (t == 0)
+        puts("connected");
 }
-
 
 void Client::act() {
     int x, y;
     bool running = true;
     std::string data_to_send;
     SDL_Event event_;
-    char buf[1024];
+    char buf[100000];
+    int t;
+    char* temp = "";
+    send(sfd_, temp, 100, 0);
+    using frames = std::chrono::duration<int64_t, std::ratio<1, 64>>;
+    auto next_frame = std::chrono::system_clock::now() + frames{1};
+    auto cur_frame = std::chrono::system_clock::now();
+    std::string no_action = "none 0 0";
+    std::string to_send;
     while (running) {
-        recv(sfd_, buf, 1024, 0);
+        to_send = "";
+        t = recv(sfd_, buf, 100000, 0);
+        if (t != 10000) continue;
         receiveData(buf);
-        drawer_->draw();
+        std::cout << "RECEIVED: " << t << " bytes\n";
+        cur_frame = std::chrono::system_clock::now();
+        if (cur_frame >= next_frame) {
+            drawer_->draw();
+            next_frame += frames{1};
+        }
+
+        std::pair<std::string, Point> caught;
         while (SDL_PollEvent(&event_)) {
             switch (event_.type) {
                 case SDL_QUIT:
@@ -38,30 +57,38 @@ void Client::act() {
                     break;
                 case SDL_MOUSEBUTTONDOWN:
                     SDL_GetMouseState(&x, &y);
-                    drawer_->catchClick(x, y);
+                    caught = drawer_->catchClick(x, y);
+                    to_send = caught.first + " " + std::string(caught.second);
                     break;
                case SDL_KEYDOWN:
                     if (event_.key.keysym.sym == SDLK_a) {
                     }
                     break;
+                default:
+                    break;
             }
         }
-        SDL_Delay(21);
+        if (to_send != "")
+            send(sfd_, to_send.c_str(), 100, 0);
+        else 
+            send(sfd_, no_action.c_str(), 100, 0);
     }
 }
 
-
 void Client::receiveData(char* data) {
+    std::cout << "received:\n";
+    std::cout << data << std::endl;
     auto received = std::string(data);
     auto ss = std::stringstream(received);
-
-    std::vector<std::vector<std::string>> widgets;
+    std::vector<std::vector<std::string>> widgets(3);
     std::size_t qty;
     std::string s;
     for (auto it = 0; it < 3; ++it) {
         ss >> qty;
+        if (qty > 1000) std::cout << "Qty is too big" << std::endl;
+        ss.ignore(1);
         while (qty--) {
-            ss >> s;
+            std::getline(ss, s);
             widgets[it].push_back(s);
         }
     }

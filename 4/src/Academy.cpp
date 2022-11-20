@@ -25,6 +25,7 @@ std::istream& operator>>(std::istream& is, School& school) {
         Ability ability;
         ability.setSchoolName(school.name_);
         is >> ability;
+        school.ability_names_.push_back(ability.getName());
         school[ability.getName()] = std::move(ability);
     } 
     return is;
@@ -36,6 +37,7 @@ std::istream& operator>>(std::istream& is, Academy& academy) {
     while (qty--) {
         School school;
         is >> school;
+        academy.school_names_.push_back(school.getName());
         academy[school.getName()] = std::move(school);
     }
     return is;

@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <iostream>
+#include "../src/Point.h"
 
 
 class Widget {
@@ -15,9 +17,7 @@ public:
     }
 
     void update(const std::vector<std::string>& data) {
-        if (data.size() > 0) {
-            data_ = std::move(data);
-        }
+        data_ = std::move(data);
     }
 
     void addUsedTexture(SDL_Texture* texture) {
@@ -28,6 +28,7 @@ public:
         for (auto texture: used_textures_) {
             SDL_DestroyTexture(texture);
         }
+        used_textures_ = {};
     }
 
     const auto& getData() const {
@@ -43,4 +44,6 @@ public:
     }
 
     virtual void draw() = 0;
+
+    virtual std::pair<std::string, Point> catchClick(int x, int y) = 0;
 };

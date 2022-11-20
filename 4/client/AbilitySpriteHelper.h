@@ -1,5 +1,5 @@
 #pragma once
-#include "Point.h"
+#include "../src/Point.h"
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -13,9 +13,13 @@ class AbilitySpriteHelper {
 
 public:
     SDL_Rect getNextSpriteRectangle(const std::string& action, double angle, std::size_t frame, int w, int h) {
+        std::cout << "ACTION: " << action << std::endl;
+
         auto vv = status_sprites_[action];
         int delta = 360 / vv.size();
         int cur_ind_angle = angle / delta;
+        if (cur_ind_angle >= vv.size())
+            std::cout << "CUR_IND_ANGLE IS: " << cur_ind_angle << std::endl;
 
         Point coords = vv[cur_ind_angle][frame % vv[0].size()];
         SDL_Rect result;
@@ -23,7 +27,7 @@ public:
         result.h = h / h_max_;
         result.x = coords.x * result.w;
         result.y = coords.y * result.h;
-        std::cout << action << " " << result.x << " " << result.y << " " << result.w << " " << result.h << '\n';
+        //std::cout << action << " " << result.x << " " << result.y << " " << result.w << " " << result.h << '\n';
         return result;
     }
 };
@@ -56,4 +60,3 @@ inline std::istream& operator>>(std::istream& is, AbilitySpriteHelper& ash) {
     }
     return is;
 }
-

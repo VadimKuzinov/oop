@@ -20,11 +20,11 @@ class Drawer {
 public:
     Drawer(int width, int height, const std::string& cfg_filename);
 
-    void Drawer::receiveData(const std::vector<std::string>& map, 
-                             const std::vector<std::string>& menu, 
-                             const std::vector<std::string>& serialize);
+    void receiveData(const std::vector<std::string>& map, 
+                     const std::vector<std::string>& menu, 
+                     const std::vector<std::string>& serialize);
     
-    void catchClick(int x, int y);
+    std::pair<std::string, Point> catchClick(int x, int y);
     void draw();
 };
 

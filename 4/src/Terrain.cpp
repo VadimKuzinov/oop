@@ -16,6 +16,13 @@ void Terrain::init(const std::string& file_academy, const std::string& file_terr
     ifs >> *this;
 }
 
+void Terrain::goToTheNextIteration() {
+    map_.clearCorpses();
+    for (auto&& squad : map_) {
+        squad->act();
+    }
+}
+
 void Terrain::live() {
     using frames = std::chrono::duration<int64_t, std::ratio<1, 64>>; //64 fps
     auto nextFrame = std::chrono::system_clock::now();
@@ -55,9 +62,8 @@ void Terrain::loadSchoolsToSummoner(std::shared_ptr<Summoner> summoner) {
     }
 }
 
-void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where, std::shared_ptr<Summoner> summoner) {
+void Terrain::addSquad(std::shared_ptr<Entity> new_squad, Point where) {
     linkSquad(new_squad, where);
-    //std::static_pointer_cast<InteractiveSquad>(new_squad)->setSummoner(summoner);
     if (typeid(*new_squad) == typeid(Summoner)) {
         addSummoner(new_squad);
     }

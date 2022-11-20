@@ -24,6 +24,9 @@ public:
     int getScaleFactor() const {
         return scale_factor_;
     }
+
+    void drawCircle(int x0, int y0, int radius);
+    std::pair<std::string, Point> catchClick(int x, int y) override;
 };
 
 std::istream& operator>>(std::istream&, MapWidget&);

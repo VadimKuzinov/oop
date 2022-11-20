@@ -28,7 +28,7 @@ public:
 
     void init(const std::string& academy_cfg, const std::string& map_cfg);
 
-    void addSquad(std::shared_ptr<Entity>, Point, std::shared_ptr<Summoner> = nullptr);
+    void addSquad(std::shared_ptr<Entity>, Point);
     void live();
 
     std::shared_ptr<Summoner> getSummonerFirst() {
@@ -52,5 +52,6 @@ public:
     }
 
     void transferSquadToEmptyPlace(std::shared_ptr<Entity> squad, Point target_coords);
+    void goToTheNextIteration();
 };
 
