@@ -95,5 +95,10 @@ public:
     void accumulateEnergy();
     void upgradeSchool();
     void act() override;
+
+    void receiveXp(double value) {
+        std::cout << "Receiving hp: " << value << std::endl;
+        xp_ += value;
+    }
 };
 

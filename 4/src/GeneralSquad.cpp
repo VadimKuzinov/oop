@@ -42,6 +42,9 @@ void GeneralSquad::giveDamage() {
     double value = getDamage();
     auto captured = getCaptured();
     captured->receiveDamage(value);
+    if (!captured->isAlive()) {
+        std::static_pointer_cast<Summoner>(getSummoner())->receiveXp(std::static_pointer_cast<GeneralSquad>(captured)->getXpForDestroying());
+    }
 }
 
 void GeneralSquad::attack() {
